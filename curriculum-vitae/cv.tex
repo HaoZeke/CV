@@ -1,0 +1,308 @@
+\documentclass[11pt,a4paper, final]{moderncv}
+
+\usepackage{color}
+\usepackage{fontspec}
+
+% Stop bugging me about \es
+\usepackage{xspace}
+% moderncv themes
+\moderncvstyle{classic}                             % style options are 'casual' (default), 'classic', 'banking', 'oldstyle' and 'fancy'
+\moderncvcolor{blue}                               % color options 'black', 'blue' (default), 'burgundy', 'green', 'grey', 'orange', 'purple' and 'red'
+
+% the (custom) color which will be used in the cv
+\definecolor{color1}{RGB}{1, 52, 64}
+
+% scale the page layout
+\usepackage[scale=0.75]{geometry}
+
+% change width of the column with the dates
+\setlength{\hintscolumnwidth}{2.5cm} 
+
+% required when changing page layout lengths
+\AtBeginDocument{\recomputelengths} 
+\usepackage{xunicode}
+\usepackage{xltxtra}
+\usepackage[utf8]{inputenc}
+
+% I like pretty logos
+\usepackage{metalogo}
+
+% Widen the letter spacing for logos
+\setlogokern{La}{0.2pt}
+\setlogokern{Xe}{0.2pt}
+\setlogokern{eL}{0.2pt}
+\setlogokern{Te}{0.2pt}
+\setlogokern{aT}{0.2pt}
+\setlogokern{eX}{0.2pt}
+
+% Better Quotes (depreciated for this useage)
+%\usepackage{epigraph}
+
+% Poaching from Espresso's ug.tex
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%% New Commands and Environments %%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\es}{\mbox{\textsf{ESPResSo}}\xspace}
+
+% german word break/hyphenation rules that's with ngerman (we use english)
+\usepackage[british,UKenglish,USenglish,english,american]{babel}
+
+% insert dummy text (used in the letter)
+%\usepackage{lipsum} 
+
+% used for \begin{comment}...\end{comment}
+\usepackage{verbatim} 
+
+% use guilllemets in bibliography (not german.) Also autostyle superceeded babel
+\usepackage[autostyle=true]{csquotes}
+
+\usepackage[
+	sorting=none,
+	minbibnames=8,
+	maxbibnames=9,
+	block=space
+]{biblatex}
+
+\bibliography{publications}
+
+
+% get rid of the number-labels ([1], [2], etc.) in front of publications
+\defbibenvironment{midbib}
+{\list
+	{}
+	{
+		\setlength{\leftmargin}{0mm}
+		\setlength{\itemindent}{-\leftmargin}
+		\setlength{\itemsep}{\bibitemsep}
+		\setlength{\parsep}{\bibparsep}}
+	}
+	{\endlist}
+{\item}
+
+
+% add [DOI] and [PDF] fields at the end of each publication entry
+\DeclareSourcemap{
+	\maps[datatype=bibtex]{
+		% the bibtex entry 'mydoi' gets mapped to 'usera'
+		\map{
+			\step[fieldsource=mydoi]
+			\step[fieldset=usera, origfieldval]
+		}
+		% the bibtex entry 'mypdf' gets mapped to 'usera'
+		\map{
+			\step[fieldsource=mypdf]
+			\step[fieldset=userb, origfieldval]
+		}
+	}
+}
+
+% [DOI] entries in publication
+\DeclareFieldFormat{usera}{\color{color1}[\href{#1}{\textsc{doi}}]}
+\AtEveryBibitem{
+	% put [DOI] stuff at the end of a publication entry
+	\csappto{blx@bbx@\thefield{entrytype}}{% 
+		\iffieldundef{usera}{ 
+			% this gets invoked, once nothing is supplied
+			% via the mypdf or mydoi value.
+			% you could e.g. display a default thing here.
+		}{\space\printfield{usera}}}
+}
+
+% [PDF] entries in publication
+\DeclareFieldFormat{userb}{\color{color1}[\href{#1}{\textsc{pdf}}]}
+
+\AtEveryBibitem{
+	% put [DOI] stuff at the end of a publication entry
+	\csappto{blx@bbx@\thefield{entrytype}}{\iffieldundef{userb}{}{\printfield{userb}}}
+}
+
+\renewcommand*{\mkbibnamegiven}[1]{%
+	\ifitemannotation{highlight}
+	{\textbf{#1}}
+	{#1}}
+
+	\renewcommand*{\mkbibnamefamily}[1]{%
+	\ifitemannotation{highlight}
+	{\textbf{#1}}
+	{#1}
+}
+
+
+% Minion Pro is used as the main font, if you don't
+% have it installed uncomment this line or choose another pretty font
+\setmainfont[Numbers=OldStyle]{Minion Pro}
+
+% the moderncv package will populate a lot of the pdf meta-information.
+% this can be used to change some of these infos.
+\AfterPreamble{\hypersetup{
+  pdfcreator={XeLaTeX},
+  pdftitle={First fledging CV}
+}}
+
+% for the icons (telephone, globe). i found the icons provided by the
+% fontawesome package prettier than the standard moderncv icons.
+\usepackage{fontawesome}
+
+% personal data
+\firstname{Rohit}
+\familyname{Goswami}
+\address{House No. 646, 35th Lane}{IIT Kanpur, 208016}
+\quote{``An unproblematic state is a state without creative thought. It's other name is Death.''\\-- David Deutsch}
+
+% I use the extrainfo command for additional information, since I 
+% want to use custom icons and have finer control over spacing.
+\extrainfo{
+	\faPhone\hspace{0.3em}+91 9935135006\\
+	{\small\faEnvelope}\hspace{0.3em}rohit1995@mail.ru\\
+	{\small\faGithub}\hspace{0.3em}haozeke\\
+	\faGlobe\hspace{0.3em}http://haozeke.github.io
+}
+
+
+% picture, resized to a height of 84pt
+\photo[84pt]{picture/rohit}
+
+% spacing before (sub)sections
+\newcommand{\spacesection}{\vspace{0.4cm}}
+\newcommand{\spacesubsection}{\vspace{0.2cm}}
+
+
+%===========================
+\begin{document}
+
+\maketitle
+
+\section{Personal Data}
+\cvitem{Name}{Rohit Goswami}
+\cvitem{Date Of Birth}{10.08.1995}
+%\cvitem{Geburtsort}{Petrovichi, Russia}
+
+\spacesection
+\section{Education}
+%\cventry{\textsc{1948}}{Ph.D. Chemistry}{University Extension}{New York}{\emph{United States}}{}
+%\cventry{\textsc{1939--1941}}{M.Sc. Chemistry}{University Extension}{New York}{\emph{United States}}{}
+\cventry{\textsc{2014--present}}{B.Tech. Chemical Engineering}{Harcourt Butler Technical University}{Kanpur}{\emph{India}}{}
+\cventry{\textsc{2010--2012}}{High School}{Delhi Public School Kalyanpur}{Kanpur}{\emph{India}}{}
+
+\spacesection
+\section{Experience}
+\subsection{Internships}
+\cventry{\textsc{Summer 2016}}{Dr. Rajarshi Chakrabarti}{Indian Institute Of Technology Bombay}{}{Research Intern}{ Retooled a server with ArchLinux and also simulated patchy colloids (Janus Particles). \\~\\
+ \textsc{Project Report: }Computational Survey of Coarse Grained Soft Matter Molecular Dynamics Simulations
+}
+
+\subsection{Volunteer Work}
+
+\cventry{\textsc{2017--present}}{Interface 2017}{Harcourt Butler Technical University, Kanpur}{}{Techincal Cell Head}{Organizing and inspiring students to work towards the sucess of the Department's techno-cultural fest and seminars. \\~\\}
+
+\cventry{\textsc{2014--2016}}{The Curiosity Magazine}{Harcourt Butler Technical University, Kanpur}{}{Editor-in-Chief}{Managed a diverse team of student content writers and also later typeset a spin-off multi-lingual newsletter in \XeLaTeX. }
+
+\newpage
+\spacesection
+\spacesubsection
+\section{Technical Skills}
+\spacesubsection
+\subsection{Programming Languages}
+\spacesubsection
+
+\cvdoubleitem{\textsc{Experienced}}{C++, C, Tcl}
+           {\textsc{Familiar}}{Ruby, Python, Shell (zsh, bash), Java, CSS, JS, HTML, Sass}
+
+\spacesubsection
+\subsection{Projects}
+\spacesubsection
+
+\cvdoubleitem{\textsc{Experienced}}{Android (Cyanogen, AOSP), Web-Design (static), ArchLinux}
+           {\textsc{Familiar}}{Linux Kernel (Android)}
+
+\spacesubsection
+\subsection{Simulation Projects}
+\spacesubsection
+
+\cvdoubleitem{\textsc{Experienced}}{\es \space(Extensible Simulation Package for Research on Soft matter), LAMMPS (Large-scale Atomic/Molecular Massively Parallel Simulator)}
+           {\textsc{Familiar}}{OpenFOAM, GROMACS (GROningen MAchine for Chemical Simulations), VMD (Visual Molecular Dynamics)}
+
+\spacesubsection
+\subsection{Tools}
+\spacesubsection
+
+\cvdoubleitem{\textsc{Experienced}}{\XeLaTeX, Git (version control), tmux, ssh, Vim, Sublime Text Editor 3, gnuplot, bspwm (tiling window manager), mosh, babun }
+           {\textsc{Familiar}}{MATLAB (matrix laboratory), AWS (Amazon Web Services), moltemplate, jekyll, middleman, grunt, gulp, Frameworks (Bourbon, Skeleton, neat), Continous Integration Services (Wercker, Travis CI), Markup Languages (Textile, HAML, Jade(pug)), Office-Suites (MS, OpenOffice, LibreOffice)}
+
+\spacesubsection
+\subsection{Operating Systems}
+\cvdoubleitem{\textsc{Prefered}}{ArchLinux}
+           {\textsc{Experienced}}{Windows (95, 2000, XP, 7, 8, 10), MacOS (10.7, 10.11, 10.12), Android (1.5, 1.6, 2.2.*, 2.3.*, 4.0.*, 4.4.*, 5.0.*, 6.0.*, 7.* ), Linux Distros (Ubuntu, Sabyon, Puppy, Manjaro, Debian, Red Hat (CentOS))}
+
+\spacesubsection
+\subsection{Opensource Contributions}
+\spacesubsection
+
+\cvdoubleitem{\textsc{Mantained}}{PixN ROM \& Kernel (AOSP based rom for the Xperia Z5)}
+           {\textsc{Reviewed}}{LineageOS}
+\newpage
+\spacesection
+\section{Interests}
+\subsection{Chemical Engineering}
+\cvdoubleitem{\textsc{Experienced}}{Thermodynamics, Transport Phenomena, Mass Transfer, Heat Transfer, Molecular Dynamics (simulations)}
+           {\textsc{Interested}}{Chemical Reaction Engineering (Statistical Interpretation), Process Control}
+
+\spacesubsection
+\subsection{Physics}
+\cvdoubleitem{\textsc{Familiar}}{Statistical Thermodynamics}
+           {\textsc{Interested}}{Quantum Phenomena (Computing, Thermodynamics), Phase Transitions (Thermodynamics, Simulations), Chaos Theory, Spectroscopy, Entropy, Information Theory}
+
+\spacesection
+\section{Aflliations \& Accolades}
+\subsection{Memberships}
+\spacesubsection
+\cventry{\textsc{2009--present}}{XDA Developers}{Senior Member}{}{}{}
+\cventry{\textsc{2015--present}}{IEEE (Institute of Electrical and Electronics Engineers)}{Student Member}{}{}{}
+\cventry{\textsc{2015--present}}{APS (American Physical Society)}{Student Undergraduate Member}{}{}{}
+\cventry{\textsc{2015--present}}{OSA (Optical Society of America)}{Student Member}{}{}{}
+\cventry{\textsc{2015--present}}{IOP (Institute of Physics)}{Student Member}{}{}{}
+\cventry{\textsc{2015--present}}{AICHE (American Institute Of Chemical Engineers)}{Student Member}{}{}{}
+\cventry{\textsc{2017--present}}{IICHE (Indian Institute Of Chemical Engineers)}{Student Member}{}{}{}
+
+\spacesubsection
+\subsection{Awards}
+\spacesubsection
+\cventry{\textsc{December 2016}}{Photonics-2016}{Indian Institute Of Technology Kanpur}{Springer Best Student Paper Award}{Nonlinear-Optics Session}{}
+\cventry{\textsc{2014--2015}}{IITG Zephyr Creative Writing}{Indian Institute Of Technology Guwahati}{First Prize}{}{}
+\cventry{\textsc{2014--2015}}{Antaragni IITK-MUN GA-DISEC}{Indian Institute Of Technology Kanpur}{Best Speaker}{}{}
+
+\spacesection
+\section{Publications}
+{\color{color1}\textsc{Conference Proceedings}}
+
+\nocite{*}
+\printbibliography[heading=none, env=midbib, keyword=conference]
+
+\ \\
+
+%{\color{color1}\textsc{Fictional Writings}}
+%\printbibliography[heading=none, env=midbib, keyword=fiction]
+
+
+
+%=============================
+% this part is a simple cover letter
+%\clearpage
+
+%\recipient{Human Resources}{Some Company Ltd.\\Some Street 123\\12345 Some City} 
+%\date{\today}
+%\opening{Dear Sir or Madam,}
+%\closing{Sincerely yours,}
+%\enclosure[Attached]{curriculum vit\ae{}}
+
+%\makelettertitle
+
+%\lipsum[1-3] 
+
+%\makeletterclosing
+
+
+\end{document}
