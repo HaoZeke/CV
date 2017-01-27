@@ -133,7 +133,16 @@
 
 % Minion Pro is used as the main font, if you don't
 % have it installed uncomment this line or choose another pretty font
-\setmainfont[Numbers=OldStyle]{Minion Pro}
+%\setmainfont[Numbers=OldStyle]{Minion Pro}
+
+\setmainfont[
+Path = fonts/,
+Numbers=OldStyle,
+Extension = .otf,
+UprightFont = *_Regular,
+ItalicFont = *_It,
+BoldFont = *_Bold
+]{MinionPro}
 
 % the moderncv package will populate a lot of the pdf meta-information.
 % this can be used to change some of these infos.
