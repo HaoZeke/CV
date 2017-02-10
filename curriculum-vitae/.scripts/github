@@ -1,0 +1,22 @@
+#!/bin/bash
+
+set -o errexit -o nounset
+
+rev=$(git rev-parse --short HEAD)
+
+cd _site
+#rm -rf .git
+
+git init
+git config user.name "HaoZeke"
+git config user.email "driger633@gmail.com"
+
+git remote add upstream "git@github.org:HaoZeke/CV.git"
+git fetch upstream
+git reset upstream/master
+
+touch .
+
+git add -A .
+git commit -m "Rebuild CV at ${rev}"
+git push -q upstream HEAD:master

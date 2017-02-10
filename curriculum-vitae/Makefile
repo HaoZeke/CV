@@ -12,6 +12,8 @@ clean:
 clobber: 
 	rm -f *.log *.nlo *.idx cv.synctex* *.aux *.toc *.out ./misc/*.aux *.bbl *.bcf *.xml *.blg *.fdb* *.fls *.pdf
 
+continous:
+	latexmk -pvc -view=none cv.tex
 #
 #biber: (used when xelatex was used instead of latexmk)
 #	make once
