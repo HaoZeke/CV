@@ -2,27 +2,15 @@ box: archlinuxjp/archlinux
 no-response-timeout: 10
 build:
     steps:
-    # Run smart version of bundle install
-#    - bundle-install
-    # Run Jekyll doctor
-#    - script:
-#        name: Run Jekyll doctor
-#        code: bundle exec jekyll doctor
-    # Build Jekyll public site
-#    - install-packages:
-#        packages: texlive-xetex fonts-font-awesome biber
     - script:
         name: Archlinux Packages
         code: ".scripts/archpack"
-
     - script:
         name: ArchLinux Preparation
         code: su -c ".scripts/archprep" builder
-
     - script:
         name: ArchLinux Fonts
         code: ".scripts/archfonts"
-
     - script:
         name: Rebuild the CV
         code: su -c ".scripts/cibuild" builder
@@ -33,22 +21,6 @@ deploy:
         code: pacman -S git openssh --noconfirm
     - add-to-known_hosts:
         hostname: github.com
-#    - install-packages:
-#        packages: python-pip
-#    - add-to-known_hosts:
-#        hostname: bitbucket.org
-#    - add-ssh-key:
-#        keyname: Deploy
-#    - script:
-#        name: Deploy Jekyll site
-#        code: ".scripts/deploy.sh"
-#    - s3sync:
-#       source_dir: _site
-#       delete-removed: true
-#       bucket-url: $AWS_BUCKET_URL
-#       key-id: $AWS_ACCESS_KEY_ID
-#       key-secret: $AWS_SECRET_ACCESS_KEY
-#       opts: " --acl-public --region=ap-southeast-1"
     - add-ssh-key:
         keyname: GITHUB
     - script:
