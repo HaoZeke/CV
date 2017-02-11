@@ -1,0 +1,38 @@
+# This configuration file will make Travis CI compile our PDF and force-push it
+# back to the repository. 
+
+# This *wonderful* hack is credited to Dan Foreman-Mackey (GitHub: @dfm / Twitter: @exoplaneteer)
+# and David W. Hogg (GitHub/Twitter: @davidwhogg) on the repository:
+#    https://github.com/davidwhogg/mcmc/
+
+# This hack has been modified slightly to push pdfs to <branch>-pdf
+# Further modified from Andrew Casey's version for me.
+
+sudo: required
+dist: trusty
+
+language: python
+
+env:
+    matrix:
+        - PYTHON_VERSION=2.7
+
+before_install:
+    - sudo add-apt-repository ppa:jonathonf/texlive-2016 -y
+    - sudo apt-get -qq update
+    - sudo apt-get install -y --no-install-recommends latexmk lmodern texlive texlive-xetex fonts-font-awesome biber xzdec
+
+#install:
+# - sudo tlmgr init-usertree
+# - sudo tlmgr update --all
+# - sudo tlmgr update unicode-math
+# - sudo tlmgr update xetex
+
+script: curriculum-vitae/.scripts/cibuild
+
+after_success: curriculum-vitae/.scripts/github
+
+notifications:
+    email:
+       on_success: change
+       on_failure: always

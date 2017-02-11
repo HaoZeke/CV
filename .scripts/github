@@ -1,0 +1,24 @@
+#!/bin/bash
+
+set -o errexit -o nounset
+
+rev=$(git rev-parse --short HEAD)
+
+#rm -rf .git
+
+git init
+#git config user.name='Wercker' 
+#git config user.email='wercker'
+#git config user.name "HaoZeke"
+#git config user.email "driger633@gmail.com"
+#ssh -vT git@github.com
+#git remote add upstream "git@github.com:HaoZeke/CV.git"
+#git fetch upstream
+#git reset upstream/master
+
+touch .
+
+git add -A .
+git -c user.name='WerckerBot' -c user.email='wercker' commit -m "[skip ci] Rebuild CV at ${rev}"
+git push -q origin HEAD:master
+# git push -q -f https://HaoZeke:$GITHUB_API_KEY@github.com/$TRAVIS_REPO_SLUG $TRAVIS_BRANCH

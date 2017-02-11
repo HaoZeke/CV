@@ -1,0 +1,10 @@
+#!/bin/bash
+set -o errexit -o nounset
+cd temp
+pacman -U otf-font-awesome-* --noconfirm
+pacman -U fontawesome.sty-* --noconfirm
+cd ..
+rm -rf temp
+texhash
+updmap-sys
+updmap

@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+#set -e # halt script on error
+cd curriculum-vitae
+export PATH=$PATH:/usr/bin/vendor_perl
+which biber
+make
+make clean
+mv cv.pdf ../RG_Latest-cv.pdf -f

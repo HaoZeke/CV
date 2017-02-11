@@ -1,0 +1,15 @@
+#!/bin/bash
+set -o errexit -o nounset
+
+rm -rf ~/.texlive
+mkdir temp
+cd temp
+git clone https://aur.archlinux.org/fontawesome.sty.git
+cd fontawesome.sty
+makepkg --noconfirm --nodeps
+mv fontawesome.sty-* ..
+cd ..
+git clone https://aur.archlinux.org/otf-font-awesome.git
+cd otf-font-awesome
+makepkg --noconfirm
+mv otf-font-awesome-* ..

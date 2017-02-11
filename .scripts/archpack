@@ -1,0 +1,8 @@
+#!/bin/bash
+set -o errexit -o nounset
+
+rm -rf /usr/share/texmf*
+pacman -S texlive-bibtexextra texlive-core texlive-fontsextra texlive-formatsextra texlive-genericextra texlive-htmlxml texlive-humanities texlive-latexextra texlive-music texlive-pictures texlive-plainextra texlive-pstricks texlive-publishers texlive-science biber git sudo make fakeroot xorg-font-utils perl-text-bibtex binutils --needed --noconfirm
+useradd -m -G wheel -s /bin/bash builder
+chown -R builder ${WERCKER_PIPELINE_DIR}
+sed -i 's/# %wheel ALL=(ALL) NOPASSWD: ALL/%wheel ALL=(ALL) NOPASSWD: ALL/' /etc/sudoers

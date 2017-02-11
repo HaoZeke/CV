@@ -1,4 +1,4 @@
-box: hiono/texlive
+box: archlinuxjp/archlinux
 no-response-timeout: 10
 build:
     steps:
@@ -9,13 +9,30 @@ build:
 #        name: Run Jekyll doctor
 #        code: bundle exec jekyll doctor
     # Build Jekyll public site
-    - install-packages:
-        packages: fonts-font-awesome
+#    - install-packages:
+#        packages: texlive-xetex fonts-font-awesome biber
+    - script:
+        name: Archlinux Packages
+        code: ".scripts/archpack"
+
+    - script:
+        name: ArchLinux Preparation
+        code: su -c ".scripts/archprep" builder
+
+    - script:
+        name: ArchLinux Fonts
+        code: ".scripts/archfonts"
+
     - script:
         name: Rebuild the CV
-        code: ".scripts/cibuild"
+        code: su -c ".scripts/cibuild" builder
 deploy:
   steps:
+    - script:
+        name: Archlinux Packages
+        code: pacman -S git openssh --noconfirm
+    - add-to-known_hosts:
+        hostname: github.com
 #    - install-packages:
 #        packages: python-pip
 #    - add-to-known_hosts:
@@ -32,6 +49,8 @@ deploy:
 #       key-id: $AWS_ACCESS_KEY_ID
 #       key-secret: $AWS_SECRET_ACCESS_KEY
 #       opts: " --acl-public --region=ap-southeast-1"
+    - add-ssh-key:
+        keyname: GITHUB
     - script:
         name: Deploy the new CV
         code: ".scripts/github"
