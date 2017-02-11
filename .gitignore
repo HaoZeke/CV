@@ -29,6 +29,8 @@
 *.toc
 *.vrb
 *run.*
-cv.pdf
 matlab2tikz*
+README.html
+LICENSE.html
+cv.pdf
 NUL
