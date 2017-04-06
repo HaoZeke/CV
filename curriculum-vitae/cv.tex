@@ -183,6 +183,19 @@ BoldFont = *_Bold,
 BoldItalicFont = *_BoldIt
 ]{MinionPro}
 
+% Myriad Pro is used as the sans font, if you don't
+% have it installed uncomment this line or choose another pretty font.
+\setsansfont[
+Path = Fonts/MyriadPro/,
+Numbers=OldStyle,
+Extension = .otf,
+UprightFont = *_Regular,
+ItalicFont = *_It,
+BoldFont = *_Bold,
+BoldItalicFont = *_BoldIt,
+Ligatures=TeX,
+Scale=MatchLowercase]{MyriadPro}
+
 % the moderncv package will populate a lot of the pdf meta-information.
 % this can be used to change some of these infos.
 \AfterPreamble{\hypersetup{
