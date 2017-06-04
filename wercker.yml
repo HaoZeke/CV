@@ -1,4 +1,4 @@
-box: archlinuxjp/archlinux
+box: eyenseo/latex-archlinux
 no-response-timeout: 10
 build:
     steps:
