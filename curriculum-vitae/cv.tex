@@ -205,6 +205,8 @@ Scale=MatchLowercase]{MyriadPro}
 
 % for the icons (telephone, globe). I found the icons provided by the
 % fontawesome package prettier than the standard moderncv icons.
+\defaultfontfeatures{
+    Path = Fonts/FontAwesome/ }
 \usepackage{fontawesome}
 
 % personal data
@@ -213,13 +215,15 @@ Scale=MatchLowercase]{MyriadPro}
 \address{House No. 646, 35th Lane}{IIT Kanpur, 208016}
 \quote{``An unproblematic state is a state without creative thought. It's other name is Death.''\\-- David Deutsch}
 
+% \faEnvelope \faPhone \faGithub \faGlobe
+
 % I use the extrainfo command for additional information, since I 
 % want to use custom icons and have finer control over spacing.
 \extrainfo{
 	\faPhone\hspace{0.3em}+91 9935135006\\
 	{\small\faEnvelope}\hspace{0.3em}r95g10@gmail.com\\
 	{\small\faGithub}\hspace{0.3em}haozeke\\
-	\faGlobe\hspace{0.3em}http://haozeke.github.io
+	\faGlobe\hspace{0.3em}https://github.com/HaoZeke/
 }
 
 
@@ -252,17 +256,28 @@ Scale=MatchLowercase]{MyriadPro}
 \spacesection
 \section{Experience}
 \subsection{Internships}
+\cventry{\textsc{2017-Present}}{Dr. Debojit Chakrabarty}{Keva Fragrances Ltd, Mumbai}{}{R\&D Industrial Intern}{Modeling complex multi-component perfumes in a predictive method via experimental and theoretical considerations. In collaboration with Prof. Rajdip Bandyopadhyaya of the ChemE Dept. at IIT Bombay.
+}
+\cventry{\textsc{Summer 2017}}{Prof. Sibasish Ghosh}{The Institute of Mathematical Sciences, Chennai}{}{Visiting Scholar}{Discussed computational techniques for the simulation and understanding of quantum tomography.}
+\cventry{\textsc{Summer 2017}}{Dr. Nisanth Nair}{Indian Institute Of Technology Kanpur}{}{SURGE Scholar}{An exploratory project to understand and deal with bottlenecks in computational chemistry, the major objectives were to investigate hybridization of existing code via OpenMP and MPI.
+\\~\\
+ \textsc{Poster: }Development of Computational Tools for Free Energy Calculations of Chemical Reactions}
 \cventry{\textsc{Summer 2016}}{Dr. Rajarshi Chakrabarti}{Indian Institute Of Technology Bombay}{}{Research Intern}{ Retooled a server with ArchLinux and also simulated patchy colloids (Janus Particles). \\~\\
  \textsc{Project Report: }Computational Survey of Coarse Grained Soft Matter Molecular Dynamics Simulations
 }
 
 \subsection{Volunteer Work}
 
-\cventry{\textsc{2017--present}}{Interface 2017}{Harcourt Butler Technical University, Kanpur}{}{Technical Cell Head}{Organizing and inspiring students to work towards the success of the Department's techno-cultural fest and seminars. \\~\\}
+\cventry{\textsc{2017--2018}}{ChemE Herald}{Harcourt Butler Technical University, Kanpur}{}{Editor-in-Chief}{Inaugurated and managed an interdisciplinary technical newsletter.}
 
-\cventry{\textsc{2014--2016}}{The Curiosity Magazine}{Harcourt Butler Technical University, Kanpur}{}{Editor-in-Chief}{Managed a diverse team of student content writers and also later typeset a spin-off multi-lingual newsletter in \XeLaTeX. }
+\cventry{\textsc{2017--2018}}{HBTU-MUN 2018}{}{}{Secretary General}{Designed a ReactJS based static website, with Trello backed user registration, also performed outreach pre-events to raise awareness and participation, in addition to overseeing the working of the executive board.}
 
-\newpage
+\cventry{\textsc{2016--2017}}{HBTU-MUN 2017}{}{}{Executive Board Chairperson}{Designed a Jekyll based static website and ensured adherence to standard MUN rules as Chairperson.}
+
+\cventry{\textsc{2016--2017}}{Interface 2017}{Harcourt Butler Technical University, Kanpur}{}{Technical Cell Head}{Organizing and inspiring students to work towards the success of the Department's techno-cultural fest and seminars.}
+
+\cventry{\textsc{2014--2016}}{The Curiosity Magazine}{Harcourt Butler Technical University, Kanpur}{}{Editor-in-Chief}{Managed a diverse team of student content writers and also later typeset a spin-off multi-lingual newsletter in \XeLaTeX.}
+
 \spacesection
 \spacesubsection
 \section{Technical Skills}
@@ -270,8 +285,8 @@ Scale=MatchLowercase]{MyriadPro}
 \subsection{Programming Languages}
 \spacesubsection
 
-\cvdoubleitem{\textsc{Experienced}}{C++, C, Tcl}
-           {\textsc{Familiar}}{Ruby, Julia, Python, Shell (zsh, bash), Java, CSS, JS, HTML, Sass}
+\cvdoubleitem{\textsc{Experienced}}{CSS, JS, HTML, Sass, C, Tcl}
+           {\textsc{Familiar}}{Ruby, C++, Julia, Python, Shell (zsh, bash), Golang, FORTRAN, ReactJS, Node}
 
 \spacesubsection
 \subsection{Projects}
@@ -285,14 +300,14 @@ Scale=MatchLowercase]{MyriadPro}
 \spacesubsection
 
 \cvdoubleitem{\textsc{Experienced}}{\es \space(Extensible Simulation Package for Research on Soft matter), LAMMPS (Large-scale Atomic/Molecular Massively Parallel Simulator)}
-           {\textsc{Familiar}}{OpenFOAM, GROMACS (GROningen MAchine for Chemical Simulations), VMD (Visual Molecular Dynamics)}
+           {\textsc{Familiar}}{OpenFOAM, GROMACS (GROningen MAchine for Chemical Simulations), VMD (Visual Molecular Dynamics), CPMD (Car-Parrinello Molecular Dynamics)}
 
 \spacesubsection
 \subsection{Tools}
 \spacesubsection
 
-\cvdoubleitem{\textsc{Experienced}}{\XeLaTeX, Git (version control), tmux, ssh, Vim, Sublime Text Editor 3, gnuplot, gadfly, bspwm (tiling window manager), mosh, babun }
-           {\textsc{Familiar}}{MATLAB (matrix laboratory), AWS (Amazon Web Services), moltemplate, jekyll, middleman, grunt, gulp, Frameworks (Bourbon, Skeleton, neat), Continuous Integration Services (Wercker, Travis CI), Markup Languages (Textile, HAML, Jade(pug)), Office-Suites (MS, OpenOffice, LibreOffice)}
+\cvdoubleitem{\textsc{Experienced}}{\XeLaTeX, pandoc, Git (version control), tmux, ssh, Vim, Sublime Text Editor 3, gnuplot, gadfly, bspwm (tiling window manager), mosh, babun, MATLAB (matrix laboratory), Continuous Integration Services (Wercker, Travis CI, Semaphore CI), docker}
+           {\textsc{Familiar}}{AWS (Amazon Web Services), moltemplate, jekyll, middleman, grunt, gulp, Frameworks (Bourbon, Skeleton, neat) Markup Languages (Textile, HAML, Jade(pug)), Office-Suites (MS, OpenOffice, LibreOffice)}
 
 \spacesubsection
 \subsection{Operating Systems}
@@ -303,9 +318,23 @@ Scale=MatchLowercase]{MyriadPro}
 \subsection{Opensource Contributions}
 \spacesubsection
 
-\cvdoubleitem{\textsc{Mantained}}{PixN ROM \& Kernel (AOSP based rom for the Xperia Z5)}
-           {\textsc{Reviewed}}{LineageOS}
+\cvdoubleitem{\textsc{Created}}{PixN ROM \& Kernel (AOSP based rom for the Xperia Z5) \\ HaoZeke's LineageOS }
+           {\textsc{Mantained}}{Xperia Z5 LineageOS (14.*)}
+
 \newpage
+
+\subsection{Opensource Projects Created}
+\spacesubsection
+
+\cvdoubleitem{\textsc{zenYoda}}{Pandoc based, tup driven stand-alone multi format (revealJS, beamer etc.) presentation system with static site generation.}
+           {\textsc{docuYoda}}{A document generation system based on pandoc and latexmk driven by gulp with yaml configuration and easy templating.}
+
+\cvdoubleitem{\textsc{starDock}}{Docker compose based containerized self-updating setup for media hosting, with traefik for reverse proxying. Includes music, ebook and video acquisition and management. \\}
+           {\textsc{pyQtNumSim}}{A Qt interface for verbose numerical methods assignments.}
+
+\cvitem{\textsc{grimoire}}{Metalsmith and webpack based open source educational experiment with a strong focus on readability, equations and references.}
+
+
 \spacesection
 \section{Interests}
 \subsection{Chemical Engineering}
@@ -314,13 +343,14 @@ Scale=MatchLowercase]{MyriadPro}
 
 \spacesubsection
 \subsection{Physics}
-\cvdoubleitem{\textsc{Familiar}}{Statistical Thermodynamics}
+\cvdoubleitem{\textsc{Familiar}}{Statistical Thermodynamics, Density Functional Theory, Rare event sampling, Transition Path Theory, Markov State Models}
            {\textsc{Interested}}{Quantum Phenomena (Computing, Thermodynamics), Phase Transitions (Thermodynamics, Simulations), Chaos Theory, Spectroscopy, Entropy, Information Theory}
 
 \spacesection
 \section{Affiliations \& Accolades}
 \subsection{Memberships}
 \spacesubsection
+\cventry{\textsc{2006--present}}{World Taekwondo}{Red Belt}{}{}{}
 \cventry{\textsc{2009--present}}{XDA Developers}{Senior Member}{}{}{}
 \cventry{\textsc{2015--present}}{IEEE (Institute of Electrical and Electronics Engineers)}{Student Member}{}{}{}
 \cventry{\textsc{2015--present}}{APS (American Physical Society)}{Student Undergraduate Member}{}{}{}
@@ -337,15 +367,16 @@ Scale=MatchLowercase]{MyriadPro}
 \cventry{\textsc{2014--2015}}{Antaragni IITK-MUN GA-DISEC}{Indian Institute Of Technology Kanpur}{Best Speaker}{}{}
 
 \spacesection
+
+\newpage
 \section{Publications}
 {\color{color1}\textsc{Conference Proceedings}}
 
 \nocite{*}
 \printbibliography[heading=none, env=midbib, keyword=conference]
 
-\ \\
 
-{\color{color1}\textsc{Conference Proceedings}}
+{\color{color1}\textsc{Preprints}}
 
 \nocite{*}
 \printbibliography[heading=none, env=midbib, keyword=preprint]
