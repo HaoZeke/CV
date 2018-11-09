@@ -1,4 +1,4 @@
-box: haozeke/docker_docuyoda
+box: haozeke/docker_docuyodabot
 no-response-timeout: 10
 build:
     steps:
