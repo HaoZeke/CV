@@ -1,4 +1,4 @@
-box: archlinuxjp/archlinux
+box: haozeke/docker_docuyoda
 no-response-timeout: 10
 build:
     steps:
