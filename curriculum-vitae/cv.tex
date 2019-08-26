@@ -16,48 +16,48 @@
 %\usepackage[scale=0.75]{geometry}
 
 % change width of the column with the dates
-\setlength{\hintscolumnwidth}{2.5cm} 
+\setlength{\hintscolumnwidth}{2.5cm}
 
-%\PassOptionsToPackage[final, factor=1100, stretch=18, shrink=18 ]{microtype} 	
+%\PassOptionsToPackage[final, factor=1100, stretch=18, shrink=18 ]{microtype}
 % The final option overrides global defaults. It greatly improves general appearance of the text. The stretch and shrink reduce bluriness[20,20 default]. The factor increases protrusion amount by 10%, [default 1000]
 % Tracking allows for small caps, like in cites to be adjusted. The activate commands are to set protrusion.
 
 \microtypecontext{spacing=nonfrench} 						% To preserve interword spacing via \nonfrenchspacing.
- 
+
 \SetExtraKerning[unit=space] 								% These produce more effects, from microtype with kerning.
-    {encoding={*}, family={bch}, series={*}, size={footnotesize,small,normalsize}}
-    {\textendash={400,400}, 								% en-dash, add more space around it
-     "28={ ,150}, 											% Left bracket, add space from right
-     "29={150, },											% Right bracket, add space from left
-     \textquotedblleft={ ,150}, 							% Left quotation mark, space from right
-     \textquotedblright={150, }} 							% Right quotation mark, space from left
+{encoding={*}, family={bch}, series={*}, size={footnotesize,small,normalsize}}
+{\textendash={400,400}, 								% en-dash, add more space around it
+"28={ ,150}, 											% Left bracket, add space from right
+"29={150, },											% Right bracket, add space from left
+\textquotedblleft={ ,150}, 							% Left quotation mark, space from right
+\textquotedblright={150, }} 							% Right quotation mark, space from left
 
 
 \SetExtraKerning[unit=space]
-  {encoding={*}, family={qhv}, series={b}, size={large,Large}}
-  {1={-200,-200}, 
-   \textendash={400,400}}
+{encoding={*}, family={qhv}, series={b}, size={large,Large}}
+{1={-200,-200},
+	\textendash={400,400}}
 
 \SetTracking{encoding={*}, shape=sc}{40} 					% This is for better small caps with tracking and microtype.
 
 \SetProtrusion{encoding={*},family={bch},series={*},size={6,7}}  % This enables better optical views.
-              {1={ ,750},2={ ,500},3={ ,500},4={ ,500},5={ ,500},
-               6={ ,500},7={ ,600},8={ ,500},9={ ,500},0={ ,500}}
+{1={ ,750},2={ ,500},3={ ,500},4={ ,500},5={ ,500},
+	6={ ,500},7={ ,600},8={ ,500},9={ ,500},0={ ,500}}
 
 % Page settings
 \usepackage{geometry}
- \geometry{
- a4paper,
- %total={210mm,297mm},
- %l,r,t used to be 15mm
- left=10mm,
- right=10mm,
- top=10mm,
- bottom=10mm,
- }
+\geometry{
+	a4paper,
+	%total={210mm,297mm},
+	%l,r,t used to be 15mm
+	left=10mm,
+	right=10mm,
+	top=10mm,
+	bottom=10mm,
+}
 
 % required when changing page layout lengths
-\AtBeginDocument{\recomputelengths} 
+\AtBeginDocument{\recomputelengths}
 \usepackage{xunicode}
 \usepackage{xltxtra}
 % \usepackage[utf8]{inputenc} (Xelatex expects UTF8 anyway)
@@ -89,10 +89,10 @@
 \usepackage[british,UKenglish,USenglish,american]{babel}
 
 % insert dummy text (used in the letter)
-%\usepackage{lipsum} 
+%\usepackage{lipsum}
 
 % used for \begin{comment}...\end{comment}
-\usepackage{verbatim} 
+\usepackage{verbatim}
 
 % use guilllemets in bibliography (not german.) Also autostyle superceeded babel
 \usepackage[autostyle=true]{csquotes}
@@ -116,8 +116,8 @@
 		\setlength{\itemindent}{-\leftmargin}
 		\setlength{\itemsep}{\bibitemsep}
 		\setlength{\parsep}{\bibparsep}}
-	}
-	{\endlist}
+}
+{\endlist}
 {\item}
 
 
@@ -141,8 +141,8 @@
 \DeclareFieldFormat{usera}{\color{color1}[\href{#1}{\textsc{doi}}]}
 \AtEveryBibitem{
 	% put [DOI] stuff at the end of a publication entry
-	\csappto{blx@bbx@\thefield{entrytype}}{% 
-		\iffieldundef{usera}{ 
+	\csappto{blx@bbx@\thefield{entrytype}}{%
+		\iffieldundef{usera}{
 			% this gets invoked, once nothing is supplied
 			% via the mypdf or mydoi value.
 			% you could e.g. display a default thing here.
@@ -162,7 +162,7 @@
 	{\textbf{#1}}
 	{#1}}
 
-	\renewcommand*{\mkbibnamefamily}[1]{%
+\renewcommand*{\mkbibnamefamily}[1]{%
 	\ifitemannotation{highlight}
 	{\textbf{#1}}
 	{#1}
@@ -175,39 +175,39 @@
 %\setmainfont[Numbers=OldStyle]{Minion Pro}
 
 \setmainfont[
-Path = Fonts/MinionPro/,
-Numbers=OldStyle,
-Extension = .otf,
-UprightFont = *_Regular,
-ItalicFont = *_It,
-BoldFont = *_Bold,
-BoldItalicFont = *_BoldIt
+	Path = Fonts/MinionPro/,
+	Numbers=OldStyle,
+	Extension = .otf,
+	UprightFont = *_Regular,
+	ItalicFont = *_It,
+	BoldFont = *_Bold,
+	BoldItalicFont = *_BoldIt
 ]{MinionPro}
 
 % Myriad Pro is used as the sans font, if you don't
 % have it installed uncomment this line or choose another pretty font.
 \setsansfont[
-Path = Fonts/MyriadPro/,
-Numbers=OldStyle,
-Extension = .otf,
-UprightFont = *_Regular,
-ItalicFont = *_It,
-BoldFont = *_Bold,
-BoldItalicFont = *_BoldIt,
-Ligatures=TeX,
-Scale=MatchLowercase]{MyriadPro}
+	Path = Fonts/MyriadPro/,
+	Numbers=OldStyle,
+	Extension = .otf,
+	UprightFont = *_Regular,
+	ItalicFont = *_It,
+	BoldFont = *_Bold,
+	BoldItalicFont = *_BoldIt,
+	Ligatures=TeX,
+	Scale=MatchLowercase]{MyriadPro}
 
 % the moderncv package will populate a lot of the pdf meta-information.
 % this can be used to change some of these infos.
 \AfterPreamble{\hypersetup{
-  pdfcreator={XeLaTeX},
-  pdftitle={Rohit Goswami's CV}
-}}
+		pdfcreator={XeLaTeX},
+		pdftitle={Rohit Goswami's CV}
+	}}
 
 % for the icons (telephone, globe). I found the icons provided by the
 % fontawesome package prettier than the standard moderncv icons.
 \defaultfontfeatures{
-    Path = Fonts/FontAwesome/ }
+	Path = Fonts/FontAwesome/ }
 \usepackage{fontawesome}
 
 % personal data
@@ -218,14 +218,14 @@ Scale=MatchLowercase]{MyriadPro}
 
 % \faEnvelope \faPhone \faGithub \faGlobe
 
-% I use the extrainfo command for additional information, since I 
+% I use the extrainfo command for additional information, since I
 % want to use custom icons and have finer control over spacing.
 \extrainfo{
-	\faPhone\hspace{0.3em}\href{tel:919935135006}{+91 9935135006}\\
-	{\small\faEnvelope}\hspace{0.3em}\href{mailto:r95g10@gmail.com}{r95g10@gmail.com}\\
-	{\small\faGithub}\hspace{0.3em}\href{https://github.com/haozeke}{haozeke}\\
-	{\small\faTwitter}\hspace{0.3em}\href{https://twitter.com/rg0swami}rg0swami\\
-	\faGlobe\hspace{0.3em}\href{https://grimoire.science}{Grimoire}
+\faPhone\hspace{0.3em}\href{tel:919935135006}{+91 9935135006}\\
+{\small\faEnvelope}\hspace{0.3em}\href{mailto:r95g10@gmail.com}{r95g10@gmail.com}\\
+{\small\faGithub}\hspace{0.3em}\href{https://github.com/haozeke}{haozeke}\\
+{\small\faTwitter}\hspace{0.3em}\href{https://twitter.com/rg0swami}rg0swami\\
+\faGlobe\hspace{0.3em}\href{https://grimoire.science}{Grimoire}
 }
 
 
@@ -251,16 +251,16 @@ Scale=MatchLowercase]{MyriadPro}
 \section{Work Experience}
 \cventry{\textsc{2019--present}}{Department of Chemistry}{Indian Institute Of Technology, Kanpur}{}{Senior Project Associate}{I am affiliated to the Femtolab under the project ``Femtosecond Laser Approaches to Quantum Information and Quantum Computation (SPO/MEITY/CHM/2018356)''}
 \cventry{\textsc{2018--2019}}{Department of Chemical Engineering}{Indian Institute Of Technology, Kanpur}{}{Project Associate}{I was associated with the Computational Nanoscience group. Over the course of two centrally funded projects, ``Nucleation On Nanostructured Surfaces Computer Simulation      Studies (SPO/DST/CHE/2017294)'' and ``Advanced Computation Research and Education (SPO/MHRD/CC/20130176)'':
-  \begin{itemize}
-      \item I worked on the
-implementation of an enhanced version of the CHILL (CHILL+) algorithm for tracking
-ice types.
-      \item Designed a linear discriminant analysis technique for near-surface ice structure determination which is undergoing rigorous testing
-      \item Implemented a graph based network connectivity model for ice structures
-    \item Spearheaded the development of High Performance GPU accelerated molecular dynamics simulation analysis tools
-    \item Worked on the determination of optimal GPU cluster configurations
-    \item Designed and administered academic outreach websites
-      \end{itemize}  }
+	\begin{itemize}
+		\item I worked on the
+		      implementation of an enhanced version of the CHILL (CHILL+) algorithm for tracking
+		      ice types.
+		\item Designed a linear discriminant analysis technique for near-surface ice structure determination which is undergoing rigorous testing
+		\item Implemented a graph based network connectivity model for ice structures
+		\item Spearheaded the development of High Performance GPU accelerated molecular dynamics simulation analysis tools
+		\item Worked on the determination of optimal GPU cluster configurations
+		\item Designed and administered academic outreach websites
+	\end{itemize}  }
 \spacesection
 \section{Education}
 %\cventry{\textsc{1948}}{Ph.D. Chemistry}{University Extension}{New York}{\emph{United States}}{}
@@ -276,10 +276,10 @@ ice types.
 }
 \cventry{\textsc{Summer 2017}}{Prof. Sibasish Ghosh}{The Institute of Mathematical Sciences, Chennai}{}{Visiting Scholar}{Discussed computational techniques for the simulation and understanding of quantum tomography.}
 \cventry{\textsc{Summer 2017}}{Prof. Nisanth Nair}{Indian Institute Of Technology Kanpur}{}{SURGE Scholar}{An exploratory project to understand and deal with bottlenecks in computational chemistry, the major objectives were to investigate hybridization of existing code via OpenMP and MPI.
-\\~\\
- \textsc{Poster: }Development of Computational Tools for Free Energy Calculations of Chemical Reactions}
+	\\~\\
+	\textsc{Poster: }Development of Computational Tools for Free Energy Calculations of Chemical Reactions}
 \cventry{\textsc{Summer 2016}}{Dr. Rajarshi Chakrabarti}{Indian Institute Of Technology Bombay}{}{Research Intern}{ Retooled a server with ArchLinux and also simulated patchy colloids (Janus Particles). \\~\\
- \textsc{Project Report: }Computational Survey of Coarse Grained Soft Matter Molecular Dynamics Simulations
+	\textsc{Project Report: }Computational Survey of Coarse Grained Soft Matter Molecular Dynamics Simulations
 }
 
 \subsection{Volunteer Work}
@@ -301,44 +301,44 @@ ice types.
 \subsection{Programming Languages}
 
 \cvdoubleitem{\textsc{Experienced}}{CSS, JS, HTML, Sass, C, C++, R, FORTRAN, OpenMP, OpenMPI, Tcl}
-           {\textsc{Familiar}}{Ruby, Julia, Python, Shell (zsh, bash), Golang, ReactJS, Node, CUDA}
+{\textsc{Familiar}}{Ruby, Julia, Python, Shell (zsh, bash), Golang, ReactJS, Node, CUDA}
 
 \spacesubsection
 \subsection{Projects}
 
 \cvdoubleitem{\textsc{Experienced}}{Android (Cyanogen, LineageOS, AOSP), Web-Design (static), ArchLinux}
-           {\textsc{Familiar}}{Linux Kernel (Android)}
+{\textsc{Familiar}}{Linux Kernel (Android)}
 
 \spacesubsection
 \subsection{Simulation Projects}
 
 \cvdoubleitem{\textsc{Experienced}}{\es \space(Extensible Simulation Package for Research on Soft matter), LAMMPS (Large-scale Atomic/Molecular Massively Parallel Simulator)}
-           {\textsc{Familiar}}{OpenFOAM, GROMACS (GROningen MAchine for Chemical Simulations), VMD (Visual Molecular Dynamics), CPMD (Car-Parrinello Molecular Dynamics)}
+{\textsc{Familiar}}{OpenFOAM, GROMACS (GROningen MAchine for Chemical Simulations), VMD (Visual Molecular Dynamics), CPMD (Car-Parrinello Molecular Dynamics)}
 
 \spacesubsection
 \subsection{Tools}
 
 \cvdoubleitem{\textsc{Experienced}}{\XeLaTeX, pandoc, Git (version control), tmux, ssh, Vim, Sublime Text Editor 3, gnuplot, gadfly, bspwm (tiling window manager), mosh, babun, MATLAB (matrix laboratory), Continuous Integration Services (Wercker, Travis CI, Semaphore CI), docker}
-           {\textsc{Familiar}}{AWS (Amazon Web Services), moltemplate, jekyll, middleman, grunt, gulp, Frameworks (Bourbon, Skeleton, neat) Markup Languages (Textile, HAML, Jade(pug)), Office-Suites (MS, OpenOffice, LibreOffice)}
+{\textsc{Familiar}}{AWS (Amazon Web Services), moltemplate, jekyll, middleman, grunt, gulp, Frameworks (Bourbon, Skeleton, neat) Markup Languages (Textile, HAML, Jade(pug)), Office-Suites (MS, OpenOffice, LibreOffice)}
 
 \spacesubsection
 \subsection{Operating Systems}
 \cvdoubleitem{\textsc{Preferred}}{ArchLinux}
-           {\textsc{Experienced}}{Windows (95, 2000, XP, 7, 8, 10), MacOS (10.7, 10.11, 10.12), Android (1.5, 1.6, 2.2.*, 2.3.*, 4.0.*, 4.4.*, 5.0.*, 6.0.*, 7.* ), Linux Distros (Ubuntu, Sabyon, Puppy, Manjaro, Debian, Red Hat)}
+{\textsc{Experienced}}{Windows (95, 2000, XP, 7, 8, 10), MacOS (10.7, 10.11, 10.12), Android (1.5, 1.6, 2.2.*, 2.3.*, 4.0.*, 4.4.*, 5.0.*, 6.0.*, 7.* ), Linux Distros (Ubuntu, Sabyon, Puppy, Manjaro, Debian, Red Hat)}
 
 \spacesubsection
 \subsection{Opensource Contributions}
 
 \cvdoubleitem{\textsc{Created}}{PixN ROM \& Kernel (AOSP based rom for the Xperia Z5) \\ HaoZeke's LineageOS }
-           {\textsc{Mantained}}{Xperia Z5 LineageOS (14.*)}
+{\textsc{Mantained}}{Xperia Z5 LineageOS (14.*)}
 
 \subsection{Opensource Projects Created}
 
 \cvdoubleitem{\textsc{zenYoda}}{Pandoc based, tup driven stand-alone multi format (revealJS, beamer etc.) presentation system with static site generation.}
-           {\textsc{docuYoda}}{A document generation system based on pandoc and latexmk driven by gulp with yaml configuration and easy templating.}
+{\textsc{docuYoda}}{A document generation system based on pandoc and latexmk driven by gulp with yaml configuration and easy templating.}
 
 \cvdoubleitem{\textsc{starDock}}{Docker compose based containerized self-updating setup for media hosting, with traefik for reverse proxying. Includes music, ebook and video acquisition and management. \\}
-           {\textsc{pyQtNumSim}}{A Qt interface for verbose numerical methods assignments.}
+{\textsc{pyQtNumSim}}{A Qt interface for verbose numerical methods assignments.}
 
 \cvitem{\textsc{grimoire}}{Metalsmith and webpack based open source educational experiment with a strong focus on readability, equations and references.}
 
@@ -373,6 +373,7 @@ ice types.
 \cventry{\textsc{2019--present}}{ASAPBio (Accelerating Science and Publication in biology)}{Ambassador}{}{}{}
 \cventry{\textsc{2019--present}}{ACM (Association for Computing Machinery)}{Professional Member}{}{}{}
 % \cventry{\textsc{2019--present}}{SIGHPC Education (Special Interest Group for High Performance Computing) ACM Chapter}{Professional Member}{}{}{}
+% \cventry{\textsc{2019--present}}{ IEEE IAS (Industrial Applications Society)}{Member}{}{}{}
 \cventry{\textsc{2019--present}}{SPIE (Society of Photo-Optical Instrumentation Engineers)}{Early Career Professional}{}{}{}
 
 \spacesubsection
@@ -384,18 +385,18 @@ ice types.
 \spacesubsection
 \subsection{Reviews}
 \cventry{\textsc{October 2018}}{Journal Of Open Source Software}{Reviewer}{}{}{I review submissions pertaining to molecular dynamics,virtualization, HPC, web platforms, finite element methods, optimization and computer geometry written primarily in C++, Rust, FORTRAN, Julia, Javascript. I am also listed for Python and R submissions. Specifically:
-  \begin{itemize}
-    \item \href{http://joss.theoj.org/papers/093a37e7d698d3350b2d4e564dcfb69b}{Simple-Web-Server: a fast and flexible HTTP/1.1 C++ client and server library}
-    \item \href{http://joss.theoj.org/papers/033b265ce2f8562dc1148b534a09275c}{HyperNaut: a navigator for the hyperbolic plane}
-    \item \href{http://joss.theoj.org/papers/fc7f571e455ef955d1e5dd271343723f}{The Biddy BDD package}
-    \item \href{http://joss.theoj.org/papers/f3b70136a43eb28b9327ec1ce42533c2}{Prest: Open-Source Software for Computational Revealed Preference Analysis}
-  \end{itemize}
+	\begin{itemize}
+		\item \href{http://joss.theoj.org/papers/093a37e7d698d3350b2d4e564dcfb69b}{Simple-Web-Server: a fast and flexible HTTP/1.1 C++ client and server library}
+		\item \href{http://joss.theoj.org/papers/033b265ce2f8562dc1148b534a09275c}{HyperNaut: a navigator for the hyperbolic plane}
+		\item \href{http://joss.theoj.org/papers/fc7f571e455ef955d1e5dd271343723f}{The Biddy BDD package}
+		\item \href{http://joss.theoj.org/papers/f3b70136a43eb28b9327ec1ce42533c2}{Prest: Open-Source Software for Computational Revealed Preference Analysis}
+	\end{itemize}
 }
 
 \spacesection
 \newpage
 \section{Publications}
-{\color{color1}\textsc{Journals}}
+ {\color{color1}\textsc{Journals}}
 
 \nocite{*}
 \printbibliography[heading=none, env=midbib, keyword=journal]
@@ -444,7 +445,7 @@ ice types.
 % this part is a simple cover letter
 %\clearpage
 
-%\recipient{Human Resources}{Some Company Ltd.\\Some Street 123\\12345 Some City} 
+%\recipient{Human Resources}{Some Company Ltd.\\Some Street 123\\12345 Some City}
 %\date{\today}
 %\opening{Dear Sir or Madam,}
 %\closing{Sincerely yours,}
@@ -452,7 +453,7 @@ ice types.
 
 %\makelettertitle
 
-%\lipsum[1-3] 
+%\lipsum[1-3]
 
 %\makeletterclosing
 
