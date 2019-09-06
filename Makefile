@@ -1,7 +1,7 @@
 all:    once
 
 once: 
-	cd curriculum-vitae && latexmk -halt-on-error cv.tex > /dev/null && cp -f cv.pdf ../RG_Latest-cv.pdf
+	cd curriculum-vitae && latexmk -halt-on-error cv.tex > /dev/null && cp -f cv.pdf ../RG_Latest-cv.pdf && cd ../onePage && latexmk -pdfxe -halt-on-error rgOnePage.tex > /dev/null
 
 alert: 
 	cd curriculum-vitae && latexmk -halt-on-error cv.tex
