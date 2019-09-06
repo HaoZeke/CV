@@ -19,7 +19,39 @@
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\documentclass[letterpaper]{deedy-resume} % Use US Letter paper, change to a4paper for A4 
+\documentclass[letterpaper]{deedy-resume} % Use US Letter paper, change to a4paper for A4
+
+\usepackage{geometry}
+\geometry{
+	letterpaper,
+	%total={210mm,297mm},
+	%l,r,t used to be 15mm
+	left=10mm,
+	right=10mm,
+	top=5mm,
+	bottom=5mm,
+}
+\usepackage[
+	backend=biber,
+	sorting=ydnt,
+	minbibnames=8,
+	maxbibnames=9,
+	block=space
+]{biblatex}
+\bibliography{publications}
+
+
+\defbibenvironment{midbib}
+{\list
+	{}
+	{
+		\setlength{\leftmargin}{0mm}
+		\setlength{\itemindent}{-\leftmargin}
+		\setlength{\itemsep}{\bibitemsep}
+		\setlength{\parsep}{\bibparsep}}
+}
+{\endlist}
+{\item}
 
 \begin{document}
 
@@ -29,111 +61,86 @@
 
 \lastupdated % Print the Last Updated text at the top right
 
-\namesection{Debarghya}{Das}{ % Your name
-\urlstyle{same}\url{http://debarghyadas.com} \\ % Your website, LinkedIn profile or other web address
-\href{mailto:dd367@cornell.edu}{dd367@cornell.edu} | 607.379.5733 % Your contact information
+\namesection{Rohit}{Goswami}{ % Your name
+	\urlstyle{same}\url{http://grimoire.science} \\ % Your website, LinkedIn profile or other web address
+	\href{mailto:rgoswami@iitk.ac.in}{rgoswami@iitk.ac.in} | +91 9935135006 % Your contact information
 }
 
 %----------------------------------------------------------------------------------------
 %	LEFT COLUMN
 %----------------------------------------------------------------------------------------
 
-\begin{minipage}[t]{0.33\textwidth} % The left column takes up 33% of the text width of the page
+\begin{minipage}[t]{0.36\textwidth} % The left column takes up 33% of the text width of the page
 
-%------------------------------------------------
-% Education
-%------------------------------------------------
+	%------------------------------------------------
+	% Education
+	%------------------------------------------------
 
-\section{Education} 
+	\section{Education}
 
-\subsection{Cornell University}
+	\subsection{HBTU Kanpur}
 
-\descript{MEng in Computer Science}
-\location{Expected Dec 2014 | Ithaca, NY \\ Cum. GPA: N/A}
+	\descript{B.Tech. in Chemical Engineering}
+	\location{2018 | Kanpur, India}
+	\location{ First Division }
 
-\sectionspace % Some whitespace after the section
+	\sectionspace % Some whitespace after the section
 
-\descript{BS in Computer Science}
-\location{Expected May 2014 | Ithaca, NY}
-Conc. in Software Engineering \\
-College of Engineering \\
-Dean's List (All Semesters) \\
-\location{ Cum. GPA: 3.92 / 4.0 \\
-Major GPA: 3.94 / 4.0}
+	%------------------------------------------------
 
-\sectionspace % Some whitespace after the section
+	\subsection{DPS Kalyanpur}
 
-%------------------------------------------------
+	\descript{Intermediate (AISSCE)}
+	\location{May 2013 | Kanpur, India}
+	\location{Central Board of Secondary Education (CBSE), $87.2\%$}
 
-\subsection{La Martiniere for Boys}
+	\sectionspace % Some whitespace after the section
 
-\location{Grad. May 2011 | Kolkata, India}
+	\descript{High School (AISSE)}
+	\location{May 2011 | Kanpur, India}
+	\location{Central Board of Secondary Education (CBSE), CGPA $9.8$}
 
-\sectionspace % Some whitespace after the section
+	%------------------------------------------------
+	% Coursework
+	%------------------------------------------------
 
-%------------------------------------------------
-% Links
-%------------------------------------------------
+	\section{Internships}
 
-\section{Links} 
+	\subsection{R\&D Industrial Intern}
+	\textbf{2017-2018}\\Keva Fragrances Ltd, Mumbai
+	\subsection{SURGE Scholar}
+	\textbf{Summer 2017}\\Department of Chemistry, IIT Kanpur
+	\subsection{Visiting Scholar}
+	\textbf{Summer 2017}\\ Physics Department, IMSc. Chennai
+	\subsection{Research Intern}
+	\textbf{Summer 2016}\\ Department of Chemistry, IIT Bombay
 
-Github:// \href{https://github.com/deedydas}{\bf deedydas} \\
-LinkedIn:// \href{https://www.linkedin.com/in/debarghyadas}{\bf debarghyadas} \\
-YouTube:// \href{https://www.youtube.com/user/DeedyDash007}{\bf DeedyDash007} \\
-Twitter:// \href{https://twitter.com/debarghya_das}{\bf @debarghya\_das} \\
-Quora:// \href{https://www.quora.com/Debarghya-Das}{\bf Debarghya-Das}
+	% \sectionspace % Some whitespace after the section
 
-\sectionspace % Some whitespace after the section
+	\section{Memberships}
+	\subsection{Current}
+	\textbf{OSA}, \textbf{2014}, Student$\to$Early Career\\
+	\textbf{AIChE}, \textbf{2015}, Student$\to$Young Professional\\
+	\textbf{APS}, \textbf{2015}, Student$\to$Early Career\\
+	\textbf{IEEE}, \textbf{2015}, Student$\to$Young Professional\\
+	\textbf{IChemE}, \textbf{2019}, Associate (AMIChemE)\\
+	\textbf{URSI}, \textbf{2019}, Corresponding \\
+	\textbf{ACM}, \textbf{2019}, Professional \\
+	\textbf{SPIE}, \textbf{2019}, Early Career \\
 
-%------------------------------------------------
-% Coursework
-%------------------------------------------------
 
-\section{Coursework}
+	%------------------------------------------------
+	% Skills
+	%------------------------------------------------
 
-\subsection{Graduate}
-
-Advanced Machine Learning \\
-Open Source Software Engineering \\
-Advanced Interactive Graphics \\
-Compilers + Practicum \\
-Cloud Computing
-
-\sectionspace % Some whitespace after the section
-
-%------------------------------------------------
-
-\subsection{Undergraduate}
-
-Information Retrieval \\
-Operating Systems \\
-Artificial Intelligence + Practicum \\
-Functional Programming \\
-Computer Graphics + Practicum \\
-{\footnotesize \textit{\textbf{(Research Asst. \& Teaching Asst) }}} \\
-Unix Tools and Scripting
-
-\sectionspace % Some whitespace after the section
-
-%------------------------------------------------
-% Skills
-%------------------------------------------------
-
-\section{Skills}
-
-\subsection{Programming}
-
-\location{Over 5000 lines:}
-Java \textbullet{} Shell \textbullet{} JavaScript \textbullet{} Matlab \\
-OCaml \textbullet{} Python \textbullet{} Rails \textbullet{} \LaTeX\ \\ 
-\location{Over 1000 lines:}
-C \textbullet{} C++ \textbullet{} CSS \textbullet{} PHP \textbullet{} Assembly \\
-\location{Familiar:}
-AS3 \textbullet{} iOS \textbullet{} Android \textbullet{} MySQL
-
-\sectionspace % Some whitespace after the section
-
-%----------------------------------------------------------------------------------------
+	\section{Skills}
+	\subsection{Simulation}
+	ESPReSSoMD \textbullet{} LAMMPS \textbullet{} GROMACS \textbullet{} VMD \textbullet{} OVITO\textbullet{} LineageOS Developer\textbullet{} Linux Kernel\textbullet{} QT\textbullet{} CMake\textbullet{} Matlab\\
+	\subsection{Created}
+	zenYoda \textbullet{} docuYoda \textbullet{} d-SEAMS \textbullet{} pyQtNumSim \textbullet{} starDoc \textbullet{} grimoire \textbullet{} hzArchIso\\
+	\subsection{Programming}
+	C++\textbullet{} FORTRAN\textbullet{} Python\textbullet{} Ruby \textbullet{} Julia \textbullet{} Lua \textbullet{} LaTeX \textbullet{} Javascript \textbullet{} Golang \textbullet{} Sass \textbullet{} CSS \textbullet{}Awk \textbullet{} HTML
+	%----------------------------------------------------------------------------------------
 
 \end{minipage} % The end of the left column
 \hfill
@@ -142,112 +149,141 @@ AS3 \textbullet{} iOS \textbullet{} Android \textbullet{} MySQL
 %	RIGHT COLUMN
 %----------------------------------------------------------------------------------------
 %
-\begin{minipage}[t]{0.66\textwidth} % The right column takes up 66% of the text width of the page
+\begin{minipage}[t]{0.63\textwidth} % The right column takes up 66% of the text width of the page
 
-%------------------------------------------------
-% Experience
-%------------------------------------------------
+	%------------------------------------------------
+	% Experience
+	%------------------------------------------------
 
-\section{Experience}
+	\section{Experience}
 
-\runsubsection{Coursera}
-\descript{| KPCB Fellow + Software Engineering Intern}
+	\runsubsection{IIT Kanpur}
+	\descript{| Senior Project Associate}
 
-\location{Expected June 2014 – Sep 2014 | Mountain View, CA}
-\vspace{\topsep} % Hacky fix for awkward extra vertical space
-\begin{tightitemize}
-\item 52 out of 2500 applicants chosen to be a KPCB Fellow 2014.
-\end{tightitemize}
+	\location{2019 – present | Department of Chemistry}
+	\vspace{\topsep} % Hacky fix for awkward extra vertical space
+	I am affiliated to the Femtolab under the project ``Femtosecond Laser Approaches to Quantum Information and Quantum Computation (SPO/MEITY/CHM/2018356)''
+	% \begin{tightitemize}
+	% 	\item 52 out of 2500 applicants chosen to be a KPCB Fellow 2014.
+	% \end{tightitemize}
 
-\sectionspace % Some whitespace after the section
+	\sectionspace % Some whitespace after the section
 
-%------------------------------------------------
+	%------------------------------------------------
 
-\runsubsection{Google}
-\descript{| Software Engineering Intern}
+	\runsubsection{IIT Kanpur}
+	\descript{| Project Associate}
 
-\location{May 2013 – Aug 2013 | Mountain View, CA}
-\begin{tightitemize}
-\item Worked on the YouTube Captions team in primarily vanilla Javascript and Python to plan, design and develop the full stack implementation of a new framework to add and edit Automatic Speech Recognition captions.
-\item Created a backbone.js-like framework for the Captions editor.
-\item All code was reviewed, perfected, and pushed to production.
-\end{tightitemize}
+	\location{2018 – 2019 | Department of Chemical Engineering}
+	\vspace{\topsep} % Hacky fix for awkward extra vertical space
+	I was associated with the Computational Nanoscience group. Over the course of two centrally funded projects, ``Nucleation On Nanostructured Surfaces Computer Simulation      Studies (SPO/DST/CHE/2017294)'' and ``Advanced Computation Research and Education (SPO/MHRD/CC/20130176)'':
+	\vspace{\topsep} % Hacky fix for awkward extra vertical space
+	\begin{tightitemize}
+		\item I worked on the
+		implementation of an enhanced version of the CHILL (CHILL+) algorithm for tracking
+		ice types.
+		\item Designed a linear discriminant analysis technique for near-surface ice structure determination which is undergoing rigorous testing
+		\item Implemented a graph based network connectivity model for ice structures
+		\item Spearheaded the development of High Performance GPU accelerated molecular dynamics simulation analysis tools
+		\item Worked on the determination of optimal GPU cluster configurations
+		\item Designed and administered academic outreach websites
+	\end{tightitemize}
 
-\sectionspace % Some whitespace after the section
 
-%------------------------------------------------
 
-\runsubsection{Phabricator}
-\descript{| Open Source Contributor \& Team Leader}
+	%------------------------------------------------
+	% Research
+	%------------------------------------------------
 
-\location{Jan 2013 – May 2013 | Palo Alto, CA \& Ithaca, NY}
-\begin{tightitemize}
-\item Phabricator is used daily by Facebook, Dropbox, Quora, Asana and more.
-\item I created the Meme generator, the entire Lipsum application, ported Tokens to different apps, fixed many bugs and more in PHP and Shell.
-\item Led a team from MIT, Cornell, IC London and UHelsinki for the project.
-\end{tightitemize}
+	% \section{Research}
 
-\sectionspace % Some whitespace after the section
+	% \runsubsection{Cornell Robot Learning Lab}
+	% \descript{| Head Undergrad Research}
 
-%------------------------------------------------
-% Research
-%------------------------------------------------
+	% \location{Jan 2014 – Present | Ithaca, NY}
+	% Worked with \textbf{\href{http://www.cs.cornell.edu/~ashesh/}{Ashesh Jain}} and \textbf{\href{http://www.cs.cornell.edu/~asaxena/}{Prof Ashutosh Saxena}} to create \textbf{PlanIt}, a tool which learns from large scale user preference feedback to plan robot trajectories in human environments. Publication submitted.
 
-\section{Research}
+	% \sectionspace % Some whitespace after the section
 
-\runsubsection{Cornell Robot Learning Lab}
-\descript{| Head Undergrad Research}
+	% %------------------------------------------------
 
-\location{Jan 2014 – Present | Ithaca, NY}
-Worked with \textbf{\href{http://www.cs.cornell.edu/~ashesh/}{Ashesh Jain}} and \textbf{\href{http://www.cs.cornell.edu/~asaxena/}{Prof Ashutosh Saxena}} to create \textbf{PlanIt}, a tool which learns from large scale user preference feedback to plan robot trajectories in human environments. Publication submitted.
+	% \runsubsection{Cornell Phonetics Lab}
+	% \descript{| Head Undergraduate Researcher}
 
-\sectionspace % Some whitespace after the section
+	% \location{Mar 2012 – May 2013 | Ithaca, NY}
+	% Lead the development of \textbf{QuickTongue}, the first ever breakthrough tongue-controlled game with \textbf{\href{http://conf.ling.cornell.edu/~tilsen/}{Prof Sam Tilsen}} to aid in Linguistics research. Publication submitted.
 
-%------------------------------------------------
+	% \sectionspace % Some whitespace after the section
 
-\runsubsection{Cornell Phonetics Lab}
-\descript{| Head Undergraduate Researcher}
+	\section{Publications}
 
-\location{Mar 2012 – May 2013 | Ithaca, NY}
-Lead the development of \textbf{QuickTongue}, the first ever breakthrough tongue-controlled game with \textbf{\href{http://conf.ling.cornell.edu/~tilsen/}{Prof Sam Tilsen}} to aid in Linguistics research. Publication submitted.
+	\runsubsection{Peer Reviewed}
+	\descript{| Journals (1), Conferences (2), Preprints (1)}
+	\nocite{*}
+	\printbibliography[heading=none]
+	% , env=midbib
+	\section{Accolades, Certifications \& Workshops}
+	\runsubsection{Springer Best Student Paper Award}
+	\descript{| Photonics 2016}
+	\runsubsection{Journal Of Open Source Software}
+	\descript{| Reviewer (7)}
+	{\small
+		\textbf{Workshops\\}
+		\begin{tightitemize}
+			\item \textbf{Artificial Intelligence}, \textit{E\&ICT IIT Kanpur}, May-June 2019
+			\item \textbf{AI Foundations Certificate Course}, \textit{univ.ai}, June 2019
+			\item \textbf{Rare Events Summer School}, \textit{IISc Bangalore}, July 2019
+		\end{tightitemize}
+		\textbf{NPTEL Courses\\}
+		\begin{tightitemize}
+			\item \textbf{Graph Theory}, \textit{IISER Pune}, Jan-Apr 2019
+			\item \textbf{Computational Chemistry and Classical Molecular Dynamics}, \textit{IIT Bombay}, Aug-Sep 2018
+			\item \textbf{Introduction to Parallel Programming in OpenMP}, \textit{IIT Madras}, Aug-Sep 2018
+			\item \textbf{Quantum Computing}, \textit{IIT Kanpur}, Jan-Apr 2018
+		\end{tightitemize}
+	}
 
-\sectionspace % Some whitespace after the section
 
-%------------------------------------------------
-% Awards
-%------------------------------------------------
+	% %------------------------------------------------
 
-\section{Awards} 
+	% \runsubsection{Cornell Phonetics Lab}
+	% \descript{| Head Undergraduate Researcher}
 
-\begin{tabular}{rll}
-2014	 & top 52/2500 & KPCB Engineering Fellow\\
-2014	 & 2\textsuperscript{nd} most points & Google Code Jam, Qualification Round\\
-2014	 & 1\textsuperscript{st}/50 & Microsoft Coding Competition, Cornell\\
-2013	 & National & Jump Trading Challenge Finalist\\
-2013 & 7\textsuperscript{th}/120 & CS 3410 Cache Race Bot Tournament \\
-2012 & 2\textsuperscript{nd}/150 & CS 3110 Biannual Intra-Class Bot Tournament \\
-2011 & National & Indian National Mathematics Olympiad (INMO) Finalist \\
-2010 & National & Comp. Soc. of India's National Programming Contest\\
-\end{tabular}
+	% \location{Mar 2012 – May 2013 | Ithaca, NY}
+	% Lead the development of \textbf{QuickTongue}, the first ever breakthrough tongue-controlled game with \textbf{\href{http://conf.ling.cornell.edu/~tilsen/}{Prof Sam Tilsen}} to aid in Linguistics research. Publication submitted.
 
-\sectionspace % Some whitespace after the section
+	%	\sectionspace % Some whitespace after the section
+	%------------------------------------------------
+	% Awards
+	%------------------------------------------------
 
-%------------------------------------------------
-% Societies
-%------------------------------------------------
+	% \section{Awards}
 
-\section{Societies} 
+	% \begin{tabular}{rll}
+	% 	2014 & top 52/2500                       & KPCB Engineering Fellow               \\
+	% 	2014 & 2\textsuperscript{nd} most points & Google Code Jam, Qualification Round  \\
+	% 	2014 & 1\textsuperscript{st}/50          & Microsoft Coding Competition, Cornell \\
+	% 	2013 & National                          & Jump Trading Challenge Finalist       \\
+	% \end{tabular}
 
-\begin{tabular}{rll}
-2014 & top 12\%ile & Tau Beta Pi Engineering Honor Society\\
-2014 & National & The Global Leadership and Education Forum (tGELF)\\
-2012 & National & Golden Key International Honor Society\\
-2012 & National & National Society of Collegiate Scholars\\
-\end{tabular}
+	% \sectionspace % Some whitespace after the section
 
-\sectionspace % Some whitespace after the section
+	% %------------------------------------------------
+	% % Societies
+	% %------------------------------------------------
 
-%----------------------------------------------------------------------------------------
+	% \section{Societies}
+
+	% \begin{tabular}{rll}
+	% 	2014 & top 12\%ile & Tau Beta Pi Engineering Honor Society             \\
+	% 	2014 & National    & The Global Leadership and Education Forum (tGELF) \\
+	% 	2012 & National    & Golden Key International Honor Society            \\
+	% 	2012 & National    & National Society of Collegiate Scholars           \\
+	% \end{tabular}
+
+	% \sectionspace % Some whitespace after the section
+
+	%----------------------------------------------------------------------------------------
 
 \end{minipage} % The end of the right column
 
