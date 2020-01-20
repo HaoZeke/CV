@@ -168,7 +168,6 @@
 	{#1}
 }
 
-
 % Minion Pro is used as the main font, if you don't
 % have it installed uncomment this line or choose another pretty font.
 % Literata is also included.
@@ -239,6 +238,12 @@
 
 %===========================
 \begin{document}
+
+% Adapted from https://tex.stackexchange.com/a/170219/130845
+\begin{tikzpicture}[remember picture,overlay]
+      \node[anchor=north, yshift=-0.25cm] at (current page.north) {\underline{Last
+		  updated on \today}};
+\end{tikzpicture}
 
 \maketitle
 
