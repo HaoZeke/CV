@@ -97,14 +97,50 @@
 % use guilllemets in bibliography (not german.) Also autostyle superceeded babel
 \usepackage[autostyle=true]{csquotes}
 
-\usepackage[
-	sorting=none,
-	minbibnames=8,
-	maxbibnames=9,
-	block=space
+\usepackage[%
+	sorting=none,%
+	minbibnames=8,%
+	maxbibnames=99,%
+	block=space,%
+	bibencoding=utf8,%
+	backend=biber%
 ]{biblatex}
 
 \bibliography{publications}
+
+% Vanity (https://tex.stackexchange.com/questions/359311/how-to-underline-name-of-specific-authors-in-biblatex)
+\usepackage{xpatch}
+\usepackage[normalem]{ulem} %for \uline
+
+\newbox\savenamebox
+
+% Actually I don't use the bold version anymore
+\newbibmacro*{name:bbold}[2]{%
+  \def\do##1{\iffieldequalstr{hash}{##1}{\setbox\savenamebox\hbox\bgroup \listbreak}{}}%
+  % \def\do##1{\iffieldequalstr{hash}{##1}{\bfseries\setbox\savenamebox\hbox\bgroup \listbreak}{}}%
+  \dolistloop{\boldnames}%
+}
+
+\newbibmacro*{name:ebold}[2]{%
+  \def\do##1{\iffieldequalstr{hash}{##1}{\egroup\uline{\usebox\savenamebox}\listbreak}{}}%
+  \dolistloop{\boldnames}%
+}
+
+\xpatchbibmacro{name:given-family}{\usebibmacro{name:delim}{#2#3#1}}{\usebibmacro{name:delim}{#2#3#1}\begingroup\usebibmacro{name:bbold}{#1}{#2}}{}{}
+
+%\xpretobibmacro{name:given-family}{\begingroup\usebibmacro{name:bbold}{#1}{#2}}{}{}
+\xapptobibmacro{name:delim}{\begingroup\normalfont}{}{}
+
+\xapptobibmacro{name:given-family}{\usebibmacro{name:ebold}{#1}{#2}\endgroup}{}{}
+\xapptobibmacro{name:delim}{\endgroup}{}{}
+
+% Hash in the bbl file
+\newcommand*{\boldnames}{}
+\forcsvlist{\listadd\boldnames}{
+  {0777a94fb5d43a9efe6c5aa525bcd0a8}, % InBold
+  {f695e364a633e61d21101f4f462d9373}, % Also me
+  }
+
 
 
 % get rid of the number-labels ([1], [2], etc.) in front of publications
