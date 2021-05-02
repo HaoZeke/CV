@@ -1,45 +1,104 @@
 % From https://tex.stackexchange.com/questions/31384/how-to-enter-publications-in-press-or-submitted-to-in-bibtex#31411
 @preamble{ " \newcommand{\noop}[1]{} " } % a do-nothing command that serves a purpose
 
-@article{RDGos16,
-  author          = {Rohit Goswami and Debabrata Goswami},
-  title           = {{Quantum Distributed Computing with Shaped Laser Pulses.}},
-  journal         = {13th International Conference on Fiber Optics and
-                  Photonics},
-  year            = 2016,
-  doi             = {10.1364/photonics.2016.w4c.3},
-  keywords        = {conference}
+@article{theeyancheriTranslationalRotationalDynamics2020,
+  title           = {Translational and Rotational Dynamics of a Self-Propelled
+                  {{Janus}} Probe in Crowded Environments},
+  author          = {Theeyancheri, Ligesh and Chaki, Subhasish and Samanta,
+                  Nairhita and Goswami, Rohit and Chelakkot, Raghunath and
+                  Chakrabarti, Rajarshi},
+  date            = {2020-08-05},
+  journaltitle    = {Soft Matter},
+  shortjournal    = {Soft Matter},
+  publisher       = {{The Royal Society of Chemistry;
+                  http://web.archive.org/web/20200805122230/https://pubs.rsc.org/en/content/articlelanding/2020/sm/d0sm00339e}},
+  issn            = {1744-6848},
+  doi             = {10.1039/D0SM00339E},
+  abstract        = {We computationally investigate the dynamics of a
+                  self-propelled Janus probe in crowded environments. The
+                  crowding is caused by the presence of viscoelastic polymers or
+                  non- viscoelastic disconnected monomers. Our simulations show
+                  that the translational, as well as rotational mean square
+                  displacements, have a distinctive three-step growth for fixed
+                  values of self-propulsion force, and steadily increase with
+                  self-propulsion, irrespective of the nature of the crowder. On
+                  the other hand, in the absence of crowders, the rotational
+                  dynamics of the Janus probe is independent of self-propulsion
+                  force. On replacing the repulsive polymers with sticky ones,
+                  translational and rotational mean square displacements of the
+                  Janus probe show a sharp drop. Since different faces of a
+                  Janus particle interact differently with the environment, we
+                  show that the direction of self-propulsion also affects its
+                  dynamics. The ratio of long-time translational and rotational
+                  diffusivities of the self-propelled probe with a fixed
+                  self-propulsion, when plotted against the area fraction of the
+                  crowders, passes through a minima and at higher area fraction
+                  merges to its value in the absence of the crowder. This points
+                  towards the decoupling of translational and rotational
+                  dynamics of the self-propelled probe at intermediate area
+                  fraction of the crowders. However, such
+                  translational-rotational decoupling is absent for passive
+                  probes.},
+  keywords        = {journal},
+  langid          = {english}
 }
 
-@online{RRCNJanus,
-  Author          = {Nairhita Samanta and Rohit Goswami and Rajarshi
-                  Chakrabarti},
-  Title           = {Diffusion of self-propelled Janus tracer in polymeric
-                  environment},
-  Year            = 2017,
-  Eprint          = {1704.06207},
-  Eprinttype      = {arXiv},
-  keywords        = {preprint}
+@article{Goswami2020,
+  author          = {Goswami, Rohit and Goswami, Amrita and Singh, Jayant Kumar},
+  title           = {d-SEAMS: Deferred Structural Elucidation Analysis for
+                  Molecular Simulations},
+  journal         = {Journal of Chemical Information and Modeling},
+  year            = 2020,
+  month           = 3,
+  day             = 20,
+  publisher       = {American Chemical Society},
+  abstract        = {Structural analyses are an integral part of computational
+                  research on nucleation and supercooled water, whose accuracy
+                  and efficiency can impact the validity and feasibility of such
+                  studies. The underlying molecular mechanisms of these often
+                  elusive and computationally expensive processes can be
+                  inferred from the evolution of ice-like structures, determined
+                  using appropriate structural analysis techniques. We present
+                  d-SEAMS, a free and open-source post-processing engine for the
+                  analysis of molecular dynamics trajectories, which is
+                  specifically able to qualitatively classify ice structures, in
+                  both strong confinement and bulk systems. For the first time,
+                  recent algorithms for confined ice structure determination
+                  have been implemented, along with topological network criteria
+                  for bulk ice structure determination. We also propose and
+                  validate a new order parameter for identifying the building
+                  blocks of quasi-two-dimensional ice. Recognizing the need for
+                  customization in structural analysis, d-SEAMS has a unique
+                  code architecture, built with nix, employing a YAML-Lua
+                  scripting pipeline. The software has been designed to be
+                  user-friendly and extensible. The engine outputs are
+                  compatible with popular graphics software suites, allowing for
+                  immediate visual insights into the systems studied. We
+                  demonstrate the features of d-SEAMS by using it to analyze
+                  nucleation in the bulk regime and for quasi-one and
+                  quasi-two-dimensional systems. Structural time evolution and
+                  quantitative metrics are determined for heterogenous ice
+                  nucleation on a silver-exposed b-AgI surface, homogenous ice
+                  nucleation, flat monolayer square ice formation and freezing
+                  of an ice nanotube.},
+  issn            = {1549-9596},
+  doi             = {10.1021/acs.jcim.0c00031},
+  archivePrefix   = {arXiv},
+  eprint          = {1909.09830},
+  eprinttype      = {arxiv},
+  keywords        = {journal}
 }
 
-@inproceedings{gosURSI19,
-  author          = {Rohit Goswami and Amrita Goswami and Debabrata Goswami },
-  booktitle       = {2019 URSI Asia-Pacific Radio Science Conference (AP-RASC)},
-  title           = {Space Filling Curves: Heuristics For Semi Classical Lasing
-                  Computations},
-  year            = 2019,
-  pages           = {1-4},
-  abstract        = {For semi classical lasing, the FDTD (finite difference time
-                  domain) formulation including nonlinearities is often used. We
-                  determine the computational efficiency of such schemes
-                  quantitatively and present a hueristic based on space filling
-                  curves to minimize complexity. The sparse matrix kernel is
-                  shown to be optimized by the utilization of Bi-directional
-                  Incremental Compressed Row Storage (BICRS). Extensions to high
-                  performance clusters and parallelization are also derived.},
-  keywords        = {conference},
-  doi             = {10.23919/URSIAP-RASC.2019.8738612},
-  month           = {March},
+@article{goswamiDonPullPunches2019,
+  langid          = {english},
+  title           = {Don’t Pull Punches in Peer Review},
+  volume          = 574,
+  doi             = {10.1038/d41586-019-03024-2},
+  journaltitle    = {Nature},
+  date            = {2019-10-08},
+  pages           = {176-176},
+  author          = {Goswami, Rohit},
+  keywords        = {journal}
 }
 
 @article{prerRoh19,
@@ -77,4 +136,74 @@
   keywords        = {journal},
   author          = {{Prerna} and Goswami, Rohit and Metya, Atanu K. and
                   Shevkunov, S. V. and Singh, Jayant K.}
+}
+
+@inproceedings{goswamiSemiSupervisedApproachesUltrafast2021,
+  title           = {Semi-{{Supervised Approaches}} to {{Ultrafast Pulse
+                  Shaping}}},
+  booktitle       = {{{ICOL}}-2019},
+  author          = {Goswami, Rohit and Goswami, Amrita and Goswami, Debabrata},
+  editor          = {Singh, Kehar and Gupta, A. K. and Khare, Sudhir and Dixit,
+                  Nimish and Pant, Kamal},
+  date            = 2021,
+  pages           = {747--749},
+  publisher       = {{Springer}},
+  location        = {{Singapore}},
+  doi             = {10.1007/978-981-15-9259-1_172},
+  url             = {10.1007/978-981-15-9259-1_172},
+  abstract        = {Spatiotemporal control aspects of pulsed laser experiments
+                  rely on the ability to modulate the shape of the generated
+                  pulses efficiently. Drawing from current state-of-the-art
+                  theoretical aspects of computational simulations to reduce the
+                  sim-to-real bottlenecks, we devise a novel schematic for the
+                  generation of on-the-fly calibrated pulse trains with more
+                  accountability than existing techniques under the domain of
+                  optimal control theory. The techniques presented further
+                  diminish the divide between experiment and theory.},
+  annotation      = 00000,
+  isbn            = 9789811592591,
+  langid          = {english},
+  series          = {Springer {{Proceedings}} in {{Physics}}},
+  keywords        = {conference},
+}
+
+@inproceedings{gosURSI19,
+  author          = {Rohit Goswami and Amrita Goswami and Debabrata Goswami},
+  booktitle       = {2019 URSI Asia-Pacific Radio Science Conference (AP-RASC)},
+  title           = {Space Filling Curves: Heuristics For Semi Classical Lasing
+                  Computations},
+  year            = 2019,
+  pages           = {1-4},
+  abstract        = {For semi classical lasing, the FDTD (finite difference time
+                  domain) formulation including nonlinearities is often used. We
+                  determine the computational efficiency of such schemes
+                  quantitatively and present a hueristic based on space filling
+                  curves to minimize complexity. The sparse matrix kernel is
+                  shown to be optimized by the utilization of Bi-directional
+                  Incremental Compressed Row Storage (BICRS). Extensions to high
+                  performance clusters and parallelization are also derived.},
+  keywords        = {conference},
+  doi             = {10.23919/URSIAP-RASC.2019.8738612},
+  month           = 3,
+}
+
+@online{RRCNJanus,
+  Author          = {Nairhita Samanta and Rohit Goswami and Rajarshi
+                  Chakrabarti},
+  Title           = {Diffusion of self-propelled Janus tracer in polymeric
+                  environment},
+  Year            = 2017,
+  Eprint          = {1704.06207},
+  Eprinttype      = {arXiv},
+  %keywords        = {preprint}
+}
+
+@article{RDGos16,
+  author          = {Rohit Goswami and Debabrata Goswami},
+  title           = {{Quantum Distributed Computing with Shaped Laser Pulses.}},
+  journal         = {13th International Conference on Fiber Optics and
+                  Photonics},
+  year            = 2016,
+  doi             = {10.1364/photonics.2016.w4c.3},
+  keywords        = {conference}
 }
