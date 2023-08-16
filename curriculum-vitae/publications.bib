@@ -17,6 +17,22 @@
   keywords = {preprint}
 }
 
+@misc{certikHighorderFiniteElement2023,
+  title = {High-Order Finite Element Method for Atomic Structure Calculations},
+  author = {Čertík, Ondřej and Pask, John E. and Fernando, Isuru and Goswami, Rohit and Sukumar, N. and Collins, Lee A. and Manzini, Gianmarco and Vackář, Jiří},
+  date = {2023-07-11},
+  number = {arXiv:2307.05856},
+  eprint = {2307.05856},
+  eprinttype = {arxiv},
+  primaryclass = {physics},
+  publisher = {{arXiv}},
+  url = {http://arxiv.org/abs/2307.05856},
+  urldate = {2023-07-29},
+  abstract = {We introduce featom, an open source code that implements a high-order finite element solver for the radial Schr\textbackslash "odinger, Dirac, and Kohn-Sham equations. The formulation accommodates various mesh types, such as uniform or exponential, and the convergence can be systematically controlled by increasing the number of, or polynomial order of the finite element basis functions. The Dirac equation is solved using a squared Hamiltonian approach to eliminate spurious states. To address the slow convergence of the \$\textbackslash kappa=\textbackslash pm1\$ states due to divergent derivatives at the origin, we incorporate known asymptotic forms into the solutions. We achieve a high level of accuracy (\$10\^\{-8\}\$ Hartree) for total energies and eigenvalues of heavy atoms such as uranium in both Schr\textbackslash "odinger and Dirac Kohn-Sham solutions. We provide detailed convergence studies and computational parameters required to attain commonly required accuracies. Finally, we compare our results with known analytic results as well as the results of other methods. In particular, we calculate benchmark results for atomic numbers (\$Z\$) from 1 to 92, verifying current benchmarks. We demonstrate significant speedup compared to the state-of-the-art shooting solver dftatom. An efficient, modular Fortran 2008 implementation, is provided under an open source, permissive license, including examples, tests, and wrappers to interface to other languages; wherein particular emphasis is placed on the independence (no global variables), reusability, and generality of the individual routines.},
+  archiveprefix = {arXiv},
+  keywords = {preprint}
+}
+
 @article{stateOfFortran2022,
   author={Kedward, Laurence and Aradi, Balint and Certik, Ondrej and
   Curcic, Milan and Ehlert, Sebastian and Engel, Philipp and Goswami,
@@ -255,22 +271,28 @@
   keywords        = {conference}
 }
 
-@inproceedings{goswamiHPCNixRedundancy2023,
-  author={Goswami, Rohit and S, Ruhila and Goswami, Amrita and Goswami, Sonaly and Goswami, Debabrata},
-  booktitle={2022 Seventh International Conference on Parallel, Distributed and Grid Computing (PDGC)},
-  title={Reproducible High Performance Computing Without Redundancy with Nix (accepted)},
-  year={2023},
-  volume={},
-  number={},
+@inproceedings{goswamiReproducibleHighPerformance2022,
+  title = {Reproducible {{High Performance Computing}} without {{Redundancy}} with {{Nix}}},
+  booktitle = {2022 {{Seventh International Conference}} on {{Parallel}}, {{Distributed}} and {{Grid Computing}} ({{PDGC}})},
+  author = {Goswami, Rohit and S., Ruhila and Goswami, Amrita and Goswami, Sonaly and Goswami, Debabrata},
+  date = {2022-11},
+  pages = {238--242},
+  issn = {2573-3079},
+  doi = {10.1109/PDGC56933.2022.10053342},
+  abstract = {High performance computing (HPC) clusters are typically managed in a restrictive manner; the large user base makes cluster administrators unwilling to allow privilege escalation. Here we discuss existing methods of package management, including those which have been developed with scalability in mind, and enumerate the drawbacks and advantages of each management methodology. We contrast the paradigms of containerization via docker, virtualization via KVM, pod-infrastructures via Kubernetes, and specialized HPC packaging systems via Spack and identify key areas of neglect. We demonstrate how functional programming due to reliance on immutable states has been leveraged for deterministic package management via the nix-language expressions. We show its associated ecosystem is a prime candidate for HPC package management. We further develop guidelines and identify bottlenecks in the existing structure and present the methodology by which the nix ecosystem should be developed further as an optimal tool for HPC package management. We assert that the caveats of the nix ecosystem can easily mitigated by considerations relevant only to HPC systems, without compromising on functional methodology and features of the nix-language. We show that benefits of adoption in terms of generating reproducible derivations in a secure manner allow for workflows to be scaled across heterogeneous clusters. In particular, from the implementation hurdles faced during the compilation and running of the d-SEAMS scientific software engine, distributed as a nix-derivation on an HPC cluster, we identify communication protocols for working with SLURM and TORQUE user resource allocation queues. These protocols are heuristically defined and described in terms of the reference implementation required for queue-efficient nix builds.},
+  eventtitle = {2022 {{Seventh International Conference}} on {{Parallel}}, {{Distributed}} and {{Grid Computing}} ({{PDGC}})},
   keywords={conference}
- }
+}
 
-@inproceedings{goswamiReproPhylogenetics2023,
-  author={Goswami, Rohit and S, Ruhila},
-  booktitle={2022 Seventh International Conference on Parallel, Distributed and Grid Computing (PDGC)},
-  title={High Throughput Reproducible Literate Phylogenetic Analysis (accepted)},
-  year={2023},
-  volume={},
-  number={},
+@inproceedings{goswamiHighThroughputReproducible2022,
+  title = {High {{Throughput Reproducible Literate Phylogenetic Analysis}}},
+  booktitle = {2022 {{Seventh International Conference}} on {{Parallel}}, {{Distributed}} and {{Grid Computing}} ({{PDGC}})},
+  author = {Goswami, Rohit and S., Ruhila},
+  date = {2022-11},
+  pages = {337--340},
+  issn = {2573-3079},
+  doi = {10.1109/PDGC56933.2022.10053210},
+  abstract = {We present a holistic approach from a literate programming perspective to frame and solve systems biology problems. In particular, given the large data-sets required for answering questions relating to evolutionary histories we focus on the generalization and workflow required on a typical SLURM or PBS TORQUE queue driven high performance computing cluster. We demonstrate how to leverage multiple CLI tools compiled for efficient use in a portable manner on heterogeneous computational resources and further demonstrating the use of R to generate literate data-driven plots and analysis. High Performance Computing cluster (HPC) bottlenecks and installation barriers are also discussed and mitigation strategies are developed. As a concrete example we demonstrate the estimation of a phylogenetic tree, used to pose and answer questions on evolutionary lineages. In this manner, a generalized approach which can be used for systems biology is elucidated for manipulating phylogenetic data, including its validation, multiple sequence alignment, tree estimation through different models and reproduction.},
+  eventtitle = {2022 {{Seventh International Conference}} on {{Parallel}}, {{Distributed}} and {{Grid Computing}} ({{PDGC}})},
   keywords={conference}
- }
+}
