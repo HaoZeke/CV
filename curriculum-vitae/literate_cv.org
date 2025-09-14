@@ -394,6 +394,13 @@ The rest of the document is written within the ~begin{document}~ environment.
 \maketitle
 #+end_export
 
+* Personal Data
+#+begin_export latex
+\cvitem{Name}{Rohit Goswami}
+\cvitem{Date Of Birth}{10.08.1995}
+\cvitem{Birthplace}{Brookhaven, New York, United States of America}
+#+end_export
+
 * Work Experience :cventries:
 ** Lab COSMO :cventry:
 :PROPERTIES:
@@ -405,3 +412,16 @@ The rest of the document is written within the ~begin{document}~ environment.
 :EMPLOYER: École Polytechnique Fédérale de Lausanne
 :END:
 Postdoctoral position with Prof. Michele Ceriotti and Dr. Guillaume Fraux working on the @@latex:\metatensor@@ ecosystem.
+** Science Institute :cventry:
+:PROPERTIES:
+:CV_ENV: cventry
+:FROM: 2021
+:TO: 2024
+:NOTE: Rannís Research Fund Doctoral Grant Awardee
+:LOCATION: University of Iceland
+:EMPLOYER: Science Institute
+:END:
+Principal investigator for the project on "Magnetic interactions of itinerant electrons modeled using Bayesian machine learning" supervised by Prof. Hannes Jónsson with Prof. Birgir Hrafnkelsson as a co-supervisor.
+
+* Thoughts :noexport:ignoreheading:ignore:
+** WAIT update ~cvitem~ when https://gitlab.com/Titan-C/org-cv/-/issues/18 is closed
