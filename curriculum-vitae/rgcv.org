@@ -18,25 +18,62 @@
 (setq org-latex-packages-alist 'nil)
 (setq org-latex-with-hyperref 'nil)
 (setq org-latex-minted-options 'nil)
-(setq org-latex-listings 'minted)
+(setq org-latex-listings 'listings)
 (setq org-latex-default-packages-alist
-  '(
-    (""     "graphicx"  t)
-    (""     "lipsum"  t)
-;; Extra
-;;    (""     "minted"   t)
-    (""     "rotating"  nil)
-    ("normalem" "ulem"  t)
-    (""     "mathtools"   t)
-    ))
+      '(
+        (""     "color"  t)
+        (""     "graphicx"  t)
+        (""     "lipsum"  t)
+        (""     "rotating"  nil)
+        ("normalem" "ulem"  t)
+        (""     "mathtools"   t)
+        ))
 #+END_SRC
 *** TeX activation :ignoreheading:ignore:
 #+LATEX_COMPILER: xelatex
-#+LATEX_CLASS_OPTIONS: [12pt,a4paper]
-# #+LATEX_HEADER: \addbibresource{../../../STÆ529M.bib}
-*** Preamble :ignoreheading:ignore:
+#+LATEX_CLASS_OPTIONS: [10pt,a4paper, final, factor=1100, stretch=18, shrink=18]
+*** Preamble :ignoreheading:ignore:noexport:
 # Load first
 #+LATEX_HEADER: \usepackage{amssymb,amsmath,MnSymbol}
+To prevent issues with ~\es~
+#+LATEX_HEADER: \usepackage{xspace}
+**** Colors :ignoreheading:ignore:noexport:
+I prefer [[https://macarthur.me/color/rgb(1,52,64)][this one]].
+#+LATEX_HEADER: \definecolor{color1}{RGB}{1, 52, 64}
+**** Geometry :ignoreheading:ignore:noexport:
+The date coloums need to be wider.
+#+LATEX_HEADER: \setlength{\hintscolumnwidth}{2.5cm}
+Setting the actual geometry:
+#+LATEX_HEADER_EXTRA: \usepackage{geometry}
+#+LATEX_HEADER_EXTRA: \geometry{
+#+LATEX_HEADER_EXTRA:  a4paper,
+#+LATEX_HEADER_EXTRA:  left=12mm,
+#+LATEX_HEADER_EXTRA:  right=12mm,
+#+LATEX_HEADER_EXTRA:  top=13mm,
+#+LATEX_HEADER_EXTRA:  bottom=13mm,
+#+LATEX_HEADER_EXTRA: }
+The ~lrt~ used to be 15mm, and ~total~ was 210mm, 297mm.
+***** Page layout helpers
+This is required when changing page layout lengths.
+#+LATEX_HEADER: \AtBeginDocument{\recomputelengths}
+**** Fonts :ignoreheading:ignore:noexport:
+***** Kerning
+Interword spacing is better preserved:
+#+LATEX_HEADER: \microtypecontext{spacing=nonfrench}
+With more effects from microtype with kerning.
+#+LATEX_HEADER: \SetExtraKerning[unit=space]
+#+LATEX_HEADER: {encoding={*}, family={bch}, series={*}, size={footnotesize,small,normalsize}}
+en-dashes with more space around it
+#+LATEX_HEADER: {\textendash={400,400},
+#+LATEX_HEADER: "28={ ,150},           % Left bracket, add space from right
+#+LATEX_HEADER: "29={150, },           % Right bracket, add space from left
+#+LATEX_HEADER: \textquotedblleft={ ,150},        % Left quotation mark, space from right
+#+LATEX_HEADER: \textquotedblright={150, }}       % Right quotation mark, space from left
+Better small caps with tracking works too
+#+LATEX_HEADER: \SetTracking{encoding={*}, shape=sc}{40}
+This enables better optical views.
+#+LATEX_HEADER: \SetProtrusion{encoding={*},family={bch},series={*},size={6,7}}
+#+LATEX_HEADER: {1={ ,750},2={ ,500},3={ ,500},4={ ,500},5={ ,500}, 6={ ,500},7={ ,600},8={ ,500},9={ ,500},0={ ,500}}
 **** Check Boxes :ignoreheading:ignore:
 # Check-boxes
 #+LATEX_HEADER: \usepackage{enumitem}
@@ -75,18 +112,17 @@ custom icons and have finer control over spacing.
 		  updated on \today}};
 \end{tikzpicture}
 #+end_export
-* Employement  :cventries:
-** One job  :cventry:
+* Work Experience :cventries:
+** Lab COSMO :cventry:
 :PROPERTIES:
 :CV_ENV: cventry
-:FROM:     <2014-09-01>
-:TO:     <2017-12-07>
-:LOCATION: a city, a country
-:EMPLOYER: The employer
-:NOTE: Extra note: everybody here loved me
+:FROM:   2025
+:TO:     \textsc{PRESENT}
+:LOCATION: Switzerland
+:NOTE: Systems Specialist
+:EMPLOYER: École Polytechnique Fédérale de Lausanne
 :END:
-
-I write about awesome stuff I do.
+Postdoctoral position with Prof. Michele Ceriotti and Dr. Guillaume Fraux working on the metatensor ecosystem.
 ** Other job  :cventry:
 :PROPERTIES:
 :FROM:     <2013-09-01>
