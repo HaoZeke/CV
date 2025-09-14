@@ -344,7 +344,7 @@ With author underlines from this [[https://tex.stackexchange.com/questions/35931
 {\small\faEnvelope}\hspace{0.3em}\href{mailto:rgoswami@ieee.org}{\ttfamily rgoswami@ieee.org}\\
 {\small\faGithub}\hspace{0.3em}\href{https://github.com/haozeke}{\ttfamily haozeke}\\
 {\small\faTwitter}\hspace{0.3em}\href{https://twitter.com/rg0swami}{\ttfamily rg0swami}\\
-\faGlobe\hspace{0.3em}\href{https://rgoswami.me}{\ttfamily rgoswami.me}
+\faGlobe\hspace{0.3em}\href{https://sh.turtletech.us/rghome}{\ttfamily rgoswami.me}
 }
 #+end_src
 *** Picture
@@ -406,7 +406,7 @@ The rest of the document is written within the ~begin{document}~ environment.
 :PROPERTIES:
 :CV_ENV: cventry
 :FROM:   2025
-:TO:     \textsc{PRESENT}
+:TO:     \textsc{present}
 :LOCATION: Switzerland
 :NOTE: Systems Specialist
 :EMPLOYER: École Polytechnique Fédérale de Lausanne
@@ -418,10 +418,570 @@ Postdoctoral position with Prof. Michele Ceriotti and Dr. Guillaume Fraux workin
 :FROM: 2021
 :TO: 2024
 :NOTE: Rannís Research Fund Doctoral Grant Awardee
-:LOCATION: University of Iceland
-:EMPLOYER: Science Institute
+:LOCATION:
+:EMPLOYER: University of Iceland
 :END:
-Principal investigator for the project on "Magnetic interactions of itinerant electrons modeled using Bayesian machine learning" supervised by Prof. Hannes Jónsson with Prof. Birgir Hrafnkelsson as a co-supervisor.
+Principal investigator for the project on "[[https://sh.turtletech.us/rannis-rg][Magnetic interactions of itinerant electrons modeled using Bayesian machine learning]]" supervised by [[https://web.archive.org/web/20250118113355/https://hj.hi.is/indexE.html][Prof. Hannes Jónsson]] with [[https://web.archive.org/web/20250624005652/https://english.hi.is/staff/birgirhr][Prof. Birgir Hrafnkelsson]] as a co-supervisor.
+
+** Quansight Labs :cventry:
+:PROPERTIES:
+:CV_ENV: cventry
+:FROM: 2021
+:TO: 2025
+:NOTE: Software Engineer II
+:LOCATION: Austin, TX
+:EMPLOYER: Quansight LLC
+:END:
+Working on foundational FOSS scientific codebases and tools like ~numpy~ and ~f2py~ to provide holistic maintenance.
+
+** Faculty of Physical Sciences :cventry:
+:PROPERTIES:
+:CV_ENV: cventry
+:FROM: 2019
+:TO: 2020
+:NOTE: Doctoral Researcher
+:LOCATION: University of Iceland
+:EMPLOYER: Faculty of Physical Sciences
+:END:
+Worked with Prof. Hannes Jónsson on Bayesian analysis and machine learning for /ab-inito/ quantum chemistry; partially employed on the EU funded "ReaxPro" project for potential energy surface saddle search acceleration.
+
+** Department of Chemistry :cventry:
+:PROPERTIES:
+:CV_ENV: cventry
+:FROM: 2019
+:TO: 2020
+:NOTE: Senior Project Associate
+:LOCATION:
+:EMPLOYER: Indian Institute of Technology, Kanpur
+:END:
+I was affiliated to the Femtolab under the project "Femtosecond Laser Approaches to Quantum Information and Quantum Computation".
+
+** Department of Chemical Engineering :cventry:
+:PROPERTIES:
+:CV_ENV: cventry
+:FROM: 2018
+:TO: 2019
+:NOTE: Project Associate
+:LOCATION:
+:EMPLOYER: Indian Institute Of Technology, Kanpur
+:END:
+I was associated with the Computational Nanoscience group. Over the course of two centrally funded projects, "Nucleation On Nanostructured Surfaces Computer Simulation Studies (SPO/DST/CHE/2017294)" and "Advanced Computation Research and Education (SPO/MHRD/CC/20130176)":
+- I worked on the implementation of an enhanced version of the CHILL (CHILL+) algorithm for tracking ice types
+- Designed a linear discriminant analysis technique for near-surface ice structure determination which is undergoing rigorous testing
+- Implemented a graph based network connectivity model for ice structures
+- Spearheaded the development of High Performance GPU accelerated molecular dynamics simulation analysis tools
+- Worked on the determination of optimal GPU cluster configurations
+- Designed and administered academic outreach websites
+
+* Education
+** Graduate studies :cventry:
+:PROPERTIES:
+:CV_ENV: cventry
+:FROM: 2019
+:TO: \textsc{present}
+:NOTE: \emph{Iceland}
+:LOCATION: Reykjavík
+:EMPLOYER: University of Iceland
+:END:
+
+** B.Tech. Chemical Engineering :cventry:
+:PROPERTIES:
+:CV_ENV: cventry
+:FROM: 2014
+:TO: 2018
+:NOTE: \emph{India}
+:LOCATION: Kanpur
+:EMPLOYER: Harcourt Butler Technical University
+:END:
+First Division (\textsc{Project: } Gas Sweetening Plant Design)
+
+** Intermediate (AISSCE) :cventry:
+:PROPERTIES:
+:CV_ENV: cventry
+:FROM: 2011
+:TO: 2013
+:NOTE: \emph{India}
+:LOCATION: Kanpur
+:EMPLOYER: Delhi Public School Kalyanpur
+:END:
+87.2% Central Board of Secondary Education (CBSE)
+
+** High School (AISSE) :cventry:
+:PROPERTIES:
+:CV_ENV: cventry
+:FROM: 2009
+:TO: 2011
+:NOTE: \emph{India}
+:LOCATION: Kanpur
+:EMPLOYER: Delhi Public School Kalyanpur
+:END:
+9.8 Cumulative Grade Point Average (CGPA) in Central Board of Secondary Education (CBSE)
+
+* Voluntary Positions
+** Simulation and Data Lab Computational Chemistry :cventry:
+:PROPERTIES:
+:CV_ENV: cventry
+:FROM: 2021
+:TO: \textsc{present}
+:NOTE: Consultant
+:LOCATION:
+:EMPLOYER: IHPC National competence center for HPC and AI in Iceland
+:END:
+I administered the setup of a ~nix~ based software management module system.
+
+** NumFOCUS :cventry:
+:PROPERTIES:
+:CV_ENV: cventry
+:FROM: 2024
+:TO: \textsc{present}
+:NOTE: Organization Admin
+:LOCATION: GSoC
+:EMPLOYER: NumFOCUS
+:END:
+I was a co-admin for the entire raft of GSoC applications.
+
+** Session CC01 :cventry:
+:PROPERTIES:
+:CV_ENV: cventry
+:FROM: April 2024
+:TO: April 2024
+:NOTE: Session Chair
+:LOCATION:
+:EMPLOYER: APS April Meeting 2024
+:END:
+Virtual session chair for the DCOP session Computational Physics III: Modeling Molecules and Materials
+
+** DVS 2024 Mentorship :cventry:
+:PROPERTIES:
+:CV_ENV: cventry
+:FROM: Feb 2024
+:TO: May 2024
+:NOTE: Mentor
+:LOCATION:
+:EMPLOYER: Data Visualization Society
+:END:
+I mentored a grad student on best practice visualizations for reproducible graphs with ~R~
+
+** IEEE P2881 :cventry:
+:PROPERTIES:
+:CV_ENV: cventry
+:FROM: 2024
+:TO: \textsc{present}
+:NOTE: Participant
+:LOCATION:
+:EMPLOYER: IEEE Standards Committee
+:END:
+Partially responsible for drafting the IEEE Standard for Neural Network Architecture Schema
+
+** PySEAMS: Python Bindings for d-SEAMS :cventry:
+:PROPERTIES:
+:CV_ENV: cventry
+:FROM: June 2023
+:TO: August 2023
+:NOTE: Organization Admin
+:LOCATION:
+:EMPLOYER: Google Summer of Code
+:END:
+Under the Python Software Foundation, mentored and arranged for a Google Summer of Code intern to work on Python bindings to d-SEAMS.
+
+** Artifact Description and Evaluation :cventry:
+:PROPERTIES:
+:CV_ENV: cventry
+:FROM: 2023
+:TO: 2023
+:NOTE: Review Board Member
+:LOCATION:
+:EMPLOYER: ICPP 2023
+:END:
+Partially responsible for handling reproducibility for the 52\textsuperscript{nd} International Conference on Parallel Processing
+
+** Session GG05 :cventry:
+:PROPERTIES:
+:CV_ENV: cventry
+:FROM: March 2023
+:TO:
+:NOTE: Session Chair
+:LOCATION:
+:EMPLOYER: APS March Meeting 2023
+:END:
+Virtual session chair for the DCOP session GG05 on Electrons, Phonons, Electron-Phonon Scattering and Phononics I
+
+** Scipy Proceedings Committee :cventry:
+:PROPERTIES:
+:CV_ENV: cventry
+:FROM: 2022
+:TO: 2023
+:NOTE: Member
+:LOCATION:
+:EMPLOYER: SciPy 2023
+:END:
+Part of the proceedings committee tasked with handling, reviewing, updating the infrastructure to edit the proceedings of Scipy 2023
+
+** IEEE P3173 :cventry:
+:PROPERTIES:
+:CV_ENV: cventry
+:FROM: 2022
+:TO: \textsc{present}
+:NOTE: Vice Chair
+:LOCATION:
+:EMPLOYER: IEEE Standards Committee
+:END:
+Am actively involved in supporting the work on drafting the IEEE Standard for Endocrine Disrupting Chemical Hazard Labelling
+
+** NumPy :cventry:
+:PROPERTIES:
+:CV_ENV: cventry
+:FROM: 2022
+:TO: 2023
+:NOTE: GSoC Mentor
+:LOCATION:
+:EMPLOYER: Python Software Foundation
+:END:
+I mentored a student for working on the F2PY frontend
+
+** LFortran :cventry:
+:PROPERTIES:
+:CV_ENV: cventry
+:FROM: 2022
+:TO: 2023
+:NOTE: GSoC Mentor
+:LOCATION:
+:EMPLOYER: NumFOCUS
+:END:
+I (co-)mentored students working on the Abstract Semantic Representation of LFortran
+
+** Early Career Engineers Committee :cventry:
+:PROPERTIES:
+:CV_ENV: cventry
+:FROM: 2021
+:TO: 2022
+:NOTE: IOP Representative
+:LOCATION:
+:EMPLOYER: Professional Engineering Committee, Royal Academy of Engineering UK
+:END:
+
+** Early Career Member Group Committee :cventry:
+:PROPERTIES:
+:CV_ENV: cventry
+:FROM: 2021
+:TO: 2025
+:NOTE: Ordinary Member
+:LOCATION:
+:EMPLOYER: Institute of Physics
+:END:
+
+** Forum on Graduate Student Affairs :cventry:
+:PROPERTIES:
+:CV_ENV: cventry
+:FROM: 2021
+:TO: 2023
+:NOTE: Nominating Committee Member
+:LOCATION:
+:EMPLOYER: American Physics Society
+:END:
+As part of the nomination committee, along with the past chair and other members, am responsible for validating and selecting nominees for the ballots of FGSA's elections
+
+** Stúdentablaðsins :cventry:
+:PROPERTIES:
+:CV_ENV: cventry
+:FROM: 2021
+:TO: 2023
+:NOTE: Editorial Team Member
+:LOCATION: Stúdentaráð Háskóla Íslands
+:EMPLOYER:
+:END:
+As a member of the editorial board; it is my pleasurable responsibility to provide guidance to the journalists and support my fellow editors in upholding the standards of the student paper of the University; published since 1943
+
+** Summer of Nix :cventry:
+:PROPERTIES:
+:CV_ENV: cventry
+:FROM: August 2021
+:TO: October 2021
+:NOTE: Mentor
+:LOCATION:
+:EMPLOYER: NixOS, NLNet, and Tweag
+:END:
+Will provide guidance to a group of five students who are to work towards packaging NLNet packages
+
+** NBA Insights Through R :cventry:
+:PROPERTIES:
+:CV_ENV: cventry
+:FROM: 2021
+:TO: 2023
+:NOTE: Technical Editor
+:LOCATION:
+:EMPLOYER: Manning Publications
+:END:
+
+** LFortran: Computational Chemistry :cventry:
+:PROPERTIES:
+:CV_ENV: cventry
+:FROM: June 2021
+:TO: August 2021
+:NOTE: Student Developer
+:LOCATION:
+:EMPLOYER: Google Summer of Code
+:END:
+Worked on implementing compile time intrinsic functions and also other front and middle end tasks towards a minimum viable product which compiles production computational chemistry codebases
+
+** Young Professionals Committee :cventry:
+:PROPERTIES:
+:CV_ENV: cventry
+:FROM: 2021
+:TO: 2022
+:NOTE: Publications Subcommittee Chair
+:LOCATION:
+:EMPLOYER: American Institute of Chemical Engineers
+:END:
+Am responsible for overseeing the preparation of all drafts of YPC publications as well as appointing subcommittee positions in coordination with the Chair.
+
+** Instructor Development Committee :cventry:
+:PROPERTIES:
+:CV_ENV: cventry
+:FROM: Sep 2020
+:TO: March 2021
+:NOTE: Special Projects Chair
+:LOCATION:
+:EMPLOYER: The Carpentries
+:END:
+Was tasked with facilitating the formation of task forces/committees as appropriate to accomplish desired project outcomes; in particular with a focus on improving recognition for community contributions
+
+** TeX Users Group Conference (TUG202X) :cventry:
+:PROPERTIES:
+:CV_ENV: cventry
+:FROM: 2020
+:TO: 2022
+:NOTE: Organizing Committee Member
+:LOCATION:
+:EMPLOYER: TeX Users Group
+:END:
+Have administered the TUG Zulip and coordinated social activities (including Topia) from the first online TUG, the 41st in 2020 and continuing to support the committee in subsequent interactions
+
+** Executive Student Council :cventry:
+:PROPERTIES:
+:CV_ENV: cventry
+:FROM: 2020
+:TO: 2021
+:NOTE: Publications Webmaster
+:LOCATION:
+:EMPLOYER: American Institute of Chemical Engineers
+:END:
+Was tasked with managing the publications committee web resources
+
+** IEEE P1940 :cventry:
+:PROPERTIES:
+:CV_ENV: cventry
+:FROM: 2019
+:TO: 2020
+:NOTE: Working group member
+:LOCATION:
+:EMPLOYER: IEEE Standards Committee
+:END:
+Was actively engaged in working with stake holders in industry and academia to create a collection of standard profiles that define integration of authentication services with ISO 8583 used for financial transactions
+
+** R Novice Inflammation :cventry:
+:PROPERTIES:
+:CV_ENV: cventry
+:FROM: 2019
+:TO: \textsc{present}
+:NOTE: Maintainer
+:LOCATION:
+:EMPLOYER: The Carpentries
+:END:
+As a maintainer for the Software Carpentries lesson on R, I work with the community to make sure that lessons stay up-to-date, accurate, functional and cohesive
+
+** CarpentryCon 2020 :cventry:
+:PROPERTIES:
+:CV_ENV: cventry
+:FROM: 2019
+:TO: 2020
+:NOTE: Program Committee co-chair \& Website subcommittee member
+:LOCATION:
+:EMPLOYER: The Carpentries
+:END:
+Working for an international conference with diverse leads from across the world, as part of the program committee I reached out to keynote speakers and managed the overall schedule. Wrote content with the website subcommittee and also contributed due to my web development expertise
+
+** Univ.ai :cventry:
+:PROPERTIES:
+:CV_ENV: cventry
+:FROM: 2019
+:TO: 2022
+:NOTE: Teaching Fellow and Developer
+:LOCATION:
+:EMPLOYER: Earth2Orbit Analytix Private Limited
+:END:
+Tested course-content and developed interactive labs to work with an online cohort of students. Am presently teaching labs and mentoring small batches. I also work with the front and backend teams to facilitate workflows including shopify stores and NodeJS authentication systems
+
+** Animal Welfare Group :cventry:
+:PROPERTIES:
+:CV_ENV: cventry
+:FROM: 2018
+:TO: 2019
+:NOTE: Member and Web-developer
+:LOCATION:
+:EMPLOYER: Indian Institute of Technology Kanpur
+:END:
+Have worked with student bodies to rescue and care for local animals. Also designed and maintained a site with ReactJS to enhance knowledge dissemination
+
+* Teaching Experience
+** HBV505M Software Quality Management :cventry:
+:PROPERTIES:
+:CV_ENV: cventry
+:FROM: Fall 2024
+:TO: Fall 2024
+:NOTE: Supervisory Teacher
+:LOCATION:
+:EMPLOYER: University of Iceland
+:END:
+6 credit undergraduate and graduate course for software engineering best practices.
+
+** REI505M Machine Learning :cventry:
+:PROPERTIES:
+:CV_ENV: cventry
+:FROM: Fall 2023
+:TO: Fall 2023
+:NOTE: Assistant Teacher
+:LOCATION:
+:EMPLOYER: University of Iceland
+:END:
+6 credit undergraduate and graduate introductory course on supervised and unsupervised learning.
+
+** Statistical Inference for Biology :cventry:
+:PROPERTIES:
+:CV_ENV: cventry
+:FROM: May 2022
+:TO: May 2022
+:NOTE: Instructor
+:LOCATION:
+:EMPLOYER: The Jackson Laboratory
+:END:
+~R~ workshop focused on frequentist statistical inference used for experimental analysis and design.
+
+** Web Development for Physicists :cventry:
+:PROPERTIES:
+:CV_ENV: cventry
+:FROM: June 2021
+:TO: June 2021
+:NOTE: Invited Instructor
+:LOCATION:
+:EMPLOYER: IOP Conference for Astronomy and Physics Students
+:END:
+Overview of web design, development and implementation focusing on technologies useful to the working physicist like SSGs and referencing frameworks
+
+** CS106A - Code in Place :cventry:
+:PROPERTIES:
+:CV_ENV: cventry
+:FROM: April 2021
+:TO: May 2021
+:NOTE: Teaching Mentor and Section Leader (TA)
+:LOCATION:
+:EMPLOYER: Stanford University
+:END:
+As a returning section leader for the [[https://compedu.stanford.edu/codeinplace/announcement/][~code-in-place~ initiative]], I was given the additional honor of being a mentor to the first time section leaders for this unique course. Also delivered a Nix workshop for the SLs.
+
+** C++ part 2 - libraries and simulations :cventry:
+:PROPERTIES:
+:CV_ENV: cventry
+:FROM: April 2021
+:TO: April 2021
+:NOTE: Invited Instructor
+:LOCATION:
+:EMPLOYER: IOP Student Community
+:END:
+Intensive ~C++~ workshop which covered augmenting existing code with ~Python~ bindings and using a build automation tool (~CMake~) along with continuous integration.
+
+** Data Carpentry (Social Sciences with R) :cventry:
+:PROPERTIES:
+:CV_ENV: cventry
+:FROM: November 2020
+:TO: November 2020
+:NOTE: Lead Instructor
+:LOCATION:
+:EMPLOYER: Carnegie Mellon University
+:END:
+~R~ workshop focused on tidy data.
+
+** Sciware: Git and GitHub :cventry:
+:PROPERTIES:
+:CV_ENV: cventry
+:FROM: September 2020
+:TO: October 2020
+:NOTE: Lead Instructor
+:LOCATION:
+:EMPLOYER: Flatiron Institute
+:END:
+10 hour long workshop which taught the fundamentals of version control and collaboration using ~git~, with some introductory coverage of more advanced topics like rebases.
+
+** Data Carpentry Workshop for Social Sciences :cventry:
+:PROPERTIES:
+:CV_ENV: cventry
+:FROM: September 2020
+:TO: September 2020
+:NOTE: Lead Instructor
+:LOCATION:
+:EMPLOYER: Georgia Gwinnett College
+:END:
+6 hours on ~R~ practices, with a focus on how base-R gives way to tidy forms of data and the ~tidyverse~.
+
+** Water, Chemicals and more with Computers for Chemistry (WC3m) :cventry:
+:PROPERTIES:
+:CV_ENV: cventry
+:FROM: July 2020
+:TO: August 2020
+:NOTE: Co-Teacher
+:LOCATION:
+:EMPLOYER: Wave Learning Festival
+:END:
+15 hour long summer course for high school students and undergrads on the basics of computational chemistry.
+
+** Online Data Carpentry Workshop :cventry:
+:PROPERTIES:
+:CV_ENV: cventry
+:FROM: June 2020
+:TO: July 2020
+:NOTE: Lead Instructor
+:LOCATION:
+:EMPLOYER: SADiLaR, South Africa
+:END:
+Taught the basics of R, OpenRefine, and some data wrangling to graduate students in the social sciences over three days.
+
+** Data Carpentry Ecology Workshop :cventry:
+:PROPERTIES:
+:CV_ENV: cventry
+:FROM: June 2020
+:TO: July 2020
+:NOTE: Leading Instructor
+:LOCATION:
+:EMPLOYER: Biotech Partners
+:END:
+Taught the basics of Python and assisted with shell lessons for high school students over three days, with a follow up mentoring program.
+
+** Helper :cventry:
+:PROPERTIES:
+:CV_ENV: cventry
+:FROM: May 2020
+:TO: May 2020
+:NOTE: Helper
+:LOCATION:
+:EMPLOYER: CodeRefinery Mega Workshop
+:END:
+
+** CS106A - Code in Place :cventry:
+:PROPERTIES:
+:CV_ENV: cventry
+:FROM: April 2020
+:TO: May 2020
+:NOTE: Section Leader (TA)
+:LOCATION:
+:EMPLOYER: Stanford University
+:END:
+As part of the special COVID-19 [[https://compedu.stanford.edu/codeinplace/announcement/][~code-in-place~ initiative]], I worked as a section leader (teaching assistant). The course covered the fundamentals of computer programming using Python and was built off the first half of CS106A. Also moderated and participated in an AMA session on "Machine Learning for the Physical Sciences" and taught a workshop for the other section leaders entitled "Functional Python Packaging with Nix"
 
 * Thoughts :noexport:ignoreheading:ignore:
 ** WAIT update ~cvitem~ when https://gitlab.com/Titan-C/org-cv/-/issues/18 is closed
+** TODO Use more links
+Will eventually be useful for the HTML export
+** TODO Consider styling links
+Even in LaTeX perhaps
+** TODO Proofread and rework
+Even in LaTeX perhaps
