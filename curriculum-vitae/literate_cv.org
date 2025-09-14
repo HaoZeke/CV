@@ -1,0 +1,52 @@
+#+AUTHOR: Rohit Goswami
+#+email: rgoswami@ieee.org
+#+options: tags:nil
+* Configuration :ignoreheading:ignore:
+:PROPERTIES:
+:VISIBILITY: folded
+:END:
+#+BEGIN_SRC emacs-lisp :exports none :eval always :results none
+(require 'ox-extra)
+(ox-extras-activate '(ignore-headlines))
+(org-babel-tangle)
+#+END_SRC
+
+** Theme :ignoreheading:ignore:
+#+BEGIN_SRC emacs-lisp :exports none :results none :eval always
+;; Details of this method: https://rgoswami.me/posts/org-arb-tex
+(setq org-latex-packages-alist 'nil)
+(setq org-latex-with-hyperref 'nil)
+(setq org-latex-minted-options 'nil)
+(setq org-latex-listings 'listings)
+(setq org-latex-default-packages-alist
+      '(
+        (""     "color"  t)
+        (""     "fontspec"  t)
+        ))
+#+END_SRC
+*** TeX activation :ignoreheading:ignore:
+#+LATEX_COMPILER: xelatex
+#+LATEX_CLASS_OPTIONS: [10pt,a4paper, final, factor=1100, stretch=18, shrink=18]
+* About :ignoreheading:ignore:noexport:
+This is a two-phase exporter so ~tex~ can be handled in ~SRC~ blocks while still
+being placed in a preamble.
+* Preamble :ignoreheading:ignore:noexport:
+To prevent issues with ~\es~ we need ~xspace~.
+#+name: xspace
+#+begin_src latex
+\usepackage{xspace}
+#+end_src
+** Colors
+I prefer [[https://macarthur.me/color/rgb(1,52,64)][this one]].
+#+name: color
+#+begin_src latex
+\definecolor{cvhighlight}{RGB}{1, 52, 64}
+#+end_src
+** Tangle
+Finally we tangle everything together and export once.
+#+begin_src latex :results none :tangle preamble.tex :noweb yes
+<<xspace>>
+<<color>>
+#+end_src
+Which can be included once and for all.
+#+LATEX_HEADER_EXTRA: \include{preamble.tex}
