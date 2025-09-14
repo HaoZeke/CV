@@ -473,7 +473,7 @@ I was associated with the Computational Nanoscience group. Over the course of tw
 - Worked on the determination of optimal GPU cluster configurations
 - Designed and administered academic outreach websites
 
-* Education
+* Education :cventries:
 ** Graduate studies :cventry:
 :PROPERTIES:
 :CV_ENV: cventry
@@ -517,7 +517,7 @@ First Division (\textsc{Project: } Gas Sweetening Plant Design)
 :END:
 9.8 Cumulative Grade Point Average (CGPA) in Central Board of Secondary Education (CBSE)
 
-* Voluntary Positions
+* Voluntary Positions :cventries:
 ** Simulation and Data Lab Computational Chemistry :cventry:
 :PROPERTIES:
 :CV_ENV: cventry
@@ -823,7 +823,7 @@ Tested course-content and developed interactive labs to work with an online coho
 :END:
 Have worked with student bodies to rescue and care for local animals. Also designed and maintained a site with ReactJS to enhance knowledge dissemination
 
-* Teaching Experience
+* Teaching Experience :cventries:
 ** HBV505M Software Quality Management :cventry:
 :PROPERTIES:
 :CV_ENV: cventry
@@ -1012,7 +1012,7 @@ As part of the special COVID-19 [[https://compedu.stanford.edu/codeinplace/annou
 
 #+end_export
 
-* Affiliations & Accolades
+* Affiliations & Accolades :cventries:
 ** Memberships
 ** OSA (Optical Society of America) :cventry:
 :PROPERTIES:
@@ -1658,7 +1658,7 @@ Nonlinear-Optics Session
 :EMPLOYER: JOSS (Journal Of Open Source Software)
 :END:
 
-* Grants Awarded
+* Grants Awarded :cventries:
 ** Personal
 ** Icelandic Research Fund :cventry:
 :PROPERTIES:
@@ -1749,7 +1749,7 @@ Compiling SciPy with LFortran.
 \printbibliography[heading=none, env=midbib, keyword=preprint]
 #+end_export
 
-* Conference Records
+* Conference Records :cventries:
 ** Posters
 ** Inferring Multicomponent Properties Through Thermal Lens :cventry:
 :PROPERTIES:
@@ -2166,7 +2166,7 @@ Authors: M. Mendonca, M. Picus, \underline{R. Goswami}, R. Gommers and M. Pahari
 :END:
 Presented at PyCon India 2021.
 Authors: M. Mendonca, \underline{R. Goswami} and M. Pahari
-* Workshops and Schools
+* Workshops and Schools :cventries:
 # TODO: Get the rest of the CECAM events in
 ** Long time multi-scale simulations of activated events: from theory to practice :cventry:
 :PROPERTIES:
@@ -2599,7 +2599,7 @@ A summer school taught in-person by faculty from Harvard and UCLA, culminating i
 :EMPLOYER: Chemistry Department, IIT Kanpur
 :END:
 
-* Certifications
+* Certifications :cventries:
 ** Coursera
 ** Deep Learning Specialization :cventry:
 :PROPERTIES:
@@ -2662,7 +2662,7 @@ The specialization can be verified by ID [[https://www.coursera.org/account/acco
 :END:
 [[https://nptel.ac.in/noc/social_cert/noc18-cy07/NPTEL18CY07S44800241810011238.jpg][License: NPTEL18CY07S4480024]]
 
-* Graduate Coursework
+* Graduate Coursework :cventries:
 #+begin_export latex
 \blockquote[Note]{Due to COVID-19, grading varies from Pass/Fail to a 10 point scale.}\\
 #+end_export
@@ -2762,7 +2762,7 @@ Metrics and models: Tools for managing software quality and its improvement. Qua
 Course covering "Elements of Statistical Learning: Data Mining, Inference, and Prediction" by Trevor Hastie, Robert Tibshirani, and Jerome Friedman along with "Pattern Recognition and Machine Learning" by Christopher Bishop.
 \textsc{Project:} Predicting Molecular Properties
 
-* Undergraduate Experience
+* Undergraduate Experience :cventries:
 ** Internships
 ** Dr. Debojit Chakrabarty :cventry:
 :PROPERTIES:
