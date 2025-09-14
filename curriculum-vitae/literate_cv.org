@@ -1,6 +1,6 @@
 #+AUTHOR: Rohit Goswami
 #+email: rgoswami@ieee.org
-#+options: tags:nil
+#+options: tags:nil title:nil
 * Configuration :ignoreheading:ignore:
 :PROPERTIES:
 :VISIBILITY: folded
