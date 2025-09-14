@@ -1,0 +1,103 @@
+#+AUTHOR: Rohit Goswami
+#+email: rgoswami@ieee.org
+#+options: tags:nil
+
+* Configuration :ignoreheading:ignore:
+:PROPERTIES:
+:VISIBILITY: folded
+:END:
+#+BEGIN_SRC emacs-lisp :exports none :eval always :results none
+(require 'ox-extra)
+(ox-extras-activate '(ignore-headlines))
+(org-babel-tangle)
+#+END_SRC
+
+** Theme :ignoreheading:ignore:
+#+BEGIN_SRC emacs-lisp :exports none :results none :eval always
+;; Details of this method: https://rgoswami.me/posts/org-arb-tex
+(setq org-latex-packages-alist 'nil)
+(setq org-latex-with-hyperref 'nil)
+(setq org-latex-minted-options 'nil)
+(setq org-latex-listings 'minted)
+(setq org-latex-default-packages-alist
+  '(
+    (""     "graphicx"  t)
+    (""     "lipsum"  t)
+;; Extra
+;;    (""     "minted"   t)
+    (""     "rotating"  nil)
+    ("normalem" "ulem"  t)
+    (""     "mathtools"   t)
+    ))
+#+END_SRC
+*** TeX activation :ignoreheading:ignore:
+#+LATEX_COMPILER: xelatex
+#+LATEX_CLASS_OPTIONS: [12pt,a4paper]
+# #+LATEX_HEADER: \addbibresource{../../../STÆ529M.bib}
+*** Preamble :ignoreheading:ignore:
+# Load first
+#+LATEX_HEADER: \usepackage{amssymb,amsmath,MnSymbol}
+**** Check Boxes :ignoreheading:ignore:
+# Check-boxes
+#+LATEX_HEADER: \usepackage{enumitem}
+#+LATEX_HEADER: \setbox0=\hbox{\large$\square$}
+#+BIND: org-export-latex-list-parameters (:cbon "[{\parbox[][][c]{\wd0}{\large$\boxtimes$}}]" :cboff "[{\parbox[][][c]{\wd0}{\large$\square$}}]")
+# Spacing
+#+LATEX_HEADER: \setlist{nosep} % or \setlist{noitemsep} to leave space around whole list
+* Custom entries :ignoreheading:ignore:
+** Quote :ignoreheading:ignore:
+#+LATEX_HEADER: \quote{``An unproblematic state is a state without creative thought. It's other name is Death.''\\-- David Deutsch}
+** Photo :noexport:ignoreheading:ignore:
+This is resized to look better.
+#+LATEX_HEADER: \photo[84pt]{Picture/rohit}
+** Icons :noexport:ignoreheading:ignore:
+I use the extrainfo command for additional information, since I want to use
+custom icons and have finer control over spacing.
+
+#+LATEX_HEADER: \extrainfo{
+#+LATEX_HEADER: % \faPhone\hspace{0.3em}\href{tel:919935135006}{\ttfamily +91 9935135006}\\
+#+LATEX_HEADER: {\small\faEnvelope}\hspace{0.3em}\href{mailto:rgoswami@ieee.org}{\ttfamily rgoswami@ieee.org}\\
+#+LATEX_HEADER: {\small\faGithub}\hspace{0.3em}\href{https://github.com/haozeke}{\ttfamily haozeke}\\
+#+LATEX_HEADER: {\small\faTwitter}\hspace{0.3em}\href{https://twitter.com/rg0swami}{\ttfamily rg0swami}\\
+#+LATEX_HEADER: \faGlobe\hspace{0.3em}\href{https://rgoswami.me}{\ttfamily rgoswami.me}
+#+LATEX_HEADER: }
+
+** Title :ignore:ignoreheading:
+#+begin_export latex
+\maketitle
+#+end_export
+
+*** Last updated :ignore:ignoreheading:
+#+begin_export latex
+% Adapted from https://tex.stackexchange.com/a/170219/130845
+\begin{tikzpicture}[remember picture,overlay]
+      \node[anchor=north, yshift=-0.25cm] at (current page.north) {\underline{Last
+		  updated on \today}};
+\end{tikzpicture}
+#+end_export
+* Employement  :cventries:
+** One job  :cventry:
+:PROPERTIES:
+:CV_ENV: cventry
+:FROM:     <2014-09-01>
+:TO:     <2017-12-07>
+:LOCATION: a city, a country
+:EMPLOYER: The employer
+:NOTE: Extra note: everybody here loved me
+:END:
+
+I write about awesome stuff I do.
+** Other job  :cventry:
+:PROPERTIES:
+:FROM:     <2013-09-01>
+:TO:     <2014-08-07>
+:LOCATION: my city, your country
+:EMPLOYER: The other employer
+:END:
+
+I write about awesome stuff I do.
+
+* Other stuff I do
+- I work a lot
+- I sleep a lot
+- I eat a lot
