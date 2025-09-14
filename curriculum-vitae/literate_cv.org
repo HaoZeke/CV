@@ -170,6 +170,12 @@ or lists have a perfectly straight-looking right edge.
 
 % Poaching from Espresso's ug.tex
 \newcommand{\es}{\mbox{\textsf{ESPResSo}}\xspace}
+
+% From the upcoming metatensor paper
+\newcommand{\metatensor}{\texttt{metatensor}\xspace}
+\newcommand{\metatomic}{\texttt{metatomic}\xspace}
+\newcommand{\metatrain}{\texttt{metatrain}\xspace}
+\newcommand{\cxx}{C\nolinebreak\hspace{-.05em}\raisebox{.4ex}{\tiny\bf +}\nolinebreak\hspace{-.10em}\raisebox{.4ex}{\tiny\bf +}\xspace}
 #+end_src
 *** Spelling
 #+name: spelling
@@ -398,4 +404,4 @@ The rest of the document is written within the ~begin{document}~ environment.
 :NOTE: Systems Specialist
 :EMPLOYER: École Polytechnique Fédérale de Lausanne
 :END:
-Postdoctoral position with Prof. Michele Ceriotti and Dr. Guillaume Fraux working on the metatensor ecosystem.
+Postdoctoral position with Prof. Michele Ceriotti and Dr. Guillaume Fraux working on the @@latex:\metatensor@@ ecosystem.
