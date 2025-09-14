@@ -42,11 +42,360 @@ I prefer [[https://macarthur.me/color/rgb(1,52,64)][this one]].
 #+begin_src latex
 \definecolor{cvhighlight}{RGB}{1, 52, 64}
 #+end_src
-** Tangle
+** Geometry
+*** Page settings
+#+name: geometry
+#+begin_src latex
+\usepackage{geometry}
+\geometry{
+	a4paper,
+	%total={210mm,297mm},
+	%l,r,t used to be 15mm
+	left=12mm,
+	right=12mm,
+	top=13mm,
+	bottom=13mm,
+}
+
+% required when changing page layout lengths
+\AtBeginDocument{\recomputelengths}
+#+end_src
+#+name: spacing
+#+begin_src latex
+% spacing before (sub)sections
+\newcommand{\spacesection}{\vspace{0.4cm}}
+\newcommand{\spacesubsection}{\vspace{0.2cm}}
+#+end_src
+** Fonts
+#+name: unicode_fonts
+#+begin_src latex
+\usepackage{xunicode}
+\usepackage{xltxtra}
+#+end_src
+*** Kerning
+#+name: font_kerning
+#+begin_src latex
+\microtypecontext{spacing=nonfrench}       % To preserve interword spacing via \nonfrenchspacing.
+
+\SetExtraKerning[unit=space]         % These produce more effects, from microtype with kerning.
+{encoding={*}, family={bch}, series={*}, size={footnotesize,small,normalsize}}
+{\textendash={400,400},         % en-dash, add more space around it
+"28={ ,150},            % Left bracket, add space from right
+"29={150, },           % Right bracket, add space from left
+\textquotedblleft={ ,150},        % Left quotation mark, space from right
+\textquotedblright={150, }}        % Right quotation mark, space from left
+
+
+\SetExtraKerning[unit=space]
+{encoding={*}, family={qhv}, series={b}, size={large,Large}}
+{1={-200,-200},
+ \textendash={400,400}}
+
+\SetTracking{encoding={*}, shape=sc}{40}      % This is for better small caps with tracking and microtype.
+
+\SetProtrusion{encoding={*},family={bch},series={*},size={6,7}}  % This enables better optical views.
+{1={ ,750},2={ ,500},3={ ,500},4={ ,500},5={ ,500},
+ 6={ ,500},7={ ,600},8={ ,500},9={ ,500},0={ ,500}}
+#+end_src
+
+# #+LATEX_HEADER: \microtypecontext{spacing=nonfrench}
+Interword spacing is better preserved by using a non-French spacing model. It
+prevents an extra-wide space from being inserted before certain punctuation
+marks like colons and semicolons, ensuring a more consistent visual flow.
+
+# #+LATEX_HEADER: \SetExtraKerning[unit=space]
+This command initiates the process of defining custom kerning rules. The
+~[unit=space]~ part sets the measurement for the kerning values that follow,
+making them relative to the normal interword space.
+
+# #+LATEX_HEADER: {encoding={*}, family={bch}, series={*}, size={footnotesize,small,normalsize}}
+This specifies that the custom kerning rules will apply to all character
+encodings, to the "bch" font family (a common choice), all font series (like
+bold or regular), and for a range of font sizes (from ~footnotesize~ to
+~normalsize~).
+
+# #+LATEX_HEADER: {\textendash={400,400},
+This rule adds extra space around the en-dash (`–`). The values `400,400` mean that 40% of the normal interword space is added to both the left and right sides of the en-dash. This creates a visually distinct separation, which is common in professional typography for ranges (e.g., "10–12").
+
+# #+LATEX_HEADER: "28={ ,150},
+This sets a kerning rule for the left parenthesis `(`. It adds a small amount of
+space (15% of an interword space) to the *right* of the character. This prevents
+the following text from appearing too close to the parenthesis.
+
+# #+LATEX_HEADER: "29={150, },
+This sets a kerning rule for the right parenthesis `)`. It adds space to the
+*left* of the character, ensuring the preceding text doesn't look crammed
+against it.
+
+# #+LATEX_HEADER: \textquotedblleft={ ,150},
+Similar to the left parenthesis, this adds a small amount of space to the
+*right* of the left double quote (`“`), providing a little breathing room for
+the text that follows.
+
+# #+LATEX_HEADER: \textquotedblright={150, }}
+This adds space to the *left* of the right double quote (`”`), preventing the
+quoted text from looking squashed against the punctuation mark.
+
+# #+LATEX_HEADER: \SetTracking{encoding={*}, shape=sc}{40}
+This command applies "tracking," which is a uniform adjustment of space between
+characters. It targets all character encodings and specifically the small caps
+(`sc`) font shape. The value `40` adds a small amount of space between each
+letter in small caps, which improves their readability and optical balance, as
+they often appear too dense without this adjustment.
+
+# #+LATEX_HEADER: \SetProtrusion{encoding={*},family={bch},series={*},size={6,7}}
+This command starts the definition of "protrusion" rules. Protrusion allows
+certain characters to hang slightly into the margins, creating a more visually
+even line of text. This rule applies to all encodings and font series for the
+"bch" font family, specifically for font sizes 6 and 7.
+
+# #+LATEX_HEADER: {1={ ,750},2={ ,500},3={ ,500},4={ ,500},5={ ,500}, 6={ ,500},7={ ,600},8={ ,500},9={ ,500},0={ ,500}}
+This is the list of specific protrusion values for numbers. For example, `1={
+,750}` allows the digit '1' to protrude by 75% of an interword space into the
+right margin. This is essential for ensuring that columns of numbers in tables
+or lists have a perfectly straight-looking right edge.
+*** Logos
+#+name: logos
+#+begin_src latex
+% I like pretty logos
+\usepackage{metalogo}
+
+% Widen the letter spacing for logos
+\setlogokern{La}{0.2pt}
+\setlogokern{Xe}{0.2pt}
+\setlogokern{eL}{0.2pt}
+\setlogokern{Te}{0.2pt}
+\setlogokern{aT}{0.2pt}
+\setlogokern{eX}{0.2pt}
+
+% Poaching from Espresso's ug.tex
+\newcommand{\es}{\mbox{\textsf{ESPResSo}}\xspace}
+#+end_src
+*** Spelling
+#+name: spelling
+#+begin_src latex
+% german word break/hyphenation rules that's with ngerman (we use english)
+\usepackage[british,UKenglish,USenglish,american]{babel}
+% use guilllemets in bibliography (not german.) Also autostyle superceeded babel
+\usepackage[autostyle=true]{csquotes}
+#+end_src
+*** XeLaTeX fonts
+#+name: xelatex_fonts
+#+begin_src latex
+% Minion Pro is used as the main font, if you don't
+% have it installed uncomment this line or choose another pretty font.
+% Literata is also included.
+%\setmainfont[Numbers=OldStyle]{Minion Pro}
+
+\setmainfont[
+	Path = Fonts/MinionPro/,
+	Numbers=OldStyle,
+	Extension = .otf,
+	UprightFont = *_Regular,
+	ItalicFont = *_It,
+	BoldFont = *_Bold,
+	BoldItalicFont = *_BoldIt
+]{MinionPro}
+
+% Myriad Pro is used as the sans font, if you don't
+% have it installed uncomment this line or choose another pretty font.
+\setsansfont[
+	Path = Fonts/MyriadPro/,
+	Numbers=OldStyle,
+	Extension = .otf,
+	UprightFont = *_Regular,
+	ItalicFont = *_It,
+	BoldFont = *_Bold,
+	BoldItalicFont = *_BoldIt,
+	Ligatures=TeX,
+	Scale=MatchLowercase]{MyriadPro}
+#+end_src
+** Bibliography
+#+name: biblio
+#+begin_src latex
+\usepackage[%
+	sorting=ydnt, %
+	minbibnames=8,%
+	maxbibnames=99,%
+	block=space,%
+	bibencoding=utf8,%
+	backend=biber,%
+	url=false,%
+	isbn=false,%
+]{biblatex}
+
+\bibliography{publications}
+#+end_src
+*** Custom author highlights
+With author underlines from this [[https://tex.stackexchange.com/questions/359311/how-to-underline-name-of-specific-authors-in-biblatex][SO post]].
+- [X] The hash needs to be extracted from the ~bbl~ file.
+- [ ] Refactor to use the user-data section of named snippets
+#+name: biblio_underline
+#+begin_src latex
+\usepackage{xpatch}
+\usepackage[normalem]{ulem} %for \uline
+
+\newbox\savenamebox
+
+% Actually I don't use the bold version anymore
+\newbibmacro*{name:bbold}[2]{%
+  \def\do##1{\iffieldequalstr{hash}{##1}{\setbox\savenamebox\hbox\bgroup \listbreak}{}}%
+  % \def\do##1{\iffieldequalstr{hash}{##1}{\bfseries\setbox\savenamebox\hbox\bgroup \listbreak}{}}%
+  \dolistloop{\boldnames}%
+}
+
+\newbibmacro*{name:ebold}[2]{%
+  \def\do##1{\iffieldequalstr{hash}{##1}{\egroup\uline{\usebox\savenamebox}\listbreak}{}}%
+  \dolistloop{\boldnames}%
+}
+
+\xpatchbibmacro{name:given-family}{\usebibmacro{name:delim}{#2#3#1}}{\usebibmacro{name:delim}{#2#3#1}\begingroup\usebibmacro{name:bbold}{#1}{#2}}{}{}
+
+%\xpretobibmacro{name:given-family}{\begingroup\usebibmacro{name:bbold}{#1}{#2}}{}{}
+\xapptobibmacro{name:delim}{\begingroup\normalfont}{}{}
+
+\xapptobibmacro{name:given-family}{\usebibmacro{name:ebold}{#1}{#2}\endgroup}{}{}
+\xapptobibmacro{name:delim}{\endgroup}{}{}
+
+% Hash in the bbl file
+\newcommand*{\boldnames}{}
+\forcsvlist{\listadd\boldnames}{
+  {0777a94fb5d43a9efe6c5aa525bcd0a8}, % InBold
+  {f695e364a633e61d21101f4f462d9373}, % Also me
+  }
+
+
+
+% get rid of the number-labels ([1], [2], etc.) in front of publications
+\defbibenvironment{midbib}
+{\list
+	{}
+	{
+		\setlength{\leftmargin}{0mm}
+		\setlength{\itemindent}{-\leftmargin}
+		\setlength{\itemsep}{\bibitemsep}
+		\setlength{\parsep}{\bibparsep}}
+}
+{\endlist}
+{\item}
+
+
+% add [DOI] and [PDF] fields at the end of each publication entry
+\DeclareSourcemap{
+	\maps[datatype=bibtex]{
+		% the bibtex entry 'mydoi' gets mapped to 'usera'
+		\map{
+			\step[fieldsource=mydoi]
+			\step[fieldset=usera, origfieldval]
+		}
+		% the bibtex entry 'mypdf' gets mapped to 'usera'
+		\map{
+			\step[fieldsource=mypdf]
+			\step[fieldset=userb, origfieldval]
+		}
+	}
+}
+
+% [DOI] entries in publication
+\DeclareFieldFormat{usera}{\color{color1}[\href{#1}{\textsc{doi}}]}
+\AtEveryBibitem{
+	% put [DOI] stuff at the end of a publication entry
+	\csappto{blx@bbx@\thefield{entrytype}}{%
+		\iffieldundef{usera}{
+			% this gets invoked, once nothing is supplied
+			% via the mypdf or mydoi value.
+			% you could e.g. display a default thing here.
+		}{\space\printfield{usera}}}
+}
+
+% [PDF] entries in publication
+\DeclareFieldFormat{userb}{\color{color1}[\href{#1}{\textsc{pdf}}]}
+
+\AtEveryBibitem{
+	% put [DOI] stuff at the end of a publication entry
+	\csappto{blx@bbx@\thefield{entrytype}}{\iffieldundef{userb}{}{\printfield{userb}}}
+}
+
+\renewcommand*{\mkbibnamegiven}[1]{%
+	\ifitemannotation{highlight}
+	{\textbf{#1}}
+	{#1}}
+
+\renewcommand*{\mkbibnamefamily}[1]{%
+	\ifitemannotation{highlight}
+	{\textbf{#1}}
+	{#1}
+}
+
+#+end_src
+** Author details
+#+name: author_deets
+#+begin_src latex
+% I use the extrainfo command for additional information, since I
+% want to use custom icons and have finer control over spacing.
+\extrainfo{
+% \faPhone\hspace{0.3em}\href{tel:919935135006}{\ttfamily +91 9935135006}\\
+{\small\faEnvelope}\hspace{0.3em}\href{mailto:rgoswami@ieee.org}{\ttfamily rgoswami@ieee.org}\\
+{\small\faGithub}\hspace{0.3em}\href{https://github.com/haozeke}{\ttfamily haozeke}\\
+{\small\faTwitter}\hspace{0.3em}\href{https://twitter.com/rg0swami}{\ttfamily rg0swami}\\
+\faGlobe\hspace{0.3em}\href{https://rgoswami.me}{\ttfamily rgoswami.me}
+}
+#+end_src
+*** Picture
+#+name: author_pic
+#+begin_src latex
+% picture, resized to a height of 84pt
+\photo[84pt]{Picture/rohit}
+#+end_src
+*** Quote
+#+name: author_quote
+#+begin_src latex
+\quote{``An unproblematic state is a state without creative thought. It's other name is Death.''\\-- David Deutsch}
+#+end_src
+** Assemble and Tangle
 Finally we tangle everything together and export once.
 #+begin_src latex :results none :tangle preamble.tex :noweb yes
 <<xspace>>
 <<color>>
+<<font_kerning>>
+<<geometry>>
+<<unicode_fonts>>
+<<logos>>
+<<spelling>>
+<<biblio>>
+<<biblio_underline>>
+<<xelatex_fonts>>
+<<author_quote>>
+<<author_deets>>
+<<author_pic>>
+<<spacing>>
 #+end_src
 Which can be included once and for all.
 #+LATEX_HEADER_EXTRA: \include{preamble.tex}
+The rest of the document is written within the ~begin{document}~ environment.
+* TeX Document Extras :ignore:ignoreheading:
+** Last updated :ignore:ignoreheading:
+#+begin_export latex
+% Adapted from https://tex.stackexchange.com/a/170219/130845
+\begin{tikzpicture}[remember picture,overlay]
+      \node[anchor=north, yshift=-0.25cm] at (current page.north) {\underline{Last
+		  updated on \today}};
+\end{tikzpicture}
+#+end_export
+
+** Title :ignore:ignoreheading:
+#+begin_export latex
+\maketitle
+#+end_export
+
+* Work Experience :cventries:
+** Lab COSMO :cventry:
+:PROPERTIES:
+:CV_ENV: cventry
+:FROM:   2025
+:TO:     \textsc{PRESENT}
+:LOCATION: Switzerland
+:NOTE: Systems Specialist
+:EMPLOYER: École Polytechnique Fédérale de Lausanne
+:END:
+Postdoctoral position with Prof. Michele Ceriotti and Dr. Guillaume Fraux working on the metatensor ecosystem.
