@@ -58,22 +58,63 @@ This is required when changing page layout lengths.
 #+LATEX_HEADER: \AtBeginDocument{\recomputelengths}
 **** Fonts :ignoreheading:ignore:noexport:
 ***** Kerning
-Interword spacing is better preserved:
 #+LATEX_HEADER: \microtypecontext{spacing=nonfrench}
-With more effects from microtype with kerning.
+With this setting, the interword spacing is better preserved by using a
+non-French spacing model. It prevents an extra-wide space from being inserted
+before certain punctuation marks like colons and semicolons, ensuring a more
+consistent visual flow.
+
 #+LATEX_HEADER: \SetExtraKerning[unit=space]
+This command initiates the process of defining custom kerning rules. The
+~[unit=space]~ part sets the measurement for the kerning values that follow,
+making them relative to the normal interword space.
+
 #+LATEX_HEADER: {encoding={*}, family={bch}, series={*}, size={footnotesize,small,normalsize}}
-en-dashes with more space around it
+This specifies that the custom kerning rules will apply to all character
+encodings, to the "bch" font family (a common choice), all font series (like
+bold or regular), and for a range of font sizes (from ~footnotesize~ to
+~normalsize~).
+
 #+LATEX_HEADER: {\textendash={400,400},
-#+LATEX_HEADER: "28={ ,150},           % Left bracket, add space from right
-#+LATEX_HEADER: "29={150, },           % Right bracket, add space from left
-#+LATEX_HEADER: \textquotedblleft={ ,150},        % Left quotation mark, space from right
-#+LATEX_HEADER: \textquotedblright={150, }}       % Right quotation mark, space from left
-Better small caps with tracking works too
+This rule adds extra space around the en-dash (`–`). The values `400,400` mean that 40% of the normal interword space is added to both the left and right sides of the en-dash. This creates a visually distinct separation, which is common in professional typography for ranges (e.g., "10–12").
+
+#+LATEX_HEADER: "28={ ,150},
+This sets a kerning rule for the left parenthesis `(`. It adds a small amount of
+space (15% of an interword space) to the *right* of the character. This prevents
+the following text from appearing too close to the parenthesis.
+
+#+LATEX_HEADER: "29={150, },
+This sets a kerning rule for the right parenthesis `)`. It adds space to the
+*left* of the character, ensuring the preceding text doesn't look crammed
+against it.
+
+#+LATEX_HEADER: \textquotedblleft={ ,150},
+Similar to the left parenthesis, this adds a small amount of space to the
+*right* of the left double quote (`“`), providing a little breathing room for
+the text that follows.
+
+#+LATEX_HEADER: \textquotedblright={150, }}
+This adds space to the *left* of the right double quote (`”`), preventing the
+quoted text from looking squashed against the punctuation mark.
+
 #+LATEX_HEADER: \SetTracking{encoding={*}, shape=sc}{40}
-This enables better optical views.
+This command applies "tracking," which is a uniform adjustment of space between
+characters. It targets all character encodings and specifically the small caps
+(`sc`) font shape. The value `40` adds a small amount of space between each
+letter in small caps, which improves their readability and optical balance, as
+they often appear too dense without this adjustment.
+
 #+LATEX_HEADER: \SetProtrusion{encoding={*},family={bch},series={*},size={6,7}}
+This command starts the definition of "protrusion" rules. Protrusion allows
+certain characters to hang slightly into the margins, creating a more visually
+even line of text. This rule applies to all encodings and font series for the
+"bch" font family, specifically for font sizes 6 and 7.
+
 #+LATEX_HEADER: {1={ ,750},2={ ,500},3={ ,500},4={ ,500},5={ ,500}, 6={ ,500},7={ ,600},8={ ,500},9={ ,500},0={ ,500}}
+This is the list of specific protrusion values for numbers. For example, `1={
+,750}` allows the digit '1' to protrude by 75% of an interword space into the
+right margin. This is essential for ensuring that columns of numbers in tables
+or lists have a perfectly straight-looking right edge.
 **** Check Boxes :ignoreheading:ignore:
 # Check-boxes
 #+LATEX_HEADER: \usepackage{enumitem}
