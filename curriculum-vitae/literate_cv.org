@@ -2785,7 +2785,7 @@ Modeling complex multi-component perfumes in a predictive method via experimenta
 :EMPLOYER: The Institute of Mathematical Sciences, Chennai
 :END:
 Discussed computational techniques for the simulation and understanding of quantum tomography.
-* TODO fix these later :ignoreheading:ignore:
+** TODO fix these later :ignoreheading:ignore:
 # TODO(rg): These are problematic somewhow
 #+begin_export latex
 \cventry{\textsc{Summer 2017}}{Prof. Nisanth Nair}{Indian Institute Of Technology Kanpur}{}{SURGE Scholar}{An exploratory project to understand and deal with bottlenecks in computational chemistry, the major objectives were to investigate hybridization of existing code via OpenMP and MPI.
