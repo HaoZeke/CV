@@ -303,7 +303,7 @@ With author underlines from this [[https://tex.stackexchange.com/questions/35931
 }
 
 % [DOI] entries in publication
-\DeclareFieldFormat{usera}{\color{color1}[\href{#1}{\textsc{doi}}]}
+\DeclareFieldFormat{usera}{\color{cvhighlight}[\href{#1}{\textsc{doi}}]}
 \AtEveryBibitem{
 	% put [DOI] stuff at the end of a publication entry
 	\csappto{blx@bbx@\thefield{entrytype}}{%
@@ -315,7 +315,7 @@ With author underlines from this [[https://tex.stackexchange.com/questions/35931
 }
 
 % [PDF] entries in publication
-\DeclareFieldFormat{userb}{\color{color1}[\href{#1}{\textsc{pdf}}]}
+\DeclareFieldFormat{userb}{\color{cvhighlight}[\href{#1}{\textsc{pdf}}]}
 
 \AtEveryBibitem{
 	% put [DOI] stuff at the end of a publication entry
@@ -522,7 +522,7 @@ First Division (\textsc{Project: } Gas Sweetening Plant Design)
 :PROPERTIES:
 :CV_ENV: cventry
 :FROM: 2021
-:TO: \textsc{present}
+:TO: 2024
 :NOTE: Consultant
 :LOCATION:
 :EMPLOYER: IHPC National competence center for HPC and AI in Iceland
@@ -599,7 +599,7 @@ Partially responsible for handling reproducibility for the 52\textsuperscript{nd
 :PROPERTIES:
 :CV_ENV: cventry
 :FROM: March 2023
-:TO:
+:TO: March 2023
 :NOTE: Session Chair
 :LOCATION:
 :EMPLOYER: APS March Meeting 2023
@@ -977,6 +977,1911 @@ Taught the basics of Python and assisted with shell lessons for high school stud
 :END:
 As part of the special COVID-19 [[https://compedu.stanford.edu/codeinplace/announcement/][~code-in-place~ initiative]], I worked as a section leader (teaching assistant). The course covered the fundamentals of computer programming using Python and was built off the first half of CS106A. Also moderated and participated in an AMA session on "Machine Learning for the Physical Sciences" and taught a workshop for the other section leaders entitled "Functional Python Packaging with Nix"
 
+** Opensource Contributions
+#+begin_export latex
+\cvdoubleitem{\textsc{Created}}{PixN ROM \& Kernel (AOSP based rom for the Xperia Z5) \\ HaoZeke's LineageOS }
+{\textsc{Mantained}}{F2PY (NumPy) \\ ASV (Airspeed Velocity) \\ Xperia Z5 LineageOS (14.*)}
+
+\subsection{Opensource Projects Created}
+
+\cvitem{\textsc{fastMatMR}}{ROpensci reviewed \texttt{R} bindings for the fastest \texttt{C++} library for reading and writing \texttt{.mtx} files}
+
+\cvitem{\textsc{d-SEAMS}}{An open-source, community supported engine for the analysis of molecular dynamics trajectories (co-creator)}
+
+\cvitem{\textsc{wailord}}{FOSS python library to interact with the ORCA suite of quantum chemistry programs, focused on the generation of property specific machine learning data-sets}
+
+\cvdoubleitem{\textsc{zenYoda}}{Pandoc based, tup driven stand-alone multi format (revealJS, beamer etc.) presentation system with static site generation.}
+{\textsc{docuYoda}}{A document generation system based on pandoc and latexmk driven by gulp with yaml configuration and easy templating.}
+
+\cvdoubleitem{\textsc{starDock}}{Docker compose based containerized self-updating setup for media hosting, with traefik for reverse proxying. Includes music, ebook and video acquisition and management. \\}
+{\textsc{pyQtNumSim}}{A Qt interface for verbose numerical methods assignments.}
+
+\cvdoubleitem{\textsc{grimoire}}{Metalsmith and webpack based open source educational experiment with a strong focus on readability, equations and references. \\}
+{\textsc{rgoswami.me}}{A hugo-blog template meant to be used with Emacs orgmode}
+
+% \spacesection{}
+% \section{Interests}
+% \subsection{Chemical Engineering}
+% \cvdoubleitem{\textsc{Experienced}}{Thermodynamics, Transport Phenomena, Mass Transfer, Heat Transfer, Molecular Dynamics (simulations)}
+%            {\textsc{Interested}}{Chemical Reaction Engineering (Statistical Interpretation), Process Control}
+
+% \spacesubsection{}
+% \subsection{Physics}
+% \cvdoubleitem{\textsc{Familiar}}{Statistical Thermodynamics, Density Functional Theory, Rare event sampling, Transition Path Theory, Markov State Models}
+%            {\textsc{Interested}}{Quantum Phenomena (Computing, Thermodynamics), Phase Transitions (Thermodynamics, Simulations), Chaos Theory, Spectroscopy, Entropy, Information Theory}
+
+#+end_export
+
+* Affiliations & Accolades
+** Memberships
+** OSA (Optical Society of America) :cventry:
+:PROPERTIES:
+:CV_ENV: cventry
+:FROM: 2014
+:TO: \textsc{present}
+:NOTE: Student Member -> Early Career Member (2018)
+:LOCATION:
+:EMPLOYER: OSA (Optical Society of America)
+:END:
+
+** AIChE (American Institute Of Chemical Engineers) :cventry:
+:PROPERTIES:
+:CV_ENV: cventry
+:FROM: 2015
+:TO: \textsc{present}
+:NOTE: Student Member -> Young Professional (2018)
+:LOCATION:
+:EMPLOYER: AIChE (American Institute Of Chemical Engineers)
+:END:
+
+** APS (American Physical Society) :cventry:
+:PROPERTIES:
+:CV_ENV: cventry
+:FROM: 2015
+:TO: \textsc{present}
+:NOTE: Student Undergraduate Member -> Early Career Member (2019)
+:LOCATION:
+:EMPLOYER: APS (American Physical Society)
+:END:
+
+** IEEE (Institute of Electrical and Electronics Engineers) :cventry:
+:PROPERTIES:
+:CV_ENV: cventry
+:FROM: 2015
+:TO: \textsc{present}
+:NOTE: Student Member -> Early Career Member (2018)
+:LOCATION:
+:EMPLOYER: IEEE (Institute of Electrical and Electronics Engineers)
+:END:
+
+** IOP (Institute of Physics) :cventry:
+:PROPERTIES:
+:CV_ENV: cventry
+:FROM: 2015
+:TO: \textsc{present}
+:NOTE: Student Member (2018) -> Member (2019)
+:LOCATION:
+:EMPLOYER: IOP (Institute of Physics)
+:END:
+
+** World Taekwondo :cventry:
+:PROPERTIES:
+:CV_ENV: cventry
+:FROM: 2006
+:TO: \textsc{present}
+:NOTE: Red Belt
+:LOCATION:
+:EMPLOYER: World Taekwondo
+:END:
+
+** XDA Developers :cventry:
+:PROPERTIES:
+:CV_ENV: cventry
+:FROM: 2009
+:TO: \textsc{present}
+:NOTE: Senior Member
+:LOCATION:
+:EMPLOYER: XDA Developers
+:END:
+
+# ** SIGHPC (Special Interest Group for High Performance Computing) ACM Chapter :cventry:
+# :PROPERTIES:
+# :CV_ENV: cventry
+# :FROM: 2019
+# :TO: \textsc{present}
+# :NOTE: Professional Member
+# :LOCATION:
+# :EMPLOYER:
+# :END:
+
+# ** SIGHPC-Education ACM Chapter :cventry:
+# :PROPERTIES:
+# :CV_ENV: cventry
+# :FROM: 2019
+# :TO: \textsc{present}
+# :NOTE: Professional Member
+# :LOCATION:
+# :EMPLOYER:
+# :END:
+
+** AAAI (Association for the Advancement of Artificial Intelligence) :cventry:
+:PROPERTIES:
+:CV_ENV: cventry
+:FROM: 2019
+:TO: \textsc{present}
+:NOTE: Professional Member
+:LOCATION:
+:EMPLOYER: AAAI (Association for the Advancement of Artificial Intelligence)
+:END:
+
+** ACM (Association for Computing Machinery) :cventry:
+:PROPERTIES:
+:CV_ENV: cventry
+:FROM: 2019
+:TO: \textsc{present}
+:NOTE: Professional Member
+:LOCATION:
+:EMPLOYER: ACM (Association for Computing Machinery)
+:END:
+Also part of the SIGHPC (Special Interest Group for High Performance Computing) & SIGHPC-Education
+
+** ASAPBio (Accelerating Science and Publication in biology) :cventry:
+:PROPERTIES:
+:CV_ENV: cventry
+:FROM: 2019
+:TO: \textsc{present}
+:NOTE: Ambassador
+:LOCATION:
+:EMPLOYER: ASAPBio (Accelerating Science and Publication in biology)
+:END:
+
+** IChemE (Institute of Chemical Engineers) :cventry:
+:PROPERTIES:
+:CV_ENV: cventry
+:FROM: 2019
+:TO: \textsc{present}
+:NOTE: Associate Member
+:LOCATION:
+:EMPLOYER: IChemE (Institute of Chemical Engineers)
+:END:
+
+** IIChE (Indian Institute of Chemical Engineers) :cventry:
+:PROPERTIES:
+:CV_ENV: cventry
+:FROM: 2019
+:TO: \textsc{present}
+:NOTE: Life Associate Member
+:LOCATION:
+:EMPLOYER: IIChE (Indian Institute of Chemical Engineers)
+:END:
+
+** IEEE IAS (Industrial Applications Society) :cventry:
+:PROPERTIES:
+:CV_ENV: cventry
+:FROM: 2019
+:TO: \textsc{present}
+:NOTE: Member
+:LOCATION:
+:EMPLOYER: IEEE IAS (Industrial Applications Society)
+:END:
+
+** IEI (The Institution of Engineers [India]) :cventry:
+:PROPERTIES:
+:CV_ENV: cventry
+:FROM: 2019
+:TO: \textsc{present}
+:NOTE: Associate Member
+:LOCATION:
+:EMPLOYER: IEI (The Institution of Engineers [India])
+:END:
+
+** InRaSS (Indian Radio Science Society) :cventry:
+:PROPERTIES:
+:CV_ENV: cventry
+:FROM: 2019
+:TO: \textsc{present}
+:NOTE: Student Member
+:LOCATION:
+:EMPLOYER: InRaSS (Indian Radio Science Society)
+:END:
+
+** OSI (Open Source Initiative) :cventry:
+:PROPERTIES:
+:CV_ENV: cventry
+:FROM: 2019
+:TO: \textsc{present}
+:NOTE: Individual Member
+:LOCATION:
+:EMPLOYER: OSI (Open Source Initiative)
+:END:
+
+** OSI (Optical Society of India) :cventry:
+:PROPERTIES:
+:CV_ENV: cventry
+:FROM: 2019
+:TO: \textsc{present}
+:NOTE: Life Fellow
+:LOCATION:
+:EMPLOYER: OSI (Optical Society of India)
+:END:
+
+** SPIE (Society of Photo-Optical Instrumentation Engineers) :cventry:
+:PROPERTIES:
+:CV_ENV: cventry
+:FROM: 2019
+:TO: \textsc{present}
+:NOTE: Early Career Professional
+:LOCATION:
+:EMPLOYER: SPIE (Society of Photo-Optical Instrumentation Engineers)
+:END:
+
+** The Carpentries :cventry:
+:PROPERTIES:
+:CV_ENV: cventry
+:FROM: 2019
+:TO: \textsc{present}
+:NOTE: Certified Instructor
+:LOCATION:
+:EMPLOYER: The Carpentries
+:END:
+
+** URSI (Union Radio-Scientifique Internationale) :cventry:
+:PROPERTIES:
+:CV_ENV: cventry
+:FROM: 2019
+:TO: \textsc{present}
+:NOTE: Corresponding Member
+:LOCATION:
+:EMPLOYER: URSI (Union Radio-Scientifique Internationale)
+:END:
+
+** Heterodox Academy :cventry:
+:PROPERTIES:
+:CV_ENV: cventry
+:FROM: 2020
+:TO: \textsc{present}
+:NOTE: Graduate Affiliate Member
+:LOCATION:
+:EMPLOYER: Heterodox Academy
+:END:
+
+** IGDORE (Institute for Globally Distributed Open Research and Education) :cventry:
+:PROPERTIES:
+:CV_ENV: cventry
+:FROM: 2020
+:TO: \textsc{present}
+:NOTE: Researcher-in-training
+:LOCATION:
+:EMPLOYER: IGDORE (Institute for Globally Distributed Open Research and Education)
+:END:
+
+** COS (Center for Open Sciences) :cventry:
+:PROPERTIES:
+:CV_ENV: cventry
+:FROM: 2020
+:TO: \textsc{present}
+:NOTE: Ambassador
+:LOCATION:
+:EMPLOYER: COS (Center for Open Sciences)
+:END:
+
+** ims (Institute of Mathematical Statistics) :cventry:
+:PROPERTIES:
+:CV_ENV: cventry
+:FROM: 2020
+:TO: \textsc{present}
+:NOTE: Student Member
+:LOCATION:
+:EMPLOYER: ims (Institute of Mathematical Statistics)
+:END:
+
+** Bernoulli Society :cventry:
+:PROPERTIES:
+:CV_ENV: cventry
+:FROM: 2020
+:TO: \textsc{present}
+:NOTE: Student Member
+:LOCATION:
+:EMPLOYER: Bernoulli Society
+:END:
+
+** RSS (Royal Statistical Society) :cventry:
+:PROPERTIES:
+:CV_ENV: cventry
+:FROM: 2020
+:TO: \textsc{present}
+:NOTE: E-Student Member -> Fellow (2022)
+:LOCATION:
+:EMPLOYER: RSS (Royal Statistical Society)
+:END:
+
+** Computing at School :cventry:
+:PROPERTIES:
+:CV_ENV: cventry
+:FROM: 2020
+:TO: \textsc{present}
+:NOTE: Member
+:LOCATION:
+:EMPLOYER: Computing at School
+:END:
+
+** TeX Users Group :cventry:
+:PROPERTIES:
+:CV_ENV: cventry
+:FROM: 2021
+:TO: \textsc{present}
+:NOTE: Member
+:LOCATION:
+:EMPLOYER: TeX Users Group
+:END:
+
+** Nordic Research Software Engineers RY :cventry:
+:PROPERTIES:
+:CV_ENV: cventry
+:FROM: 2021
+:TO: \textsc{present}
+:NOTE: Board Member and founding Secretary (2021--2022)
+:LOCATION:
+:EMPLOYER: Nordic Research Software Engineers RY
+:END:
+
+** HPC Carpentry :cventry:
+:PROPERTIES:
+:CV_ENV: cventry
+:FROM: 2021
+:TO: \textsc{present}
+:NOTE: Member and Steering Council member (2022--2023)
+:LOCATION:
+:EMPLOYER: HPC Carpentry
+:END:
+
+** IOP SIG on Computational Physics :cventry:
+:PROPERTIES:
+:CV_ENV: cventry
+:FROM: 2021
+:TO: 2025
+:NOTE: Ordinary Member
+:LOCATION:
+:EMPLOYER: IOP SIG on Computational Physics
+:END:
+
+** Biochemical Society, UK :cventry:
+:PROPERTIES:
+:CV_ENV: cventry
+:FROM: 2022
+:TO: \textsc{present}
+:NOTE: Graduate Member
+:LOCATION:
+:EMPLOYER: Biochemical Society, UK
+:END:
+
+** Federation of European Biochemical Societies (FEBS) :cventry:
+:PROPERTIES:
+:CV_ENV: cventry
+:FROM: 2022
+:TO: \textsc{present}
+:NOTE: Member
+:LOCATION:
+:EMPLOYER: Federation of European Biochemical Societies (FEBS)
+:END:
+
+** BCS, the Chartered Institute of IT, UK :cventry:
+:PROPERTIES:
+:CV_ENV: cventry
+:FROM: 2022
+:TO: \textsc{present}
+:NOTE: Professional Member
+:LOCATION:
+:EMPLOYER: BCS, the Chartered Institute of IT, UK
+:END:
+
+** BCS Open Source Group :cventry:
+:PROPERTIES:
+:CV_ENV: cventry
+:FROM: 2022
+:TO: \textsc{present}
+:NOTE: Early Career Representative
+:LOCATION:
+:EMPLOYER: BCS Open Source Group
+:END:
+
+** IOP Computational Physics Group :cventry:
+:PROPERTIES:
+:CV_ENV: cventry
+:FROM: 2022
+:TO: \textsc{present}
+:NOTE: Early Career Representative
+:LOCATION:
+:EMPLOYER: IOP Computational Physics Group
+:END:
+
+** British Ecological Society :cventry:
+:PROPERTIES:
+:CV_ENV: cventry
+:FROM: 2022
+:TO: \textsc{present}
+:NOTE: Student Member
+:LOCATION:
+:EMPLOYER: British Ecological Society
+:END:
+
+** RSC (Royal Society of Chemistry) :cventry:
+:PROPERTIES:
+:CV_ENV: cventry
+:FROM: 2022
+:TO: \textsc{present}
+:NOTE: Member (2022)
+:LOCATION:
+:EMPLOYER: RSC (Royal Society of Chemistry)
+:END:
+
+** Awards
+** Tensor Methods and Emerging Applications to the Physical and Data Sciences :cventry:
+:PROPERTIES:
+:CV_ENV: cventry
+:FROM: Spring 2021
+:TO: Spring 2021
+:NOTE: IPAM Fellow
+:LOCATION:
+:EMPLOYER: Institute for Pure and Applied Mathematics
+:END:
+
+** Photonics-2016 :cventry:
+:PROPERTIES:
+:CV_ENV: cventry
+:FROM: December 2016
+:TO: December 2016
+:NOTE: Springer Best Student Paper Award
+:LOCATION:
+:EMPLOYER: Indian Institute Of Technology Kanpur
+:END:
+Nonlinear-Optics Session
+
+** IITG Zephyr Creative Writing :cventry:
+:PROPERTIES:
+:CV_ENV: cventry
+:FROM: 2014
+:TO: 2015
+:NOTE: First Prize
+:LOCATION:
+:EMPLOYER: Indian Institute Of Technology Guwahati
+:END:
+
+** Antaragni IITK-MUN GA-DISEC :cventry:
+:PROPERTIES:
+:CV_ENV: cventry
+:FROM: 2014
+:TO: 2015
+:NOTE: Best Speaker
+:LOCATION:
+:EMPLOYER: Indian Institute Of Technology Kanpur
+:END:
+
+** Reviews
+** IOP - Journal of Physics B: Atomic, Molecular and Optical Physics :cventry:
+:PROPERTIES:
+:CV_ENV: cventry
+:FROM: 2022
+:TO: \textsc{present}
+:NOTE: Reviewer
+:LOCATION:
+:EMPLOYER: IOP
+:END:
+
+** IOP - New Journal of Physics :cventry:
+:PROPERTIES:
+:CV_ENV: cventry
+:FROM: 2022
+:TO: \textsc{present}
+:NOTE: Reviewer
+:LOCATION:
+:EMPLOYER: IOP
+:END:
+
+** IOP - Journal of Optics :cventry:
+:PROPERTIES:
+:CV_ENV: cventry
+:FROM: 2021
+:TO: \textsc{present}
+:NOTE: Reviewer
+:LOCATION:
+:EMPLOYER: IOP
+:END:
+
+** IOP - Journal of Physics: Condensed Matter :cventry:
+:PROPERTIES:
+:CV_ENV: cventry
+:FROM: 2021
+:TO: \textsc{present}
+:NOTE: Reviewer
+:LOCATION:
+:EMPLOYER: IOP
+:END:
+
+** APS Physical Review A :cventry:
+:PROPERTIES:
+:CV_ENV: cventry
+:FROM: 2021
+:TO: \textsc{present}
+:NOTE: Reviewer
+:LOCATION:
+:EMPLOYER: APS
+:END:
+
+** APS Physical Review E :cventry:
+:PROPERTIES:
+:CV_ENV: cventry
+:FROM: 2021
+:TO: \textsc{present}
+:NOTE: Reviewer
+:LOCATION:
+:EMPLOYER: APS
+:END:
+
+** APS Physical Review Applied :cventry:
+:PROPERTIES:
+:CV_ENV: cventry
+:FROM: 2021
+:TO: \textsc{present}
+:NOTE: Reviewer
+:LOCATION:
+:EMPLOYER: APS
+:END:
+
+** Nature Communications :cventry:
+:PROPERTIES:
+:CV_ENV: cventry
+:FROM: 2020
+:TO: \textsc{present}
+:NOTE: Reviewer
+:LOCATION:
+:EMPLOYER: Nature Communications
+:END:
+
+** APS Physical Review Letters :cventry:
+:PROPERTIES:
+:CV_ENV: cventry
+:FROM: 2020
+:TO: \textsc{present}
+:NOTE: Reviewer
+:LOCATION:
+:EMPLOYER: APS
+:END:
+
+** IOP - Machine Learning: Science and Technology :cventry:
+:PROPERTIES:
+:CV_ENV: cventry
+:FROM: 2020
+:TO: \textsc{present}
+:NOTE: Reviewer
+:LOCATION:
+:EMPLOYER: IOP
+:END:
+
+** SPIE Journal of Micro/Nanolithography, MEMS, and MOEMS :cventry:
+:PROPERTIES:
+:CV_ENV: cventry
+:FROM: 2020
+:TO: \textsc{present}
+:NOTE: Reviewer
+:LOCATION:
+:EMPLOYER: SPIE Journal of Micro/Nanolithography, MEMS, and MOEMS
+:END:
+
+** Manning Publications :cventry:
+:PROPERTIES:
+:CV_ENV: cventry
+:FROM: 2020
+:TO: \textsc{present}
+:NOTE: Technical Reviewer
+:LOCATION:
+:EMPLOYER: Manning Publications
+:END:
+
+** JupyterCon 2020 :cventry:
+:PROPERTIES:
+:CV_ENV: cventry
+:FROM: 2020
+:TO: \textsc{present}
+:NOTE: Reviewer
+:LOCATION:
+:EMPLOYER: JupyterCon 2020
+:END:
+
+** PeerJ - Life & Environment :cventry:
+:PROPERTIES:
+:CV_ENV: cventry
+:FROM: 2019
+:TO: \textsc{present}
+:NOTE: Reviewer
+:LOCATION:
+:EMPLOYER: PeerJ
+:END:
+
+** PeerJ - Computer Science :cventry:
+:PROPERTIES:
+:CV_ENV: cventry
+:FROM: 2019
+:TO: \textsc{present}
+:NOTE: Reviewer
+:LOCATION:
+:EMPLOYER: PeerJ
+:END:
+
+** PeerJ - Organic Chemistry :cventry:
+:PROPERTIES:
+:CV_ENV: cventry
+:FROM: 2019
+:TO: \textsc{present}
+:NOTE: Reviewer
+:LOCATION:
+:EMPLOYER: PeerJ
+:END:
+
+** PLOS ONE :cventry:
+:PROPERTIES:
+:CV_ENV: cventry
+:FROM: 2019
+:TO: \textsc{present}
+:NOTE: Reviewer
+:LOCATION:
+:EMPLOYER: PLOS ONE
+:END:
+
+** Journal Of Open Source Software :cventry:
+:PROPERTIES:
+:CV_ENV: cventry
+:FROM: 2018
+:TO: \textsc{present}
+:NOTE: Reviewer
+:LOCATION:
+:EMPLOYER: Journal Of Open Source Software
+:END:
+# I review submissions pertaining to molecular dynamics,virtualization, HPC, web platforms, finite element methods, optimization and computer geometry written primarily in C++, Rust, FORTRAN, Julia, Javascript. I am also listed for Python and R submissions.
+# Specifically:
+# - [[https://joss.theoj.org/papers/76800aa00f4d57b1695c876c0b936ba3][DEPP - Differential Evolution Parallel Program]]
+# - [[https://joss.theoj.org/papers/553250d815e1990db1b89c742854c71a][RHEOS - A Julia package for Rheology Data Analysis]]
+# - [[https://joss.theoj.org/papers/25d51faf73cc17ae3affb51b787bbe18][Computing diffusion coefficients in macromolecular simulations: the Diffusion Coefficient Tool for VMD]]
+# - [[http://joss.theoj.org/papers/093a37e7d698d3350b2d4e564dcfb69b][Simple-Web-Server: a fast and flexible HTTP/1.1 C++ client and server library]]
+# - [[http://joss.theoj.org/papers/033b265ce2f8562dc1148b534a09275c][HyperNaut: a navigator for the hyperbolic plane]]
+# - [[http://joss.theoj.org/papers/fc7f571e455ef955d1e5dd271343723f][The Biddy BDD package]]
+# - [[http://joss.theoj.org/papers/f3b70136a43eb28b9327ec1ce42533c2][Prest: Open-Source Software for Computational Revealed Preference Analysis]]
+
+** Editorial Positions
+** JOSS (Journal Of Open Source Software) :cventry:
+:PROPERTIES:
+:CV_ENV: cventry
+:FROM: 2024
+:TO: \textsc{present}
+:NOTE: Editor
+:LOCATION:
+:EMPLOYER: JOSS (Journal Of Open Source Software)
+:END:
+
+* Grants Awarded
+** Personal
+** Icelandic Research Fund :cventry:
+:PROPERTIES:
+:CV_ENV: cventry
+:FROM: 2020
+:TO: 2023
+:NOTE: Doctoral Fellowship
+:LOCATION: Rannís
+:EMPLOYER: Icelandic Research Fund
+:END:
+Amount: 6650 thousand ISK
+\textsc{Title: }Magnetic interactions of itinerant electrons modeled using Bayesian machine learning.
+
+** Project Leadership
+** COST Action :cventry:
+:PROPERTIES:
+:CV_ENV: cventry
+:FROM: 2025
+:TO: 2029
+:NOTE: Co-Proposer
+:LOCATION: Building Education and One Health with Adaptive Convergence and Open Networks
+:EMPLOYER: COST Action
+:END:
+Amount: 575,000 EUR
+Funding generated for the COST action CA24106, also part of the Management Committee (Iceland).
+
+** Google Summer of Code :cventry:
+:PROPERTIES:
+:CV_ENV: cventry
+:FROM: 2023
+:TO: 2024
+:NOTE: Student Mentee
+:LOCATION: d-SEAMS
+:EMPLOYER: Google Summer of Code
+:END:
+Amount: 6,000 USD
+Funding generated to mentor a first time code contributor writing Python bindings for d-SEAMS.
+
+** NumFocus Small Development Grant :cventry:
+:PROPERTIES:
+:CV_ENV: cventry
+:FROM: 2023
+:TO: 2023
+:NOTE: Software Engineer
+:LOCATION:
+:EMPLOYER: NumFocus
+:END:
+Amount: 10,000 USD
+Compiling SciPy’s Fortran packages with LFortran.
+
+** Google Season of Docs :cventry:
+:PROPERTIES:
+:CV_ENV: cventry
+:FROM: 2022
+:TO: 2022
+:NOTE: Technical writer
+:LOCATION:
+:EMPLOYER: Google Season of Docs
+:END:
+Amount: 10,000 USD
+Funding generated to hire a technical writer full-time for two months.
+
+** NumFocus Small Development Grant :cventry:
+:PROPERTIES:
+:CV_ENV: cventry
+:FROM: 2022
+:TO: 2022
+:NOTE: Software Engineer
+:LOCATION:
+:EMPLOYER: NumFocus
+:END:
+Amount: 4,600 USD
+Compiling SciPy with LFortran.
+* Publications
+#+begin_export latex
+{\color{cvhighlight}\textsc{Journals}}
+\nocite{*}
+\printbibliography[heading=none, env=midbib, keyword=journal]
+
+{\color{cvhighlight}\textsc{Conference Proceedings}}
+
+\nocite{*}
+\printbibliography[heading=none, env=midbib, keyword=conference]
+
+{\color{cvhighlight}\textsc{Preprints}}
+
+\nocite{*}
+\printbibliography[heading=none, env=midbib, keyword=preprint]
+#+end_export
+
+* Conference Records
+** Posters
+** Inferring Multicomponent Properties Through Thermal Lens :cventry:
+:PROPERTIES:
+:CV_ENV: cventry
+:FROM: April 2024
+:TO: April 2024
+:END:
+Presented at APS April Meeting 2024.
+Authors: \underline{R. Goswami}, S. Goswami, and D. Goswami
+
+** Simulated Annealing for Global Search :cventry:
+:PROPERTIES:
+:CV_ENV: cventry
+:FROM: March 2024
+:TO: March 2024
+:END:
+Presented at APS March Meeting 2024.
+Authors: \underline{R. Goswami}, R. S., A. Goswami, S. Goswami, and D. Goswami
+
+** Towards Modular Components for Phylogenetic Estimation :cventry:
+:PROPERTIES:
+:CV_ENV: cventry
+:FROM: March 2023
+:TO: March 2023
+:END:
+Presented at APS March Meeting 2023.
+Authors: \underline{R. Goswami}, R. S.
+
+** Wailord: Parsers and Reproducibility for Quantum Chemistry :cventry:
+:PROPERTIES:
+:CV_ENV: cventry
+:FROM: July 2022
+:TO: July 2022
+:END:
+Presented at SciPyCon 2022.
+Author: \underline{R. Goswami}
+
+** LPython: Interactive LLVM-based Python Compiler for Modern Architectures :cventry:
+:PROPERTIES:
+:CV_ENV: cventry
+:FROM: July 2022
+:TO: July 2022
+:END:
+Presented at SciPyCon 2022.
+Authors: O. Čertík, B. Beckman, N. Gera, S. Lunagariya, G. Singh, \underline{R. Goswami}, T. Shaktivel, and D. Edwards
+
+** Ultrafast Insights for Predictive Fragrance Compounding :cventry:
+:PROPERTIES:
+:CV_ENV: cventry
+:FROM: March 2020
+:TO: March 2020
+:END:
+Presented at ACS Spring 2020 National Meeting.
+Authors: \underline{R. Goswami}, A. K. Rawat, D. Chakrabarty, and D. Goswami
+
+** Qubit Network Barriers to Deep Learning :cventry:
+:PROPERTIES:
+:CV_ENV: cventry
+:FROM: December 2019
+:TO: December 2019
+:END:
+Presented at IEEE WRAP-2019.
+Authors: \underline{R. Goswami}, A. Goswami, and D. Goswami
+
+** Space Filling Curves: Heuristics For Semi Classical Lasing Computations :cventry:
+:PROPERTIES:
+:CV_ENV: cventry
+:FROM: March 2019
+:TO: March 2019
+:END:
+Presented at URSI Asia-Pacific Radio Science Conference (AP-RASC 2019).
+Authors: \underline{R. Goswami}, A. Goswami, and D. Goswami
+
+** FDTD Numerical Computations for Ultrafast Non-linear Optics :cventry:
+:PROPERTIES:
+:CV_ENV: cventry
+:FROM: December 2018
+:TO: December 2018
+:END:
+Presented at Photonics-2018.
+Authors: \underline{R. Goswami}, A. Goswami, and D. Goswami
+
+** Oral Presentations
+** Managing concurrency for high throughput adaptive kinetic monte carlo :cventry:
+:PROPERTIES:
+:CV_ENV: cventry
+:FROM: August 2025
+:TO: August 2025
+:END:
+Presented at ACS Fall 2025.
+Author: \underline{R. Goswami}
+
+** Advocating for standardized APIs for common procedures :cventry:
+:PROPERTIES:
+:CV_ENV: cventry
+:FROM: August 2025
+:TO: August 2025
+:END:
+Presented at Psi-K 2025.
+Authors: Miha Gunde, and \underline{R. Goswami}
+
+** Towards a million atoms and a thousand KMC steps a day :cventry:
+:PROPERTIES:
+:CV_ENV: cventry
+:FROM: July 2025
+:TO: July 2025
+:END:
+Presented at Kernel aKMC Conference 2025.
+Author: \underline{R. Goswami}
+
+** Low Data Saddle Search Acceleration with Bayesian Performance Analysis :cventry:
+:PROPERTIES:
+:CV_ENV: cventry
+:FROM: May 2025
+:TO: May 2025
+:END:
+Presented at Machine Learning in Chemical and Materials Sciences 2025.
+Author: \underline{R. Goswami}
+
+** Contending with concurrency across programming languages :cventry:
+:PROPERTIES:
+:CV_ENV: cventry
+:FROM: March 2025
+:TO: March 2025
+:END:
+Presented at APS Global Physics Summit 2025.
+Author: \underline{R. Goswami}
+
+** Modeling material-dependent thermal beam profiles in fiber optics :cventry:
+:PROPERTIES:
+:CV_ENV: cventry
+:FROM: August 2024
+:TO: August 2024
+:END:
+Presented at ACS Fall 2024.
+Authors: \underline{R. Goswami}, R. S., S. Goswami, and D. Goswami
+
+** Accelerating Saddle Searches with Gaussian Process Regression :cventry:
+:PROPERTIES:
+:CV_ENV: cventry
+:FROM: June 2024
+:TO: June 2024
+:END:
+Presented at CECAM-LTS-MAP: Long time multi-scale simulations of activated events.
+Author: \underline{R. Goswami}
+
+** Throwaway Gaussian Processes for Saddle Searches :cventry:
+:PROPERTIES:
+:CV_ENV: cventry
+:FROM: May 2024
+:TO: May 2024
+:END:
+Presented at Machine Learning in Chemical and Materials Sciences 2024.
+Author: \underline{R. Goswami}
+
+** PySEAMS: Pythonic Structural Elucidation Analysis for Molecular Simulations :cventry:
+:PROPERTIES:
+:CV_ENV: cventry
+:FROM: April 2024
+:TO: April 2024
+:END:
+Presented at APS April Meeting 2024.
+Authors: \underline{R. Goswami}, R. S., and A. Goswami
+
+** Revisiting Scaling Assumptions of Ab-Initio Calculations :cventry:
+:PROPERTIES:
+:CV_ENV: cventry
+:FROM: March 2024
+:TO: March 2024
+:END:
+Presented at APS March Meeting 2024.
+Author: \underline{R. Goswami}
+
+** Scaling workflows from development to HPC :cventry:
+:PROPERTIES:
+:CV_ENV: cventry
+:FROM: February 2024
+:TO: February 2024
+:END:
+Presented at 14\textsuperscript{th} Icelandic HPC Community Workshop.
+Author: \underline{R. Goswami}
+
+** Development, Benchmarks and Workflows :cventry:
+:PROPERTIES:
+:CV_ENV: cventry
+:FROM: February 2024
+:TO: February 2024
+:END:
+Presented at CECAM-ESL: Advancing the Molecular Paradigm.
+Author: \underline{R. Goswami}
+
+** Computational Chemistry and Possible Tensor Applications :cventry:
+:PROPERTIES:
+:CV_ENV: cventry
+:FROM: December 2023
+:TO: December 2023
+:END:
+Presented at IPAM TMRC2 (Tensor Methods Reunion Conference).
+Author: \underline{R. Goswami}
+
+** High-order finite element method for atomic structure calculations :cventry:
+:PROPERTIES:
+:CV_ENV: cventry
+:FROM: April 2023
+:TO: April 2023
+:END:
+Presented at APS April Meeting 2023.
+Authors: \underline{R. Goswami}, O. Čertík, J. E. Pask, I. Fernando, L. A. Collins, G. Manzini, N. Sukumar, and J. Vackář
+
+** Enhancing slideware for computational physics education :cventry:
+:PROPERTIES:
+:CV_ENV: cventry
+:FROM: March 2023
+:TO: March 2023
+:END:
+Presented at APS March Meeting 2023.
+Author: \underline{R. Goswami}
+
+** Intermediate Representations for Quantum Computing :cventry:
+:PROPERTIES:
+:CV_ENV: cventry
+:FROM: March 2023
+:TO: March 2023
+:END:
+Presented at APS March Meeting 2023.
+Authors: \underline{R. Goswami}, S. Goswami and D. Goswami
+
+** Reproducible engines and interfaces on heterogeneous compute resources for structural analysis of deformed systems :cventry:
+:PROPERTIES:
+:CV_ENV: cventry
+:FROM: December 2022
+:TO: December 2022
+:END:
+Presented at APS Mid-Atlantic Section 2022 Meeting.
+Author: \underline{R. Goswami} (Accepted)
+
+** High Throughput Reproducible Literate Phylogenetic Analysis :cventry:
+:PROPERTIES:
+:CV_ENV: cventry
+:FROM: November 2022
+:TO: November 2022
+:END:
+Presented at IEEE PDGC-2022.
+Authors: \underline{R. Goswami}, R. S.
+
+** Reproducible High Performance Computing Without Redundancy with Nix :cventry:
+:PROPERTIES:
+:CV_ENV: cventry
+:FROM: November 2022
+:TO: November 2022
+:END:
+Presented at IEEE PDGC-2022.
+Authors: \underline{R. Goswami}, R. S., A. Goswami, S. Goswami and D. Goswami
+
+** Reproducible Literate Programming Workflows for Censored Data :cventry:
+:PROPERTIES:
+:CV_ENV: cventry
+:FROM: November 2022
+:TO: November 2022
+:END:
+Presented at IOP Machine Learning for Healthcare.
+Authors: \underline{R. Goswami}, R. S.
+
+** Reproducible Environments on Elja with Nix and Spack :cventry:
+:PROPERTIES:
+:CV_ENV: cventry
+:FROM: August 2022
+:TO: August 2022
+:END:
+Presented at 6\textsuperscript{th} Icelandic HPC Community Workshop.
+Author: \underline{R. Goswami}
+
+** Maintaining Fortran in Python in Perpetuity :cventry:
+:PROPERTIES:
+:CV_ENV: cventry
+:FROM: July 2022
+:TO: July 2022
+:END:
+Presented at SciPyCon 2022.
+Authors: \underline{R. Goswami}, M. Mendonca, R. Gommers, and T. Shaktivel
+
+** f2py: Two Decades Later :cventry:
+:PROPERTIES:
+:CV_ENV: cventry
+:FROM: September 2021
+:TO: September 2021
+:END:
+Presented at FortranCon 2021.
+Authors: \underline{R. Goswami}, R. Gommers, M. Mendonca, and P. Peterson
+
+** Implementing Fortran Standardese within LFortran :cventry:
+:PROPERTIES:
+:CV_ENV: cventry
+:FROM: September 2021
+:TO: September 2021
+:END:
+Presented at FortranCon 2021.
+Authors: \underline{R. Goswami} and O. Čertík
+
+** Continuous Integration and TeX with Org-Mode :cventry:
+:PROPERTIES:
+:CV_ENV: cventry
+:FROM: August 2021
+:TO: August 2021
+:END:
+Presented at TUG21, 42nd Annual Conference of the TeX Users Group.
+Author: \underline{R. Goswami}
+
+** Modern documentation across languages :cventry:
+:PROPERTIES:
+:CV_ENV: cventry
+:FROM: July 2021
+:TO: July 2021
+:END:
+Presented at ACM SERI 2021.
+Author: \underline{R. Goswami}
+
+** Nix from the dark ages (without Root) :cventry:
+:PROPERTIES:
+:CV_ENV: cventry
+:FROM: October 2020
+:TO: October 2020
+:END:
+Presented at NixCon 2020.
+Author: \underline{R. Goswami} (Lightning Talk)
+
+** Reproducible Scalable Workflows with Nix, Papermill and Renku :cventry:
+:PROPERTIES:
+:CV_ENV: cventry
+:FROM: October 2020
+:TO: October 2020
+:END:
+Presented at PyCon India 2020.
+Author: \underline{R. Goswami}
+
+** Reproducible Environments with the Nix Packaging System :cventry:
+:PROPERTIES:
+:CV_ENV: cventry
+:FROM: August 2020
+:TO: August 2020
+:END:
+Presented at CarpentryCon 2020.
+Authors: \underline{R. Goswami} and A. Goswami
+
+** LFortran: Interactive LLVM-based Fortran Compiler for Modern Architectures :cventry:
+:PROPERTIES:
+:CV_ENV: cventry
+:FROM: July 2020
+:TO: July 2020
+:END:
+Presented at FortranCon 2020.
+Authors: O. Čertík, N. Maan, A. Pandey, M. Curcic, P. Brady, Z. Jibben, N. Carlson, \underline{R. Goswami}, A. Shahmoradi and A. Markus (Presented by Ondřej)
+
+** Process Safety in terms of Latent Dirichlet Allocations :cventry:
+:PROPERTIES:
+:CV_ENV: cventry
+:FROM: December 2019
+:TO: December 2019
+:END:
+Presented at 72nd Annual Session of of the Indian Institute of Chemical Engineers, CHEMCON-2019.
+Author: \underline{R. Goswami} (Accepted)
+
+** Semi-Supervised Approaches to Ultrafast Optimal Control Theory :cventry:
+:PROPERTIES:
+:CV_ENV: cventry
+:FROM: October 2019
+:TO: October 2019
+:END:
+Presented at 43rd Symposium of the Optical Society of India, International Conference on Optics & Electro-Optics.
+Authors: \underline{R. Goswami}, A. Goswami and D. Goswami
+
+** Quantum Distributed Computing with Shaped Laser Pulses :cventry:
+:PROPERTIES:
+:CV_ENV: cventry
+:FROM: December 2016
+:TO: December 2016
+:END:
+Presented at 13th International Conference on Fiber Optics and Photonics.
+Authors: \underline{R. Goswami} and D. Goswami
+
+** Sprint Mentorship
+** NumPy Sprint :cventry:
+:PROPERTIES:
+:CV_ENV: cventry
+:FROM: December 4\textsuperscript{th} 2022
+:TO: December 4\textsuperscript{th} 2022
+:END:
+Presented at PyData Global 2022.
+Authors: G. Kathiresan, I. Pawson, \underline{R. Goswami}, and M. Pahari
+
+** NumPy Sprint :cventry:
+:PROPERTIES:
+:CV_ENV: cventry
+:FROM: September 16\textsuperscript{th} 2022
+:TO: September 16\textsuperscript{th} 2022
+:END:
+Presented at Grace Hopper Open Source Day 2022.
+Authors: \underline{R. Goswami}, R. Barnowski, B. Sipőcz, M. Mendonca and I. Pawson
+
+** NumPy-SciPy Sprint :cventry:
+:PROPERTIES:
+:CV_ENV: cventry
+:FROM: October 30\textsuperscript{th} 2021
+:TO: October 30\textsuperscript{th} 2021
+:END:
+Presented at PyData Global 2021.
+Authors: M. Mendonca, M. Picus, \underline{R. Goswami}, R. Gommers and M. Pahari
+
+** NumPy Sprint :cventry:
+:PROPERTIES:
+:CV_ENV: cventry
+:FROM: September 20\textsuperscript{th} 2021
+:TO: September 20\textsuperscript{th} 2021
+:END:
+Presented at PyCon India 2021.
+Authors: M. Mendonca, \underline{R. Goswami} and M. Pahari
+* Workshops and Schools
+# TODO: Get the rest of the CECAM events in
+** Long time multi-scale simulations of activated events: from theory to practice :cventry:
+:PROPERTIES:
+:CV_ENV: cventry
+:FROM: June 2024
+:TO: June 2024
+:NOTE: Was invited to present tutorials for ~eON v2~ as well as present work on saddle searches and take part in discussions regarding the future of accelerated kinetic monte carlo methods.
+:LOCATION:
+:EMPLOYER: SISSA, Trieste
+:END:
+
+** Electronic Structure Software Development: Advancing the Modular Paradigm :cventry:
+:PROPERTIES:
+:CV_ENV: cventry
+:FROM: February 2024
+:TO: February 2024
+:NOTE: Was an invited speaker to discuss scaling workflows from development machines to HPC centers and to provide a FOSS perspective into electronic structure codes.
+:LOCATION:
+:EMPLOYER: CECAM-HQ, EPFL Lausanne
+:END:
+
+** Quantum2 on Machine Learning Enhanced Sampling :cventry:
+:PROPERTIES:
+:CV_ENV: cventry
+:FROM: November 2023
+:TO: November 2023
+:NOTE: Explored the integration of machine learning potentials with enhanced sampling in molecular dynamics to address nuclear quantum effects, with discussions on advancing accuracy in chemical reactions study.
+:LOCATION:
+:EMPLOYER: CECAM-HQ, EPFL (Online)
+:END:
+
+** FAIR and TRUE Data Processing for Soft Matter Simulations :cventry:
+:PROPERTIES:
+:CV_ENV: cventry
+:FROM: September 2023
+:TO: September 2023
+:NOTE: Focused on FAIR and TRUE data management in molecular simulations; highlighted standardization, metadata interoperability.
+:LOCATION:
+:EMPLOYER: CECAM-DE-SMSM (Online)
+:END:
+
+** Machine-learned potentials in molecular simulation: best practices and tutorials :cventry:
+:PROPERTIES:
+:CV_ENV: cventry
+:FROM: July 2023
+:TO: July 2023
+:NOTE: On the advancement and application of machine-learned potentials in molecular simulation, featuring discussions on best practices, tutorials, and collaborative efforts to integrate ML into various chemistry research areas.
+:LOCATION:
+:EMPLOYER: CECAM-AT (Online)
+:END:
+
+** Saddle point Search algorithms: towards the definition of a common BENCHmark framework :cventry:
+:PROPERTIES:
+:CV_ENV: cventry
+:FROM: June 2023
+:TO: June 2023
+:NOTE: Aimed at developing a unified benchmark for saddle point identification methods in potential energy surfaces for computational materials science.
+:LOCATION:
+:EMPLOYER: CECAM-FR-GSO LAAS-CNRS (Online)
+:END:
+
+** Introduction to oneAPI, SYCL2020 and OpenMP offloading :cventry:
+:PROPERTIES:
+:CV_ENV: cventry
+:FROM: October 2022
+:TO: October 2022
+:NOTE: A ten-hour long hands-on introduction to newer methodologies to heterogeneous computations in HPC work-spaces.
+:LOCATION:
+:EMPLOYER: High-Performance Computing Center Stuttgart (HLRS)
+:END:
+
+** SciML GPU Programming Bootcamp :cventry:
+:PROPERTIES:
+:CV_ENV: cventry
+:FROM: October 2022
+:TO: October 2022
+:NOTE: A guided tour of Physics Inspired Neural Networks (PINNs) for solving differential equations.
+:LOCATION:
+:EMPLOYER: High-Performance Computing Center Stuttgart (HLRS) and NVIDIA
+:END:
+
+** Electronic Structure Software Development: Best Practices and Tools :cventry:
+:PROPERTIES:
+:CV_ENV: cventry
+:FROM: October 2022
+:TO: October 2022
+:NOTE: Was an invited panelist (representing NumPy) for accelerating the Electronic Structure Library initiative projects with FOSS best practices.
+:LOCATION:
+:EMPLOYER: CECAM-HQ, EPFL Lausanne
+:END:
+
+** Error control in first-principles modeling :cventry:
+:PROPERTIES:
+:CV_ENV: cventry
+:FROM: June 2022
+:TO: June 2022
+:NOTE: A statistical perspective on controlling numerical errors in ab-initio methods.
+:LOCATION:
+:EMPLOYER: CECAM-HQ, EPFL (Online)
+:END:
+
+** Recent Advances in Machine Learning Accelerated Molecular Dynamics :cventry:
+:PROPERTIES:
+:CV_ENV: cventry
+:FROM: March 2022
+:TO: March 2022
+:NOTE: An HPC workflow focused practical introduction to using exotic compute devices for ML in MD.
+:LOCATION:
+:EMPLOYER: CECAM-DE-JUELICH
+:END:
+
+** MolSim2022 :cventry:
+:PROPERTIES:
+:CV_ENV: cventry
+:FROM: January 2022
+:TO: January 2022
+:NOTE: A flagship two week virtual school attended to brush up on the fundamentals of computational chemistry (at the molecular level) and also to reconnect with the community.
+:LOCATION:
+:EMPLOYER: CECAM-NL
+:END:
+
+** PRACE Autumn School 2021 :cventry:
+:PROPERTIES:
+:CV_ENV: cventry
+:FROM: October 2021
+:TO: October 2021
+:NOTE: This 5-day course held in Vuokatti, consists of lectures and hands-on training on modern, GPU-accelerated high-performance computing: GPU programming and GPU code optimization at scale, as well as understanding and applying machine learning methods emphasizing usage on LUMI.
+:LOCATION:
+:EMPLOYER: CSC-IT Center for Science, Finland
+:END:
+
+** Multiple scattering Green's function for electronic structure and spectroscopy calculations :cventry:
+:PROPERTIES:
+:CV_ENV: cventry
+:FROM: August 2021
+:TO: September 2021
+:NOTE: Two week school covering mathematical foundations and applications using Green's function and T-matrix approaches for condensed matter.
+:LOCATION:
+:EMPLOYER: Les Houches Physics School, France
+:END:
+
+** Seventh LAMMPS Workshop and Symposium :cventry:
+:PROPERTIES:
+:CV_ENV: cventry
+:FROM: August 2021
+:TO: August 2021
+:NOTE: Three day tutorial and overview of recent results led by the LAMMPS developers.
+:LOCATION:
+:EMPLOYER: Online
+:END:
+
+** AiiDA Virtual Tutorial :cventry:
+:PROPERTIES:
+:CV_ENV: cventry
+:FROM: July 2021
+:TO: July 2021
+:NOTE: A five day online in-depth tutorial by core and plugin developers covering programming practices including a hackathon on workflows and plugins.
+:LOCATION:
+:EMPLOYER: EPFL, Lausanne, Switzerland
+:END:
+
+** Comscope Summer School :cventry:
+:PROPERTIES:
+:CV_ENV: cventry
+:FROM: June 2021
+:TO: June 2021
+:NOTE: Covers dynamical mean field theory and electronic structure codes using FlapwMBPT, LDA+, LQSGW+DMFT, RISB+LDA by tutorials and training from professionals at BNL and Rutgers.
+:LOCATION:
+:EMPLOYER: Virtual, Comscope, US
+:END:
+
+** Virtual Summer School on Theoretical Methods for Energy Conversion :cventry:
+:PROPERTIES:
+:CV_ENV: cventry
+:FROM: June 2021
+:TO: June 2021
+:NOTE: The Summer School provided a comprehensive picture of state-of-the-art theoretical methods in the field, combining tutorial and research lectures into a 3-day event. The topics covered spanned electronic structure methods, dynamics and machine learning approaches.
+:LOCATION:
+:EMPLOYER: International Center for Advanced Studies of Energy Conversion (ICASEC) and the RTG2455 BENCh
+:END:
+
+** MPI and OpenMP in Scientific Software Development :cventry:
+:PROPERTIES:
+:CV_ENV: cventry
+:FROM: June 2021
+:TO: June 2021
+:NOTE: An in-depth application oriented three day event with concrete examples in C++ involving guest lectures from distinguished speakers and covering parallel I/O, debugging performance bottlenecks, multi-grid and mesh methods, along with more of the OpenMPI standard; culminated with examples of using OpenMP for GPUs; from the PRACE training center at SURF.
+:LOCATION:
+:EMPLOYER: PRACE @ SURF, NL
+:END:
+
+** Basic Parallel Programming with MPI and OpenMP :cventry:
+:PROPERTIES:
+:CV_ENV: cventry
+:FROM: June 2021
+:TO: June 2021
+:NOTE: A refresher on OpenMPI and OpenMP for both Fortran and C++ usage, involving the HLRI materials.
+:LOCATION:
+:EMPLOYER: SURF, NL
+:END:
+
+** Efficient Tensor Representations for Learning and Computational Complexity :cventry:
+:PROPERTIES:
+:CV_ENV: cventry
+:FROM: May 2021
+:TO: May 2021
+:NOTE: The fourth of the core IPAM long program workshops; focusing on algorithmic complexity and usage.
+:LOCATION:
+:EMPLOYER: Institute for Pure and Applied Mathematics, US
+:END:
+
+** Mathematical Foundations and Algorithms for Tensor Computations :cventry:
+:PROPERTIES:
+:CV_ENV: cventry
+:FROM: May 2021
+:TO: May 2021
+:NOTE: The third of the core IPAM long program workshops; focusing on numerical analysis and linear algebra for tensor networks and their computation.
+:LOCATION:
+:EMPLOYER: Institute for Pure and Applied Mathematics, US
+:END:
+
+** Tensor Network States and Applications :cventry:
+:PROPERTIES:
+:CV_ENV: cventry
+:FROM: April 2021
+:TO: April 2021
+:NOTE: The second of the core IPAM long program workshops; focusing on tensor network states; their topology and applications.
+:LOCATION:
+:EMPLOYER: Institute for Pure and Applied Mathematics, US
+:END:
+
+** Tensor Methods and their Applications in the Physical and Data Sciences :cventry:
+:PROPERTIES:
+:CV_ENV: cventry
+:FROM: March 2021
+:TO: April 2021
+:NOTE: The first of the workshops which form the core of the IPAM long program; focusing on representations of basic tensor networks in various disciplines and their computation
+:LOCATION:
+:EMPLOYER: Institute for Pure and Applied Mathematics, US
+:END:
+
+** SWiMM: School on Simulation Workflows in Materials Modelling :cventry:
+:PROPERTIES:
+:CV_ENV: cventry
+:FROM: March 2021
+:TO: March 2021
+:NOTE: Two week long program focused on the familiarization with tools for high-throughput HPC workflows including AiiDA and PyIron along with tools ontological exploration.
+:LOCATION:
+:EMPLOYER: CECAM School
+:END:
+
+** Workflows for Atomistic Simulations :cventry:
+:PROPERTIES:
+:CV_ENV: cventry
+:FROM: March 2021
+:TO: March 2021
+:NOTE: A three day intensive workshop consisting of hands-on sessions working with PyIron followed by lectures and discussions on potential and forcefield development.
+:LOCATION:
+:EMPLOYER: Ruhr-Universität Bochum
+:END:
+
+** Tensor Method Tutorials :cventry:
+:PROPERTIES:
+:CV_ENV: cventry
+:FROM: March 2021
+:TO: March 2021
+:NOTE: Part of my long program participation in the Tensor Methods and Emerging Applications to the Physical and Data Sciences. A two week long exposure to the basics of the program, and recent advances for context.
+:LOCATION:
+:EMPLOYER: Institute for Pure and Applied Mathematics, US
+:END:
+
+** IPWin2021: Inverse problems in partial differential equations and geometry :cventry:
+:PROPERTIES:
+:CV_ENV: cventry
+:FROM: January 2021
+:TO: January 2021
+:NOTE: Virtual winter school providing an introduction to modern and hot topics in inverse problems based on three series of embedded lectures given by internationally recognized researchers.
+:LOCATION:
+:EMPLOYER: Technical University of Denmark
+:END:
+
+** BerkeleyGW Workshop and Berkeley Excited States Conference :cventry:
+:PROPERTIES:
+:CV_ENV: cventry
+:FROM: January 2021
+:TO: January 2021
+:NOTE: An event focused on the BerkelyGW software, split between a three day practical tutorial and a two day conference.
+:LOCATION:
+:EMPLOYER: Virtual
+:END:
+
+** Computational materials discovery of unconventional magnets :cventry:
+:PROPERTIES:
+:CV_ENV: cventry
+:FROM: October 2020
+:TO: October 2020
+:NOTE: The proposed workshop aims to bring together researchers both from theory and experiments working on different aspects of the field to present the latest advancements and to discuss the efforts required to expedite the discovery of new unconventional magnetic materials.
+:LOCATION:
+:EMPLOYER: EPFL, Lausanne, Switzerland
+:END:
+
+** ESPResSo and Python: Versatile Tools for Soft Matter Research :cventry:
+:PROPERTIES:
+:CV_ENV: cventry
+:FROM: October 2020
+:TO: October 2020
+:NOTE: The school focused on the introduction of particle-based coarse-grained Molecular Dynamics simulation techniques for Hard and Soft Matter systems with the freely available software package ~es~. Included lectures and hands-on sessions.
+:LOCATION:
+:EMPLOYER: CECAM School
+:END:
+
+** Excited Charge Dynamics in Semiconductors :cventry:
+:PROPERTIES:
+:CV_ENV: cventry
+:FROM: September 2020
+:TO: September 2020
+:NOTE: An online workshop to discuss recent progress in the investigation of dynamics of excited charges in semiconductors.
+:LOCATION:
+:EMPLOYER: ICTP, Trieste
+:END:
+
+** (Machine) learning how to coarse-grain :cventry:
+:PROPERTIES:
+:CV_ENV: cventry
+:FROM: September 2020
+:TO: September 2020
+:NOTE: The purpose of this workshop will be to discuss the current state of the art, some of the challenges that the community is facing in furthering the penetration of ML models in CG simulations, and future perspectives.
+:LOCATION:
+:EMPLOYER: CECAM and TRR146 Virtual Event
+:END:
+
+** Gaussian Process and Uncertainty Quantification Summer School :cventry:
+:PROPERTIES:
+:CV_ENV: cventry
+:FROM: September 2020
+:TO: September 2020
+:NOTE: The Gaussian Process Summer Schools are a series of schools and workshops aimed at researchers who want to understand and use Gaussian process models, both in theory and practice.
+:LOCATION:
+:EMPLOYER: University of Sheffield, UK
+:END:
+
+** AiiDA Virtual Tutorial :cventry:
+:PROPERTIES:
+:CV_ENV: cventry
+:FROM: July 2020
+:TO: July 2020
+:NOTE: A four day online in-depth tutorial by core and plugin developers covering the nuances of reproducible workflows for AiiDA with example Quantum ESPRESSO calculations on Quantum Mobile virtual machines.
+:LOCATION:
+:EMPLOYER: EPFL, Lausanne, Switzerland
+:END:
+
+** Mathematical Methods of Modern Statistics 2 :cventry:
+:PROPERTIES:
+:CV_ENV: cventry
+:FROM: June 2020
+:TO: June 2020
+:NOTE: A five day online event from the Centre International de Rencontres Mathématiques on recent statistical advances relating to the analysis of high dimensional data from frequentist and Bayesian perspectives.
+:LOCATION:
+:EMPLOYER: CIRM Virtual Event
+:END:
+
+** ALCF Computational Performance Workshop :cventry:
+:PROPERTIES:
+:CV_ENV: cventry
+:FROM: May 2020
+:TO: May 2020
+:NOTE: A three day workshop on the hardware and software improvements organized by Argonne Leadership Computing Facility.
+:LOCATION:
+:EMPLOYER: Online
+:END:
+
+** TriangleSCI 2019 :cventry:
+:PROPERTIES:
+:CV_ENV: cventry
+:FROM: October 2019
+:TO: October 2019
+:NOTE: \textbf{declined to attend}
+:LOCATION:
+:EMPLOYER: Invited to the Triangle Scholarly Communication Institute
+:END:
+A week long fully-funded incubator to discuss actionable goals towards Bringing Equity and Diversity to Peer Review. This was undertaken as part of the larger discussion on Equity in Scholarly Communications
+
+** Artificial Intelligence :cventry:
+:PROPERTIES:
+:CV_ENV: cventry
+:FROM: May 2019
+:TO: June 2019
+:LOCATION:
+:EMPLOYER: E \& ICT Academy, IIT Kanpur
+:END:
+A four week course on AI foundations culminating in a time-series prediction project.
+** AI Foundations Certificate Course :cventry:
+:PROPERTIES:
+:CV_ENV: cventry
+:FROM: June 2019
+:TO: June 2019
+:LOCATION:
+:EMPLOYER: univ.ai
+:END:
+A summer school taught in-person by faculty from Harvard and UCLA, culminating in a computer vision and neural network based identification project.
+
+** Rare Events Summer School :cventry:
+:PROPERTIES:
+:CV_ENV: cventry
+:FROM: July 2019
+:TO: July 2019
+:NOTE: A short course consisting of lectures and hands-on sessions by experts in the field, organized by Prof. Baron Peters.
+:LOCATION:
+:EMPLOYER: Indian Institute of Science, Bangalore
+:END:
+
+** Short Courses
+** Surface Area and Porous Material Characterization :cventry:
+:PROPERTIES:
+:CV_ENV: cventry
+:FROM: September 23\textsuperscript{rd} 2019
+:TO: September 23\textsuperscript{rd} 2019
+:NOTE: An intensive day long course on the basics of experimental classification and DFT methods for pore distribution by Dr. Martin Thomas from Anton-Paar.
+:LOCATION:
+:EMPLOYER: Dept. of ChemE, IIT Kanpur
+:END:
+
+** OpenACC GPU Bootcamp :cventry:
+:PROPERTIES:
+:CV_ENV: cventry
+:FROM: September 21\textsuperscript{st} 2019
+:TO: September 21\textsuperscript{st} 2019
+:NOTE: Day long programming session and discussion covering the acceleration of Institute in-house code facilitated by a Senior Nvidia Solution Architect (Mr. Bharatkumar) and Prof. Debabrata Goswami.
+:LOCATION:
+:EMPLOYER: Chemistry Department, IIT Kanpur
+:END:
+
+* Certifications
+** Coursera
+** Deep Learning Specialization :cventry:
+:PROPERTIES:
+:CV_ENV: cventry
+:FROM: March 2020
+:TO: March 2020
+:NOTE: 99.5\%
+:LOCATION:
+:EMPLOYER: deeplearning.ai
+:END:
+The specialization can be verified by ID [[https://www.coursera.org/account/accomplishments/specialization/Q3DLMMZJ42TR][~Q3DLMMZJ42TR~]]. This signifies the completion of the following five courses:
+- [[https://www.coursera.org/account/accomplishments/verify/WFMW5VPBCKVJ][Neural Networks and Deep Learning]] - **100.0%**
+- [[https://www.coursera.org/account/accomplishments/records/9NJJAPSMK59A][Improving Deep Neural Networks: Hyperparameter tuning, Regularization and Optimization]] - **99.2%**
+- [[https://www.coursera.org/account/accomplishments/records/QWTW54L3CEDC][Structuring Machine Learning Projects]] - **98.3%**
+- [[https://www.coursera.org/account/accomplishments/verify/A23X8Q7QHJPV][Convolutional Neural Networks]] - **100.0%**
+- [[https://www.coursera.org/account/accomplishments/records/D8JCTU57D6CN][Sequence Models]] - **100.0%**
+
+** NPTEL Courses
+** Graph Theory :cventry:
+:PROPERTIES:
+:CV_ENV: cventry
+:FROM: Jan 2019
+:TO: Apr 2019
+:NOTE: 55\%
+:LOCATION:
+:EMPLOYER: IISER Pune
+:END:
+[[https://nptel.ac.in/noc/E_Certificate/noc19-ma13/NPTEL19MA13S21460067191106132.jpg][License: NPTEL19MA13S21460067]]
+
+** Computational Chemistry and Classical Molecular Dynamics :cventry:
+:PROPERTIES:
+:CV_ENV: cventry
+:FROM: Aug 2018
+:TO: Sep 2018
+:NOTE: Elite 77\%
+:LOCATION:
+:EMPLOYER: IIT Bombay
+:END:
+[[https://nptel.ac.in/noc/social_cert/noc18-cy13/NPTEL18CY13S214401271810100922.jpg][License: NPTEL18CS13S21440127]]
+
+** Introduction to Parallel Programming in OpenMP :cventry:
+:PROPERTIES:
+:CV_ENV: cventry
+:FROM: Aug 2018
+:TO: Sep 2018
+:NOTE: 40\%
+:LOCATION:
+:EMPLOYER: IIT Madras
+:END:
+[[https://nptel.ac.in/noc/social_cert/noc18-cs55/NPTEL18CS55S114401221810100922.jpg][License: NPTEL18CS55S11440122]]
+
+** Quantum Computing :cventry:
+:PROPERTIES:
+:CV_ENV: cventry
+:FROM: Jan 2018
+:TO: Apr 2018
+:NOTE: Elite 65\%
+:LOCATION:
+:EMPLOYER: IIT Kanpur
+:END:
+[[https://nptel.ac.in/noc/social_cert/noc18-cy07/NPTEL18CY07S44800241810011238.jpg][License: NPTEL18CY07S4480024]]
+
+* Graduate Coursework
+#+begin_export latex
+\blockquote[Note]{Due to COVID-19, grading varies from Pass/Fail to a 10 point scale.}\\
+#+end_export
+
+** Seminar on Machine Learning :cventry:
+:PROPERTIES:
+:CV_ENV: cventry
+:FROM: Summer 2020
+:TO: Summer 2020
+:NOTE: Pass
+:LOCATION: Computer Science Dept.
+:EMPLOYER: University of Iceland
+:END:
+Research seminar.
+\textsc{Presentation:} Graph Neural Networks
+
+** Statistics, science and COVID-19 :cventry:
+:PROPERTIES:
+:CV_ENV: cventry
+:FROM: Summer 2020
+:TO: Summer 2020
+:NOTE: 10
+:LOCATION: Health Sciences Institute
+:EMPLOYER: University of Iceland
+:END:
+Course covering "Statistical Rethinking" by Richard McElreath as well as the COVID-19 model of the University.
+
+** Probabilistic Data Analysis :cventry:
+:PROPERTIES:
+:CV_ENV: cventry
+:FROM: Spring 2020
+:TO: Spring 2020
+:NOTE:
+:LOCATION: Turku Data Science group
+:EMPLOYER: University of Turku, Finland
+:END:
+Research seminar based on "Bayesian Data Analysis" by Andrew Gelman, John Carlin, Hal Stern, David Dunson, Aki Vehtari, and Donald Rubin
+\textsc{Presentation:} Markov Chain Simulations
+
+** Applied data analysis :cventry:
+:PROPERTIES:
+:CV_ENV: cventry
+:FROM: Spring 2020
+:TO: Spring 2020
+:NOTE: 10
+:LOCATION: Mathematics and Applied Statistics Dept.
+:EMPLOYER: University of Iceland
+:END:
+Course covering "Introduction to Statistical Learning An Introduction to Statistical Learning with Applications in R" by Gareth James, Daniela Witten, Trevor Hastie and Robert Tibshirani
+\textsc{Project:} Icelandic Housing Analysis
+
+** Applied data analysis - Project :cventry:
+:PROPERTIES:
+:CV_ENV: cventry
+:FROM: Spring 2020
+:TO: Spring 2020
+:NOTE: Pass
+:LOCATION: Mathematics and Applied Statistics Dept.
+:EMPLOYER: University of Iceland
+:END:
+Extra credit course
+\textsc{Project:} Molecular Dynamics Trajectory Analysis
+
+** Machine Learning :cventry:
+:PROPERTIES:
+:CV_ENV: cventry
+:FROM: Spring 2020
+:TO: Spring 2020
+:NOTE: Pass
+:LOCATION: Computer Science Dept.
+:EMPLOYER: University of Iceland
+:END:
+An overview of some of the main concepts, techniques and algorithms in machine learning. Supervised learning, unsupervised learning and reinforcement learning. Data preprocessing and data visualization. Model evaluation and model selection. Linear regression, nearest neighbors, support vector machines and decision trees. Deep learning. Cluster analysis, the k-means and EM algorithms. TD-learning, Q-learning.
+\textsc{Project:} Toxic Comment Classification (Grade 9/10)
+
+** Software Quality Management :cventry:
+:PROPERTIES:
+:CV_ENV: cventry
+:FROM: Spring 2020
+:TO: Spring 2020
+:NOTE: Pass
+:LOCATION:
+:EMPLOYER: University of Iceland
+:END:
+Metrics and models: Tools for managing software quality and its improvement. Quality Assurance: standards. Software Quality assurance activities. Quality assurance infrastructure and progress control. Software quality in Agile development.
+\textsc{Presentation:} Scrum (Grade 10/10)
+
+** Introduction to Pattern Recognition :cventry:
+:PROPERTIES:
+:CV_ENV: cventry
+:FROM: Spring 2020
+:TO: Spring 2020
+:NOTE: 8
+:LOCATION: Electrical Engineering Dept.
+:EMPLOYER: University of Iceland
+:END:
+Course covering "Elements of Statistical Learning: Data Mining, Inference, and Prediction" by Trevor Hastie, Robert Tibshirani, and Jerome Friedman along with "Pattern Recognition and Machine Learning" by Christopher Bishop.
+\textsc{Project:} Predicting Molecular Properties
+
+* Undergraduate Experience
+** Internships
+** Dr. Debojit Chakrabarty :cventry:
+:PROPERTIES:
+:CV_ENV: cventry
+:FROM: 2017
+:TO: 2018
+:NOTE: R\&D Industrial Intern
+:LOCATION:
+:EMPLOYER: Keva Fragrances Ltd, Mumbai
+:END:
+Modeling complex multi-component perfumes in a predictive method via experimental and theoretical considerations. In collaboration with Prof. Rajdip Bandyopadhyaya of the ChemE Dept. at IIT Bombay.
+
+** Prof. Sibasish Ghosh :cventry:
+:PROPERTIES:
+:CV_ENV: cventry
+:FROM: Summer 2017
+:TO: Summer 2017
+:NOTE: Visiting Scholar
+:LOCATION:
+:EMPLOYER: The Institute of Mathematical Sciences, Chennai
+:END:
+Discussed computational techniques for the simulation and understanding of quantum tomography.
+* TODO fix these later :ignoreheading:ignore:
+# TODO(rg): These are problematic somewhow
+#+begin_export latex
+\cventry{\textsc{Summer 2017}}{Prof. Nisanth Nair}{Indian Institute Of Technology Kanpur}{}{SURGE Scholar}{An exploratory project to understand and deal with bottlenecks in computational chemistry, the major objectives were to investigate hybridization of existing code via OpenMP and MPI.
+	\\~\\
+	\textsc{Poster: }Development of Computational Tools for Free Energy Calculations of Chemical Reactions}
+\cventry{\textsc{Summer 2016}}{Prof. Rajarshi Chakrabarti}{Indian Institute Of Technology Bombay}{}{Research Intern}{Retooled a server with ArchLinux and also simulated patchy colloids (Janus Particles). \\~\\
+	\textsc{Project Report: }Computational Survey of Coarse Grained Soft Matter Molecular Dynamics Simulations
+}
+#+end_export
+
+** Volunteer Work
+** ChemE Herald :cventry:
+:PROPERTIES:
+:CV_ENV: cventry
+:FROM: 2017
+:TO: 2018
+:NOTE: Editor-in-Chief
+:LOCATION:
+:EMPLOYER: Harcourt Butler Technical University, Kanpur
+:END:
+Inaugurated and managed an interdisciplinary technical newsletter.
+
+** HBTU-MUN 2018 :cventry:
+:PROPERTIES:
+:CV_ENV: cventry
+:FROM: 2017
+:TO: 2018
+:NOTE: Secretary General
+:LOCATION:
+:EMPLOYER:
+:END:
+Designed a ReactJS based static website, with Trello backed user registration, also performed outreach pre-events to raise awareness and participation, in addition to overseeing the working of the executive board.
+
+** HBTU-MUN 2017 :cventry:
+:PROPERTIES:
+:CV_ENV: cventry
+:FROM: 2016
+:TO: 2017
+:NOTE: Executive Board Chairperson
+:LOCATION:
+:EMPLOYER:
+:END:
+Designed a Jekyll based static website and ensured adherence to standard MUN rules as Chairperson.
+
+# Sadly this was hit by anti-aircraft guns
+# \cventry{\textsc{2016--2017}}{Interface 2017}{Harcourt Butler Technical University, Kanpur}{}{Technical Cell Head}{Organizing and inspiring students to work towards the success of the Department's techno-cultural fest and seminars.}
+
+** The Curiosity Magazine :cventry:
+:PROPERTIES:
+:CV_ENV: cventry
+:FROM: 2014
+:TO: 2016
+:NOTE: Editor-in-Chief
+:LOCATION:
+:EMPLOYER: Harcourt Butler Technical University, Kanpur
+:END:
+Managed a diverse team of student content writers and also later typeset a spin-off multi-lingual newsletter in \XeLaTeX.
+
+* Technical Skills
+
+#+begin_export latex
+\subsection{Programming Languages}
+
+\cvdoubleitem{\textsc{Experienced}}{C++, Python, R, FORTRAN, Shell (zsh, bash),  OpenMP, OpenMPI, Tcl, CSS, JS, HTML, Sass, C}
+{\textsc{Familiar}}{Ruby, Julia, Java, Haskell, Matlab, Golang, ReactJS, Node, CUDA}
+
+\spacesubsection{}
+\subsection{Projects}
+
+\cvdoubleitem{\textsc{Experienced}}{d-SEAMS, Android (Cyanogen, LineageOS, AOSP), Web-Design (static), ArchLinux}
+{\textsc{Familiar}}{Linux Kernel (Android)}
+
+\spacesubsection{}
+\subsection{Simulation Projects}
+
+\cvdoubleitem{\textsc{Experienced}}{\es \space(Extensible Simulation Package for Research on Soft matter), LAMMPS (Large-scale Atomic/Molecular Massively Parallel Simulator), OVITO, AiiDA (Automated Interactive Infrastructure and Database for Computational Science)}
+{\textsc{Familiar}}{OpenFOAM, GROMACS (GROningen MAchine for Chemical Simulations), VMD (Visual Molecular Dynamics)}
+
+\spacesubsection{}
+\subsection{Tools}
+
+\cvdoubleitem{\textsc{Experienced}}{\XeLaTeX, pandoc, Git (version control), tmux, ssh, Vim, Sublime Text Editor 3, gnuplot, gadfly, bspwm (tiling window manager), babun, MATLAB (matrix laboratory), Continuous Integration Services (Wercker, Travis CI, Semaphore CI), docker}
+{\textsc{Familiar}}{AWS (Amazon Web Services), moltemplate, jekyll, middleman, grunt, gulp, Frameworks (Bourbon, Skeleton, neat) Markup Languages (Textile, HAML, Jade(pug))}
+
+% \spacesubsection{}
+% \subsection{Operating Systems}
+% \cvdoubleitem{\textsc{Preferred}}{ArchLinux}
+% {\textsc{Experienced}}{Windows (95, 2000, XP, 7, 8, 10), MacOS (10.7, 10.11, 10.12), Android (1.5, 1.6, 2.2.*, 2.3.*, 4.0.*, 4.4.*, 5.0.*, 6.0.*, 7.* ), Linux Distros (Ubuntu, Sabyon, Puppy, Manjaro, Debian, Red Hat)}
+
+
+% \cventry{\textsc{Spring 2020}}{Machine Learning}{University of Iceland}{An overview of some of the main concepts, techniques and algorithms in machine learning. Supervised learning, unsupervised learning and reinforcement learning. Data preprocessing and data visualization. Model evaluation and model selection. Linear regression, nearest neighbors, support vector machines and decision trees. Deep learning. Cluster analysis, the k-means and EM algorithms. TD-learning, Q-learning. \\ \textbf{Project:} Toxic Comment Classification (Grade 9/10)}{}{}
+% \cventry{\textsc{Spring 2020}}{Applied data analysis}{University of Iceland}{Course covering ``Introduction to Statistical Learning An Introduction to Statistical Learning with Applications in R'' by Gareth James, Daniela Witten, Trevor Hastie and Robert Tibshirani\\ \textbf{Project:} Toxic Comment Classification}{$10$}{}
+
+#+end_export
+
+
 * Thoughts :noexport:ignoreheading:ignore:
 ** WAIT update ~cvitem~ when https://gitlab.com/Titan-C/org-cv/-/issues/18 is closed
 ** TODO Use more links
@@ -985,3 +2890,4 @@ Will eventually be useful for the HTML export
 Even in LaTeX perhaps
 ** TODO Proofread and rework
 Even in LaTeX perhaps
+** TODO Consider pruning
