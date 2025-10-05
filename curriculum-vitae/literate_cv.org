@@ -220,7 +220,6 @@ or lists have a perfectly straight-looking right edge.
 #+name: biblio
 #+begin_src latex
 \usepackage[%
-	sorting=ydnt, %
 	minbibnames=8,%
 	maxbibnames=99,%
 	block=space,%
@@ -228,16 +227,25 @@ or lists have a perfectly straight-looking right edge.
 	backend=biber,%
 	url=false,%
 	isbn=false,%
+    % plauthor stuff
+	plsorting=ydtn, %
+    fixyear=true, %
+    hlyear=true, %
+    plauthorname=Goswami, %
+    plauthorfirstname=Rohit, %
+    plauthorhandling=highlight, %
+    plnumbering=local-descending, %
 ]{biblatex}
 
 \bibliography{publications}
 #+end_src
-*** Custom author highlights
-With author underlines from this [[https://tex.stackexchange.com/questions/359311/how-to-underline-name-of-specific-authors-in-biblatex][SO post]].
+*** DONE Custom author highlights
+CLOSED: [2025-10-05 Sun 14:31]
++With author underlines from this [[https://tex.stackexchange.com/questions/359311/how-to-underline-name-of-specific-authors-in-biblatex][SO post]].+ Now uses the incredible [[https://github.com/jspitz/biblatex-publist/][biblatex-publist]] instead.
 - [X] The hash needs to be extracted from the ~bbl~ file.
-- [ ] Refactor to use the user-data section of named snippets
++- [ ] Refactor to use the user-data section of named snippets+
 #+name: biblio_underline
-#+begin_src latex
+#+begin_src latex :eval never
 \usepackage{xpatch}
 \usepackage[normalem]{ulem} %for \uline
 
@@ -369,7 +377,6 @@ Finally we tangle everything together and export once.
 <<logos>>
 <<spelling>>
 <<biblio>>
-<<biblio_underline>>
 <<xelatex_fonts>>
 <<author_quote>>
 <<author_deets>>
