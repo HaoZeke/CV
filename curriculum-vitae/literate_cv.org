@@ -1,6 +1,7 @@
 #+AUTHOR: Rohit Goswami
 #+email: rgoswami@ieee.org
 #+options: tags:nil title:nil
+# Usage: tangle and then call hz/org-export-to-file-moderncv-tex
 * Configuration :ignoreheading:ignore:
 :PROPERTIES:
 :VISIBILITY: folded
