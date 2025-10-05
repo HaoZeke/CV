@@ -343,6 +343,8 @@ CLOSED: [2025-10-05 Sun 14:31]
 ** Author details
 #+name: author_deets
 #+begin_src latex
+\firstname{Rohit}
+\familyname{Goswami}
 % I use the extrainfo command for additional information, since I
 % want to use custom icons and have finer control over spacing.
 \extrainfo{
@@ -352,6 +354,12 @@ CLOSED: [2025-10-05 Sun 14:31]
 {\small\faTwitter}\hspace{0.3em}\href{https://twitter.com/rg0swami}{\ttfamily rg0swami}\\
 \faGlobe\hspace{0.3em}\href{https://sh.turtletech.us/rghome}{\ttfamily rgoswami.me}
 }
+% the moderncv package will populate a lot of the pdf meta-information.
+% this can be used to change some of these infos.
+\AfterPreamble{\hypersetup{
+		pdfcreator={XeLaTeX},
+		pdftitle={Rohit Goswami's CV}
+	}}
 #+end_src
 *** Picture
 #+name: author_pic
