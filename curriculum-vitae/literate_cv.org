@@ -16,13 +16,9 @@
 ;; Details of this method: https://rgoswami.me/posts/org-arb-tex
 (setq org-latex-packages-alist 'nil)
 (setq org-latex-with-hyperref 'nil)
+(setq org-latex-hyperref-template 'nil)
 (setq org-latex-minted-options 'nil)
 (setq org-latex-listings 'listings)
-(setq org-latex-default-packages-alist
-      '(
-        (""     "color"  t)
-        (""     "fontspec"  t)
-        ))
 #+END_SRC
 *** TeX activation :ignoreheading:ignore:
 #+LATEX_COMPILER: xelatex
@@ -40,6 +36,7 @@ To prevent issues with ~\es~ we need ~xspace~.
 I prefer [[https://macarthur.me/color/rgb(1,52,64)][this one]].
 #+name: color
 #+begin_src latex
+\usepackage{color}
 \definecolor{cvhighlight}{RGB}{1, 52, 64}
 #+end_src
 ** Geometry
@@ -192,7 +189,7 @@ or lists have a perfectly straight-looking right edge.
 % have it installed uncomment this line or choose another pretty font.
 % Literata is also included.
 %\setmainfont[Numbers=OldStyle]{Minion Pro}
-
+\usepackage{fontspec}
 \setmainfont[
 	Path = Fonts/MinionPro/,
 	Numbers=OldStyle,
@@ -227,6 +224,7 @@ or lists have a perfectly straight-looking right edge.
 	backend=biber,%
 	url=false,%
 	isbn=false,%
+    style=publist,
     % plauthor stuff
 	plsorting=ydtn, %
     fixyear=true, %
@@ -384,7 +382,7 @@ Finally we tangle everything together and export once.
 <<spacing>>
 #+end_src
 Which can be included once and for all.
-#+LATEX_HEADER_EXTRA: \include{preamble.tex}
+#+LATEX_HEADER: \input{preamble.tex}
 The rest of the document is written within the ~begin{document}~ environment.
 * TeX Document Extras :ignore:ignoreheading:
 ** Last updated :ignore:ignoreheading:
@@ -1742,18 +1740,25 @@ Compiling SciPy with LFortran.
 * Publications
 #+begin_export latex
 {\color{cvhighlight}\textsc{Journals}}
+
+\begin{refsection}
 \nocite{*}
-\printbibliography[heading=none, env=midbib, keyword=journal]
+\printbibliography[heading=none, keyword=journal]
+\end{refsection}
 
 {\color{cvhighlight}\textsc{Conference Proceedings}}
 
+\begin{refsection}
 \nocite{*}
-\printbibliography[heading=none, env=midbib, keyword=conference]
+\printbibliography[heading=none, keyword=conference]
+\end{refsection}
 
 {\color{cvhighlight}\textsc{Preprints}}
 
+\begin{refsection}
 \nocite{*}
-\printbibliography[heading=none, env=midbib, keyword=preprint]
+\printbibliography[heading=none, keyword=preprint]
+\end{refsection}
 #+end_export
 
 * Conference Records :cventries:
