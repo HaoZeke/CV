@@ -12,6 +12,15 @@
 (org-babel-tangle)
 #+END_SRC
 
+Along with the exporter.
+
+#+begin_src emacs-lisp :eval always
+(defun hz/org-export-to-file-moderncv-tex ()
+  (interactive)
+  (let ((outfile (org-export-output-file-name ".tex")))
+    (org-export-to-file 'moderncv outfile)))
+#+end_src
+
 ** Theme :ignoreheading:ignore:
 #+BEGIN_SRC emacs-lisp :exports none :results none :eval always
 ;; Details of this method: https://rgoswami.me/posts/org-arb-tex
