@@ -45,13 +45,13 @@ I prefer [[https://macarthur.me/color/rgb(1,52,64)][this one]].
 #+begin_src latex
 \usepackage{geometry}
 \geometry{
-	a4paper,
-	%total={210mm,297mm},
-	%l,r,t used to be 15mm
-	left=12mm,
-	right=12mm,
-	top=13mm,
-	bottom=13mm,
+ a4paper,
+ %total={210mm,297mm},
+ %l,r,t used to be 15mm
+ left=12mm,
+ right=12mm,
+ top=13mm,
+ bottom=13mm,
 }
 
 % required when changing page layout lengths
@@ -185,48 +185,48 @@ or lists have a perfectly straight-looking right edge.
 *** XeLaTeX fonts
 #+name: xelatex_fonts
 #+begin_src latex
+\usepackage{fontspec}
 % Minion Pro is used as the main font, if you don't
 % have it installed uncomment this line or choose another pretty font.
 % Literata is also included.
 %\setmainfont[Numbers=OldStyle]{Minion Pro}
-\usepackage{fontspec}
 \setmainfont[
-	Path = Fonts/MinionPro/,
-	Numbers=OldStyle,
-	Extension = .otf,
-	UprightFont = *_Regular,
-	ItalicFont = *_It,
-	BoldFont = *_Bold,
-	BoldItalicFont = *_BoldIt
+ Path = Fonts/MinionPro/,
+ Numbers=OldStyle,
+ Extension = .otf,
+ UprightFont = *_Regular,
+ ItalicFont = *_It,
+ BoldFont = *_Bold,
+ BoldItalicFont = *_BoldIt
 ]{MinionPro}
 
 % Myriad Pro is used as the sans font, if you don't
 % have it installed uncomment this line or choose another pretty font.
 \setsansfont[
-	Path = Fonts/MyriadPro/,
-	Numbers=OldStyle,
-	Extension = .otf,
-	UprightFont = *_Regular,
-	ItalicFont = *_It,
-	BoldFont = *_Bold,
-	BoldItalicFont = *_BoldIt,
-	Ligatures=TeX,
-	Scale=MatchLowercase]{MyriadPro}
+ Path = Fonts/MyriadPro/,
+ Numbers=OldStyle,
+ Extension = .otf,
+ UprightFont = *_Regular,
+ ItalicFont = *_It,
+ BoldFont = *_Bold,
+ BoldItalicFont = *_BoldIt,
+ Ligatures=TeX,
+ Scale=MatchLowercase]{MyriadPro}
 #+end_src
 ** Bibliography
 #+name: biblio
 #+begin_src latex
 \usepackage[%
-	minbibnames=8,%
-	maxbibnames=99,%
-	block=space,%
-	bibencoding=utf8,%
-	backend=biber,%
-	url=false,%
-	isbn=false,%
+ minbibnames=8,%
+ maxbibnames=99,%
+ block=space,%
+ bibencoding=utf8,%
+ backend=biber,%
+ url=false,%
+ isbn=false,%
     style=publist,
     % plauthor stuff
-	plsorting=ydtn, %
+ plsorting=ydtn, %
     fixyear=true, %
     hlyear=true, %
     plauthorname=Goswami, %
@@ -281,12 +281,12 @@ CLOSED: [2025-10-05 Sun 14:31]
 % get rid of the number-labels ([1], [2], etc.) in front of publications
 \defbibenvironment{midbib}
 {\list
-	{}
-	{
-		\setlength{\leftmargin}{0mm}
-		\setlength{\itemindent}{-\leftmargin}
-		\setlength{\itemsep}{\bibitemsep}
-		\setlength{\parsep}{\bibparsep}}
+ {}
+ {
+  \setlength{\leftmargin}{0mm}
+  \setlength{\itemindent}{-\leftmargin}
+  \setlength{\itemsep}{\bibitemsep}
+  \setlength{\parsep}{\bibparsep}}
 }
 {\endlist}
 {\item}
@@ -294,49 +294,49 @@ CLOSED: [2025-10-05 Sun 14:31]
 
 % add [DOI] and [PDF] fields at the end of each publication entry
 \DeclareSourcemap{
-	\maps[datatype=bibtex]{
-		% the bibtex entry 'mydoi' gets mapped to 'usera'
-		\map{
-			\step[fieldsource=mydoi]
-			\step[fieldset=usera, origfieldval]
-		}
-		% the bibtex entry 'mypdf' gets mapped to 'usera'
-		\map{
-			\step[fieldsource=mypdf]
-			\step[fieldset=userb, origfieldval]
-		}
-	}
+ \maps[datatype=bibtex]{
+  % the bibtex entry 'mydoi' gets mapped to 'usera'
+  \map{
+   \step[fieldsource=mydoi]
+   \step[fieldset=usera, origfieldval]
+  }
+  % the bibtex entry 'mypdf' gets mapped to 'usera'
+  \map{
+   \step[fieldsource=mypdf]
+   \step[fieldset=userb, origfieldval]
+  }
+ }
 }
 
 % [DOI] entries in publication
 \DeclareFieldFormat{usera}{\color{cvhighlight}[\href{#1}{\textsc{doi}}]}
 \AtEveryBibitem{
-	% put [DOI] stuff at the end of a publication entry
-	\csappto{blx@bbx@\thefield{entrytype}}{%
-		\iffieldundef{usera}{
-			% this gets invoked, once nothing is supplied
-			% via the mypdf or mydoi value.
-			% you could e.g. display a default thing here.
-		}{\space\printfield{usera}}}
+ % put [DOI] stuff at the end of a publication entry
+ \csappto{blx@bbx@\thefield{entrytype}}{%
+  \iffieldundef{usera}{
+   % this gets invoked, once nothing is supplied
+   % via the mypdf or mydoi value.
+   % you could e.g. display a default thing here.
+  }{\space\printfield{usera}}}
 }
 
 % [PDF] entries in publication
 \DeclareFieldFormat{userb}{\color{cvhighlight}[\href{#1}{\textsc{pdf}}]}
 
 \AtEveryBibitem{
-	% put [DOI] stuff at the end of a publication entry
-	\csappto{blx@bbx@\thefield{entrytype}}{\iffieldundef{userb}{}{\printfield{userb}}}
+ % put [DOI] stuff at the end of a publication entry
+ \csappto{blx@bbx@\thefield{entrytype}}{\iffieldundef{userb}{}{\printfield{userb}}}
 }
 
 \renewcommand*{\mkbibnamegiven}[1]{%
-	\ifitemannotation{highlight}
-	{\textbf{#1}}
-	{#1}}
+ \ifitemannotation{highlight}
+ {\textbf{#1}}
+ {#1}}
 
 \renewcommand*{\mkbibnamefamily}[1]{%
-	\ifitemannotation{highlight}
-	{\textbf{#1}}
-	{#1}
+ \ifitemannotation{highlight}
+ {\textbf{#1}}
+ {#1}
 }
 
 #+end_src
@@ -357,9 +357,9 @@ CLOSED: [2025-10-05 Sun 14:31]
 % the moderncv package will populate a lot of the pdf meta-information.
 % this can be used to change some of these infos.
 \AfterPreamble{\hypersetup{
-		pdfcreator={XeLaTeX},
-		pdftitle={Rohit Goswami's CV}
-	}}
+  pdfcreator={XeLaTeX},
+  pdftitle={Rohit Goswami's CV}
+ }}
 #+end_src
 *** Picture
 #+name: author_pic
@@ -398,7 +398,7 @@ The rest of the document is written within the ~begin{document}~ environment.
 % Adapted from https://tex.stackexchange.com/a/170219/130845
 \begin{tikzpicture}[remember picture,overlay]
       \node[anchor=north, yshift=-0.25cm] at (current page.north) {\underline{Last
-		  updated on \today}};
+    updated on \today}};
 \end{tikzpicture}
 #+end_export
 
@@ -2809,10 +2809,10 @@ Discussed computational techniques for the simulation and understanding of quant
 # TODO(rg): These are problematic somewhow
 #+begin_export latex
 \cventry{\textsc{Summer 2017}}{Prof. Nisanth Nair}{Indian Institute Of Technology Kanpur}{}{SURGE Scholar}{An exploratory project to understand and deal with bottlenecks in computational chemistry, the major objectives were to investigate hybridization of existing code via OpenMP and MPI.
-	\\~\\
-	\textsc{Poster: }Development of Computational Tools for Free Energy Calculations of Chemical Reactions}
+ \\~\\
+ \textsc{Poster: }Development of Computational Tools for Free Energy Calculations of Chemical Reactions}
 \cventry{\textsc{Summer 2016}}{Prof. Rajarshi Chakrabarti}{Indian Institute Of Technology Bombay}{}{Research Intern}{Retooled a server with ArchLinux and also simulated patchy colloids (Janus Particles). \\~\\
-	\textsc{Project Report: }Computational Survey of Coarse Grained Soft Matter Molecular Dynamics Simulations
+ \textsc{Project Report: }Computational Survey of Coarse Grained Soft Matter Molecular Dynamics Simulations
 }
 #+end_export
 
