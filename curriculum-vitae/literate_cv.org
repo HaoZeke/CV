@@ -497,13 +497,14 @@ I was affiliated to the Femtolab under the project "Femtosecond Laser Approaches
 :LOCATION:
 :EMPLOYER: Indian Institute Of Technology, Kanpur
 :END:
-I was associated with the Computational Nanoscience group. Over the course of two centrally funded projects, "Nucleation On Nanostructured Surfaces Computer Simulation Studies (SPO/DST/CHE/2017294)" and "Advanced Computation Research and Education (SPO/MHRD/CC/20130176)":
-- I worked on the implementation of an enhanced version of the CHILL (CHILL+) algorithm for tracking ice types
-- Designed a linear discriminant analysis technique for near-surface ice structure determination which is undergoing rigorous testing
-- Implemented a graph based network connectivity model for ice structures
-- Spearheaded the development of High Performance GPU accelerated molecular dynamics simulation analysis tools
-- Worked on the determination of optimal GPU cluster configurations
-- Designed and administered academic outreach websites
+I was associated with the Computational Nanoscience group. Over the course of two centrally funded projects, "Nucleation On Nanostructured Surfaces Computer Simulation Studies (SPO/DST/CHE/2017294)" and "Advanced Computation Research and Education (SPO/MHRD/CC/20130176)".
+# :
+# - I worked on the implementation of an enhanced version of the CHILL (CHILL+) algorithm for tracking ice types
+# - Designed a linear discriminant analysis technique for near-surface ice structure determination which is undergoing rigorous testing
+# - Implemented a graph based network connectivity model for ice structures
+# - Spearheaded the development of High Performance GPU accelerated molecular dynamics simulation analysis tools
+# - Worked on the determination of optimal GPU cluster configurations
+# - Designed and administered academic outreach websites
 
 * Education :cventries:
 ** Graduate studies :cventry:
