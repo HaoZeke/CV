@@ -434,6 +434,16 @@ The rest of the document is written within the ~begin{document}~ environment.
 :EMPLOYER: École Polytechnique Fédérale de Lausanne
 :END:
 Postdoctoral position with Prof. Michele Ceriotti and Dr. Guillaume Fraux working on the @@latex:\metatensor@@ ecosystem.
+** Department of Mechanical & Materials Engineering :cventry:
+:PROPERTIES:
+:CV_ENV: cventry
+:FROM: 2025
+:TO: 2025
+:NOTE: Visiting Researcher
+:LOCATION:
+:EMPLOYER: Queen's University
+:END:
+TEER 1 NOC 41200 visa exemption researcher at [[https://www.laurentkarimbeland.com/home][Prof. Laurent Béland's]] group working on heating effects of large copper systems by scaling off-lattice / object kinetic monte carlo to over a million atoms.
 ** Science Institute :cventry:
 :PROPERTIES:
 :CV_ENV: cventry
