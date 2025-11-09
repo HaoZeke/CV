@@ -12,9 +12,9 @@
 (org-babel-tangle)
 #+END_SRC
 
-Along with the exporter.
+# Along with the exporter.
 
-#+begin_src emacs-lisp :eval always
+#+begin_src emacs-lisp :eval always :exports none
 (defun hz/org-export-to-file-moderncv-tex ()
   (interactive)
   (let ((outfile (org-export-output-file-name ".tex")))
@@ -359,7 +359,6 @@ CLOSED: [2025-10-05 Sun 14:31]
 % want to use custom icons and have finer control over spacing.
 \extrainfo{
 % \faPhone\hspace{0.3em}\href{tel:919935135006}{\ttfamily +91 9935135006}\\
-{\small\faEnvelope}\hspace{0.3em}\href{mailto:rgoswami@ieee.org}{\ttfamily rgoswami@ieee.org}\\
 {\small\faGithub}\hspace{0.3em}\href{https://github.com/haozeke}{\ttfamily haozeke}\\
 {\small\faTwitter}\hspace{0.3em}\href{https://twitter.com/rg0swami}{\ttfamily rg0swami}\\
 \faGlobe\hspace{0.3em}\href{https://sh.turtletech.us/rghome}{\ttfamily rgoswami.me}
