@@ -417,6 +417,9 @@ The rest of the document is written within the ~begin{document}~ environment.
 #+end_export
 
 * Personal Data
+:PROPERTIES:
+:CUSTOM_ID: pdata
+:END:
 #+begin_export latex
 \cvitem{Name}{Rohit Goswami}
 \cvitem{Date Of Birth}{10.08.1995}
@@ -424,6 +427,9 @@ The rest of the document is written within the ~begin{document}~ environment.
 #+end_export
 
 * Work Experience :cventries:
+:PROPERTIES:
+:CUSTOM_ID: wexp
+:END:
 ** Lab COSMO :cventry:
 :PROPERTIES:
 :CV_ENV: cventry
@@ -517,6 +523,9 @@ I was associated with the Computational Nanoscience group. Over the course of tw
 # - Designed and administered academic outreach websites
 
 * Education :cventries:
+:PROPERTIES:
+:CUSTOM_ID: edu
+:END:
 ** Graduate studies :cventry:
 :PROPERTIES:
 :CV_ENV: cventry
@@ -561,6 +570,9 @@ First Division (\textsc{Project: } Gas Sweetening Plant Design)
 9.8 Cumulative Grade Point Average (CGPA) in Central Board of Secondary Education (CBSE)
 
 * Voluntary Positions :cventries:
+:PROPERTIES:
+:CUSTOM_ID: vpos
+:END:
 ** Simulation and Data Lab Computational Chemistry :cventry:
 :PROPERTIES:
 :CV_ENV: cventry
@@ -867,6 +879,9 @@ Tested course-content and developed interactive labs to work with an online coho
 Have worked with student bodies to rescue and care for local animals. Also designed and maintained a site with ReactJS to enhance knowledge dissemination
 
 * Teaching Experience :cventries:
+:PROPERTIES:
+:CUSTOM_ID: texp
+:END:
 ** HBV505M Software Quality Management :cventry:
 :PROPERTIES:
 :CV_ENV: cventry
@@ -1021,6 +1036,9 @@ Taught the basics of Python and assisted with shell lessons for high school stud
 As part of the special COVID-19 [[https://compedu.stanford.edu/codeinplace/announcement/][~code-in-place~ initiative]], I worked as a section leader (teaching assistant). The course covered the fundamentals of computer programming using Python and was built off the first half of CS106A. Also moderated and participated in an AMA session on "Machine Learning for the Physical Sciences" and taught a workshop for the other section leaders entitled "Functional Python Packaging with Nix"
 
 ** Opensource Contributions
+:PROPERTIES:
+:CUSTOM_ID: osscontrib
+:END:
 #+begin_export latex
 \cvdoubleitem{\textsc{Created}}{PixN ROM \& Kernel (AOSP based rom for the Xperia Z5) \\ HaoZeke's LineageOS }
 {\textsc{Mantained}}{F2PY (NumPy) \\ ASV (Airspeed Velocity) \\ Xperia Z5 LineageOS (14.*)}
@@ -1056,7 +1074,13 @@ As part of the special COVID-19 [[https://compedu.stanford.edu/codeinplace/annou
 #+end_export
 
 * Affiliations & Accolades :cventries:
+:PROPERTIES:
+:CUSTOM_ID: affilacco
+:END:
 ** Memberships
+:PROPERTIES:
+:CUSTOM_ID: members
+:END:
 ** OSA (Optical Society of America) :cventry:
 :PROPERTIES:
 :CV_ENV: cventry
@@ -1459,6 +1483,9 @@ Also part of the SIGHPC (Special Interest Group for High Performance Computing) 
 :END:
 
 ** Awards
+:PROPERTIES:
+:CUSTOM_ID: awards
+:END:
 ** Tensor Methods and Emerging Applications to the Physical and Data Sciences :cventry:
 :PROPERTIES:
 :CV_ENV: cventry
@@ -1501,6 +1528,9 @@ Nonlinear-Optics Session
 :END:
 
 ** Reviews
+:PROPERTIES:
+:CUSTOM_ID: reviews
+:END:
 ** IOP - Journal of Physics B: Atomic, Molecular and Optical Physics :cventry:
 :PROPERTIES:
 :CV_ENV: cventry
@@ -1691,6 +1721,9 @@ Nonlinear-Optics Session
 # - [[http://joss.theoj.org/papers/f3b70136a43eb28b9327ec1ce42533c2][Prest: Open-Source Software for Computational Revealed Preference Analysis]]
 
 ** Editorial Positions
+:PROPERTIES:
+:CUSTOM_ID: edpos
+:END:
 ** JOSS (Journal Of Open Source Software) :cventry:
 :PROPERTIES:
 :CV_ENV: cventry
@@ -1702,7 +1735,13 @@ Nonlinear-Optics Session
 :END:
 
 * Grants Awarded :cventries:
+:PROPERTIES:
+:CUSTOM_ID: grantawards
+:END:
 ** Personal
+:PROPERTIES:
+:CUSTOM_ID: grant_personal
+:END:
 ** Icelandic Research Fund :cventry:
 :PROPERTIES:
 :CV_ENV: cventry
@@ -1716,6 +1755,9 @@ Amount: 6650 thousand ISK
 \textsc{Title: }Magnetic interactions of itinerant electrons modeled using Bayesian machine learning.
 
 ** Project Leadership
+:PROPERTIES:
+:CUSTOM_ID: grant_project
+:END:
 ** COST Action :cventry:
 :PROPERTIES:
 :CV_ENV: cventry
@@ -1776,6 +1818,9 @@ Funding generated to hire a technical writer full-time for two months.
 Amount: 4,600 USD
 Compiling SciPy with LFortran.
 * Publications
+:PROPERTIES:
+:CUSTOM_ID: publ
+:END:
 #+begin_export latex
 \ExecutePublistOptions{plsorting=ddt}
 {\color{cvhighlight}\textsc{Journals}}
@@ -1801,7 +1846,13 @@ Compiling SciPy with LFortran.
 #+end_export
 
 * Conference Records :cventries:
+:PROPERTIES:
+:CUSTOM_ID: confrecords
+:END:
 ** Posters
+:PROPERTIES:
+:CUSTOM_ID: posters
+:END:
 ** Inferring Multicomponent Properties Through Thermal Lens :cventry:
 :PROPERTIES:
 :CV_ENV: cventry
@@ -1884,6 +1935,9 @@ Presented at Photonics-2018.
 Authors: \underline{R. Goswami}, A. Goswami, and D. Goswami
 
 ** Oral Presentations
+:PROPERTIES:
+:CUSTOM_ID: opres
+:END:
 ** Managing concurrency for high throughput adaptive kinetic monte carlo :cventry:
 :PROPERTIES:
 :CV_ENV: cventry
@@ -2182,6 +2236,9 @@ Presented at 13th International Conference on Fiber Optics and Photonics.
 Authors: \underline{R. Goswami} and D. Goswami
 
 ** Sprint Mentorship
+:PROPERTIES:
+:CUSTOM_ID: sprintmentorship
+:END:
 ** NumPy Sprint :cventry:
 :PROPERTIES:
 :CV_ENV: cventry
@@ -2218,6 +2275,9 @@ Authors: M. Mendonca, M. Picus, \underline{R. Goswami}, R. Gommers and M. Pahari
 Presented at PyCon India 2021.
 Authors: M. Mendonca, \underline{R. Goswami} and M. Pahari
 * Workshops and Schools :cventries:
+:PROPERTIES:
+:CUSTOM_ID: workshops
+:END:
 # TODO: Get the rest of the CECAM events in
 ** Long time multi-scale simulations of activated events: from theory to practice :cventry:
 :PROPERTIES:
@@ -2630,6 +2690,9 @@ A summer school taught in-person by faculty from Harvard and UCLA, culminating i
 :END:
 
 ** Short Courses
+:PROPERTIES:
+:CUSTOM_ID: shortcourses
+:END:
 ** Surface Area and Porous Material Characterization :cventry:
 :PROPERTIES:
 :CV_ENV: cventry
@@ -2651,7 +2714,13 @@ A summer school taught in-person by faculty from Harvard and UCLA, culminating i
 :END:
 
 * Certifications :cventries:
+:PROPERTIES:
+:CUSTOM_ID: certifs
+:END:
 ** Coursera
+:PROPERTIES:
+:CUSTOM_ID: coursera
+:END:
 ** Deep Learning Specialization :cventry:
 :PROPERTIES:
 :CV_ENV: cventry
@@ -2669,6 +2738,9 @@ The specialization can be verified by ID [[https://www.coursera.org/account/acco
 - [[https://www.coursera.org/account/accomplishments/records/D8JCTU57D6CN][Sequence Models]] - **100.0%**
 
 ** NPTEL Courses
+:PROPERTIES:
+:CUSTOM_ID: nptel_courses
+:END:
 ** Graph Theory :cventry:
 :PROPERTIES:
 :CV_ENV: cventry
@@ -2714,6 +2786,9 @@ The specialization can be verified by ID [[https://www.coursera.org/account/acco
 [[https://nptel.ac.in/noc/social_cert/noc18-cy07/NPTEL18CY07S44800241810011238.jpg][License: NPTEL18CY07S4480024]]
 
 * Graduate Coursework :cventries:
+:PROPERTIES:
+:CUSTOM_ID: grad_courses
+:END:
 #+begin_export latex
 \blockquote[Note]{Due to COVID-19, grading varies from Pass/Fail to a 10 point scale.}\\
 #+end_export
@@ -2814,7 +2889,13 @@ Course covering "Elements of Statistical Learning: Data Mining, Inference, and P
 \textsc{Project:} Predicting Molecular Properties
 
 * Undergraduate Experience :cventries:
+:PROPERTIES:
+:CUSTOM_ID: undergrad_exp
+:END:
 ** Internships
+:PROPERTIES:
+:CUSTOM_ID: interns
+:END:
 ** Dr. Debojit Chakrabarty :cventry:
 :PROPERTIES:
 :CV_ENV: cventry
@@ -2848,6 +2929,9 @@ Discussed computational techniques for the simulation and understanding of quant
 #+end_export
 
 ** Volunteer Work
+:PROPERTIES:
+:CUSTOM_ID: volunteer_work
+:END:
 ** ChemE Herald :cventry:
 :PROPERTIES:
 :CV_ENV: cventry
@@ -2896,6 +2980,9 @@ Designed a Jekyll based static website and ensured adherence to standard MUN rul
 Managed a diverse team of student content writers and also later typeset a spin-off multi-lingual newsletter in \XeLaTeX.
 
 * Technical Skills
+:PROPERTIES:
+:CUSTOM_ID: techskills
+:END:
 
 #+begin_export latex
 \subsection{Programming Languages}
