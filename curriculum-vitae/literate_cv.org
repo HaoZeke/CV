@@ -236,7 +236,7 @@ or lists have a perfectly straight-looking right edge.
  isbn=false,%
     style=publist,
     % plauthor stuff
- plsorting=ydtn, %
+    % plsorting=ydtn, % Somehow not applying, use ddt thorugh \ExecutePublistOptions{plsorting=ddt}
     fixyear=true, %
     hlyear=true, %
     plauthorname=Goswami, %
@@ -1767,6 +1767,7 @@ Amount: 4,600 USD
 Compiling SciPy with LFortran.
 * Publications
 #+begin_export latex
+\ExecutePublistOptions{plsorting=ddt}
 {\color{cvhighlight}\textsc{Journals}}
 
 \begin{refsection}
