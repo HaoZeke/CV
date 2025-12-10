@@ -444,6 +444,16 @@ Postdoctoral position with Prof. Michele Ceriotti and Dr. Guillaume Fraux workin
 :EMPLOYER: Queen's University
 :END:
 TEER 1 NOC 41200 visa exemption researcher at [[https://www.laurentkarimbeland.com/home][Prof. Laurent Béland's]] group working on heating effects of large copper systems by scaling off-lattice / object kinetic monte carlo to over a million atoms.
+# ** TurtleTech :cventry:
+# :PROPERTIES:
+# :CV_ENV: cventry
+# :FROM: 2025
+# :TO:     \textsc{present}
+# :NOTE: CEO
+# :LOCATION: Iceland
+# :EMPLOYER: TurtleTech ehf.
+# :END:
+# Founder and CEO of FOSS consultancy.
 ** Science Institute :cventry:
 :PROPERTIES:
 :CV_ENV: cventry
