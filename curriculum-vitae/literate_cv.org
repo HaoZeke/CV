@@ -359,6 +359,7 @@ CLOSED: [2025-10-05 Sun 14:31]
 % want to use custom icons and have finer control over spacing.
 \extrainfo{
 % \faPhone\hspace{0.3em}\href{tel:919935135006}{\ttfamily +91 9935135006}\\
+{\small\faEnvelope}\hspace{0.3em}\href{mailto:rgoswami@ieee.org}{\ttfamily rgoswami@ieee.org}\\
 {\small\faGithub}\hspace{0.3em}\href{https://github.com/haozeke}{\ttfamily haozeke}\\
 {\small\faTwitter}\hspace{0.3em}\href{https://twitter.com/rg0swami}{\ttfamily rg0swami}\\
 \faGlobe\hspace{0.3em}\href{https://sh.turtletech.us/rghome}{\ttfamily rgoswami.me}
@@ -800,6 +801,17 @@ Am responsible for overseeing the preparation of all drafts of YPC publications 
 :EMPLOYER: The Carpentries
 :END:
 Was tasked with facilitating the formation of task forces/committees as appropriate to accomplish desired project outcomes; in particular with a focus on improving recognition for community contributions
+
+** Symengine :cventry:
+:PROPERTIES:
+:CV_ENV: cventry
+:FROM: Sep 2020
+:TO: March 2021
+:NOTE: Technical Writer
+:LOCATION:
+:EMPLOYER: Google Season of Docs
+:END:
+Was tasked with a long project extending the existing documentation and setting up tests and websites for the Symengine project
 
 ** TeX Users Group Conference (TUG202X) :cventry:
 :PROPERTIES:
