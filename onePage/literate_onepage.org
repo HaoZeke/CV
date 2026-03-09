@@ -1,0 +1,259 @@
+#+AUTHOR: Rohit Goswami
+#+email: rgoswami@ieee.org
+#+options: tags:nil title:nil toc:nil num:nil author:nil date:nil
+# Usage: export to LaTeX, compile with xelatex
+* Configuration :ignoreheading:ignore:
+:PROPERTIES:
+:VISIBILITY: folded
+:END:
+#+BEGIN_SRC emacs-lisp :exports none :eval always :results none
+(require 'ox-extra)
+(ox-extras-activate '(ignore-headlines))
+#+END_SRC
+
+** Theme :ignoreheading:ignore:
+#+BEGIN_SRC emacs-lisp :exports none :results none :eval always
+(setq org-latex-packages-alist 'nil)
+(setq org-latex-with-hyperref 'nil)
+(setq org-latex-hyperref-template 'nil)
+(setq org-latex-minted-options 'nil)
+(setq org-latex-listings 'listings)
+;; Register the deedy-resume class for org export
+(add-to-list 'org-latex-classes
+  '("deedy-resume"
+    "\\documentclass[letterpaper]{deedy-resume}"
+    ("\\section{%s}" . "\\section*{%s}")
+    ("\\subsection{%s}" . "\\subsection*{%s}")))
+#+END_SRC
+
+*** TeX activation :ignoreheading:ignore:
+#+LATEX_COMPILER: xelatex
+#+LATEX_CLASS: deedy-resume
+#+LATEX_CLASS_OPTIONS: [letterpaper]
+
+* About :ignoreheading:ignore:noexport:
+This is a one-page CV using the [[https://github.com/deedy/Deedy-Resume][Deedy Resume]] template.
+The two-column layout uses ~minipage~ environments with ~\runsubsection~,
+~\descript~, and ~\location~ commands defined in ~deedy-resume.cls~.
+
+Content is updated to match the full literate CV (~literate_cv.org~) as of 2025.
+
+* Preamble :ignoreheading:ignore:noexport:
+** Geometry
+Override the class defaults for tighter margins.
+#+name: onepage_geometry
+#+begin_src latex
+\usepackage{geometry}
+\geometry{
+ letterpaper,
+ left=10mm,
+ right=10mm,
+ top=5mm,
+ bottom=5mm,
+}
+#+end_src
+** Bibliography
+#+name: onepage_biblio
+#+begin_src latex
+\usepackage[
+ backend=biber,
+ sorting=ydnt,
+ minbibnames=8,
+ maxbibnames=9,
+ block=space
+]{biblatex}
+\bibliography{publications}
+
+\defbibenvironment{midbib}
+{\list
+ {}
+ {
+  \setlength{\leftmargin}{0mm}
+  \setlength{\itemindent}{-\leftmargin}
+  \setlength{\itemsep}{\bibitemsep}
+  \setlength{\parsep}{\bibparsep}}
+}
+{\endlist}
+{\item}
+#+end_src
+** Tangle
+#+begin_src latex :results none :tangle onepage-preamble.tex :noweb yes
+<<onepage_geometry>>
+<<onepage_biblio>>
+#+end_src
+
+#+LATEX_HEADER: \input{onepage-preamble.tex}
+
+* Document :ignore:ignoreheading:
+** Last updated :ignore:ignoreheading:
+#+begin_export latex
+\lastupdated
+#+end_export
+
+** Title :ignore:ignoreheading:
+#+begin_export latex
+\namesection{Rohit}{Goswami}{
+ \urlstyle{same}\url{https://rgoswami.me} \\
+ \href{mailto:rgoswami@ieee.org}{rgoswami@ieee.org} | \href{https://github.com/haozeke}{github.com/haozeke} | \href{https://scholar.google.com/citations?hl=en&user=36gIdJMAAAAJ}{Google Scholar}
+}
+#+end_export
+
+** Left Column :ignore:ignoreheading:
+#+begin_export latex
+\begin{minipage}[t]{0.36\textwidth}
+#+end_export
+
+*** Education :ignore:ignoreheading:
+#+begin_export latex
+
+\section{Education}
+
+\subsection{University of Iceland}
+\descript{Ph.D. Physical Sciences}
+\location{2019 -- 2025 | Reykjav\'{i}k, Iceland}
+\location{Bayesian ML for magnetic interactions}
+
+\sectionspace
+
+\subsection{HBTU Kanpur}
+\descript{B.Tech. in Chemical Engineering}
+\location{2018 | Kanpur, India}
+\location{First Division}
+
+\sectionspace
+
+\subsection{DPS Kalyanpur}
+\descript{Intermediate (AISSCE)}
+\location{May 2013 | Kanpur, India}
+\location{CBSE, 87.2\%}
+
+\descript{High School (AISSE)}
+\location{May 2011 | Kanpur, India}
+\location{CBSE, CGPA 9.8}
+
+#+end_export
+
+*** Memberships :ignore:ignoreheading:
+#+begin_export latex
+
+\vspace{-5pt}
+\section{Memberships}
+\subsection{Current}
+\textbf{APS}, \textbf{2015}, Early Career\\
+\textbf{IEEE}, \textbf{2015}, Early Career\\
+\textbf{IOP}, \textbf{2015}, Member (MInstP)\\
+\textbf{AIChE}, \textbf{2015}, Young Professional\\
+\textbf{ACM}, \textbf{2019}, Professional \\
+\textbf{RSC}, \textbf{2022}, Member (MRSC)\\
+\textbf{BCS}, \textbf{2022}, Professional (MBCS)
+\vspace{-5pt}
+
+#+end_export
+
+*** Skills :ignore:ignoreheading:
+#+begin_export latex
+
+\section{Skills}
+\subsection{Simulation}
+LAMMPS \textbullet{} ORCA \textbullet{} AiiDA \textbullet{} OVITO \textbullet{} ESPResSoMD \textbullet{} GROMACS \textbullet{} VMD \textbullet{} CMake\\
+\subsection{Created}
+d-SEAMS \textbullet{} wailord \textbullet{} fastMatMR \textbullet{} zenYoda \textbullet{} docuYoda\\
+\subsection{Programming}
+C++ \textbullet{} Python \textbullet{} R \textbullet{} Fortran \textbullet{} Rust \textbullet{} Julia \textbullet{} Shell \textbullet{} \LaTeX \textbullet{} Nix \textbullet{} JS \textbullet{} CUDA
+
+#+end_export
+
+*** End Left Column :ignore:ignoreheading:
+#+begin_export latex
+\end{minipage}
+\hfill
+#+end_export
+
+** Right Column :ignore:ignoreheading:
+#+begin_export latex
+\begin{minipage}[t]{0.63\textwidth}
+#+end_export
+
+*** Experience :ignore:ignoreheading:
+#+begin_export latex
+
+\section{Experience}
+
+\runsubsection{Lab COSMO, EPFL}
+\descript{| Systems Specialist (Postdoc)}
+\location{2025 -- Present | Lausanne, Switzerland}
+\vspace{\topsep}
+Working with Prof. Michele Ceriotti and Dr. Guillaume Fraux on the \texttt{metatensor} ecosystem for interoperable atomistic machine learning, including GROMACS integration and DLPack support.
+
+\sectionspace
+
+\runsubsection{Queen's University}
+\descript{| Visiting Researcher}
+\location{2025 | Kingston, Canada}
+Scaling off-lattice kinetic monte carlo to over a million atoms with Prof. Laurent B\'{e}land.
+
+\sectionspace
+
+\runsubsection{University of Iceland}
+\descript{| Doctoral Researcher}
+\location{2019 -- 2024 | Reykjav\'{i}k, Iceland}
+Rann\'{i}s Doctoral Grant PI: Bayesian ML for saddle point searches on potential energy surfaces. Supervised by Prof. Hannes J\'{o}nsson.
+
+\sectionspace
+
+\runsubsection{Quansight Labs}
+\descript{| Software Engineer II}
+\location{2021 -- 2025 | Remote}
+Maintained \texttt{f2py} (NumPy) and foundational FOSS scientific codebases.
+
+\sectionspace
+
+\runsubsection{IIT Kanpur}
+\descript{| Senior Project Associate / Project Associate}
+\location{2018 -- 2020 | Kanpur, India}
+\vspace{\topsep}
+\begin{tightitemize}
+\item Computational nanoscience: ice structure analysis (CHILL+), GPU-accelerated MD tools
+\item Femtolab: quantum information and computation with ultrafast lasers
+\end{tightitemize}
+
+#+end_export
+
+*** Publications :ignore:ignoreheading:
+#+begin_export latex
+
+\sectionspace
+\section{Publications}
+
+\runsubsection{Selected}
+\descript{| JOSS Editor (2024--present)}
+\nocite{goswamiEfficientImplementationGaussian2025a,bigiMetatensorMetatomicFoundational2025,Goswami2020}
+\printbibliography[heading=none, keyword=selected]
+
+#+end_export
+
+*** Accolades :ignore:ignoreheading:
+#+begin_export latex
+
+\section{Selected Service \& Awards}
+{\small
+ \begin{tightitemize}
+  \item \textbf{JOSS Editor} (2024--present); \textbf{NumFOCUS GSoC Admin} (2024--present)
+  \item \textbf{IEEE P3173 Vice Chair}; \textbf{Nordic-RSE} Board, founding Secretary
+  \item \textbf{COST Action Co-Proposer} (575k EUR, 2025--2029); \textbf{Rann\'{i}s Doctoral Grant} (6650k ISK)
+  \item \textbf{Reviewer}: Nature Comms, PRL, PRA, PRE, JOSS (80+), PLOS ONE, IOP, PeerJ
+  \item \textbf{Teaching}: Stanford CS106A, The Carpentries, University of Iceland
+ \end{tightitemize}
+}
+
+#+end_export
+
+*** End Right Column :ignore:ignoreheading:
+#+begin_export latex
+\end{minipage}
+#+end_export
+
+* Notes :noexport:ignoreheading:ignore:
+** TODO Consider adding a QR code
+** TODO Tune content density after first compile
+The deedy-resume template is tight; may need to adjust vspace or font sizes.
