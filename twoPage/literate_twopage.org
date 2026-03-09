@@ -224,6 +224,32 @@ For \texttt{d-SEAMS} molecular simulation analysis engine.
 \end{itemize}
 #+end_export
 
+** Talks :ignore:ignoreheading:
+#+begin_export latex
+\section{Selected Presentations}
+\begin{itemize}
+\item \textbf{ACS Fall 2025} -- ``Managing concurrency for high throughput adaptive kinetic Monte Carlo'' (Washington, DC)
+\item \textbf{Psi-k 2025} -- ``Advocating for standardized APIs for common procedures'' (Liverpool, UK)
+\item \textbf{Kernel aKMC 2025} -- ``Towards a million atoms and a thousand KMC steps a day'' (Queen's, Canada)
+\item \textbf{APS Global Physics Summit 2025} -- ``Contending with concurrency across programming languages'' (Anaheim, CA)
+\item \textbf{CECAM-LTS-MAP 2024} -- ``Accelerating Saddle Searches with Gaussian Process Regression'' (Invited, Lausanne)
+\item \textbf{IPAM TMRC2 2023} -- ``Computational Chemistry and Possible Tensor Applications'' (Invited, UCLA)
+\item \textbf{14th Icelandic HPC Workshop 2024} -- ``Scaling workflows from development to HPC''
+\end{itemize}
+#+end_export
+
+** Software :ignore:ignoreheading:
+#+begin_export latex
+\section{Open Source Software}
+\begin{itemize}
+\item \textbf{d-SEAMS} (co-creator) -- Molecular dynamics trajectory analysis engine (JCIM 2020, NumFOCUS SDG funded)
+\item \textbf{f2py / NumPy} (maintainer) -- Fortran-to-Python interface generator; core NumPy component
+\item \textbf{fastMatMR} -- rOpenSci reviewed R bindings for fast Matrix Market I/O
+\item \textbf{wailord} -- Python library for ORCA quantum chemistry workflows (SciPy 2022)
+\item \textbf{flowy} -- High performance probabilistic lava emplacement prediction (CPC 2025)
+\end{itemize}
+#+end_export
+
 ** Skills :ignore:ignoreheading:
 #+begin_export latex
 \section{Technical Skills}
