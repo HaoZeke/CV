@@ -1,0 +1,67 @@
+% rgcv-bib.sty -- Shared bibliography setup for rgCV variants
+\ProvidesPackage{rgcv-bib}[2025/03/09 Bibliography setup for rgCV]
+
+\RequirePackage[%
+  minbibnames=8,%
+  maxbibnames=99,%
+  block=space,%
+  bibencoding=utf8,%
+  backend=biber,%
+  url=false,%
+  isbn=false,%
+  style=publist,%
+  fixyear=true,%
+  hlyear=true,%
+  plauthorname=Goswami,%
+  plauthorfirstname=Rohit,%
+  plauthorhandling=highlight,%
+  plnumbering=local-descending,%
+]{biblatex}
+
+% DOI and PDF field mapping
+\DeclareSourcemap{
+  \maps[datatype=bibtex]{
+    \map{
+      \step[fieldsource=mydoi]
+      \step[fieldset=usera, origfieldval]
+    }
+    \map{
+      \step[fieldsource=mypdf]
+      \step[fieldset=userb, origfieldval]
+    }
+  }
+}
+
+% [DOI] link formatting
+\DeclareFieldFormat{usera}{\color{cvteal}[\href{#1}{\textsc{doi}}]}
+\AtEveryBibitem{
+  \csappto{blx@bbx@\thefield{entrytype}}{%
+    \iffieldundef{usera}{}{\space\printfield{usera}}}
+}
+
+% [PDF] link formatting
+\DeclareFieldFormat{userb}{\color{cvteal}[\href{#1}{\textsc{pdf}}]}
+\AtEveryBibitem{
+  \csappto{blx@bbx@\thefield{entrytype}}{\iffieldundef{userb}{}{\printfield{userb}}}
+}
+
+% Author name highlighting
+\renewcommand*{\mkbibnamegiven}[1]{%
+  \ifitemannotation{highlight}{\textbf{#1}}{#1}}
+\renewcommand*{\mkbibnamefamily}[1]{%
+  \ifitemannotation{highlight}{\textbf{#1}}{#1}}
+
+% Compact bib environment (no number labels)
+\defbibenvironment{midbib}
+{\list
+  {}
+  {
+    \setlength{\leftmargin}{0mm}
+    \setlength{\itemindent}{-\leftmargin}
+    \setlength{\itemsep}{\bibitemsep}
+    \setlength{\parsep}{\bibparsep}}
+}
+{\endlist}
+{\item}
+
+\endinput
