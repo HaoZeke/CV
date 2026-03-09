@@ -180,7 +180,7 @@ First Division.
 ** Publications :ignore:ignoreheading:
 #+begin_export latex
 \section{Selected Publications}
-\nocite{goswamiEfficientImplementationGaussian2025a,bigiMetatensorMetatomicFoundational2025,Goswami2020,stateOfFortran2022,goswamiAdaptivePruningOA2025,sallermannFlowyHighPerformance2025,goswamiBayesianHierarchicalModels2025,goswamiCompositionalAnalysisFragrance2025}
+\nocite{goswamiEfficientImplementationGaussian2025a,bigiMetatensorMetatomicFoundational2025,Goswami2020,stateOfFortran2022,goswamiAdaptivePruningOA2025,sallermannFlowyHighPerformance2025,goswamiBayesianHierarchicalModels2025,goswamiCompositionalAnalysisFragrance2025,goswamiTwodimensionalRMSDProjections2026}
 \printbibliography[heading=none, keyword=selected]
 #+end_export
 
@@ -247,6 +247,8 @@ For \texttt{d-SEAMS} molecular simulation analysis engine.
 \item \textbf{fastMatMR} -- rOpenSci reviewed R bindings for fast Matrix Market I/O
 \item \textbf{wailord} -- Python library for ORCA quantum chemistry workflows (SciPy 2022)
 \item \textbf{flowy} -- High performance probabilistic lava emplacement prediction (CPC 2025)
+\item \textbf{eOn} (maintainer) -- Long timescale dynamics code with Gaussian Process accelerated saddle searches
+\item \textbf{metatensor} (maintainer) -- Atomistic machine learning toolkit (JCP 2026)
 \end{itemize}
 #+end_export
 
