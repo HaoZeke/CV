@@ -274,6 +274,7 @@ TSWLatexianTemp*
 # auto folder when using emacs and auctex
 ./auto/*
 *.el
+!scripts/org2tex.el
 
 # expex forward references with \gathertags
 *-tags.tex
@@ -290,7 +291,7 @@ TSWLatexianTemp*
 .LSOverride
 
 # Icon must end with two \r
-Icon
+Icon
 
 # Thumbnails
 ._*
@@ -317,3 +318,27 @@ Temporary Items
 
 # End of https://www.toptal.com/developers/gitignore/api/macos
 
+# Pixi
+.pixi/
+
+# Tangled preambles (regenerated)
+preamble.tex
+onepage-preamble.tex
+twopage-preamble.tex
+
+# Build PDFs (regenerated)
+curriculum-vitae/literate_cv.pdf
+twoPage/literate_twopage.pdf
+onePage/literate_onepage.pdf
+
+# Shared cache
+shared/.fastembed_cache/
+
+# Claude config
+CLAUDE.md
+.claude/
+
+# Emacs
+*.elc
+\#*\#
+.\#*

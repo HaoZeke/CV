@@ -440,7 +440,7 @@ The rest of the document is written within the ~begin{document}~ environment.
 :NOTE: Systems Specialist
 :EMPLOYER: École Polytechnique Fédérale de Lausanne
 :END:
-Postdoctoral position with Prof. Michele Ceriotti and Dr. Guillaume Fraux working on the @@latex:\metatensor@@ ecosystem.
+Postdoctoral position with Prof. Michele Ceriotti and Dr. Guillaume Fraux working on the @@latex:\metatensor@@ ecosystem for interoperable atomistic machine learning, including GROMACS integration and DLPack support for zero-copy tensor interoperability.
 ** Department of Mechanical & Materials Engineering :cventry:
 :PROPERTIES:
 :CV_ENV: cventry
@@ -531,11 +531,12 @@ I was associated with the Computational Nanoscience group. Over the course of tw
 :PROPERTIES:
 :CV_ENV: cventry
 :FROM: 2019
-:TO: \textsc{present}
+:TO: 2025
 :NOTE: \emph{Iceland}
 :LOCATION: Reykjavík
 :EMPLOYER: University of Iceland
 :END:
+Thesis: ``Efficient Exploration of Chemical Kinetics''. Supervised by Prof. Hannes Jónsson with Prof. Birgir Hrafnkelsson as co-supervisor.
 
 ** B.Tech. Chemical Engineering :cventry:
 :PROPERTIES:

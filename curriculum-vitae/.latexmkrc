@@ -1,4 +1,6 @@
-print("Hello, world!  I'm a .latexmkrc\n");
-$pdflatex = "xelatex %O %S";
-$pdf_mode = 1;
-$dvi_mode = $postscript_mode = 0;
+$pdflatex = "xelatex -interaction=nonstopmode -halt-on-error %O %S";
+$pdf_mode = 5;  # xelatex
+$biber = 'biber %O %S';
+$clean_ext = 'bbl bcf run.xml';
+$ENV{'TEXINPUTS'} = '../shared/:' . ($ENV{'TEXINPUTS'} || '');
+$ENV{'BIBINPUTS'} = '../shared/:' . ($ENV{'BIBINPUTS'} || '');
