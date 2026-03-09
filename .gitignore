@@ -326,6 +326,13 @@ preamble.tex
 onepage-preamble.tex
 twopage-preamble.tex
 
+# Generated tex from org export
+onePage/literate_onepage.tex
+twoPage/literate_twopage.tex
+
+# Biber temp files
+*.bpx
+
 # Build PDFs (regenerated)
 curriculum-vitae/literate_cv.pdf
 twoPage/literate_twopage.pdf
