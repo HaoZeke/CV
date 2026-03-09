@@ -1,0 +1,129 @@
+% Created 2026-03-09 Mon 16:04
+% Intended LaTeX compiler: xelatex
+\documentclass[twopage]{rgcv}
+\usepackage{graphicx}
+\usepackage{longtable}
+\usepackage{wrapfig}
+\usepackage{rotating}
+\usepackage[normalem]{ulem}
+\usepackage{capt-of}
+\usepackage{hyperref}
+\input{twopage-preamble.tex}
+\date{}
+\title{}
+\begin{document}
+
+\lastupdated
+
+\namesection{Rohit}{Goswami}{
+ Ph.D., MInstP MRSC MBCS \\
+ \href{mailto:rgoswami@ieee.org}{rgoswami@ieee.org}
+ \textbullet{} \href{https://rgoswami.me}{rgoswami.me}
+ \textbullet{} \href{https://github.com/haozeke}{github.com/haozeke}
+ \textbullet{} \href{https://scholar.google.com/citations?hl=en&user=36gIdJMAAAAJ}{Google Scholar}
+}
+\section{Work Experience}
+
+\runsubsection{Lab COSMO, EPFL}
+\descript{| Systems Specialist (Postdoctoral Researcher)}
+\location{2025 -- Present | Lausanne, Switzerland}
+\begin{itemize}
+\item Developing the \texttt{metatensor} ecosystem for interoperable atomistic machine learning with Prof. Michele Ceriotti and Dr. Guillaume Fraux
+\item Integration of machine learning potentials with GROMACS; DLPack support for zero-copy tensor interoperability across C++, Python, Rust, and Fortran
+\end{itemize}
+
+\sectionspace
+
+\runsubsection{Queen's University}
+\descript{| Visiting Researcher}
+\location{2025 | Kingston, Canada}
+\begin{itemize}
+\item Scaling off-lattice / object kinetic Monte Carlo to over a million atoms for radiation damage modeling with Prof. Laurent B\'{e}land
+\end{itemize}
+
+\sectionspace
+
+\runsubsection{University of Iceland}
+\descript{| Doctoral Researcher (Rann\'{i}s Doctoral Grant PI)}
+\location{2019 -- 2024 | Reykjav\'{i}k, Iceland}
+\begin{itemize}
+\item Principal investigator: ``Magnetic interactions of itinerant electrons modeled using Bayesian machine learning'' (Rann\'{i}s Research Fund)
+\item Developed Gaussian process accelerated saddle point search methods (climbing image NEB, dimer) with adaptive pruning
+\item Bayesian hierarchical models for quantitative benchmarking of saddle search algorithms
+\end{itemize}
+
+\sectionspace
+
+\runsubsection{Quansight Labs}
+\descript{| Software Engineer II}
+\location{2021 -- 2025 | Remote (Austin, TX)}
+\begin{itemize}
+\item Maintained \texttt{f2py} (NumPy's Fortran-to-Python interface) and foundational FOSS scientific codebases
+\item Contributed to \texttt{scipy}, \texttt{meson-python}, and \texttt{LFortran} compiler development
+\end{itemize}
+
+\sectionspace
+
+\runsubsection{IIT Kanpur}
+\descript{| Senior Project Associate / Project Associate}
+\location{2018 -- 2020 | Kanpur, India}
+\begin{itemize}
+\item Computational nanoscience group: ice nucleation analysis (CHILL+), GPU-accelerated MD tools; created \texttt{d-SEAMS}
+\item Femtolab: femtosecond laser approaches to quantum information and computation
+\end{itemize}
+\section{Education}
+
+\runsubsection{University of Iceland}
+\descript{| Ph.D. Physical Sciences}
+\location{2019 -- 2025 | Reykjav\'{i}k, Iceland}
+Thesis: ``Efficient Exploration of Chemical Kinetics''. Supervised by Prof. Hannes J\'{o}nsson.
+
+\sectionspace
+
+\runsubsection{HBTU Kanpur}
+\descript{| B.Tech. Chemical Engineering}
+\location{2014 -- 2018 | Kanpur, India}
+First Division.
+\section{Selected Publications}
+\nocite{goswamiEfficientImplementationGaussian2025a,bigiMetatensorMetatomicFoundational2025,Goswami2020,stateOfFortran2022,goswamiAdaptivePruningOA2025,sallermannFlowyHighPerformance2025,goswamiBayesianHierarchicalModels2025,goswamiCompositionalAnalysisFragrance2025}
+\printbibliography[heading=none, keyword=selected]
+\section{Grants and Awards}
+
+\runsubsection{COST Action CA23158 Co-Proposer}
+\descript{| 575k EUR, 2025--2029}
+European Cooperation in Science and Technology network proposal.
+
+\sectionspace
+
+\runsubsection{Rann\'{i}s Doctoral Research Grant}
+\descript{| 6650k ISK, 2020--2023}
+Icelandic Research Fund grant as PI for Bayesian ML applied to saddle point searches.
+
+\sectionspace
+
+\runsubsection{NumFOCUS Small Development Grant}
+\descript{| \$5000 USD, 2020}
+For \texttt{d-SEAMS} molecular simulation analysis engine.
+
+\sectionspace
+
+\runsubsection{Springer Best Student Paper Award}
+\descript{| Photonics 2016}
+\section{Selected Service}
+\begin{itemize}
+\item \textbf{JOSS Editor} (2024--present) -- Journal of Open Source Software, topic editor
+\item \textbf{NumFOCUS GSoC Admin} (2024--present) -- Coordinating Google Summer of Code across NumFOCUS projects
+\item \textbf{IEEE P3173 Vice Chair} (2022--present) -- Standard for Endocrine Disrupting Chemical Hazard Labelling
+\item \textbf{Nordic-RSE} -- Board Member; founding Secretary of the Nordic Research Software Engineers association
+\item \textbf{IHPC Consultant} (2021--2024) -- Simulation and Data Lab Computational Chemistry, National HPC center of Iceland
+\item \textbf{Reviewer}: Nature Comms, PRL, PRA, PRE, JOSS (80+), PLOS ONE, IOP journals, PeerJ
+\end{itemize}
+\section{Technical Skills}
+
+\skillsection{HPC}{LAMMPS, GROMACS, MPI, CUDA, Nix, Spack, EasyBuild, Slurm, containers (Docker/Singularity)}
+\skillsection{Languages}{C++, Python, Fortran, Rust, R, Julia, Shell}
+\skillsection{Tools}{CMake, Meson, Git, CI/CD (GitHub Actions, Azure), \LaTeX, Emacs}
+\skillsection{ML/Data}{PyTorch, scikit-learn, GPy, Stan, Bayesian optimization, Gaussian processes}
+\section{Professional Memberships}
+IOP (MInstP) \textbullet{} RSC (MRSC) \textbullet{} BCS (MBCS) \textbullet{} ACM \textbullet{} APS \textbullet{} IEEE \textbullet{} AIChE
+\end{document}
