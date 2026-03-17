@@ -17,13 +17,21 @@ jobs:
         with:
           cache: true
 
-      - name: Install TeX Live
-        run: |
-          sudo apt-get update
-          sudo apt-get install -y --no-install-recommends \
-            texlive-xetex texlive-bibtex-extra texlive-latex-extra \
-            texlive-fonts-extra texlive-fonts-recommended \
-            biber latexmk fonts-font-awesome
+      - uses: zauguin/install-texlive@v3
+        with:
+          packages: >
+            scheme-basic
+            xetex latexmk biber
+            academicons arydshln babel babel-english biblatex
+            biblatex-publist capt-of colortbl csquotes enumitem
+            etoolbox fancyhdr fontawesome5 fontspec geometry
+            gettitlestring graphics graphics-cfg graphics-def
+            greek-fontenc hyperref isodate kvdefinekeys kvoptions
+            kvsetkeys l3backend l3kernel l3packages metalogo
+            microtype moderncv multirow pgf realscripts
+            substr textpos tipa titlesec ulem unicode-data
+            wrapfig xcolor xltxtra xunicode
+            lm lm-math collection-fontsrecommended
 
       - name: Build all CV variants
         run: pixi run all
