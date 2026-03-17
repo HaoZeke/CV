@@ -327,6 +327,7 @@ onepage-preamble.tex
 twopage-preamble.tex
 
 # Generated tex from org export
+curriculum-vitae/literate_cv.tex
 onePage/literate_onepage.tex
 twoPage/literate_twopage.tex
 

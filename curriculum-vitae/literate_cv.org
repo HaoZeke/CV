@@ -1,6 +1,6 @@
 #+AUTHOR: Rohit Goswami
 #+email: rgoswami@ieee.org
-#+options: tags:nil title:nil
+#+options: tags:nil title:nil toc:nil
 # Usage: tangle and then call hz/org-export-to-file-moderncv-tex
 * Configuration :ignoreheading:ignore:
 :PROPERTIES:
@@ -32,11 +32,21 @@
 #+END_SRC
 *** TeX activation :ignoreheading:ignore:
 #+LATEX_COMPILER: xelatex
+#+LATEX_CLASS: moderncv
 #+LATEX_CLASS_OPTIONS: [10pt,a4paper, final, factor=1100, stretch=18, shrink=18]
 * About :ignoreheading:ignore:noexport:
 This is a two-phase exporter so ~tex~ can be handled in ~SRC~ blocks while still
 being placed in a preamble.
 * Preamble :ignoreheading:ignore:noexport:
+** ModernCV theme
+#+name: moderncv_theme
+#+begin_src latex
+\moderncvstyle{classic}
+\definecolor{color1}{RGB}{1, 52, 64}
+% change width of the column with the dates
+\setlength{\hintscolumnwidth}{2.5cm}
+#+end_src
+** Xspace
 To prevent issues with ~\es~ we need ~xspace~.
 #+name: xspace
 #+begin_src latex
@@ -385,6 +395,7 @@ CLOSED: [2025-10-05 Sun 14:31]
 ** Assemble and Tangle
 Finally we tangle everything together and export once.
 #+begin_src latex :results none :tangle preamble.tex :noweb yes
+<<moderncv_theme>>
 <<xspace>>
 <<color>>
 <<font_kerning>>

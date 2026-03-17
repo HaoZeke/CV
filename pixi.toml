@@ -6,28 +6,26 @@ name = "rgCV"
 platforms = ["linux-64", "osx-64", "osx-arm64"]
 version = "0.1.0"
 
-[activation.env]
-TEXLIVE_BIN = "$CONDA_PREFIX/share/texlive/bin"
-
 [tasks]
 # Org to TeX (emacs batch)
 mktex-full = "emacs -nl --script scripts/org2tex.el curriculum-vitae/literate_cv.org"
 mktex-twopage = "emacs -nl --script scripts/org2tex.el twoPage/literate_twopage.org"
 mktex-onepage = "emacs -nl --script scripts/org2tex.el onePage/literate_onepage.org"
 
-# TeX to PDF (PATH export for cross-platform texlive)
-mkpdf-full = { cmd = "export PATH=\"$CONDA_PREFIX/share/texlive/bin/x86_64-linux:$CONDA_PREFIX/share/texlive/bin/aarch64-linux:$CONDA_PREFIX/share/texlive/bin/x86_64-darwin:$CONDA_PREFIX/share/texlive/bin/aarch64-darwin:$PATH\" && latexmk -pdfxe -halt-on-error literate_cv.tex", depends-on = ["mktex-full"], cwd = "curriculum-vitae/" }
-mkpdf-twopage = { cmd = "export PATH=\"$CONDA_PREFIX/share/texlive/bin/x86_64-linux:$CONDA_PREFIX/share/texlive/bin/aarch64-linux:$CONDA_PREFIX/share/texlive/bin/x86_64-darwin:$CONDA_PREFIX/share/texlive/bin/aarch64-darwin:$PATH\" && latexmk -pdfxe -halt-on-error literate_twopage.tex", depends-on = ["mktex-twopage"], cwd = "twoPage/" }
-mkpdf-onepage = { cmd = "export PATH=\"$CONDA_PREFIX/share/texlive/bin/x86_64-linux:$CONDA_PREFIX/share/texlive/bin/aarch64-linux:$CONDA_PREFIX/share/texlive/bin/x86_64-darwin:$CONDA_PREFIX/share/texlive/bin/aarch64-darwin:$PATH\" && latexmk -pdfxe -halt-on-error literate_onepage.tex", depends-on = ["mktex-onepage"], cwd = "onePage/" }
+# TeX to PDF (requires xelatex, latexmk, biber on system PATH)
+mkpdf-full = { cmd = "latexmk -pdfxe -halt-on-error literate_cv.tex", depends-on = ["mktex-full"], cwd = "curriculum-vitae/" }
+mkpdf-twopage = { cmd = "latexmk -pdfxe -halt-on-error literate_twopage.tex", depends-on = ["mktex-twopage"], cwd = "twoPage/" }
+mkpdf-onepage = { cmd = "latexmk -pdfxe -halt-on-error literate_onepage.tex", depends-on = ["mktex-onepage"], cwd = "onePage/" }
 
 # Convenience
 all = { depends-on = ["mkpdf-full", "mkpdf-twopage", "mkpdf-onepage"] }
-clean = { cmd = "fd -e aux -e log -e bbl -e bcf -e blg -e fdb_latexmk -e fls -e xml -e synctex.gz --exec rm -f {}" }
+clean = { cmd = "fd -e aux -e log -e bbl -e bcf -e blg -e fdb_latexmk -e fls -e xml -e synctex.gz -e xdv --exec rm -f {}" }
 
 # Tangle only (preamble extraction without full export)
 tangle-full = "emacs --batch -l org curriculum-vitae/literate_cv.org --eval '(org-babel-tangle)'"
 tangle-twopage = "emacs --batch -l org twoPage/literate_twopage.org --eval '(org-babel-tangle)'"
+tangle-onepage = "emacs --batch -l org onePage/literate_onepage.org --eval '(org-babel-tangle)'"
 
 [dependencies]
-texlive-core = "*"
 perl = "*"
+emacs = "*"

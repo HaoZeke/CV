@@ -41,10 +41,12 @@
     ("\\section{%s}" . "\\section*{%s}")
     ("\\subsection{%s}" . "\\subsection*{%s}")))
 
-;; Also keep moderncv
+;; Also keep moderncv (NO-DEFAULT-PACKAGES to avoid conflicts)
 (add-to-list 'org-latex-classes
   '("moderncv"
-    "\\documentclass[10pt,a4paper,final,factor=1100,stretch=18,shrink=18]{moderncv}"
+    "\\documentclass[10pt,a4paper,final,factor=1100,stretch=18,shrink=18]{moderncv}
+[NO-DEFAULT-PACKAGES]
+[NO-PACKAGES]"
     ("\\section{%s}" . "\\section*{%s}")
     ("\\subsection{%s}" . "\\subsection*{%s}")))
 
