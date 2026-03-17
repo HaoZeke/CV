@@ -4,8 +4,26 @@
 (package-initialize)
 (require 'ox)
 (require 'ox-latex)
-(require 'ox-extra)
-(ox-extras-activate '(ignore-headlines))
+
+;; Try loading ox-extra (org-contrib), fall back to inline implementation
+(condition-case nil
+    (progn
+      (require 'ox-extra)
+      (ox-extras-activate '(ignore-headlines)))
+  (file-missing
+   ;; Inline ignore-headlines from ox-extra (avoids org-contrib dependency).
+   ;; Headlines tagged :ignore: have their heading removed but contents kept.
+   (defun org2tex--ignore-headline (headline backend info)
+     "Strip headline text for :ignore: tagged headings, keeping body."
+     (when (member "ignore" (org-element-property :tags headline))
+       (let ((contents (org-export-get-body headline info)))
+         contents)))
+   ;; Use a transcode filter: override headline transcoding
+   (advice-add 'org-latex-headline :around
+     (lambda (orig headline contents info)
+       (if (member "ignore" (org-element-property :tags headline))
+           (or contents "")
+         (funcall orig headline contents info))))))
 
 ;; Suppress org defaults
 (setq org-latex-packages-alist 'nil)
