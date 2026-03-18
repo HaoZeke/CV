@@ -18,67 +18,26 @@
 (setq org-latex-hyperref-template 'nil)
 (setq org-latex-minted-options 'nil)
 (setq org-latex-listings 'listings)
-;; Register the deedy-resume class for org export
-(add-to-list 'org-latex-classes
-  '("deedy-resume"
-    "\\documentclass[letterpaper]{deedy-resume}"
-    ("\\section{%s}" . "\\section*{%s}")
-    ("\\subsection{%s}" . "\\subsection*{%s}")))
 #+END_SRC
 
 *** TeX activation :ignoreheading:ignore:
 #+LATEX_COMPILER: xelatex
-#+LATEX_CLASS: deedy-resume
-#+LATEX_CLASS_OPTIONS: [letterpaper]
+#+LATEX_CLASS: rgcv-onepage
 
 * About :ignoreheading:ignore:noexport:
-This is a one-page CV using the [[https://github.com/deedy/Deedy-Resume][Deedy Resume]] template.
-The two-column layout uses ~minipage~ environments with ~\runsubsection~,
-~\descript~, and ~\location~ commands defined in ~deedy-resume.cls~.
-
-Content is updated to match the full literate CV (~literate_cv.org~) as of 2025.
+One-page CV using the ~rgcv~ class (onepage mode).
+Two-column layout via ~minipage~ with ~\runsubsection~, ~\descript~,
+and ~\location~ commands from ~rgcv.cls~.
 
 * Preamble :ignoreheading:ignore:noexport:
-** Geometry
-Override the class defaults for tighter margins.
-#+name: onepage_geometry
-#+begin_src latex
-\usepackage{geometry}
-\geometry{
- letterpaper,
- left=10mm,
- right=10mm,
- top=5mm,
- bottom=5mm,
-}
-#+end_src
 ** Bibliography
 #+name: onepage_biblio
 #+begin_src latex
-\usepackage[
- backend=biber,
- sorting=ydnt,
- minbibnames=8,
- maxbibnames=9,
- block=space
-]{biblatex}
+\usepackage{rgcv-bib}
 \bibliography{publications}
-
-\defbibenvironment{midbib}
-{\list
- {}
- {
-  \setlength{\leftmargin}{0mm}
-  \setlength{\itemindent}{-\leftmargin}
-  \setlength{\itemsep}{\bibitemsep}
-  \setlength{\parsep}{\bibparsep}}
-}
-{\endlist}
-{\item}
 #+end_src
 ** Tangle
 #+begin_src latex :results none :tangle onepage-preamble.tex :noweb yes
-<<onepage_geometry>>
 <<onepage_biblio>>
 #+end_src
 

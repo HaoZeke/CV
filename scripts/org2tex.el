@@ -52,14 +52,7 @@
     ("\\section{%s}" . "\\section*{%s}")
     ("\\subsection{%s}" . "\\subsection*{%s}")))
 
-;; Also keep the legacy deedy-resume class for backward compat
-(add-to-list 'org-latex-classes
-  '("deedy-resume"
-    "\\documentclass[letterpaper]{deedy-resume}"
-    ("\\section{%s}" . "\\section*{%s}")
-    ("\\subsection{%s}" . "\\subsection*{%s}")))
-
-;; Also keep moderncv (NO-DEFAULT-PACKAGES to avoid conflicts)
+;; moderncv (NO-DEFAULT-PACKAGES to avoid conflicts)
 (add-to-list 'org-latex-classes
   '("moderncv"
     "\\documentclass[10pt,a4paper,final,factor=1100,stretch=18,shrink=18]{moderncv}

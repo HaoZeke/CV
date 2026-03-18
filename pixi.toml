@@ -19,7 +19,7 @@ mkpdf-onepage = { cmd = "latexmk -pdfxe -halt-on-error literate_onepage.tex", de
 
 # Convenience
 all = { depends-on = ["mkpdf-full", "mkpdf-twopage", "mkpdf-onepage"] }
-clean = { cmd = "fd -e aux -e log -e bbl -e bcf -e blg -e fdb_latexmk -e fls -e xml -e synctex.gz -e xdv --exec rm -f {}" }
+clean = "fd -e aux -e log -e bbl -e bcf -e blg -e fdb_latexmk -e fls -e xml -e synctex.gz -e xdv -x rm -f"
 
 # Tangle only (preamble extraction without full export)
 tangle-full = "emacs --batch -l org curriculum-vitae/literate_cv.org --eval '(org-babel-tangle)'"

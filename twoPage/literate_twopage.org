@@ -18,11 +18,6 @@
 (setq org-latex-hyperref-template 'nil)
 (setq org-latex-minted-options 'nil)
 (setq org-latex-listings 'listings)
-(add-to-list 'org-latex-classes
-  '("rgcv-twopage"
-    "\\documentclass[twopage]{rgcv}"
-    ("\\section{%s}" . "\\section*{%s}")
-    ("\\subsection{%s}" . "\\subsection*{%s}")))
 #+END_SRC
 
 *** TeX activation :ignoreheading:ignore:
@@ -37,40 +32,8 @@ Uses the unified ~rgcv~ class in twopage mode.
 ** Bibliography
 #+name: twopage_biblio
 #+begin_src latex
-\usepackage[%
- minbibnames=8,%
- maxbibnames=99,%
- block=space,%
- bibencoding=utf8,%
- backend=biber,%
- url=false,%
- isbn=false,%
- style=publist,%
- fixyear=true,%
- hlyear=true,%
- plauthorname=Goswami,%
- plauthorfirstname=Rohit,%
- plauthorhandling=highlight,%
- plnumbering=local-descending,%
-]{biblatex}
+\usepackage{rgcv-bib}
 \bibliography{publications}
-
-\renewcommand*{\mkbibnamegiven}[1]{%
- \ifitemannotation{highlight}{\textbf{#1}}{#1}}
-\renewcommand*{\mkbibnamefamily}[1]{%
- \ifitemannotation{highlight}{\textbf{#1}}{#1}}
-
-\defbibenvironment{midbib}
-{\list
- {}
- {
-  \setlength{\leftmargin}{0mm}
-  \setlength{\itemindent}{-\leftmargin}
-  \setlength{\itemsep}{\bibitemsep}
-  \setlength{\parsep}{\bibparsep}}
-}
-{\endlist}
-{\item}
 #+end_src
 
 ** Extra packages

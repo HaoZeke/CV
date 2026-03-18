@@ -211,7 +211,7 @@ or lists have a perfectly straight-looking right edge.
 % Literata is also included.
 %\setmainfont[Numbers=OldStyle]{Minion Pro}
 \setmainfont[
- Path = Fonts/MinionPro/,
+ Path = ../shared/Fonts/MinionPro/,
  Numbers=OldStyle,
  Extension = .otf,
  UprightFont = *_Regular,
@@ -223,7 +223,7 @@ or lists have a perfectly straight-looking right edge.
 % Myriad Pro is used as the sans font, if you don't
 % have it installed uncomment this line or choose another pretty font.
 \setsansfont[
- Path = Fonts/MyriadPro/,
+ Path = ../shared/Fonts/MyriadPro/,
  Numbers=OldStyle,
  Extension = .otf,
  UprightFont = *_Regular,
