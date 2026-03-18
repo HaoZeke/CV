@@ -4,6 +4,10 @@ on:
     branches: [main]
   workflow_dispatch:
 
+concurrency:
+  group: build-cvs-${{ github.ref }}
+  cancel-in-progress: true
+
 permissions:
   contents: write
 
