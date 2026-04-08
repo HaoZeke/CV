@@ -1065,15 +1065,29 @@ As part of the special COVID-19 [[https://compedu.stanford.edu/codeinplace/annou
 :END:
 #+begin_export latex
 \cvdoubleitem{\textsc{Created}}{PixN ROM \& Kernel (AOSP based rom for the Xperia Z5) \\ HaoZeke's LineageOS }
-{\textsc{Mantained}}{F2PY (NumPy) \\ ASV (Airspeed Velocity) \\ Xperia Z5 LineageOS (14.*)}
+{\textsc{Maintained}}{F2PY (NumPy) \\ ASV (Airspeed Velocity) \\ Xperia Z5 LineageOS (14.*)}
+
+\subsection{Maintained / Major Contributor}
+
+\cvitem{\textsc{HiGHS / SciPy}}{Added the \texttt{meson} build system to HiGHS (Beale--Orchard-Hays Prize-winning LP/MIP solver), built the \texttt{highspy} pybind11 bindings, and integrated them into SciPy. Every \texttt{scipy.optimize.linprog} and \texttt{milp} call uses this work. Also initiated PRIMA (derivative-free optimization) integration into SciPy.}
+
+\cvitem{\textsc{OpenBLAS}}{Ported OpenBLAS to the meson build system, added it to the meson WrapDB with LAPACK support, and maintained the wrap through upstream releases. OpenBLAS provides the default BLAS/LAPACK backend for NumPy and SciPy.}
+
+\cvitem{\textsc{eOn}}{Lead maintainer. Rewrote the architecture: RPC-based potential interface (\texttt{rgpot}), meson build, GP saddle searches, Hessian-enhanced CI-NEB, metatomic ML potentials.}
+
+\cvitem{\textsc{f2py (NumPy)}}{Maintainer with commit rights. Meson backend, CLI modernization, derived type support, documentation rewrite. GSoC mentor (2022--2023).}
+
+\cvitem{\textsc{ASV}}{Co-maintainer of Airspeed Velocity, the standard Python benchmarking tool. Refactored runner architecture (\texttt{asv\_runner}), added \texttt{py-rattler} support, managed releases (0.6.x series).}
+
+\cvitem{\textsc{metatensor}}{Contributor at EPFL labCOSMO. DLPack zero-copy tensor interchange, device-aware execution, Rust core.}
 
 \subsection{Opensource Projects Created}
 
-\cvitem{\textsc{fastMatMR}}{ROpensci reviewed \texttt{R} bindings for the fastest \texttt{C++} library for reading and writing \texttt{.mtx} files}
+\cvitem{\textsc{d-SEAMS}}{Open-source engine for molecular dynamics trajectory analysis (co-creator). Voronoi tessellation, ring statistics, Steinhardt order parameters. NumFOCUS-funded. JCIM 2020.}
 
-\cvitem{\textsc{d-SEAMS}}{An open-source, community supported engine for the analysis of molecular dynamics trajectories (co-creator)}
+\cvitem{\textsc{fastMatMR}}{rOpenSci reviewed \texttt{R} bindings for the fastest \texttt{C++} library for reading and writing \texttt{.mtx} files}
 
-\cvitem{\textsc{wailord}}{FOSS python library to interact with the ORCA suite of quantum chemistry programs, focused on the generation of property specific machine learning data-sets}
+\cvitem{\textsc{wailord}}{FOSS Python library for ORCA quantum chemistry parsers and workflow automation. SciPyCon 2022.}
 
 \cvdoubleitem{\textsc{zenYoda}}{Pandoc based, tup driven stand-alone multi format (revealJS, beamer etc.) presentation system with static site generation.}
 {\textsc{docuYoda}}{A document generation system based on pandoc and latexmk driven by gulp with yaml configuration and easy templating.}

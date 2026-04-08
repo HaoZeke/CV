@@ -205,13 +205,14 @@ For \texttt{d-SEAMS} molecular simulation analysis engine.
 #+begin_export latex
 \section{Open Source Software}
 \begin{itemize}
-\item \textbf{d-SEAMS} (co-creator) -- Molecular dynamics trajectory analysis engine (JCIM 2020, NumFOCUS SDG funded)
-\item \textbf{f2py / NumPy} (maintainer) -- Fortran-to-Python interface generator; core NumPy component
-\item \textbf{fastMatMR} -- rOpenSci reviewed R bindings for fast Matrix Market I/O
-\item \textbf{wailord} -- Python library for ORCA quantum chemistry workflows (SciPy 2022)
-\item \textbf{flowy} -- High performance probabilistic lava emplacement prediction (CPC 2025)
-\item \textbf{eOn} (maintainer) -- Long timescale dynamics code with Gaussian Process accelerated saddle searches
-\item \textbf{metatensor} (maintainer) -- Atomistic machine learning toolkit (JCP 2026)
+\item \textbf{HiGHS / SciPy} (contributor) -- Added meson build to HiGHS (Beale--Orchard-Hays Prize LP/MIP solver), built \texttt{highspy} bindings, integrated into SciPy \texttt{linprog}/\texttt{milp}. Initiated PRIMA integration.
+\item \textbf{OpenBLAS} (contributor) -- Ported to meson, added to WrapDB with LAPACK support. Default BLAS/LAPACK for NumPy/SciPy.
+\item \textbf{eOn} (lead maintainer) -- Long timescale dynamics: RPC architecture, GP saddle searches, Hessian CI-NEB, ML potentials
+\item \textbf{f2py / NumPy} (maintainer) -- Fortran-to-Python interface generator; meson backend, derived type support
+\item \textbf{ASV} (co-maintainer) -- Airspeed Velocity: Python benchmarking tool; runner refactor, release management
+\item \textbf{d-SEAMS} (co-creator) -- Molecular trajectory analysis engine (JCIM 2020, NumFOCUS funded)
+\item \textbf{metatensor} (contributor) -- Atomistic ML data format; DLPack, device-aware execution, Rust core
+\item \textbf{flowy} (contributor) -- Probabilistic lava emplacement prediction, 400x speedup (CPC 2025)
 \end{itemize}
 #+end_export
 
