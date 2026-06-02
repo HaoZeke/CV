@@ -5,6 +5,23 @@
 (require 'ox)
 (require 'ox-latex)
 
+;; Vendored org-cv (https://gitlab.com/Titan-C/org-cv) so the moderncv
+;; cventry transcoder is available without the personal Emacs config.
+(add-to-list 'load-path
+             (expand-file-name "org-cv"
+                               (file-name-directory
+                                (or load-file-name buffer-file-name "."))))
+(require 'org-cv-utils)
+(require 'ox-moderncv)
+
+;; Derived backend: inherit the plain `latex' template (preamble.tex and the
+;; custom title block stay exactly as authored) but override headline
+;; transcoding so headlines carrying `:CV_ENV: cventry' render as moderncv
+;; \cventry instead of collapsing to \subsection.
+(org-export-define-derived-backend 'rgcv-latex 'latex
+  :menu-entry '(?r "Export with rgcv (moderncv cventry)" nil)
+  :translate-alist '((headline . org-moderncv-headline)))
+
 ;; Try loading ox-extra (org-contrib), fall back to inline implementation
 (condition-case nil
     (progn
@@ -66,4 +83,4 @@
   (when org-file
     (find-file org-file)
     (org-babel-tangle)
-    (org-latex-export-to-latex)))
+    (org-export-to-file 'rgcv-latex (org-export-output-file-name ".tex"))))
