@@ -18,6 +18,12 @@
   plnumbering=local-descending,%
 ]{biblatex}
 
+% Custom datamodel fields so biber reads `mypdf`/`mydoi` from the .bib.
+% Without this declaration biber drops the source fields and the sourcemap
+% below never populates usera/userb, so the [DOI]/[PDF] links never render.
+\DeclareDatamodelFields[type=field,datatype=verbatim]{mypdf,mydoi}
+\DeclareDatamodelEntryfields{mypdf,mydoi}
+
 % DOI and PDF field mapping
 \DeclareSourcemap{
   \maps[datatype=bibtex]{

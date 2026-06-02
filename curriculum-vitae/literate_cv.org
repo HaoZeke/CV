@@ -256,6 +256,23 @@ or lists have a perfectly straight-looking right edge.
 ]{biblatex}
 
 \bibliography{publications}
+
+% Free-to-read links. Custom datamodel fields `mydoi'/`mypdf' are read by
+% biber, mapped onto biblatex usera/userb, and rendered as clickable
+% [DOI]/[PDF] markers appended at the end of each bibliography entry.
+\DeclareDatamodelFields[type=field,datatype=verbatim]{mypdf,mydoi}
+\DeclareDatamodelEntryfields{mypdf,mydoi}
+\DeclareSourcemap{
+  \maps[datatype=bibtex]{
+    \map{\step[fieldsource=mydoi]\step[fieldset=usera, origfieldval]}
+    \map{\step[fieldsource=mypdf]\step[fieldset=userb, origfieldval]}
+  }
+}
+\DeclareFieldFormat{usera}{\color{cvhighlight}[\href{#1}{\textsc{doi}}]}
+\DeclareFieldFormat{userb}{\color{cvhighlight}[\href{#1}{\textsc{pdf}}]}
+\renewbibmacro*{finentry}{%
+  \iffieldundef{userb}{}{\addspace\printfield{userb}}%
+  \finentry}
 #+end_src
 *** DONE Custom author highlights
 CLOSED: [2025-10-05 Sun 14:31]
