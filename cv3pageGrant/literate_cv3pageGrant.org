@@ -147,21 +147,21 @@ Scale=MatchLowercase]{MyriadPro}
 
 \pagerule
 
-\section{Grant-Facing Research Profile}
-\textbf{Project fit.} Researcher and scientific-software engineer connecting Gaussian-process saddle searches, machine-learned interatomic potentials, adaptive kinetic Monte Carlo, and reproducible HPC workflows. The grant axis is ESCAPE: evidence-driven superbasin-corrected adaptive photocatalytic event kinetics, where every event carries a descriptor, saddle route, rate route, uncertainty label, and provenance.
+\section{Research Profile}
+Researcher and scientific-software engineer working on Gaussian-process saddle point searches, machine-learned interatomic potentials, adaptive kinetic Monte Carlo, and reproducible HPC workflows for the long-time kinetics of activated processes.
 
 \vspace{0.22em}
 \begin{tabularx}{\textwidth}{>{\raggedright\arraybackslash}p{0.18\textwidth}>{\raggedright\arraybackslash}p{0.25\textwidth}X}
-\fitline{Saddles}{GP-certified search}{JCTC, ChemPhysChem, ACS Phys. Chem. Au, and Frontiers papers on GP-accelerated NEB/dimer, adaptive pruning, benchmarking, and Hessian-aligned CI-NEB.}
-\fitline{Descriptors}{MLIP event memory}{EPFL labCOSMO work on \texttt{metatensor}/\texttt{metatomic}, tensor interoperability, GROMACS ML/MM, DLPack, and descriptor portability.}
-\fitline{Long times}{eOn/aKMC + amsel}{Lead eOn maintainer; Queen's work scaling off-lattice/object KMC past million-atom regimes; current superbasin engine work for absorbing-Markov escape clocks.}
-\fitline{Rates}{Temperature-aware kinetics}{PhD on efficient exploration of chemical kinetics; constrained-path, free-energy, and Bayesian uncertainty machinery for rate records beyond static barriers.}
-\fitline{Infrastructure}{Open, replayable science}{NumPy/f2py maintainer, d-SEAMS co-creator, reproducible NEB workflows, pixi/Nix/Snakemake/CI practice, and JOSS editorial service.}
+\fitline{Saddle search}{GP-accelerated methods}{JCTC, ChemPhysChem, ACS Phys. Chem. Au, and Frontiers papers on GP-accelerated NEB/dimer, adaptive pruning, benchmarking, and Hessian-aligned CI-NEB.}
+\fitline{Atomistic ML}{Interatomic potentials}{EPFL labCOSMO work on \texttt{metatensor}/\texttt{metatomic}, tensor interoperability, GROMACS ML/MM, DLPack, and descriptor portability.}
+\fitline{Long timescales}{Adaptive KMC}{Lead eOn maintainer; off-lattice/object KMC scaled past million-atom regimes at Queen's; absorbing-Markov superbasin escape methods.}
+\fitline{Kinetics}{Rate theory}{PhD on efficient exploration of chemical kinetics; constrained-path, free-energy, and Bayesian uncertainty machinery for reaction rates.}
+\fitline{Infrastructure}{Reproducible science}{NumPy/f2py maintainer, d-SEAMS co-creator, reproducible NEB workflows, pixi/Nix/Snakemake/CI practice, and JOSS editorial service.}
 \end{tabularx}
 
-\section{Selected Track Record for the Proposed Work}
+\section{Track Record}
 \metric{25} peer-reviewed and conference publications \quad
-\metric{1} prior Rann\'{i}s PI grant delivered \quad
+\metric{1} Rann\'{i}s grant delivered as PI \quad
 \metric{5+} years eOn maintenance \quad
 \metric{80+} JOSS reviews handled \quad
 \metric{575k EUR} COST Action co-proposer network
@@ -169,13 +169,13 @@ Scale=MatchLowercase]{MyriadPro}
 \begin{itemize}
 \item Built and published a Gaussian-process saddle-search stack that reduces reference calls for difficult transition-state searches and now spans NEB, dimer, CI-NEB, adaptive pruning, and Bayesian benchmarking.
 \item Works at the interface between atomistic ML infrastructure and production simulation engines: \texttt{metatensor}, \texttt{metatomic}, GROMACS, LAMMPS, eOn, NumPy/f2py, and HPC packaging.
-\item Prior Icelandic Research Fund doctoral grant supported Bayesian machine learning for magnetic interactions and saddle searches, tying proposal leadership to direct IRF delivery experience.
+\item Delivered an Icelandic Research Fund doctoral grant as principal investigator on Bayesian machine learning for magnetic interactions and saddle searches.
 \end{itemize}
 
-\section{Appointments and Project Fit}
-\entry{SURF B.V.}{2026--present}{HPC Advisor, Netherlands}{Supports Dutch research infrastructure and production HPC users; reinforces the grant's compute, workflow, and reproducibility layer.}
+\section{Appointments}
+\entry{SURF B.V.}{2026--present}{HPC Advisor, Netherlands}{Supports Dutch national research infrastructure and production HPC users across compute, workflow, and reproducibility.}
 \entry{Lab COSMO, EPFL}{2025--2026}{Systems Specialist, Switzerland}{Developed \texttt{metatensor}/\texttt{metatomic} atomistic-ML infrastructure with Prof. Michele Ceriotti and Dr. Guillaume Fraux; worked on GROMACS ML/MM integration and zero-copy tensor exchange across C++, Python, Rust, and Fortran.}
-\entry{Queen's University}{2025}{Visiting Researcher, Canada}{Scaled off-lattice/object kinetic Monte Carlo with Prof. Laurent B\'{e}land; directly aligned with ESCAPE's long-time event-network and superbasin components.}
+\entry{Queen's University}{2025}{Visiting Researcher, Canada}{Scaled off-lattice/object kinetic Monte Carlo past million-atom regimes with Prof. Laurent B\'{e}land for long-time event-network evolution.}
 \entry{University of Iceland}{2019--2024}{Doctoral Researcher and Rann\'{i}s Doctoral Grant PI, Reykjav\'{i}k}{Developed Gaussian-process accelerated saddle point search methods and Bayesian hierarchical benchmarks under Prof. Hannes J\'{o}nsson; ran the GP saddle-search work on Icelandic HPC infrastructure.}
 \entry{Quansight Labs}{2021--2025}{Software Engineer II, remote}{Maintained \texttt{f2py} and contributed across NumPy/SciPy, meson-python, LFortran, OpenBLAS, PRIMA, and scientific build infrastructure.}
 
@@ -189,7 +189,7 @@ Scale=MatchLowercase]{MyriadPro}
 \paper{Efficient Implementation of Gaussian Process Regression Accelerated Saddle Point Searches with Application to Molecular Reactions}{JCTC, 2025}{Core GP saddle-search method for molecular reactions, with true/reference force economy.}{\href{https://doi.org/10.1021/acs.jctc.5c00866}{doi}}
 \paper{A Tutorial Review of Bayesian Optimization with Gaussian Processes to Accelerate Stationary Point Searches}{ACS Physical Chemistry Au, 2026}{Review article framing GP acceleration as a reusable method for stationary-point search.}{\href{https://doi.org/10.1021/acsphyschemau.6c00038}{doi}}
 \paper{Adaptive Pruning for Increased Robustness and Reduced Computational Overhead in Gaussian Process Accelerated Saddle Point Searches}{ChemPhysChem, 2025}{Cover-feature paper: adaptive training-set pruning for robust, cheaper saddle searches.}{\href{https://doi.org/10.1002/cphc.202500730}{doi}}
-\paper{Enhanced Climbing Image Nudged Elastic Band Method with Hessian Eigenmode Alignment}{Frontiers in Chemistry, 2026}{Hessian-aligned CI-NEB method with Miha Gunde and Hannes J\'{o}nsson; strengthens the saddle-search side of ESCAPE.}{\href{https://doi.org/10.3389/fchem.2026.1807063}{doi}}
+\paper{Enhanced Climbing Image Nudged Elastic Band Method with Hessian Eigenmode Alignment}{Frontiers in Chemistry, 2026}{Hessian-aligned CI-NEB method for transition-state search, with Miha Gunde and Hannes J\'{o}nsson.}{\href{https://doi.org/10.3389/fchem.2026.1807063}{doi}}
 \paper{Bayesian Hierarchical Models for Quantitative Estimates for Performance Metrics Applied to Saddle Search Algorithms}{AIP Advances, 2025}{Statistical benchmark layer for comparing saddle-search methods without over-reading small test sets.}{\href{https://doi.org/10.1063/5.0283639}{doi}}
 \paper{Reproducible Orchestration of Best Practices for Reaction Path Optimization with the Nudged Elastic Band}{MethodsX, 2026}{Executable workflow paper for reproducible NEB calculations and benchmarking.}{\href{https://doi.org/10.1016/j.mex.2026.103899}{doi}}
 \paper{Two-Dimensional RMSD Projections for Reaction Path Visualization and Validation}{MethodsX, 2026}{Validation and inspection tool for reaction paths and transition-region geometry.}{\href{https://doi.org/10.1016/j.mex.2026.103851}{doi}}
