@@ -142,8 +142,6 @@ Scale=MatchLowercase]{MyriadPro}
 \hfill
 \begin{minipage}[t]{0.28\textwidth}
 \raggedleft
-{\sffamily\bfseries\color{cvCoral}Three-page grant CV}\\[-0.1em]
-\headerline{Tailored for IRF/Project Grant review}\\[0.35em]
 \grantquote{``An unproblematic state is a state without creative thought. It's other name is Death.''\\-- David Deutsch}
 \end{minipage}
 
@@ -162,7 +160,7 @@ Scale=MatchLowercase]{MyriadPro}
 \end{tabularx}
 
 \section{Selected Track Record for the Proposed Work}
-\metric{26} peer-reviewed and conference publications \quad
+\metric{25} peer-reviewed and conference publications \quad
 \metric{1} prior Rann\'{i}s PI grant delivered \quad
 \metric{5+} years eOn maintenance \quad
 \metric{80+} JOSS reviews handled \quad
