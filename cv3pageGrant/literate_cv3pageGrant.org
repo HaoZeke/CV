@@ -123,6 +123,8 @@ Scale=MatchLowercase]{MyriadPro}
 \newcommand{\paper}[4]{%
   \textbf{#1} \hfill {\sffamily\small\color{cvMuted}#2}\\[-0.08em]
   #3{\if\relax\detokenize{#4}\relax\else\ {\color{cvTeal}#4}\fi}\par\vspace{0.24em}}
+\newcommand{\publine}[3]{%
+  {\fontsize{8.7pt}{10.0pt}\selectfont \textbf{#1}\ {\sffamily\color{cvMuted}#2.}{\if\relax\detokenize{#3}\relax\else\ {\color{cvTeal}#3}\fi}\par}\vspace{0.12em}}
 \newcommand{\skillline}[2]{%
   \textbf{\color{cvTeal}#1:} #2\par}
 \newcommand{\pagerule}{\vspace{0.25em}{\color{cvRule}\hrule height 0.45pt}\vspace{0.45em}}
@@ -197,6 +199,21 @@ Scale=MatchLowercase]{MyriadPro}
 \paper{d-SEAMS: Deferred Structural Elucidation Analysis for Molecular Simulations}{JCIM, 2020}{Co-created molecular-simulation analysis engine for water, ice, and confined phases; NumFOCUS funded.}{\href{https://doi.org/10.1021/acs.jcim.0c00031}{doi}}
 \paper{The State of Fortran}{Computing in Science \& Engineering, 2022}{Community paper and compiler/tooling context for maintainable scientific software.}{\href{https://doi.org/10.1109/MCSE.2022.3159862}{doi}}
 \paper{Flowy: High Performance Probabilistic Lava Emplacement Prediction}{CPC, 2025}{High-performance simulation workflow with Moritz Sallermann, Amrita Goswami, and Alejandro Pe\~{n}a-Torres.}{\href{https://doi.org/10.1016/j.cpc.2025.109745}{doi}}
+\vspace{0.15em}{\sffamily\bfseries\small\color{cvCoral}Additional peer-reviewed and conference publications}\par\vspace{0.18em}
+\publine{Study of Ice Nucleation on Silver Iodide Surface with Defects}{Molecular Physics, 2019}{\href{https://doi.org/10.1080/00268976.2019.1657599}{doi}}
+\publine{High-Order Finite Element Method for Atomic Structure Calculations}{Computer Physics Communications, 2023}{\href{https://doi.org/10.1016/j.cpc.2023.109051}{doi}}
+\publine{Wailord: Parsers and Reproducibility for Quantum Chemistry}{Proc. 21st Python in Science Conf. (SciPy), 2022}{\href{https://doi.org/10.25080/majora-212e5952-021}{doi}}
+\publine{Reproducible High Performance Computing Without Redundancy with Nix}{IEEE PDGC, 2023}{\href{https://doi.org/10.1109/PDGC56933.2022.10053161}{doi}}
+\publine{High Throughput Reproducible Literate Phylogenetic Analysis}{IEEE PDGC, 2023}{}
+\publine{Unified Software Design Patterns for Simulated Annealing}{arXiv preprint, 2023}{\href{https://doi.org/10.48550/arXiv.2402.06536}{doi}}
+\publine{Compositional Analysis of Fragrance Accords Using Femtosecond Thermal Lens Spectroscopy}{Chemistry -- An Asian Journal, 2025}{\href{https://doi.org/10.1002/asia.202500521}{doi}}
+\publine{Translational and Rotational Dynamics of a Self-Propelled Janus Probe in Crowded Environments}{Soft Matter, 2020}{\href{https://doi.org/10.1039/D0SM00339E}{doi}}
+\publine{Diffusion of Self-Propelled Janus Tracer in Polymeric Environment}{Preprint, 2017}{}
+\publine{Semi-Supervised Approaches to Ultrafast Pulse Shaping}{ICOL-2019 (Springer), 2021}{\href{https://doi.org/10.1007/978-981-15-9259-1_172}{doi}}
+\publine{Qubit Network Barriers to Deep Learning}{IEEE WRAP, 2019}{\href{https://doi.org/10.1109/WRAP47485.2019.9013687}{doi}}
+\publine{Quantum Distributed Computing with Shaped Laser Pulses}{OSA Photonics, 2016}{\href{https://doi.org/10.1364/photonics.2016.w4c.3}{doi}}
+\publine{Space Filling Curves: Heuristics for Semi-Classical Lasing Computations}{URSI AP-RASC, 2019}{\href{https://doi.org/10.23919/URSIAP-RASC.2019.8738612}{doi}}
+\publine{Don't Pull Punches in Peer Review}{Nature (Correspondence), 2019}{\href{https://doi.org/10.1038/d41586-019-03024-2}{doi}}
 
 \section{Grants, Awards, and Funded Roles}
 \compactentry{COST Action CA24106 co-proposer and Iceland Management Committee member}{2025--2029}{\textbf{575,000 EUR} European Cooperation in Science and Technology network: Building Education and One Health with Adaptive Convergence and Open Networks.}
@@ -213,8 +230,6 @@ Scale=MatchLowercase]{MyriadPro}
 \skillline{d-SEAMS/pySEAMS}{Co-creator of molecular-trajectory analysis engine; mentored Python bindings through Google Summer of Code.}
 \skillline{SciPy, HiGHS, OpenBLAS, LFortran}{Build, solver, compiler, and linear-algebra contributions used by the scientific Python stack.}
 \skillline{Reproducibility stack}{Nix, pixi, Snakemake, CMake, Meson, CI, containers, Slurm, Spack, EasyBuild, \LaTeX, and literate org-mode workflows.}
-
-\newpage
 
 \section{Talks and Scientific Communication}
 \compactentry{Managing concurrency for high throughput adaptive kinetic Monte Carlo}{ACS Fall, 2025}{Washington, DC. High-throughput aKMC concurrency and scheduling.}
@@ -251,7 +266,7 @@ Scale=MatchLowercase]{MyriadPro}
 
 \section{Technical Breadth}
 \skillline{Scientific domains}{Chemical kinetics, transition-state theory, adaptive kinetic Monte Carlo, molecular dynamics, photocatalysis, atomistic machine learning, Bayesian optimization, Gaussian processes, uncertainty quantification, rare-event sampling.}
-\skillline{Simulation and HPC}{eOn, LAMMPS, GROMACS, GPAW context, MPI/OpenMP, CUDA, Slurm, containers, Nix, Spack, EasyBuild, Linux/HPC operations.}
+\skillline{Simulation and HPC}{eOn, LAMMPS, GROMACS, MPI/OpenMP, CUDA, Slurm, containers, Nix, Spack, EasyBuild, and HPC operations.}
 \skillline{Programming}{C++, Python, Fortran, Rust, R, Julia, shell; bindings and ABI work across Python/C++/Fortran/Rust stacks.}
 \skillline{Data and ML}{PyTorch, scikit-learn, GPy, Stan, Bayesian hierarchical models, descriptor tensors, reaction-path validation, reproducible benchmark design.}
 
