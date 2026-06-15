@@ -46,6 +46,7 @@ jobs:
           cp curriculum-vitae/literate_cv.pdf artifacts/RG_CV_Full.pdf
           cp twoPage/literate_twopage.pdf artifacts/RG_CV_TwoPage.pdf
           cp onePage/literate_onepage.pdf artifacts/RG_CV_OnePage.pdf
+          cp cv3pageGrant/literate_cv3pageGrant.pdf artifacts/RG_CV_Grant3Page.pdf
 
       - name: Push to pdfs branch
         run: |

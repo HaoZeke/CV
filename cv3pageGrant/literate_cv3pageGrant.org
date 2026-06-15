@@ -1,0 +1,252 @@
+#+AUTHOR: Rohit Goswami
+#+email: rgoswami@ieee.org
+#+options: tags:nil title:nil toc:nil num:nil author:nil date:nil
+
+* Configuration :ignoreheading:ignore:
+#+begin_src emacs-lisp :exports none :eval always :results none
+(setq org-latex-default-packages-alist nil)
+(setq org-latex-packages-alist nil)
+#+end_src
+
+** TeX activation :ignoreheading:ignore:
+#+LATEX_COMPILER: xelatex
+#+LATEX_CLASS: article
+#+LATEX_CLASS_OPTIONS: [10pt,a4paper]
+
+* Design Note :noexport:
+
+Grant-review CVs are not compressed full CVs. The source scan used the local
+IRF proposal workspace plus current funder/reviewer guidance: NIH defines a
+biosketch as evidence that project staff have the skills, knowledge, and
+resources for the proposed work; ERC material foregrounds independence, track
+record, leadership promise, and host conditions; NSF biosketch practice keeps
+the document product- and contribution-centred; NN/g scan-path work supports
+front-loading high-value claims in left-anchored, strongly labelled blocks.
+
+Design consequences for this variant:
+- Page 1 makes the ESCAPE fit explicit: GP saddle search, MLIP descriptors,
+  eOn/aKMC, amsel superbasins, rate corrections, excited states, and open
+  infrastructure.
+- Page 2 proves the fit with selected papers, grants, software, and talks.
+- Page 3 gives career context, teaching/mentorship, service, review load, and
+  affiliations, while keeping the David Deutsch quote from the full CV.
+- The file remains orgmode-first and sources claims from
+  =curriculum-vitae/literate_cv.org=, =twoPage/literate_twopage.org=, and the
+  local IRF proposal at =../uniApplications/rannis_2027_project=.
+
+* Preamble :ignoreheading:ignore:noexport:
+#+name: grant_preamble
+#+begin_src latex :results none :tangle cv3pageGrant-preamble.tex
+\usepackage[a4paper,left=12mm,right=12mm,top=10mm,bottom=11mm]{geometry}
+\usepackage{xcolor}
+\usepackage{fontspec}
+\usepackage{enumitem}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage{titlesec}
+\usepackage{microtype}
+\usepackage{hyperref}
+\usepackage[autostyle=true]{csquotes}
+\usepackage[british]{babel}
+
+\definecolor{cvInk}{RGB}{30, 32, 34}
+\definecolor{cvMuted}{RGB}{92, 96, 101}
+\definecolor{cvTeal}{RGB}{0, 87, 96}
+\definecolor{cvCoral}{RGB}{171, 72, 54}
+\definecolor{cvGold}{RGB}{173, 126, 31}
+\definecolor{cvRule}{RGB}{214, 218, 219}
+\definecolor{cvTint}{RGB}{244, 248, 248}
+
+\setmainfont[
+Path = ../shared/Fonts/MinionPro/,
+Extension = .otf,
+UprightFont = *_Regular,
+ItalicFont = *_It,
+BoldFont = *_Bold,
+BoldItalicFont = *_BoldIt,
+Ligatures=TeX]{MinionPro}
+
+\setsansfont[
+Path = ../shared/Fonts/MyriadPro/,
+Extension = .otf,
+UprightFont = *_Regular,
+ItalicFont = *_It,
+BoldFont = *_Bold,
+BoldItalicFont = *_BoldIt,
+Ligatures=TeX,
+Scale=MatchLowercase]{MyriadPro}
+
+\hypersetup{
+  pdfcreator={XeLaTeX},
+  pdftitle={Rohit Goswami Three-Page Grant CV},
+  pdfauthor={Rohit Goswami},
+  colorlinks=true,
+  urlcolor=cvTeal,
+  linkcolor=cvTeal,
+  citecolor=cvTeal
+}
+
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.14em}
+\setlength{\tabcolsep}{0pt}
+\renewcommand{\arraystretch}{1.08}
+\setlist[itemize]{nosep,leftmargin=1.15em,label=\textcolor{cvTeal}{\raisebox{0.15ex}{\scriptsize\textbullet}}}
+\AtBeginDocument{\color{cvInk}\fontsize{9.35pt}{10.75pt}\selectfont}
+
+\titleformat{\section}
+  {\sffamily\bfseries\large\color{cvTeal}}
+  {}{0pt}{\MakeUppercase}[\vspace{-0.35em}{\color{cvRule}\titlerule}]
+\titlespacing*{\section}{0pt}{0.72em}{0.35em}
+
+\titleformat{\subsection}
+  {\sffamily\bfseries\normalsize\color{cvCoral}}
+  {}{0pt}{}
+\titlespacing*{\subsection}{0pt}{0.35em}{0.12em}
+
+\newcommand{\headerline}[1]{{\sffamily\color{cvMuted}\fontsize{9.2pt}{10.4pt}\selectfont #1}}
+\newcommand{\cvtag}[1]{%
+  {\sffamily\bfseries\scriptsize\color{cvTeal}\MakeUppercase{#1}}}
+\newcommand{\grantquote}[1]{%
+  {\color{cvMuted}\itshape\fontsize{8.9pt}{10.2pt}\selectfont #1}}
+\newcommand{\metric}[2]{%
+  {\sffamily\bfseries\color{cvCoral}#1}{\sffamily\color{cvMuted}\ #2}}
+\newcommand{\entry}[4]{%
+  \textbf{#1}\hfill{\sffamily\small\color{cvMuted}#2}\\[-0.08em]%
+  {\sffamily\small\color{cvMuted}#3}\\[-0.08em]%
+  #4\par\vspace{0.28em}}
+\newcommand{\compactentry}[3]{%
+  \textbf{#1}\hfill{\sffamily\small\color{cvMuted}#2}\\[-0.08em]%
+  #3\par\vspace{0.22em}}
+\newcommand{\fitline}[3]{%
+  \textbf{\color{cvTeal}#1} & \textbf{#2} & #3\\[0.18em]}
+\newcommand{\paper}[4]{%
+  \textbf{#1} \hfill {\sffamily\small\color{cvMuted}#2}\\[-0.08em]
+  #3{\if\relax\detokenize{#4}\relax\else\ {\color{cvTeal}#4}\fi}\par\vspace{0.24em}}
+\newcommand{\skillline}[2]{%
+  \textbf{\color{cvTeal}#1:} #2\par}
+\newcommand{\pagerule}{\vspace{0.25em}{\color{cvRule}\hrule height 0.45pt}\vspace{0.45em}}
+#+end_src
+
+#+LATEX_HEADER: \input{cv3pageGrant-preamble.tex}
+
+* Document :ignoreheading:ignore:
+#+begin_export latex
+\begin{minipage}[t]{0.67\textwidth}
+{\sffamily\bfseries\fontsize{28pt}{30pt}\selectfont Rohit Goswami}\\[-0.12em]
+{\sffamily\bfseries\large\color{cvTeal}Computational chemical kinetics, atomistic ML, rare events, and scientific software}\\[-0.05em]
+\headerline{\href{mailto:rgoswami@ieee.org}{rgoswami@ieee.org} \textbullet{} \href{https://rgoswami.me}{rgoswami.me} \textbullet{} \href{https://github.com/HaoZeke}{github.com/HaoZeke} \textbullet{} Iceland / Netherlands}
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.28\textwidth}
+\raggedleft
+{\sffamily\bfseries\color{cvCoral}Three-page grant CV}\\[-0.1em]
+\headerline{Tailored for IRF/Project Grant review}\\[0.35em]
+\grantquote{``An unproblematic state is a state without creative thought. It's other name is Death.''\\-- David Deutsch}
+\end{minipage}
+
+\pagerule
+
+\section{Grant-Facing Research Profile}
+\textbf{Project fit.} Researcher and scientific-software engineer connecting Gaussian-process saddle searches, machine-learned interatomic potentials, adaptive kinetic Monte Carlo, and reproducible HPC workflows. The grant axis is ESCAPE: evidence-driven superbasin-corrected adaptive photocatalytic event kinetics, where every event carries a descriptor, saddle route, rate route, uncertainty label, and provenance.
+
+\vspace{0.22em}
+\begin{tabularx}{\textwidth}{>{\raggedright\arraybackslash}p{0.18\textwidth}>{\raggedright\arraybackslash}p{0.25\textwidth}X}
+\fitline{Saddles}{GP-certified search}{JCTC, ChemPhysChem, ACS Phys. Chem. Au, and Frontiers papers on GP-accelerated NEB/dimer, adaptive pruning, benchmarking, and Hessian-aligned CI-NEB.}
+\fitline{Descriptors}{MLIP event memory}{EPFL labCOSMO work on \texttt{metatensor}/\texttt{metatomic}, tensor interoperability, GROMACS ML/MM, DLPack, and descriptor portability.}
+\fitline{Long times}{eOn/aKMC + amsel}{Lead eOn maintainer; Queen's work scaling off-lattice/object KMC past million-atom regimes; current superbasin engine work for absorbing-Markov escape clocks.}
+\fitline{Rates}{Temperature-aware kinetics}{PhD on efficient exploration of chemical kinetics; constrained-path, free-energy, and Bayesian uncertainty machinery for rate records beyond static barriers.}
+\fitline{Infrastructure}{Open, replayable science}{NumPy/f2py maintainer, d-SEAMS co-creator, reproducible NEB workflows, pixi/Nix/Snakemake/CI practice, and JOSS editorial service.}
+\end{tabularx}
+
+\section{Selected Track Record for the Proposed Work}
+\metric{11} peer-reviewed or accepted selected papers \quad
+\metric{1} prior Rann\'{i}s PI grant delivered \quad
+\metric{5+} years eOn maintenance \quad
+\metric{80+} JOSS reviews handled \quad
+\metric{575k EUR} COST Action co-proposer network
+
+\begin{itemize}
+\item Built and published a Gaussian-process saddle-search stack that reduces reference calls for difficult transition-state searches and now spans NEB, dimer, CI-NEB, adaptive pruning, and Bayesian benchmarking.
+\item Works at the interface between atomistic ML infrastructure and production simulation engines: \texttt{metatensor}, \texttt{metatomic}, GROMACS, LAMMPS, eOn, NumPy/f2py, and HPC packaging.
+\item Prior Icelandic Research Fund doctoral grant supported Bayesian machine learning for magnetic interactions and saddle searches, tying proposal leadership to direct IRF delivery experience.
+\end{itemize}
+
+\section{Appointments and Project Fit}
+\entry{SURF B.V.}{2026--present}{HPC Advisor, Netherlands}{Supports Dutch research infrastructure and production HPC users; reinforces the grant's compute, workflow, and reproducibility layer.}
+\entry{Lab COSMO, EPFL}{2025--2026}{Systems Specialist, Switzerland}{Developed \texttt{metatensor}/\texttt{metatomic} atomistic-ML infrastructure with Prof. Michele Ceriotti and Dr. Guillaume Fraux; worked on GROMACS ML/MM integration and zero-copy tensor exchange across C++, Python, Rust, and Fortran.}
+\entry{Queen's University}{2025}{Visiting Researcher, Canada}{Scaled off-lattice/object kinetic Monte Carlo with Prof. Laurent B\'{e}land; directly aligned with ESCAPE's long-time event-network and superbasin components.}
+\entry{University of Iceland}{2019--2024}{Doctoral Researcher and Rann\'{i}s Doctoral Grant PI, Reykjav\'{i}k}{Developed Gaussian-process accelerated saddle point search methods and Bayesian hierarchical benchmarks under Prof. Hannes J\'{o}nsson; ran the GP saddle-search work on Icelandic HPC infrastructure.}
+\entry{Quansight Labs}{2021--2025}{Software Engineer II, remote}{Maintained \texttt{f2py} and contributed across NumPy/SciPy, meson-python, LFortran, OpenBLAS, PRIMA, and scientific build infrastructure.}
+
+\section{Education}
+\entry{University of Iceland}{2019--2025}{Ph.D. Physical Sciences}{Thesis: ``Efficient Exploration of Chemical Kinetics.'' Supervisor: Prof. Hannes J\'{o}nsson; co-supervisor: Prof. Birgir Hrafnkelsson.}
+\entry{HBTU Kanpur}{2014--2018}{B.Tech. Chemical Engineering}{First Division; computational nanoscience, ultrafast optics, and molecular-simulation analysis foundations.}
+
+\newpage
+
+\section{Selected Publications and Method Outputs}
+\paper{Efficient Implementation of Gaussian Process Regression Accelerated Saddle Point Searches with Application to Molecular Reactions}{JCTC, 2025}{Core GP saddle-search method for molecular reactions, with true/reference force economy.}{\href{https://doi.org/10.1021/acs.jctc.5c00866}{doi}}
+\paper{A Tutorial Review of Bayesian Optimization with Gaussian Processes to Accelerate Stationary Point Searches}{ACS Physical Chemistry Au, 2026}{Review article framing GP acceleration as a reusable method for stationary-point search.}{\href{https://doi.org/10.1021/acsphyschemau.6c00038}{doi}}
+\paper{Adaptive Pruning for Increased Robustness and Reduced Computational Overhead in Gaussian Process Accelerated Saddle Point Searches}{ChemPhysChem, 2025}{Cover-feature paper: adaptive training-set pruning for robust, cheaper saddle searches.}{\href{https://doi.org/10.1002/cphc.202500730}{doi}}
+\paper{Enhanced Climbing Image Nudged Elastic Band Method with Hessian Eigenmode Alignment}{Frontiers in Chemistry, 2026}{Hessian-aligned CI-NEB method with Miha Gunde and Hannes J\'{o}nsson; strengthens the saddle-search side of ESCAPE.}{\href{https://doi.org/10.3389/fchem.2026.1807063}{doi}}
+\paper{Bayesian Hierarchical Models for Quantitative Estimates for Performance Metrics Applied to Saddle Search Algorithms}{AIP Advances, 2025}{Statistical benchmark layer for comparing saddle-search methods without over-reading small test sets.}{\href{https://doi.org/10.1063/5.0283639}{doi}}
+\paper{Reproducible Orchestration of Best Practices for Reaction Path Optimization with the Nudged Elastic Band}{MethodsX, 2026}{Executable workflow paper for reproducible NEB calculations and benchmarking.}{\href{https://doi.org/10.1016/j.mex.2026.103899}{doi}}
+\paper{Two-Dimensional RMSD Projections for Reaction Path Visualization and Validation}{MethodsX, 2026}{Validation and inspection tool for reaction paths and transition-region geometry.}{\href{https://doi.org/10.1016/j.mex.2026.103851}{doi}}
+\paper{Metatensor and Metatomic: Foundational Libraries for Interoperable Atomistic Machine Learning}{JCP, 2026}{Co-author on the tensor and model-stack infrastructure underpinning descriptor event memory.}{\href{https://doi.org/10.1063/5.0304911}{doi}}
+\paper{d-SEAMS: Deferred Structural Elucidation Analysis for Molecular Simulations}{JCIM, 2020}{Co-created molecular-simulation analysis engine for water, ice, and confined phases; NumFOCUS funded.}{\href{https://doi.org/10.1021/acs.jcim.0c00031}{doi}}
+\paper{The State of Fortran}{Computing in Science \& Engineering, 2022}{Community paper and compiler/tooling context for maintainable scientific software.}{\href{https://doi.org/10.1109/MCSE.2022.3159862}{doi}}
+\paper{Flowy: High Performance Probabilistic Lava Emplacement Prediction}{CPC, 2025}{High-performance simulation workflow with Moritz Sallermann, Amrita Goswami, and Alejandro Pe\~{n}a-Torres.}{\href{https://doi.org/10.1016/j.cpc.2025.109745}{doi}}
+
+\section{Grants, Awards, and Funded Roles}
+\compactentry{COST Action CA24106 co-proposer and Iceland Management Committee member}{2025--2029}{\textbf{575,000 EUR} European Cooperation in Science and Technology network: Building Education and One Health with Adaptive Convergence and Open Networks.}
+\compactentry{Icelandic Research Fund Doctoral Research Grant, PI}{2020--2023}{\textbf{6.65M ISK}. Title: ``Magnetic interactions of itinerant electrons modeled using Bayesian machine learning.''}
+\compactentry{Google Summer of Code mentor funding}{2023--2024}{\textbf{6,000 USD}. Mentored Python bindings and contributor onboarding for d-SEAMS/pySEAMS.}
+\compactentry{NumFOCUS Small Development Grants}{2022--2023}{\textbf{14,600 USD total}. LFortran/SciPy and scientific Python compiler-build work.}
+\compactentry{Google Season of Docs technical-writer grant}{2022}{\textbf{10,000 USD}. Generated documentation capacity for scientific software.}
+\compactentry{Springer Best Student Paper Award}{2016}{Photonics conference recognition for early ultrafast-optics work.}
+
+\section{Open Source and Infrastructure Record}
+\skillline{eOn}{Lead maintainer for long-timescale dynamics: RPC architecture, GP saddle searches, Hessian CI-NEB, ML potentials, reproducible packaging.}
+\skillline{\texttt{metatensor}/\texttt{metatomic}}{Contributor to atomistic-ML infrastructure: DLPack, device-aware execution, Rust/C++/Python interoperability, GROMACS interface work.}
+\skillline{\texttt{f2py}/NumPy}{Maintainer of NumPy's Fortran-to-Python interface; Meson backend, derived-type support, and scientific build-system modernization.}
+\skillline{d-SEAMS/pySEAMS}{Co-creator of molecular-trajectory analysis engine; mentored Python bindings through Google Summer of Code.}
+\skillline{SciPy, HiGHS, OpenBLAS, LFortran}{Build, solver, compiler, and linear-algebra contributions used by the scientific Python stack.}
+\skillline{Reproducibility stack}{Nix, pixi, Snakemake, CMake, Meson, CI, containers, Slurm, Spack, EasyBuild, \LaTeX, and literate org-mode workflows.}
+
+\newpage
+
+\section{Talks and Scientific Communication}
+\compactentry{Managing concurrency for high throughput adaptive kinetic Monte Carlo}{ACS Fall, 2025}{Washington, DC. High-throughput aKMC concurrency and scheduling.}
+\compactentry{Towards a million atoms and a thousand KMC steps a day}{Kernel aKMC, 2025}{Queen's University, Canada. Scaling KMC/event-network methods with the B\'{e}land group.}
+\compactentry{Low Data Saddle Search Acceleration with Bayesian Performance Analysis}{ML in Chemical and Materials Sciences, 2025}{Talk on GP saddle-search acceleration and uncertainty-aware benchmarking.}
+\compactentry{Advocating for standardized APIs for common procedures}{Psi-k, 2025}{Liverpool, UK. Scientific-software interfaces for transition-state and atomistic workflows.}
+\compactentry{Accelerating Saddle Searches with Gaussian Process Regression}{CECAM LTS-MAP, 2024}{Invited talk, Lausanne. Long-time multi-scale simulations of activated events.}
+\compactentry{Computational Chemistry and Possible Tensor Applications}{IPAM TMRC2, 2023}{Invited talk, UCLA. Tensor methods and computational-chemistry workloads.}
+\compactentry{Scaling workflows from development to HPC}{Icelandic HPC Workshop, 2024}{Workflow portability from local development to national HPC systems.}
+
+\section{Teaching, Mentorship, and Training}
+\compactentry{University of Iceland, supervisory and course teaching}{2021--2024}{Supervisory teacher for Software Quality Management; teaching in Machine Learning, Statistical Inference for Biology, and computational workshops.}
+\compactentry{Software/Data Carpentry and Code in Place}{2020--2024}{Instructor, helper, mentor, and section leader across Git/GitHub, R, Python, and introductory computing.}
+\compactentry{Google Summer of Code and NumFOCUS mentorship}{2023--present}{Mentored first-time scientific-software contributors; coordinated contributor pathways around NumFOCUS projects.}
+\compactentry{Doctoral-student training relevance}{IRF proposal}{Can train a doctoral student across rare-event theory, saddle search, MLIP validation, GP uncertainty, kinetic-network analysis, and reproducible scientific computing.}
+
+\section{Selected Service and Reviewing}
+\begin{itemize}
+\item \textbf{Journal of Open Source Software editor} (2024--present), topic editor; handled 80+ reviews across scientific software.
+\item \textbf{Nordic Research Software Engineers Association}, board member and founding secretary.
+\item \textbf{IEEE P3173 vice chair} and IEEE standards work on chemical hazard labelling; earlier standards participation in P2881 and P1940.
+\item \textbf{NumFOCUS Google Summer of Code administrator} (2024--present).
+\item \textbf{National HPC Centre of Iceland consultant} (2021--2024), Simulation and Data Lab Computational Chemistry.
+\item Reviewer for Nature Communications, Physical Review Letters, Physical Review A/E/Applied, IOP journals, PLOS ONE, PeerJ, JOSS, and Manning Publications.
+\end{itemize}
+
+\section{Technical Breadth}
+\skillline{Scientific domains}{Chemical kinetics, transition-state theory, adaptive kinetic Monte Carlo, molecular dynamics, photocatalysis, atomistic machine learning, Bayesian optimization, Gaussian processes, uncertainty quantification.}
+\skillline{Simulation and HPC}{eOn, LAMMPS, GROMACS, GPAW context, MPI/OpenMP, CUDA, Slurm, containers, Nix, Spack, EasyBuild, Linux/HPC operations.}
+\skillline{Programming}{C++, Python, Fortran, Rust, R, Julia, shell; bindings and ABI work across Python/C++/Fortran/Rust stacks.}
+\skillline{Data and ML}{PyTorch, scikit-learn, GPy, Stan, Bayesian hierarchical models, descriptor tensors, reaction-path validation, reproducible benchmark design.}
+
+\section{Affiliations}
+Institute of Physics (MInstP) \textbullet{} Royal Society of Chemistry (MRSC) \textbullet{} BCS, the Chartered Institute for IT (MBCS) \textbullet{} ACM \textbullet{} APS \textbullet{} IEEE \textbullet{} AIChE \textbullet{} Nordic-RSE \textbullet{} TeX Users Group.
+#+end_export
