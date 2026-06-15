@@ -235,7 +235,7 @@ Researcher and scientific-software engineer working on Gaussian-process saddle p
 \compactentry{Low Data Saddle Search Acceleration with Bayesian Performance Analysis}{ML in Chemical and Materials Sciences, 2025}{Talk on GP saddle-search acceleration and uncertainty-aware benchmarking.}
 \compactentry{Advocating for standardized APIs for common procedures}{Psi-k, 2025}{Liverpool, UK. Scientific-software interfaces for transition-state and atomistic workflows.}
 \compactentry{Accelerating Saddle Searches with Gaussian Process Regression}{CECAM LTS-MAP, 2024}{Invited talk, Lausanne. Long-time multi-scale simulations of activated events.}
-\compactentry{Throwaway Gaussian Processes for Saddle Searches}{ML in Chemical and Materials Sciences, 2024}{Disposable GP surrogates for transition-state search, the kernel of ESCAPE's saddle layer.}
+\compactentry{Throwaway Gaussian Processes for Saddle Searches}{ML in Chemical and Materials Sciences, 2024}{Disposable GP surrogates for transition-state search.}
 \compactentry{Computational Chemistry and Possible Tensor Applications}{IPAM TMRC2, 2023}{Invited talk, UCLA. Tensor methods and computational-chemistry workloads.}
 \compactentry{Contending with concurrency across programming languages}{APS Global Physics Summit, 2025}{Anaheim, CA. Concurrency patterns for high-throughput simulation engines.}
 \compactentry{Development, Benchmarks and Workflows}{CECAM-ESL Advancing the Molecular Paradigm, 2024}{Reproducible benchmarking and workflow practice for electronic-structure codes.}
@@ -245,7 +245,6 @@ Researcher and scientific-software engineer working on Gaussian-process saddle p
 \compactentry{University of Iceland, supervisory and course teaching}{2021--2024}{Supervisory teacher for Software Quality Management; teaching in Machine Learning, Statistical Inference for Biology, and computational workshops.}
 \compactentry{Software/Data Carpentry and Code in Place}{2020--2024}{Instructor, helper, mentor, and section leader across Git/GitHub, R, Python, and introductory computing.}
 \compactentry{Google Summer of Code and NumFOCUS mentorship}{2023--present}{Mentored first-time scientific-software contributors; coordinated contributor pathways around NumFOCUS projects.}
-\compactentry{Doctoral-student training relevance}{IRF proposal}{Can train a doctoral student across rare-event theory, saddle search, MLIP validation, GP uncertainty, and reproducible scientific computing.}
 
 \section{Selected Service and Reviewing}
 \begin{itemize}
