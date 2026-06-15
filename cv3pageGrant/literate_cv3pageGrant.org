@@ -185,7 +185,7 @@ Scale=MatchLowercase]{MyriadPro}
 
 \newpage
 
-\section{Selected Publications and Method Outputs}
+\section{Publications and Method Outputs}
 \paper{Efficient Implementation of Gaussian Process Regression Accelerated Saddle Point Searches with Application to Molecular Reactions}{JCTC, 2025}{Core GP saddle-search method for molecular reactions, with true/reference force economy.}{\href{https://doi.org/10.1021/acs.jctc.5c00866}{doi}}
 \paper{A Tutorial Review of Bayesian Optimization with Gaussian Processes to Accelerate Stationary Point Searches}{ACS Physical Chemistry Au, 2026}{Review article framing GP acceleration as a reusable method for stationary-point search.}{\href{https://doi.org/10.1021/acsphyschemau.6c00038}{doi}}
 \paper{Adaptive Pruning for Increased Robustness and Reduced Computational Overhead in Gaussian Process Accelerated Saddle Point Searches}{ChemPhysChem, 2025}{Cover-feature paper: adaptive training-set pruning for robust, cheaper saddle searches.}{\href{https://doi.org/10.1002/cphc.202500730}{doi}}
@@ -222,14 +222,17 @@ Scale=MatchLowercase]{MyriadPro}
 \compactentry{Low Data Saddle Search Acceleration with Bayesian Performance Analysis}{ML in Chemical and Materials Sciences, 2025}{Talk on GP saddle-search acceleration and uncertainty-aware benchmarking.}
 \compactentry{Advocating for standardized APIs for common procedures}{Psi-k, 2025}{Liverpool, UK. Scientific-software interfaces for transition-state and atomistic workflows.}
 \compactentry{Accelerating Saddle Searches with Gaussian Process Regression}{CECAM LTS-MAP, 2024}{Invited talk, Lausanne. Long-time multi-scale simulations of activated events.}
+\compactentry{Throwaway Gaussian Processes for Saddle Searches}{ML in Chemical and Materials Sciences, 2024}{Disposable GP surrogates for transition-state search, the kernel of ESCAPE's saddle layer.}
 \compactentry{Computational Chemistry and Possible Tensor Applications}{IPAM TMRC2, 2023}{Invited talk, UCLA. Tensor methods and computational-chemistry workloads.}
+\compactentry{Contending with concurrency across programming languages}{APS Global Physics Summit, 2025}{Anaheim, CA. Concurrency patterns for high-throughput simulation engines.}
+\compactentry{Development, Benchmarks and Workflows}{CECAM-ESL Advancing the Molecular Paradigm, 2024}{Reproducible benchmarking and workflow practice for electronic-structure codes.}
 \compactentry{Scaling workflows from development to HPC}{Icelandic HPC Workshop, 2024}{Workflow portability from local development to national HPC systems.}
 
 \section{Teaching, Mentorship, and Training}
 \compactentry{University of Iceland, supervisory and course teaching}{2021--2024}{Supervisory teacher for Software Quality Management; teaching in Machine Learning, Statistical Inference for Biology, and computational workshops.}
 \compactentry{Software/Data Carpentry and Code in Place}{2020--2024}{Instructor, helper, mentor, and section leader across Git/GitHub, R, Python, and introductory computing.}
 \compactentry{Google Summer of Code and NumFOCUS mentorship}{2023--present}{Mentored first-time scientific-software contributors; coordinated contributor pathways around NumFOCUS projects.}
-\compactentry{Doctoral-student training relevance}{IRF proposal}{Can train a doctoral student across rare-event theory, saddle search, MLIP validation, GP uncertainty, kinetic-network analysis, and reproducible scientific computing.}
+\compactentry{Doctoral-student training relevance}{IRF proposal}{Can train a doctoral student across rare-event theory, saddle search, MLIP validation, GP uncertainty, and reproducible scientific computing.}
 
 \section{Selected Service and Reviewing}
 \begin{itemize}
@@ -238,14 +241,23 @@ Scale=MatchLowercase]{MyriadPro}
 \item \textbf{IEEE P3173 vice chair} and IEEE standards work on chemical hazard labelling; earlier standards participation in P2881 and P1940.
 \item \textbf{NumFOCUS Google Summer of Code administrator} (2024--present).
 \item \textbf{National HPC Centre of Iceland consultant} (2021--2024), Simulation and Data Lab Computational Chemistry.
+\item \textbf{Triangle Scholarly Communication Institute} (2019), invited participant in a funded incubator on equity and diversity in peer review.
 \item Reviewer for Nature Communications, Physical Review Letters, Physical Review A/E/Applied, IOP journals, PLOS ONE, PeerJ, JOSS, and Manning Publications.
 \end{itemize}
 
+\section{Honours and Fellowships}
+\compactentry{IPAM Fellow, Institute for Pure and Applied Mathematics (UCLA)}{2021}{Tensor Methods and Emerging Applications to the Physical and Data Sciences long programme.}
+\compactentry{Springer Best Student Paper Award, Photonics-2016}{2016}{Nonlinear-Optics session, IIT Kanpur.}
+
 \section{Technical Breadth}
-\skillline{Scientific domains}{Chemical kinetics, transition-state theory, adaptive kinetic Monte Carlo, molecular dynamics, photocatalysis, atomistic machine learning, Bayesian optimization, Gaussian processes, uncertainty quantification.}
+\skillline{Scientific domains}{Chemical kinetics, transition-state theory, adaptive kinetic Monte Carlo, molecular dynamics, photocatalysis, atomistic machine learning, Bayesian optimization, Gaussian processes, uncertainty quantification, rare-event sampling.}
 \skillline{Simulation and HPC}{eOn, LAMMPS, GROMACS, GPAW context, MPI/OpenMP, CUDA, Slurm, containers, Nix, Spack, EasyBuild, Linux/HPC operations.}
 \skillline{Programming}{C++, Python, Fortran, Rust, R, Julia, shell; bindings and ABI work across Python/C++/Fortran/Rust stacks.}
 \skillline{Data and ML}{PyTorch, scikit-learn, GPy, Stan, Bayesian hierarchical models, descriptor tensors, reaction-path validation, reproducible benchmark design.}
+
+\section{Additional Software and Solver Contributions}
+\skillline{HiGHS / SciPy / OpenBLAS}{Integrated the HiGHS LP/MIP solver into SciPy (every \texttt{linprog}/\texttt{milp} call), initiated PRIMA derivative-free integration, and ported OpenBLAS to Meson as the default BLAS/LAPACK backend for NumPy and SciPy.}
+\skillline{ASV / wailord / fastMatMR}{Co-maintain Airspeed Velocity (Python benchmarking); created an ORCA quantum-chemistry parser/workflow library and rOpenSci-reviewed R bindings for fast Matrix Market I/O.}
 
 \section{Affiliations}
 Institute of Physics (MInstP) \textbullet{} Royal Society of Chemistry (MRSC) \textbullet{} BCS, the Chartered Institute for IT (MBCS) \textbullet{} ACM \textbullet{} APS \textbullet{} IEEE \textbullet{} AIChE \textbullet{} Nordic-RSE \textbullet{} TeX Users Group.
