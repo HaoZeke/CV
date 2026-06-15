@@ -162,7 +162,7 @@ Scale=MatchLowercase]{MyriadPro}
 \end{tabularx}
 
 \section{Selected Track Record for the Proposed Work}
-\metric{11} peer-reviewed or accepted selected papers \quad
+\metric{26} peer-reviewed and conference publications \quad
 \metric{1} prior Rann\'{i}s PI grant delivered \quad
 \metric{5+} years eOn maintenance \quad
 \metric{80+} JOSS reviews handled \quad
@@ -261,18 +261,13 @@ Scale=MatchLowercase]{MyriadPro}
 \end{itemize}
 
 \section{Honours and Fellowships}
-\compactentry{IPAM Fellow, Institute for Pure and Applied Mathematics (UCLA)}{2021}{Tensor Methods and Emerging Applications to the Physical and Data Sciences long programme.}
-\compactentry{Springer Best Student Paper Award, Photonics-2016}{2016}{Nonlinear-Optics session, IIT Kanpur.}
+\skillline{Fellowships and awards}{IPAM Fellow, Institute for Pure and Applied Mathematics, UCLA (2021), Tensor Methods long programme; Springer Best Student Paper Award, Photonics-2016 (Nonlinear-Optics session, IIT Kanpur).}
 
 \section{Technical Breadth}
 \skillline{Scientific domains}{Chemical kinetics, transition-state theory, adaptive kinetic Monte Carlo, molecular dynamics, photocatalysis, atomistic machine learning, Bayesian optimization, Gaussian processes, uncertainty quantification, rare-event sampling.}
-\skillline{Simulation and HPC}{eOn, LAMMPS, GROMACS, MPI/OpenMP, CUDA, Slurm, containers, Nix, Spack, EasyBuild, and HPC operations.}
-\skillline{Programming}{C++, Python, Fortran, Rust, R, Julia, shell; bindings and ABI work across Python/C++/Fortran/Rust stacks.}
+\skillline{Simulation, HPC, and languages}{eOn, LAMMPS, GROMACS, MPI/OpenMP, CUDA, Slurm, Nix, Spack, EasyBuild, containers; C++, Python, Fortran, Rust, R, Julia, shell, with bindings/ABI work across the Python/C++/Fortran/Rust stacks.}
 \skillline{Data and ML}{PyTorch, scikit-learn, GPy, Stan, Bayesian hierarchical models, descriptor tensors, reaction-path validation, reproducible benchmark design.}
-
-\section{Additional Software and Solver Contributions}
-\skillline{HiGHS / SciPy / OpenBLAS}{Integrated the HiGHS LP/MIP solver into SciPy (every \texttt{linprog}/\texttt{milp} call), initiated PRIMA derivative-free integration, and ported OpenBLAS to Meson as the default BLAS/LAPACK backend for NumPy and SciPy.}
-\skillline{ASV / wailord / fastMatMR}{Co-maintain Airspeed Velocity (Python benchmarking); created an ORCA quantum-chemistry parser/workflow library and rOpenSci-reviewed R bindings for fast Matrix Market I/O.}
+\skillline{Solvers and tooling}{HiGHS LP/MIP integration into SciPy (\texttt{linprog}/\texttt{milp}) and PRIMA; OpenBLAS Meson port (default NumPy/SciPy BLAS/LAPACK); ASV benchmarking co-maintenance; \texttt{wailord} ORCA parser and rOpenSci-reviewed \texttt{fastMatMR} R bindings.}
 
 \section{Affiliations}
 Institute of Physics (MInstP) \textbullet{} Royal Society of Chemistry (MRSC) \textbullet{} BCS, the Chartered Institute for IT (MBCS) \textbullet{} ACM \textbullet{} APS \textbullet{} IEEE \textbullet{} AIChE \textbullet{} Nordic-RSE \textbullet{} TeX Users Group.
