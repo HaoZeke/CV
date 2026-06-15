@@ -137,7 +137,7 @@ Scale=MatchLowercase]{MyriadPro}
 \begin{minipage}[t]{0.67\textwidth}
 {\sffamily\bfseries\fontsize{28pt}{30pt}\selectfont Rohit Goswami}\\[-0.12em]
 {\sffamily\bfseries\large\color{cvTeal}Computational chemical kinetics, atomistic ML, rare events, and scientific software}\\[-0.05em]
-\headerline{\href{mailto:rgoswami@ieee.org}{rgoswami@ieee.org} \textbullet{} \href{https://rgoswami.me}{rgoswami.me} \textbullet{} \href{https://github.com/HaoZeke}{github.com/HaoZeke} \textbullet{} Iceland / Netherlands}
+\headerline{\href{mailto:rgoswami@ieee.org}{rgoswami@ieee.org} \textbullet{} \href{https://research.rgoswami.me}{research.rgoswami.me} \textbullet{} \href{https://github.com/HaoZeke}{github.com/HaoZeke} \textbullet{} Iceland / Netherlands}
 \end{minipage}
 \hfill
 \begin{minipage}[t]{0.28\textwidth}
@@ -221,13 +221,15 @@ Researcher and scientific-software engineer working on Gaussian-process saddle p
 \compactentry{Google Season of Docs technical-writer grant}{2022}{\textbf{10,000 USD}. Generated documentation capacity for scientific software.}
 \compactentry{Springer Best Student Paper Award}{2016}{Photonics conference recognition for early ultrafast-optics work.}
 
+\newpage
+
 \section{Open Source and Infrastructure Record}
 \skillline{eOn}{Lead maintainer for long-timescale dynamics: RPC architecture, GP saddle searches, Hessian CI-NEB, ML potentials, reproducible packaging.}
 \skillline{\texttt{metatensor}/\texttt{metatomic}}{Contributor to atomistic-ML infrastructure: DLPack, device-aware execution, Rust/C++/Python interoperability, GROMACS interface work.}
 \skillline{\texttt{f2py}/NumPy}{Maintainer of NumPy's Fortran-to-Python interface; Meson backend, derived-type support, and scientific build-system modernization.}
 \skillline{d-SEAMS/pySEAMS}{Co-creator of molecular-trajectory analysis engine; mentored Python bindings through Google Summer of Code.}
 \skillline{SciPy, HiGHS, OpenBLAS, LFortran}{Build, solver, compiler, and linear-algebra contributions used by the scientific Python stack.}
-\skillline{Reproducibility stack}{Nix, pixi, Snakemake, CMake, Meson, CI, containers, Slurm, Spack, EasyBuild, \LaTeX, and literate org-mode workflows.}
+\skillline{Reproducibility stack}{Nix, pixi, Snakemake, CMake, Meson, CI, containers, Slurm, Spack, EasyBuild, LaTeX, and literate org-mode workflows.}
 
 \section{Talks and Scientific Communication}
 \compactentry{Managing concurrency for high throughput adaptive kinetic Monte Carlo}{ACS Fall, 2025}{Washington, DC. High-throughput aKMC concurrency and scheduling.}
