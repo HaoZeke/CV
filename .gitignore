@@ -321,23 +321,11 @@ Temporary Items
 # Pixi
 .pixi/
 
-# Tangled preambles (regenerated)
-preamble.tex
-onepage-preamble.tex
-twopage-preamble.tex
-
-# Generated tex from org export
-curriculum-vitae/literate_cv.tex
-onePage/literate_onepage.tex
-twoPage/literate_twopage.tex
+# All generated build output (tangles, exports, PDFs, aux)
+build/
 
 # Biber temp files
 *.bpx
-
-# Build PDFs (regenerated)
-curriculum-vitae/literate_cv.pdf
-twoPage/literate_twopage.pdf
-onePage/literate_onepage.pdf
 
 # Shared cache
 shared/.fastembed_cache/
@@ -350,3 +338,5 @@ CLAUDE.md
 *.elc
 \#*\#
 .\#*
+auto/
+.auctex-auto/

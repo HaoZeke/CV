@@ -1,33 +1,34 @@
 [workspace]
 authors = ["Rohit Goswami <rgoswami@ieee.org>"]
 channels = ["conda-forge"]
-description = "CV variants for Rohit Goswami"
+description = "CV variants for Rohit Goswami (single cv.org source)"
 name = "rgCV"
 platforms = ["linux-64", "osx-64", "osx-arm64"]
-version = "0.1.0"
+version = "0.2.0"
 
 [tasks]
-# Org to TeX (emacs batch)
-mktex-full = "emacs -nl --script scripts/org2tex.el curriculum-vitae/literate_cv.org"
-mktex-twopage = "emacs -nl --script scripts/org2tex.el twoPage/literate_twopage.org"
-mktex-onepage = "emacs -nl --script scripts/org2tex.el onePage/literate_onepage.org"
-mktex-cv3pagegrant = "emacs -nl --script scripts/org2tex.el cv3pageGrant/literate_cv3pageGrant.org"
+# Single source: cv.org -> build/<variant>/
+# --batch --no-init-file avoids user init hangs; org2tex.el loads everything needed
+tangle = "emacs --batch --no-init-file --no-site-file -l scripts/org2tex.el tangle"
+mktex-full = "emacs --batch --no-init-file --no-site-file -l scripts/org2tex.el full"
+mktex-twopage = "emacs --batch --no-init-file --no-site-file -l scripts/org2tex.el twopage"
+mktex-onepage = "emacs --batch --no-init-file --no-site-file -l scripts/org2tex.el onepage"
+mktex-grant = "emacs --batch --no-init-file --no-site-file -l scripts/org2tex.el grant"
+mktex = "emacs --batch --no-init-file --no-site-file -l scripts/org2tex.el all"
 
 # TeX to PDF (requires xelatex, latexmk, biber on system PATH)
-mkpdf-full = { cmd = "latexmk -pdfxe -halt-on-error literate_cv.tex", depends-on = ["mktex-full"], cwd = "curriculum-vitae/" }
-mkpdf-twopage = { cmd = "latexmk -pdfxe -halt-on-error literate_twopage.tex", depends-on = ["mktex-twopage"], cwd = "twoPage/" }
-mkpdf-onepage = { cmd = "latexmk -pdfxe -halt-on-error literate_onepage.tex", depends-on = ["mktex-onepage"], cwd = "onePage/" }
-mkpdf-cv3pagegrant = { cmd = "latexmk -pdfxe -halt-on-error literate_cv3pageGrant.tex", depends-on = ["mktex-cv3pagegrant"], cwd = "cv3pageGrant/" }
+mkpdf-full = { cmd = "latexmk -pdfxe -halt-on-error -r ../../shared/.latexmkrc cv.tex", depends-on = ["mktex-full"], cwd = "build/full/" }
+mkpdf-twopage = { cmd = "latexmk -pdfxe -halt-on-error -r ../../shared/.latexmkrc cv.tex", depends-on = ["mktex-twopage"], cwd = "build/twopage/" }
+mkpdf-onepage = { cmd = "latexmk -pdfxe -halt-on-error -r ../../shared/.latexmkrc cv.tex", depends-on = ["mktex-onepage"], cwd = "build/onepage/" }
+mkpdf-grant = { cmd = "latexmk -pdfxe -halt-on-error -r ../../shared/.latexmkrc cv.tex", depends-on = ["mktex-grant"], cwd = "build/grant/" }
 
-# Convenience
-all = { depends-on = ["mkpdf-full", "mkpdf-twopage", "mkpdf-onepage", "mkpdf-cv3pagegrant"] }
-clean = "fd -e aux -e log -e bbl -e bcf -e blg -e fdb_latexmk -e fls -e xml -e synctex.gz -e xdv -x rm -f"
-
-# Tangle only (preamble extraction without full export)
-tangle-full = "emacs --batch -l org curriculum-vitae/literate_cv.org --eval '(org-babel-tangle)'"
-tangle-twopage = "emacs --batch -l org twoPage/literate_twopage.org --eval '(org-babel-tangle)'"
-tangle-onepage = "emacs --batch -l org onePage/literate_onepage.org --eval '(org-babel-tangle)'"
-tangle-cv3pagegrant = "emacs --batch -l org cv3pageGrant/literate_cv3pageGrant.org --eval '(org-babel-tangle)'"
+# Convenience aliases
+full = { depends-on = ["mkpdf-full"] }
+twopage = { depends-on = ["mkpdf-twopage"] }
+onepage = { depends-on = ["mkpdf-onepage"] }
+grant = { depends-on = ["mkpdf-grant"] }
+all = { depends-on = ["mkpdf-full", "mkpdf-twopage", "mkpdf-onepage", "mkpdf-grant"] }
+clean = "rm -rf build && fd -e aux -e log -e bbl -e bcf -e blg -e fdb_latexmk -e fls -e xml -e synctex.gz -e xdv -x rm -f"
 
 [dependencies]
 perl = "*"

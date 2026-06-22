@@ -42,9 +42,9 @@
   \RequirePackage{fontspec}
   \RequirePackage{hyperref}
 
-  % Use Minion Pro / Myriad Pro matching fullcv
+  % Fonts relative to build/<variant>/ (TEXINPUTS also includes ../../shared/)
   \setmainfont[
-    Path = ../shared/Fonts/MinionPro/,
+    Path = ../../shared/Fonts/MinionPro/,
     Numbers=OldStyle,
     Extension = .otf,
     UprightFont = *_Regular,
@@ -54,7 +54,7 @@
   ]{MinionPro}
 
   \setsansfont[
-    Path = ../shared/Fonts/MyriadPro/,
+    Path = ../../shared/Fonts/MyriadPro/,
     Numbers=OldStyle,
     Extension = .otf,
     UprightFont = *_Regular,

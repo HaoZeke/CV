@@ -43,10 +43,10 @@ jobs:
       - name: Collect PDFs
         run: |
           mkdir -p artifacts
-          cp curriculum-vitae/literate_cv.pdf artifacts/RG_CV_Full.pdf
-          cp twoPage/literate_twopage.pdf artifacts/RG_CV_TwoPage.pdf
-          cp onePage/literate_onepage.pdf artifacts/RG_CV_OnePage.pdf
-          cp cv3pageGrant/literate_cv3pageGrant.pdf artifacts/RG_CV_Grant3Page.pdf
+          cp build/full/cv.pdf artifacts/RG_CV_Full.pdf
+          cp build/twopage/cv.pdf artifacts/RG_CV_TwoPage.pdf
+          cp build/onepage/cv.pdf artifacts/RG_CV_OnePage.pdf
+          cp build/grant/cv.pdf artifacts/RG_CV_Grant3Page.pdf
 
       - name: Push to pdfs branch
         run: |

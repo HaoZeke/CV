@@ -1,9 +1,22 @@
-;; org2tex.el -- batch org-to-LaTeX exporter for rgCV
-;; Usage: emacs --batch -l org2tex.el <orgfile>
-;; or:    emacs -nl --script org2tex.el <orgfile>
+;;; org2tex.el --- batch org-to-LaTeX exporter for rgCV -*- lexical-binding: t -*-
+;; Usage:
+;;   emacs -nl --script scripts/org2tex.el tangle          ; tangle cv.org only
+;;   emacs -nl --script scripts/org2tex.el full            ; tangle + export full CV
+;;   emacs -nl --script scripts/org2tex.el twopage|onepage|grant
+;;   emacs -nl --script scripts/org2tex.el all             ; tangle + export all
+;;   emacs -nl --script scripts/org2tex.el <path/to/file.org>  ; legacy: single file
 (package-initialize)
 (require 'ox)
 (require 'ox-latex)
+
+(defvar rgcv-root
+  (expand-file-name ".." (file-name-directory
+                          (or load-file-name buffer-file-name ".")))
+  "Repository root (parent of scripts/).")
+
+(defvar rgcv-master
+  (expand-file-name "cv.org" rgcv-root)
+  "Single source of truth.")
 
 ;; Vendored org-cv (https://gitlab.com/Titan-C/org-cv) so the moderncv
 ;; cventry transcoder is available without the personal Emacs config.
@@ -28,14 +41,7 @@
       (require 'ox-extra)
       (ox-extras-activate '(ignore-headlines)))
   (file-missing
-   ;; Inline ignore-headlines from ox-extra (avoids org-contrib dependency).
    ;; Headlines tagged :ignore: have their heading removed but contents kept.
-   (defun org2tex--ignore-headline (headline backend info)
-     "Strip headline text for :ignore: tagged headings, keeping body."
-     (when (member "ignore" (org-element-property :tags headline))
-       (let ((contents (org-export-get-body headline info)))
-         contents)))
-   ;; Use a transcode filter: override headline transcoding
    (advice-add 'org-latex-headline :around
      (lambda (orig headline contents info)
        (if (member "ignore" (org-element-property :tags headline))
@@ -48,6 +54,9 @@
 (setq org-latex-hyperref-template 'nil)
 (setq org-latex-minted-options 'nil)
 (setq org-latex-listings 'listings)
+
+;; Allow tangling/export without interactive confirmation
+(setq org-confirm-babel-evaluate nil)
 
 ;; Register rgcv classes for org export
 (add-to-list 'org-latex-classes
@@ -78,9 +87,64 @@
     ("\\section{%s}" . "\\section*{%s}")
     ("\\subsection{%s}" . "\\subsection*{%s}")))
 
-;; Export the file
-(let ((org-file (car command-line-args-left)))
-  (when org-file
+;; article (grant variant)
+(add-to-list 'org-latex-classes
+  '("article"
+    "\\documentclass[10pt,a4paper]{article}
+[NO-DEFAULT-PACKAGES]
+[NO-PACKAGES]"
+    ("\\section{%s}" . "\\section*{%s}")
+    ("\\subsection{%s}" . "\\subsection*{%s}")
+    ("\\subsubsection{%s}" . "\\subsubsection*{%s}")))
+
+(defun rgcv--tangle-master ()
+  "Tangle cv.org into build/ (preambles, bodies, short-variant drivers)."
+  (find-file rgcv-master)
+  (org-babel-tangle)
+  (message "Tangled %s" rgcv-master))
+
+(defun rgcv--export-org (org-file tex-file)
+  "Export ORG-FILE with rgcv-latex backend to TEX-FILE."
+  (let ((default-directory (file-name-directory (expand-file-name org-file))))
     (find-file org-file)
+    (org-export-to-file 'rgcv-latex tex-file)
+    (message "Exported %s -> %s" org-file tex-file)))
+
+(defun rgcv--export-full ()
+  "Tangle master then export full CV into build/full/cv.tex."
+  (rgcv--tangle-master)
+  (let* ((build-dir (expand-file-name "build/full" rgcv-root))
+         (tex-file (expand-file-name "cv.tex" build-dir)))
+    (make-directory build-dir t)
+    (rgcv--export-org rgcv-master tex-file)))
+
+(defun rgcv--export-variant (variant)
+  "Export a short variant (twopage|onepage|grant) from its tangled driver."
+  (rgcv--tangle-master)
+  (let* ((build-dir (expand-file-name (format "build/%s" variant) rgcv-root))
+         (org-file (expand-file-name "cv.org" build-dir))
+         (tex-file (expand-file-name "cv.tex" build-dir)))
+    (unless (file-exists-p org-file)
+      (error "Missing tangled driver %s; run tangle first" org-file))
+    (rgcv--export-org org-file tex-file)))
+
+(defun rgcv--dispatch (cmd)
+  "Dispatch CMD: tangle, full, twopage, onepage, grant, all, or a path."
+  (cond
+   ((string= cmd "tangle") (rgcv--tangle-master))
+   ((string= cmd "full") (rgcv--export-full))
+   ((member cmd '("twopage" "onepage" "grant"))
+    (rgcv--export-variant cmd))
+   ((string= cmd "all")
+    (rgcv--export-full)
+    (dolist (v '("twopage" "onepage" "grant"))
+      (rgcv--export-variant v)))
+   ;; Legacy: treat as path to an org file
+   ((file-exists-p cmd)
+    (find-file cmd)
     (org-babel-tangle)
-    (org-export-to-file 'rgcv-latex (org-export-output-file-name ".tex"))))
+    (org-export-to-file 'rgcv-latex (org-export-output-file-name ".tex")))
+   (t (error "Unknown command: %s" cmd))))
+
+(let ((cmd (or (car command-line-args-left) "tangle")))
+  (rgcv--dispatch cmd))
