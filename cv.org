@@ -1,10 +1,10 @@
-#+TITLE: Rohit Goswami CV (literate master)
 #+AUTHOR: Rohit Goswami
 #+email: rgoswami@ieee.org
 #+options: tags:nil title:nil toc:nil num:nil author:nil date:nil
 
 # Single source of truth for all CV variants.
 # Edit this file only; tangle + export produces build/<variant>/ artifacts.
+# Do not set #+TITLE: moderncv \maketitle prints \@title as the subtitle.
 #
 #   pixi run tangle   # write preambles, variant drivers, and latex bodies
 #   pixi run all      # tangle, export, compile every variant
@@ -454,6 +454,7 @@ The rest of the document is written within the ~begin{document}~ environment.
 
 ** Title :ignore:ignoreheading:
 #+begin_export latex
+\title{}
 \maketitle
 #+end_export
 
@@ -3361,9 +3362,7 @@ d-SEAMS \textbullet{} wailord \textbullet{} fastMatMR \textbullet{} zenYoda \tex
 \subsection{Programming}
 C++ \textbullet{} Python \textbullet{} R \textbullet{} Fortran \textbullet{} Rust \textbullet{} Julia \textbullet{} Shell \textbullet{} \LaTeX \textbullet{} Nix \textbullet{} JS \textbullet{} CUDA
 
-\end{minipage}
-\hfill
-
+\end{minipage}\hfill
 \begin{minipage}[t]{0.63\textwidth}
 
 
