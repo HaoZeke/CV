@@ -8,20 +8,24 @@ concurrency:
   group: build-cvs-${{ github.ref }}
   cancel-in-progress: true
 
-permissions:
-  contents: write
+permissions: {}
 
 jobs:
   build:
+    name: Build CV PDFs
     runs-on: ubuntu-latest
+    permissions:
+      contents: write # push rebuilt PDFs to the orphan pdfs branch
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
 
-      - uses: prefix-dev/setup-pixi@v0.8.8
+      - uses: prefix-dev/setup-pixi@19eac09b398e3d0c747adc7921926a6d802df4da # v0.8.8
         with:
           cache: true
 
-      - uses: zauguin/install-texlive@v3
+      - uses: zauguin/install-texlive@53f0ed88ffcaca6e4990e7f8f4a9f3ddefda859e # v3
         with:
           packages: >
             scheme-basic
@@ -62,6 +66,9 @@ jobs:
           cp build/grant/cv.pdf artifacts/RG_CV_Grant3Page.pdf
 
       - name: Push to pdfs branch
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          REPO: ${{ github.repository }}
         run: |
           cd artifacts
           git init
@@ -69,5 +76,5 @@ jobs:
           git add *.pdf
           git -c user.name="github-actions" -c user.email="actions@github.com" \
             commit -m "Update CV PDFs ($(date -u +%Y-%m-%d))"
-          git remote add origin "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git"
+          git remote add origin "https://x-access-token:${GH_TOKEN}@github.com/${REPO}.git"
           git push -f origin pdfs
