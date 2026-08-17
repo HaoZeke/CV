@@ -36,6 +36,7 @@ jobs:
             substr textpos tipa titlesec ulem unicode-data
             wrapfig xcolor xltxtra xunicode
             lm lm-math collection-fontsrecommended
+            fontawesome6
 
       - name: Build all CV variants
         run: pixi run all
