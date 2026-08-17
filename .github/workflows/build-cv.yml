@@ -43,13 +43,13 @@ jobs:
 
       - name: Guard title leak and onepage length
         run: |
-          if rg -n 'literate master' build/full/cv.tex cv.org; then
+          if grep -n 'literate master' build/full/cv.tex cv.org; then
             echo "internal TITLE leaked into export or source" >&2
             exit 1
           fi
-          if ! rg -q 'Output written on cv.pdf \(1 page' build/onepage/cv.log; then
+          if ! grep -q 'Output written on cv.pdf (1 page' build/onepage/cv.log; then
             echo "onepage CV is not one page" >&2
-            rg 'Output written on cv.pdf' build/onepage/cv.log || true
+            grep 'Output written on cv.pdf' build/onepage/cv.log || true
             exit 1
           fi
 
