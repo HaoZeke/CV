@@ -58,7 +58,8 @@ Misc/                # non-build ancillary PDFs
 ## CI
 
 GitHub Actions builds all variants on push to `main` and publishes PDFs to the
-`pdfs` orphan branch.
+`pdfs` orphan branch. [zizmor](https://github.com/zizmorcore/zizmor) scans the
+workflows on push and pull request.
 
 ## License
 
