@@ -2445,12 +2445,7 @@ Theory seminar, hosted by Jörg Meyer. Dimers, climbing images, and Gaussian pro
 :END:
 Invited talk at the pARTn hackathon (1--3 April 2026): practical lessons for transition-state methods. [[https://mammasmias.github.io/hackathon-pARTn/program.html][Programme]].
 
-** Invited research-group seminars :cventry:
-:PROPERTIES:
-:CV_ENV: cventry
-:EMPLOYER: MIT, Harvard University, and Boston College
-:LOCATION: Massachusetts
-:END:
+** Invited research-group seminars
 William H. Green's and Rafael Gómez-Bombarelli's groups at MIT, Boris Kozinsky's group at Harvard, and a group seminar at Boston College. Scientific software, atomistic machine learning, and the metatensor/eOn ecosystem.
 
 * Workshops and Schools :cventries:
