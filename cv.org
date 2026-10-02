@@ -2398,8 +2398,8 @@ Invited talk at the pARTn hackathon (1--3 April 2026): practical lessons for tra
 ** Invited research-group seminars :cventry:
 :PROPERTIES:
 :CV_ENV: cventry
-:EMPLOYER: MIT and Harvard University
-:LOCATION: Cambridge, Massachusetts
+:EMPLOYER: MIT, Harvard University, and Boston College
+:LOCATION: Massachusetts
 :END:
 William H. Green's and Rafael Gómez-Bombarelli's groups at MIT, Boris Kozinsky's group at Harvard, and a group seminar at Boston College. Scientific software, atomistic machine learning, and the metatensor/eOn ecosystem.
 
@@ -3885,7 +3885,7 @@ The accompanying publication list gives full references and individual contribut
 \entry{How silicon nitride clusters lose N\textsubscript{2}}{29 September 2026}{IPCMS and ICube, Strasbourg}{Seminar and research visit on saddle-search methods and their integration with first-principles software.}
 \entry{Finding transitions on surfaces}{16 September 2026}{Leiden University \textbullet{} host: Jörg Meyer}{Theory seminar on dimers, climbing images, and Gaussian processes. QMCPACK collaboration with Geert-Jan Kroes through SURF's Promising Applications programme.}
 \entry{NEB and dimer methods in machine learning}{1 April 2026}{pARTn hackathon \textbullet{} Ruđer Bošković Institute, Zagreb}{Invited talk on methods and practical lessons for transition-state searches. The hackathon ran 1--3 April. \href{https://mammasmias.github.io/hackathon-pARTn/program.html}{Programme}.}
-\compactentry{Invited research-group seminars}{MIT and Harvard}{William H. Green's and Rafael Gómez-Bombarelli's groups at MIT; Boris Kozinsky's group at Harvard; a group seminar at Boston College. Scientific software, atomistic machine learning, and the metatensor/eOn ecosystem.}
+\compactentry{Invited research-group seminars}{United States}{William H. Green's and Rafael Gómez-Bombarelli's groups at MIT; Boris Kozinsky's group at Harvard; a group seminar at Boston College. Scientific software, atomistic machine learning, and the metatensor/eOn ecosystem.}
 \entry{Accelerating saddle searches with Gaussian process regression}{June 2024}{CECAM LTS-MAP \textbullet{} SISSA, Trieste}{Invited speaker and eOn tutorial contributor.}
 \entry{Development, benchmarks and workflows}{February 2024}{CECAM Electronic Structure Library meeting \textbullet{} Lausanne}{Invited speaker on workflows from development machines to HPC centres.}
 \entry{Computational chemistry and possible tensor applications}{December 2023}{IPAM Tensor Methods Reunion Conference}{Invited talk following the 2021 Tensor Methods long programme.}
