@@ -3780,6 +3780,10 @@ Tangle, then export =build/uoi-cs/cv.org= with =scripts/org2tex.el=.
 \fancyfoot[L]{\sffamily\scriptsize\color{cvMuted}Rohit Goswami \quad Academic CV \quad 2 October 2026}
 \fancyfoot[R]{\sffamily\scriptsize\color{cvMuted}\thepage}
 \setlength{\footskip}{6mm}
+\renewcommand{\paper}[4]{%
+  \par\noindent\begin{minipage}[t]{0.77\linewidth}\textbf{#1}\end{minipage}\hfill
+  \begin{minipage}[t]{0.21\linewidth}\raggedleft\sffamily\small\color{cvMuted}#2\end{minipage}\par\nobreak
+  #3\ {\color{cvTeal}#4}\par\vspace{0.55em}}
 \newcommand{\runningtitle}[1]{%
   {\sffamily\bfseries\large\color{cvTeal}Rohit Goswami}\hfill
   {\sffamily\small\color{cvMuted}#1}\par\pagerule}
