@@ -3810,7 +3810,7 @@ Tangle, then export =build/uoi-cs/cv.org= with =scripts/org2tex.el=.
 \pagerule
 
 \section{Research profile}
-Scientific software engineer and researcher working on generated interfaces, machine learning, and high-performance computing. Maintainer of NumPy's \texttt{f2py}; co-maintainer of Airspeed Velocity; lead developer of eOn. My research combines Gaussian-process methods, independent numerical checks, and Bayesian comparisons of algorithm performance. My proposed programme studies reliable AI agents, including the harnesses that control their tools, persistent memory, and verification.
+Scientific software engineer and researcher working on generated interfaces, machine learning, and high-performance computing. Maintainer of NumPy's \texttt{f2py}; co-maintainer of Airspeed Velocity; lead developer of eOn. My research develops efficient Gaussian-process methods, adaptive reduction of training data, and interoperable learned models. The gpridge manuscript and ESCAPE proposal extend this work to stable surrogate models and reusable scientific event records. My proposed programme also studies agent harnesses, persistent memory, and independent verification.
 
 \vspace{0.4em}
 \metric{16}{journal articles}\hfill\metric{7}{conference papers}\hfill\metric{2}{courses taught in this department}
@@ -3865,7 +3865,7 @@ The accompanying publication list gives full references and individual contribut
 \compactentry{Python Data Model for Reliable Research Code}{Accepted project, 2026}{Collaborative Lesson Development Training project with Bas Terwijn, University of Amsterdam. Lessons on object identity, mutation, aliasing, and shared state.}
 \compactentry{Python Dissemination}{Lesson development}{Material on developing and publishing reusable Python software; submitted to Carpentries Lab.}
 \compactentry{HPC, Jenkins, and ReFrame}{Training material}{Internal SURF course material on the software build-and-test workflow; HPC labs that use ReFrame to check execution and numerical results. Exercises develop a mental model, predict behaviour, and diagnose failures.}
-\compactentry{Engineering Reliable AI Agents}{Proposed master's course}{A 6 ECTS course on tool control, persistent memory, permissions, failure recovery, coordination, and scientific verification. Four practical units and a reproducible software capstone, with open materials for Nordic collaboration.}
+\compactentry{Engineering Reliable AI Agents}{Proposed master's course}{A 6 ECTS course on tool control, persistent memory, permissions, failure recovery, coordination, and scientific verification. Four practical units extend one small repository into a reproducible software capstone, with open materials for Nordic collaboration.}
 
 \section{Mentoring and training service}
 \compactentry{Google Summer of Code}{2022--2024}{Mentor; NumFOCUS organisation administrator in 2024.}
