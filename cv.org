@@ -558,7 +558,7 @@ Working on foundational FOSS scientific codebases and tools like ~numpy~ and ~f2
 :LOCATION: University of Iceland
 :EMPLOYER: Faculty of Physical Sciences
 :END:
-Admitted to the MS programme in Chemistry in 2019 and moved to the Ph.D. programme in July 2020. Worked with Prof. Hannes Jónsson on Bayesian analysis and machine learning for /ab initio/ quantum chemistry. From October 2020 to August 2021, employed on the EU H2020 "ReaxPro" project (814416), developing the Gaussian-process dimer method and its integration into eOn.
+Full-time salaried position from October 2019, funded by an Icelandic Research Fund grant, alongside the MS programme in Chemistry; moved to the Ph.D. programme in July 2020. Worked with Prof. Hannes Jónsson on Bayesian analysis and machine learning for /ab initio/ quantum chemistry. From October 2020 to August 2021, employed on the EU H2020 "ReaxPro" project (814416), developing the Gaussian-process dimer method and its integration into eOn.
 
 ** IHPC :cventry:
 :PROPERTIES:
