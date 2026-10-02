@@ -3810,7 +3810,7 @@ Tangle, then export =build/uoi-cs/cv.org= with =scripts/org2tex.el=.
 \pagerule
 
 \section{Research profile}
-Scientific software engineer and researcher working on generated interfaces, machine learning, and high-performance computing. Maintainer of NumPy's \texttt{f2py}; co-maintainer of Airspeed Velocity; lead developer of eOn. My research develops efficient Gaussian-process methods, adaptive reduction of training data, and interoperable learned models. The gpridge manuscript and ESCAPE proposal extend this work to stable surrogate models and reusable scientific event records. My proposed programme also studies agent harnesses and persistent memory, alongside portable HPC applications, dependable data-centre software, and performance and energy measurement.
+Researcher and scientific software engineer developing numerical algorithms, AI systems, and high-performance computing. Maintainer of NumPy's \texttt{f2py}; co-maintainer of Airspeed Velocity; lead developer of eOn. I develop Leidarljos for persistent memory, provenance, and coordinated AI tools. My scientific software spans Gaussian-process search, interoperable learned models, and streaming bioinformatics with rsx. The gpridge and anneal manuscripts and ESCAPE proposal extend this programme. Collaborations connect computer science with computational chemistry, biology, and earth sciences, alongside research on portable HPC applications and data-centre software.
 
 \vspace{0.4em}
 \metric{16}{journal articles}\hfill\metric{7}{conference papers}\hfill\metric{2}{courses taught in this department}
@@ -3837,8 +3837,9 @@ Scientific software engineer and researcher working on generated interfaces, mac
 \skillline{SciPy}{Reworked HiGHS linear and mixed-integer programming integration, including the upstream Python interface and a Meson subproject (\href{https://github.com/scipy/scipy/pull/19255}{\#19255}, \href{https://github.com/scipy/scipy/pull/21565}{\#21565}).}
 \skillline{Airspeed Velocity}{Co-maintainer. Repeatable benchmarking across scientific Python releases.}
 \skillline{\texttt{metatensor} / \texttt{metatomic}}{DLPack exchange, device-aware execution, and Rust operations for interoperable atomistic machine learning.}
-\skillline{Applications and packaging}{Co-creator of d-SEAMS; performance, packaging, and continuous integration for Flowy; conda-forge feedstock maintenance.}
-\skillline{Agent systems}{Software for persistent memory, task ownership, tool permissions, and evidence for results; practical basis for the proposed research and teaching programme.}
+\skillline{Scientific applications}{Co-creator of d-SEAMS; author of rsx for streaming bioinformatics; performance, packaging, and continuous integration for Flowy.}
+\skillline{\href{https://leidarljos.github.io}{Leidarljos}}{Developer. Persistent memory with validity and revision, cryptographic provenance, task ownership, and coordination across AI tools.}
+\skillline{Mathematical software}{gpridge for Gaussian-process search; anneal for global optimisation under a fixed budget. Manuscripts in preparation.}
 
 \section{Eight selected works}
 The accompanying publication list gives full references and individual contributions. Eleven journal articles appeared in 2025--2026, nine with me as first or sole author.
@@ -3850,7 +3851,7 @@ The accompanying publication list gives full references and individual contribut
 \paper{Reproducible high performance computing without redundancy with Nix}{IEEE PDGC, 2022}{Goswami et al. Reproducible environments on Elja that retain the native build.}{\href{https://doi.org/10.1109/PDGC56933.2022.10053342}{doi}}
 \paper{d-SEAMS: deferred structural elucidation analysis for molecular simulations}{JCIM, 2020}{Goswami, Goswami, and Singh. Software architecture, core algorithms, tests, and documentation.}{\href{https://doi.org/10.1021/acs.jcim.0c00031}{doi}}
 \paper{Efficient implementation of Gaussian process regression accelerated saddle point searches with application to molecular reactions}{JCTC, 2025}{Goswami et al. Method implementation, calculations, analysis, and manuscript.}{\href{https://doi.org/10.1021/acs.jctc.5c00866}{doi}}
-\paper{Bayesian hierarchical models for quantitative estimates for performance metrics applied to saddle search algorithms}{AIP Advances, 2025}{Sole author. Comparison of two optimizers across 500 test cases.}{\href{https://doi.org/10.1063/5.0283639}{doi}}
+\paper{rsx: a high-performance streaming toolkit for RAD-seq sex determination}{BMC Bioinformatics, 2026}{First author with Ruhila Goswami. Rust implementation, numerical kernels, and Python/C interfaces; joint benchmarks and manuscript.}{\href{https://doi.org/10.1186/s12859-026-06628-4}{doi}}
 \paper{Flowy: high performance probabilistic lava emplacement prediction}{CPC, 2025}{Sallermann, A. Goswami, Peña-Torres, and R. Goswami. Performance engineering, packaging, and continuous integration.}{\href{https://doi.org/10.1016/j.cpc.2025.109745}{doi}}
 
 \newpage
