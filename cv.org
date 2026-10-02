@@ -568,7 +568,7 @@ I was associated with the Computational Nanoscience group. Over the course of tw
 :PROPERTIES:
 :CUSTOM_ID: edu
 :END:
-** Graduate studies :cventry:
+** Ph.D. in Physical Chemistry :cventry:
 :PROPERTIES:
 :CV_ENV: cventry
 :FROM: 2019
@@ -577,7 +577,7 @@ I was associated with the Computational Nanoscience group. Over the course of tw
 :LOCATION: Reykjavík
 :EMPLOYER: University of Iceland
 :END:
-Thesis: ``Efficient Exploration of Chemical Kinetics''. Supervised by Prof. Hannes Jónsson with Prof. Birgir Hrafnkelsson as co-supervisor.
+Thesis: ``Efficient Exploration of Chemical Kinetics: Development and application of tractable Gaussian Process Models''. Supervised by Prof. Hannes Jónsson with Prof. Birgir Hrafnkelsson as co-supervisor.
 
 ** B.Tech. Chemical Engineering :cventry:
 :PROPERTIES:
@@ -936,6 +936,25 @@ Have worked with student bodies to rescue and care for local animals. Also desig
 :PROPERTIES:
 :CUSTOM_ID: texp
 :END:
+** Python Data Model for Reliable Research Code :cventry:
+:PROPERTIES:
+:CV_ENV: cventry
+:FROM: 2026
+:TO: 2026
+:EMPLOYER: Collaborative Lesson Development Training
+:NOTE: Accepted project
+:END:
+With Bas Terwijn, University of Amsterdam. Carpentries lesson development on object identity, mutation, aliasing, and shared state.
+
+** HPC and software-workflow training material :cventry:
+:PROPERTIES:
+:CV_ENV: cventry
+:FROM: 2026
+:TO: Present
+:EMPLOYER: SURF
+:END:
+Internal Jenkins course material on the build-and-test workflow and HPC labs using ReFrame to check execution and numerical results. Worked examples, diagnostic exercises, and deliberate failures.
+
 ** HBV505M Software Quality Management :cventry:
 :PROPERTIES:
 :CV_ENV: cventry
@@ -2342,6 +2361,48 @@ Authors: M. Mendonca, M. Picus, \underline{R. Goswami}, R. Gommers and M. Pahari
 :END:
 Presented at PyCon India 2021.
 Authors: M. Mendonca, \underline{R. Goswami} and M. Pahari
+* Invited seminars and research visits :cventries:
+:PROPERTIES:
+:CUSTOM_ID: invited-visits
+:END:
+** How silicon nitride clusters lose N2 :cventry:
+:PROPERTIES:
+:CV_ENV: cventry
+:FROM: 29 September 2026
+:TO: 29 September 2026
+:EMPLOYER: IPCMS and ICube
+:LOCATION: Strasbourg
+:END:
+Seminar and research visit on saddle searches and first-principles software.
+
+** Finding transitions on surfaces :cventry:
+:PROPERTIES:
+:CV_ENV: cventry
+:FROM: 16 September 2026
+:TO: 16 September 2026
+:EMPLOYER: Leiden University
+:LOCATION: Leiden
+:END:
+Theory seminar, hosted by Jörg Meyer. Dimers, climbing images, and Gaussian processes; QMCPACK collaboration with Geert-Jan Kroes through SURF.
+
+** NEB and Dimer within scope of ML :cventry:
+:PROPERTIES:
+:CV_ENV: cventry
+:FROM: 1 April 2026
+:TO: 1 April 2026
+:EMPLOYER: Ruđer Bošković Institute
+:LOCATION: Zagreb
+:END:
+Invited talk at the pARTn hackathon (1--3 April 2026): practical lessons for transition-state methods. [[https://mammasmias.github.io/hackathon-pARTn/program.html][Programme]].
+
+** Invited research-group seminars :cventry:
+:PROPERTIES:
+:CV_ENV: cventry
+:EMPLOYER: MIT and Harvard University
+:LOCATION: Cambridge, Massachusetts
+:END:
+William H. Green's and Rafael Gómez-Bombarelli's groups at MIT, and Boris Kozinsky's group at Harvard. Scientific software, atomistic machine learning, and the metatensor/eOn ecosystem.
+
 * Workshops and Schools :cventries:
 :PROPERTIES:
 :CUSTOM_ID: workshops
@@ -3702,3 +3763,166 @@ Institute of Physics (MInstP) \textbullet{} Royal Society of Chemistry (MRSC) \t
 ,#+end_export
 #+end_src
 
+
+** University of Iceland CS application variant
+The application uses the grant variant's fonts, palette, and entry layout.
+Tangle, then export =build/uoi-cs/cv.org= with =scripts/org2tex.el=.
+*** Preamble
+#+begin_src latex :results none :tangle build/uoi-cs/preamble.tex :mkdirp yes :noweb yes
+<<grant_preamble>>
+\usepackage{fancyhdr}
+\hypersetup{pdftitle={Rohit Goswami -- Academic Curriculum Vitae}}
+\AtBeginDocument{\fontsize{10.2pt}{12.1pt}\selectfont}
+\titlespacing*{\section}{0pt}{0.9em}{0.4em}
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+\fancyfoot[L]{\sffamily\scriptsize\color{cvMuted}Rohit Goswami \quad Academic CV \quad 2 October 2026}
+\fancyfoot[R]{\sffamily\scriptsize\color{cvMuted}\thepage}
+\setlength{\footskip}{6mm}
+\newcommand{\runningtitle}[1]{%
+  {\sffamily\bfseries\large\color{cvTeal}Rohit Goswami}\hfill
+  {\sffamily\small\color{cvMuted}#1}\par\pagerule}
+#+end_src
+
+*** Body
+#+name: uoi_cs_body
+#+begin_src latex :exports none
+\begin{minipage}[t]{0.67\textwidth}
+  {\sffamily\bfseries\fontsize{36pt}{39pt}\selectfont\color{cvTeal}Rohit Goswami}\par
+  \vspace{0.3em}
+  {\sffamily\large Scientific software \textbullet{} AI systems \textbullet{} HPC}\par
+  \vspace{0.45em}
+  \headerline{Reykjavík, Iceland \quad\href{mailto:rgoswami@ieee.org}{rgoswami@ieee.org}}\par
+  \headerline{\href{https://rgoswami.me}{rgoswami.me} \quad\href{https://research.rgoswami.me}{research.rgoswami.me}}
+\end{minipage}\hfill
+\begin{minipage}[t]{0.29\textwidth}\raggedleft
+  \cvtag{Academic curriculum vitae}\par
+  \vspace{0.45em}
+  {\sffamily\small\color{cvMuted}University of Iceland\\Computer Science /\\Software Engineering}\par
+  \vspace{0.5em}
+  \headerline{2 October 2026}
+\end{minipage}
+\pagerule
+
+\section{Research profile}
+Scientific software engineer and researcher working on generated interfaces, machine learning, and high-performance computing. Maintainer of NumPy's \texttt{f2py}; co-maintainer of Airspeed Velocity; lead developer of eOn. My research combines Gaussian-process methods, independent numerical checks, and Bayesian comparisons of algorithm performance. My proposed programme studies reliable AI agents, including the harnesses that control their tools, persistent memory, and verification.
+
+\vspace{0.4em}
+\metric{16}{journal articles}\hfill\metric{7}{conference papers}\hfill\metric{2}{courses taught in this department}
+\vspace{0.3em}
+
+\section{Appointments and professional practice}
+\entry{HPC advisor}{July 2026--present}{SURF, Amsterdam}{Support for Snellius, the Dutch national supercomputer; EasyBuild and EESSI software stacks, performance investigation, and the Promising Applications programme. Work with the MultiXscale community and a Leiden group on QMCPACK.}
+\entry{Systems specialist; postdoctoral researcher}{May 2025--June 2026}{Laboratory of Computational Science and Modelling, EPFL}{Atomistic machine-learning infrastructure, including \texttt{metatensor} and \texttt{metatomic}; interfaces across languages and CPU/GPU devices.}
+\entry{Software Engineer II}{August 2021--May 2025}{Quansight Labs \textbullet{} half time}{NumPy and \texttt{f2py}, SciPy, and Airspeed Velocity. Generated interfaces, build systems, solver integration, packaging, and performance measurement.}
+\entry{Doctoral researcher}{October 2019--October 2025}{Science Institute, University of Iceland}{Gaussian-process acceleration of saddle searches, statistical comparison of algorithms, and open-source scientific software.}
+\compactentry{Scientific coding evaluation}{Professional practice}{Authoring and reviewing scientific coding tasks, validating tests against reference implementations and seeded defects, and analysing recorded coding-agent actions.}
+\compactentry{Consultancy and enterprise}{2021--present}{Consultant to IHPC, the Icelandic national competence centre for HPC and AI, since 2021; founder of TurtleTech ehf., Reykjavík, since 2023.}
+
+\section{Education and fellowships}
+\entry{Ph.D. in Physical Chemistry}{October 2025}{University of Iceland \textbullet{} Faculty of Physical Sciences}{\emph{Efficient Exploration of Chemical Kinetics: Development and application of tractable Gaussian Process Models}. Supervisor: Hannes Jónsson; co-supervisor: Birgir Hrafnkelsson. \href{https://arxiv.org/abs/2510.21368}{Thesis}.}
+\compactentry{B.Tech. in Chemical Engineering}{2018}{Harcourt Butler Technical University, Kanpur, India.}
+\compactentry{IPAM Fellow}{2021}{Tensor Methods and Emerging Applications long programme, Institute for Pure and Applied Mathematics, UCLA.}
+
+\newpage
+\runningtitle{Software and research}
+\section{Scientific software}
+\skillline{\texttt{f2py} / NumPy}{Maintainer. Fortran-to-Python interface generation, compiler compatibility, the Meson build backend, documentation, and release-blocking defects.}
+\skillline{eOn}{Lead developer. Distributed atomistic dynamics, server/client execution, Gaussian-process saddle searches, and climbing-image methods.}
+\skillline{SciPy}{Reworked HiGHS linear and mixed-integer programming integration, including the upstream Python interface and a Meson subproject (\href{https://github.com/scipy/scipy/pull/19255}{\#19255}, \href{https://github.com/scipy/scipy/pull/21565}{\#21565}).}
+\skillline{Airspeed Velocity}{Co-maintainer. Repeatable benchmarking across scientific Python releases.}
+\skillline{\texttt{metatensor} / \texttt{metatomic}}{DLPack exchange, device-aware execution, and Rust operations for interoperable atomistic machine learning.}
+\skillline{Applications and packaging}{Co-creator of d-SEAMS; performance, packaging, and continuous integration for Flowy; conda-forge feedstock maintenance.}
+\skillline{Agent systems}{Software for persistent memory, task ownership, tool permissions, and evidence for results; practical basis for the proposed research and teaching programme.}
+
+\section{Eight selected works}
+The accompanying publication list gives full references and individual contributions. Eleven journal articles appeared in 2025--2026, nine with me as first or sole author.
+\vspace{0.3em}
+
+\paper{Metatensor and metatomic: foundational libraries for interoperable atomistic machine learning}{JCP, 2026}{Bigi et al. Language and device interoperability for learned models.}{\href{https://doi.org/10.1063/5.0304911}{doi}}
+\paper{The State of Fortran}{CiSE, 2022}{Kedward et al. I wrote the sections on packaging, build systems, and interoperability.}{\href{https://doi.org/10.1109/MCSE.2022.3159862}{doi}}
+\paper{A tutorial review of Bayesian optimization with Gaussian processes to accelerate stationary point searches}{ACS Phys. Chem. Au, 2026}{Sole author. A 32-page account of the methods and their practical use.}{\href{https://doi.org/10.1021/acsphyschemau.6c00038}{doi}}
+\paper{Reproducible high performance computing without redundancy with Nix}{IEEE PDGC, 2022}{Goswami et al. Reproducible environments on Elja that retain the native build.}{\href{https://doi.org/10.1109/PDGC56933.2022.10053342}{doi}}
+\paper{d-SEAMS: deferred structural elucidation analysis for molecular simulations}{JCIM, 2020}{Goswami, Goswami, and Singh. Software architecture, core algorithms, tests, and documentation.}{\href{https://doi.org/10.1021/acs.jcim.0c00031}{doi}}
+\paper{Efficient implementation of Gaussian process regression accelerated saddle point searches with application to molecular reactions}{JCTC, 2025}{Goswami et al. Method implementation, calculations, analysis, and manuscript.}{\href{https://doi.org/10.1021/acs.jctc.5c00866}{doi}}
+\paper{Bayesian hierarchical models for quantitative estimates for performance metrics applied to saddle search algorithms}{AIP Advances, 2025}{Sole author. Comparison of two optimizers across 500 test cases.}{\href{https://doi.org/10.1063/5.0283639}{doi}}
+\paper{Flowy: high performance probabilistic lava emplacement prediction}{CPC, 2025}{Sallermann, A. Goswami, Peña-Torres, and R. Goswami. Performance engineering, packaging, and continuous integration.}{\href{https://doi.org/10.1016/j.cpc.2025.109745}{doi}}
+
+\newpage
+\runningtitle{Teaching and research support}
+\section{University teaching}
+\entry{Software Quality Management}{Autumn 2024}{HBV505M, 6 ECTS \textbullet{} University of Iceland}{Teacher; course supervisor: Helmut Neukirchen. Quality models, configuration and change management, continuous integration, review, static analysis, and a quality plan for the students' own codebase. Listed as HBV204M.}
+\entry{Machine Learning}{Autumn 2023}{REI505M \textbullet{} University of Iceland}{Assistant teacher; support for practical and project work.}
+\entry{Code in Place}{2020 and 2021}{Stanford University}{Section leader for introductory programming.}
+
+\section{Lesson development and research-software training}
+\compactentry{Certified Carpentries instructor}{Since 2019}{Workshops at Carnegie Mellon, Stanford, the Jackson Laboratory, and the University of Iceland. Live coding, diagnostic exercises, worked examples, and application to learners' own code.}
+\compactentry{Python Data Model for Reliable Research Code}{Accepted project, 2026}{Collaborative Lesson Development Training project with Bas Terwijn, University of Amsterdam. Lessons on object identity, mutation, aliasing, and shared state.}
+\compactentry{Python Dissemination}{Lesson development}{Material on developing and publishing reusable Python software; submitted to Carpentries Lab.}
+\compactentry{HPC, Jenkins, and ReFrame}{Training material}{Internal SURF course material on the software build-and-test workflow; HPC labs that use ReFrame to check execution and numerical results. Exercises develop a mental model, predict behaviour, and diagnose failures.}
+\compactentry{Engineering Reliable AI Agents}{Proposed master's course}{A 6 ECTS course on tool control, persistent memory, permissions, failure recovery, coordination, and scientific verification. Four practical units and a reproducible software capstone, with open materials for Nordic collaboration.}
+
+\section{Mentoring and training service}
+\compactentry{Google Summer of Code}{2022--2024}{Mentor; NumFOCUS organisation administrator in 2024.}
+\compactentry{Summer of Nix}{2021}{Mentor to five students.}
+\compactentry{Carpentries Instructor Development Committee}{2020--2021}{Special projects chair; maintenance of a Carpentries R lesson.}
+\compactentry{HPC-Carpentry}{2022--2023}{Steering council member.}
+
+\section{Funding}
+\compactentry{Rannís doctoral fellowship}{2020--2023}{6.65 million ISK, Icelandic Research Fund.}
+\compactentry{COST Action CA24106}{2025--2029}{Co-proposer and management committee member for Iceland. The network's funding is 575,000 EUR.}
+\compactentry{NumFOCUS and Google Season of Docs}{Open-source grants}{Led successful grants totalling more than 30,000 USD for scientific software and documentation.}
+\compactentry{Algorithms for Transitions: From Catalysis to Spintronics}{24--27 May 2027}{Lead organiser of the symposium honouring Hannes Jónsson; funded by the Center for Nonlinear Studies, Los Alamos National Laboratory.}
+
+\newpage
+\runningtitle{International engagement and service}
+\section{Selected invited talks and research visits}
+\entry{How silicon nitride clusters lose N\textsubscript{2}}{29 September 2026}{IPCMS and ICube, Strasbourg}{Seminar and research visit on saddle-search methods and their integration with first-principles software.}
+\entry{Finding transitions on surfaces}{16 September 2026}{Leiden University \textbullet{} host: Jörg Meyer}{Theory seminar on dimers, climbing images, and Gaussian processes. QMCPACK collaboration with Geert-Jan Kroes through SURF's Promising Applications programme.}
+\entry{NEB and dimer methods in machine learning}{1 April 2026}{pARTn hackathon \textbullet{} Ruđer Bošković Institute, Zagreb}{Invited talk on methods and practical lessons for transition-state searches. The hackathon ran 1--3 April. \href{https://mammasmias.github.io/hackathon-pARTn/program.html}{Programme}.}
+\compactentry{Invited research-group seminars}{MIT and Harvard}{William H. Green's and Rafael Gómez-Bombarelli's groups at MIT; Boris Kozinsky's group at Harvard. Scientific software, atomistic machine learning, and the metatensor/eOn ecosystem.}
+\entry{Accelerating saddle searches with Gaussian process regression}{June 2024}{CECAM LTS-MAP \textbullet{} SISSA, Trieste}{Invited speaker and eOn tutorial contributor.}
+\entry{Development, benchmarks and workflows}{February 2024}{CECAM Electronic Structure Library meeting \textbullet{} Lausanne}{Invited speaker on workflows from development machines to HPC centres.}
+\entry{Computational chemistry and possible tensor applications}{December 2023}{IPAM Tensor Methods Reunion Conference}{Invited talk following the 2021 Tensor Methods long programme.}
+\compactentry{Scientific-software best practices}{October 2022}{Invited NumPy representative, CECAM Electronic Structure Library meeting, Lausanne.}
+
+\section{Computing and teaching collaborations}
+\skillline{EESSI and MultiXscale}{SURF work within the community around Kenneth Hoste and Alan O'Cais; software deployment, testing, and European HPC infrastructure.}
+\skillline{The Carpentries}{Accepted lesson-development project with Bas Terwijn; instructor and lesson-maintenance networks.}
+\skillline{Nordic-RSE}{Founding secretary and board member, 2021--2022.}
+
+\section{Editorial and professional service}
+\skillline{Journal of Open Source Software}{Editor, 2024--present.}
+\skillline{Peer review}{Nature Communications; Physical Review A, E, Applied, and Letters; Journal of Physics: Condensed Matter; Machine Learning: Science and Technology; PLOS ONE, among others.}
+\skillline{Standards and conferences}{IEEE P3173 vice chair; participation in P2881 and P1940. ICPP 2023 artifact description and evaluation board. APS session chair, 2023--2024; Forum on Graduate Student Affairs nominating committee.}
+
+\section{Languages and residence}
+English is my working language. Icelandic permanent resident; Reykjavík is my home. I will reach B1 in Icelandic within four years of appointment and take on teaching in Icelandic as my proficiency develops.
+
+\section{Referees}
+Prof. Hannes Jónsson \textbullet{} \href{mailto:hj@hi.is}{hj@hi.is}\qquad
+Prof. Morris Riedel \textbullet{} \href{mailto:morris@hi.is}{morris@hi.is}\\
+University of Iceland. Full details accompany the application.
+#+end_src
+
+*** Driver org
+#+begin_src org :results none :tangle build/uoi-cs/cv.org :mkdirp yes :noweb yes
+,#+TITLE: Academic Curriculum Vitae
+,#+AUTHOR: Rohit Goswami
+,#+DATE: 2 October 2026
+,#+options: tags:nil title:nil toc:nil num:nil author:nil date:nil
+,#+LATEX_COMPILER: xelatex
+,#+LATEX_CLASS: article
+,#+LATEX_CLASS_OPTIONS: [10pt,a4paper]
+,#+LATEX_HEADER: \input{preamble.tex}
+,* Configuration :ignoreheading:ignore:
+,#+begin_src emacs-lisp :exports none :eval always :results none
+,(setq org-latex-default-packages-alist nil)
+,(setq org-latex-packages-alist nil)
+,#+end_src
+,* Document :ignoreheading:ignore:
+,#+begin_export latex
+<<uoi_cs_body>>
+,#+end_export
+#+end_src
