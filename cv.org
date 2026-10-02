@@ -2401,7 +2401,7 @@ Invited talk at the pARTn hackathon (1--3 April 2026): practical lessons for tra
 :EMPLOYER: MIT and Harvard University
 :LOCATION: Cambridge, Massachusetts
 :END:
-William H. Green's and Rafael Gómez-Bombarelli's groups at MIT, and Boris Kozinsky's group at Harvard. Scientific software, atomistic machine learning, and the metatensor/eOn ecosystem.
+William H. Green's and Rafael Gómez-Bombarelli's groups at MIT, Boris Kozinsky's group at Harvard, and a group seminar at Boston College. Scientific software, atomistic machine learning, and the metatensor/eOn ecosystem.
 
 * Workshops and Schools :cventries:
 :PROPERTIES:
@@ -3810,7 +3810,7 @@ Tangle, then export =build/uoi-cs/cv.org= with =scripts/org2tex.el=.
 \pagerule
 
 \section{Research profile}
-Scientific software engineer and researcher working on generated interfaces, machine learning, and high-performance computing. Maintainer of NumPy's \texttt{f2py}; co-maintainer of Airspeed Velocity; lead developer of eOn. My research develops efficient Gaussian-process methods, adaptive reduction of training data, and interoperable learned models. The gpridge manuscript and ESCAPE proposal extend this work to stable surrogate models and reusable scientific event records. My proposed programme also studies agent harnesses, persistent memory, and independent verification.
+Scientific software engineer and researcher working on generated interfaces, machine learning, and high-performance computing. Maintainer of NumPy's \texttt{f2py}; co-maintainer of Airspeed Velocity; lead developer of eOn. My research develops efficient Gaussian-process methods, adaptive reduction of training data, and interoperable learned models. The gpridge manuscript and ESCAPE proposal extend this work to stable surrogate models and reusable scientific event records. My proposed programme also studies agent harnesses and persistent memory, alongside portable HPC applications, dependable data-centre software, and performance and energy measurement.
 
 \vspace{0.4em}
 \metric{16}{journal articles}\hfill\metric{7}{conference papers}\hfill\metric{2}{courses taught in this department}
@@ -3885,13 +3885,14 @@ The accompanying publication list gives full references and individual contribut
 \entry{How silicon nitride clusters lose N\textsubscript{2}}{29 September 2026}{IPCMS and ICube, Strasbourg}{Seminar and research visit on saddle-search methods and their integration with first-principles software.}
 \entry{Finding transitions on surfaces}{16 September 2026}{Leiden University \textbullet{} host: Jörg Meyer}{Theory seminar on dimers, climbing images, and Gaussian processes. QMCPACK collaboration with Geert-Jan Kroes through SURF's Promising Applications programme.}
 \entry{NEB and dimer methods in machine learning}{1 April 2026}{pARTn hackathon \textbullet{} Ruđer Bošković Institute, Zagreb}{Invited talk on methods and practical lessons for transition-state searches. The hackathon ran 1--3 April. \href{https://mammasmias.github.io/hackathon-pARTn/program.html}{Programme}.}
-\compactentry{Invited research-group seminars}{MIT and Harvard}{William H. Green's and Rafael Gómez-Bombarelli's groups at MIT; Boris Kozinsky's group at Harvard. Scientific software, atomistic machine learning, and the metatensor/eOn ecosystem.}
+\compactentry{Invited research-group seminars}{MIT and Harvard}{William H. Green's and Rafael Gómez-Bombarelli's groups at MIT; Boris Kozinsky's group at Harvard; a group seminar at Boston College. Scientific software, atomistic machine learning, and the metatensor/eOn ecosystem.}
 \entry{Accelerating saddle searches with Gaussian process regression}{June 2024}{CECAM LTS-MAP \textbullet{} SISSA, Trieste}{Invited speaker and eOn tutorial contributor.}
 \entry{Development, benchmarks and workflows}{February 2024}{CECAM Electronic Structure Library meeting \textbullet{} Lausanne}{Invited speaker on workflows from development machines to HPC centres.}
 \entry{Computational chemistry and possible tensor applications}{December 2023}{IPAM Tensor Methods Reunion Conference}{Invited talk following the 2021 Tensor Methods long programme.}
 \compactentry{Scientific-software best practices}{October 2022}{Invited NumPy representative, CECAM Electronic Structure Library meeting, Lausanne.}
 
 \section{Computing and teaching collaborations}
+\skillline{IHPC and Iceland--Jülich links}{Consultant to IHPC since 2021. Proposed joint software and training projects with Prof. Morris Riedel and interested colleagues, building on their established European collaborations.}
 \skillline{EESSI and MultiXscale}{SURF work within the community around Kenneth Hoste and Alan O'Cais; software deployment, testing, and European HPC infrastructure.}
 \skillline{The Carpentries}{Accepted lesson-development project with Bas Terwijn; instructor and lesson-maintenance networks.}
 \skillline{Nordic-RSE}{Founding secretary and board member, 2021--2022.}
@@ -3902,7 +3903,7 @@ The accompanying publication list gives full references and individual contribut
 \skillline{Standards and conferences}{IEEE P3173 vice chair; participation in P2881 and P1940. ICPP 2023 artifact description and evaluation board. APS session chair, 2023--2024; Forum on Graduate Student Affairs nominating committee.}
 
 \section{Languages and residence}
-English is my working language. Icelandic permanent resident; Reykjavík is my home. I will reach B1 in Icelandic within four years of appointment and take on teaching in Icelandic as my proficiency develops.
+English is my working language. Icelandic permanent resident; Reykjavík is my home and where I intend to build my academic career. I will reach B1 in Icelandic within four years of appointment and take on teaching in Icelandic as my proficiency develops.
 
 \section{Referees}
 Prof. Hannes Jónsson \textbullet{} \href{mailto:hj@hi.is}{hj@hi.is}\qquad
