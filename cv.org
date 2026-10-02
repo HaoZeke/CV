@@ -553,12 +553,12 @@ Working on foundational FOSS scientific codebases and tools like ~numpy~ and ~f2
 :PROPERTIES:
 :CV_ENV: cventry
 :FROM: 2019
-:TO: 2020
-:NOTE: Doctoral Researcher
+:TO: 2021
+:NOTE: Graduate Researcher
 :LOCATION: University of Iceland
 :EMPLOYER: Faculty of Physical Sciences
 :END:
-Worked with Prof. Hannes Jónsson on Bayesian analysis and machine learning for /ab-inito/ quantum chemistry; partially employed on the EU funded "ReaxPro" project for potential energy surface saddle search acceleration.
+Admitted to the MS programme in Chemistry in 2019 and moved to the Ph.D. programme in July 2020. Worked with Prof. Hannes Jónsson on Bayesian analysis and machine learning for /ab initio/ quantum chemistry. From October 2020 to August 2021, employed on the EU H2020 "ReaxPro" project (814416), developing the Gaussian-process dimer method and its integration into eOn.
 
 ** IHPC :cventry:
 :PROPERTIES:
@@ -618,7 +618,7 @@ I was associated with the Computational Nanoscience group. Over the course of tw
 ** Ph.D. in Chemistry :cventry:
 :PROPERTIES:
 :CV_ENV: cventry
-:FROM: 2019
+:FROM: 2020
 :TO: 2025
 :NOTE: \emph{Iceland}
 :LOCATION: Reykjavík
@@ -1889,8 +1889,8 @@ Nonlinear-Optics Session
 ** Icelandic Research Fund :cventry:
 :PROPERTIES:
 :CV_ENV: cventry
-:FROM: 2020
-:TO: 2023
+:FROM: 2021
+:TO: 2024
 :NOTE: Doctoral Fellowship
 :LOCATION: Rannís
 :EMPLOYER: Icelandic Research Fund
@@ -3340,7 +3340,7 @@ European Cooperation in Science and Technology network proposal.
 \sectionspace
 
 \runsubsection{Rann\'{i}s Doctoral Research Grant}
-\descript{| 6650k ISK, 2020--2023}
+\descript{| 6650k ISK, 2021--2024}
 Icelandic Research Fund grant as PI for Bayesian ML applied to saddle point searches.
 
 \sectionspace
@@ -3749,7 +3749,7 @@ Researcher and scientific-software engineer working on Gaussian-process saddle p
 
 \section{Grants, Awards, and Funded Roles}
 \compactentry{COST Action CA24106 co-proposer and Iceland Management Committee member}{2025--2029}{\textbf{575,000 EUR} European Cooperation in Science and Technology network: Building Education and One Health with Adaptive Convergence and Open Networks.}
-\compactentry{Icelandic Research Fund Doctoral Research Grant, PI}{2020--2023}{\textbf{6.65M ISK}. Title: ``Magnetic interactions of itinerant electrons modeled using Bayesian machine learning.''}
+\compactentry{Icelandic Research Fund Doctoral Research Grant, PI}{2021--2024}{\textbf{6.65M ISK}. Title: ``Magnetic interactions of itinerant electrons modeled using Bayesian machine learning.''}
 \compactentry{Google Summer of Code mentor funding}{2023--2024}{\textbf{6,000 USD}. Mentored Python bindings and contributor onboarding for d-SEAMS/pySEAMS.}
 \compactentry{NumFOCUS Small Development Grants}{2022--2023}{\textbf{14,600 USD total}. LFortran/SciPy and scientific Python compiler-build work.}
 \compactentry{Google Season of Docs technical-writer grant}{2022}{\textbf{10,000 USD}. Generated documentation capacity for scientific software.}
@@ -3935,7 +3935,7 @@ The accompanying publication list gives full references and individual contribut
 \compactentry{HPC-Carpentry}{2022--2023}{Steering council member.}
 
 \section{Funding}
-\compactentry{Rannís doctoral fellowship}{2020--2023}{6.65 million ISK, Icelandic Research Fund.}
+\compactentry{Rannís doctoral fellowship}{2021--2024}{6.65 million ISK, Icelandic Research Fund.}
 \compactentry{COST Action CA24106}{2025--2029}{Co-proposer and management committee member for Iceland. The network's funding is 575,000 EUR.}
 \compactentry{NumFOCUS and Google Season of Docs}{Open-source grants}{Led successful grants totalling more than 30,000 USD for scientific software and documentation.}
 \compactentry{Algorithms for Transitions: From Catalysis to Spintronics}{24--27 May 2027}{Lead organiser of the symposium honouring Hannes Jónsson; funded by the Center for Nonlinear Studies, Los Alamos National Laboratory.}
