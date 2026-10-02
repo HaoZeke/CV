@@ -615,7 +615,7 @@ I was associated with the Computational Nanoscience group. Over the course of tw
 :PROPERTIES:
 :CUSTOM_ID: edu
 :END:
-** Ph.D. in Physical Chemistry :cventry:
+** Ph.D. in Chemistry :cventry:
 :PROPERTIES:
 :CV_ENV: cventry
 :FROM: 2019
@@ -624,7 +624,7 @@ I was associated with the Computational Nanoscience group. Over the course of tw
 :LOCATION: Reykjavík
 :EMPLOYER: University of Iceland
 :END:
-Thesis: ``Efficient Exploration of Chemical Kinetics: Development and application of tractable Gaussian Process Models''. Supervised by Prof. Hannes Jónsson with Prof. Birgir Hrafnkelsson as co-supervisor.
+Degree awarded 19 December 2025. Research in computational and physical chemistry. Thesis: ``Efficient Exploration of Chemical Kinetics: Development and application of tractable Gaussian Process Models''. Supervised by Prof. Hannes Jónsson with Prof. Birgir Hrafnkelsson as co-supervisor.
 
 ** B.Tech. Chemical Engineering :cventry:
 :PROPERTIES:
@@ -635,7 +635,7 @@ Thesis: ``Efficient Exploration of Chemical Kinetics: Development and applicatio
 :LOCATION: Kanpur
 :EMPLOYER: Harcourt Butler Technical University
 :END:
-First Division (\textsc{Project: } Gas Sweetening Plant Design)
+First Division (\textsc{Project: } Gas Sweetening Plant Design). Degree awarded by Dr. A.P.J. Abdul Kalam Technical University, Uttar Pradesh.
 
 ** Intermediate (AISSCE) :cventry:
 :PROPERTIES:
@@ -1990,7 +1990,7 @@ Compiling SciPy with LFortran.
 
 {\color{cvhighlight}\textsc{Doctoral thesis}}
 
-\cvitem{2025}{\emph{Efficient Exploration of Chemical Kinetics: Development and application of tractable Gaussian Process Models}. Ph.D. in Physical Chemistry, University of Iceland, October 2025. \href{https://arxiv.org/abs/2510.21368}{Thesis}.}
+\cvitem{2025}{\emph{Efficient Exploration of Chemical Kinetics: Development and application of tractable Gaussian Process Models}. Ph.D. in Chemistry, University of Iceland, awarded 19 December 2025. \href{https://arxiv.org/abs/2510.21368}{Thesis}.}
 #+end_export
 
 * Conference Records :cventries:
@@ -3316,7 +3316,7 @@ Scholar: https://scholar.google.com/citations?hl=en&user=36gIdJMAAAAJ
 \section{Education}
 
 \runsubsection{University of Iceland}
-\descript{| Ph.D. Physical Sciences}
+\descript{| Ph.D. Chemistry}
 \location{2019 -- 2025 | Reykjav\'{i}k, Iceland}
 Thesis: ``Efficient Exploration of Chemical Kinetics''. Supervised by Prof. Hannes J\'{o}nsson.
 
@@ -3439,7 +3439,7 @@ IOP (MInstP) \textbullet{} RSC (MRSC) \textbullet{} BCS (MBCS) \textbullet{} ACM
 \section{Education}
 
 \subsection{University of Iceland}
-\descript{Ph.D. Physical Sciences}
+\descript{Ph.D. Chemistry}
 \location{2019 -- 2025 | Reykjav\'{i}k, Iceland}
 \location{Bayesian ML for magnetic interactions}
 
@@ -3714,7 +3714,7 @@ Researcher and scientific-software engineer working on Gaussian-process saddle p
 \entry{Quansight Labs}{2021--2025}{Software Engineer II, remote}{Maintained \texttt{f2py} and contributed across NumPy/SciPy, meson-python, LFortran, OpenBLAS, PRIMA, and scientific build infrastructure.}
 
 \section{Education}
-\entry{University of Iceland}{2019--2025}{Ph.D. Physical Sciences}{Thesis: ``Efficient Exploration of Chemical Kinetics.'' Supervisor: Prof. Hannes J\'{o}nsson; co-supervisor: Prof. Birgir Hrafnkelsson.}
+\entry{University of Iceland}{2019--2025}{Ph.D. Chemistry}{Thesis: ``Efficient Exploration of Chemical Kinetics.'' Supervisor: Prof. Hannes J\'{o}nsson; co-supervisor: Prof. Birgir Hrafnkelsson.}
 \entry{HBTU Kanpur}{2014--2018}{B.Tech. Chemical Engineering}{First Division; computational nanoscience, ultrafast optics, and molecular-simulation analysis foundations.}
 
 \newpage
@@ -3885,7 +3885,7 @@ Researcher and scientific software engineer developing numerical algorithms, AI 
 \compactentry{Consultancy and enterprise}{2021--present}{Consultant to IHPC, the Icelandic national competence centre for HPC and AI, since 2021; founder of TurtleTech ehf., Reykjavík, since 2023.}
 
 \section{Education and fellowships}
-\entry{Ph.D. in Physical Chemistry}{October 2025}{University of Iceland \textbullet{} Faculty of Physical Sciences}{\emph{Efficient Exploration of Chemical Kinetics: Development and application of tractable Gaussian Process Models}. Supervisor: Hannes Jónsson; co-supervisor: Birgir Hrafnkelsson. \href{https://arxiv.org/abs/2510.21368}{Thesis}.}
+\entry{Ph.D. in Chemistry}{19 December 2025}{University of Iceland \textbullet{} Faculty of Physical Sciences}{\emph{Efficient Exploration of Chemical Kinetics: Development and application of tractable Gaussian Process Models}. Supervisor: Hannes Jónsson; co-supervisor: Birgir Hrafnkelsson. \href{https://arxiv.org/abs/2510.21368}{Thesis}.}
 \compactentry{B.Tech. in Chemical Engineering}{2018}{Harcourt Butler Technical University, Kanpur, India.}
 \compactentry{IPAM Fellow}{2021}{Tensor Methods and Emerging Applications long programme, Institute for Pure and Applied Mathematics, UCLA.}
 
