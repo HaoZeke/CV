@@ -3164,15 +3164,16 @@ Designed a Jekyll based static website and ensured adherence to standard MUN rul
 :END:
 Managed a diverse team of student content writers and also later typeset a spin-off multi-lingual newsletter in \XeLaTeX.
 
-# Keep the four skills tables together on a dedicated page.
-#+LATEX: \clearpage
-
-* Technical Skills
+* Technical Skills :ignore:
 :PROPERTIES:
 :CUSTOM_ID: techskills
 :END:
 
 #+begin_export latex
+% Keep the four skills tables together on a dedicated page.
+\clearpage
+\section{Technical Skills}
+
 \subsection{Programming Languages}
 
 \cvdoubleitem{\textsc{Experienced}}{C++, Python, Rust, R, FORTRAN, Shell (zsh, bash),  OpenMP, OpenMPI, Tcl, CSS, JS, HTML, Sass, C}
