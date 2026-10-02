@@ -3164,6 +3164,9 @@ Designed a Jekyll based static website and ensured adherence to standard MUN rul
 :END:
 Managed a diverse team of student content writers and also later typeset a spin-off multi-lingual newsletter in \XeLaTeX.
 
+# Keep the four skills tables together on a dedicated page.
+#+LATEX: \clearpage
+
 * Technical Skills
 :PROPERTIES:
 :CUSTOM_ID: techskills
