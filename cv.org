@@ -93,6 +93,19 @@ I prefer [[https://macarthur.me/color/rgb(1,52,64)][this one]].
 % spacing before (sub)sections
 \newcommand{\spacesection}{\vspace{0.4cm}}
 \newcommand{\spacesubsection}{\vspace{0.2cm}}
+
+% Keep headings with the first lines of their entries.
+\usepackage{needspace}
+\pretocmd{\section}{\Needspace{5\baselineskip}}{}{}
+\pretocmd{\subsection}{\Needspace{5\baselineskip}}{}{}
+
+% Reserve enough footer width for two-digit page numbers.
+\AddToHook{begindocument/end}{%
+  \ifcsname pagenumberwidth\endcsname
+    \settowidth{\pagenumberwidth}{\color{color2}\pagenumberfont
+      \strut\pageref{lastpage}/\pageref{lastpage}}%
+    \addtolength{\pagenumberwidth}{0.5em}%
+  \fi}
 #+end_src
 ** Fonts
 #+name: unicode_fonts
@@ -271,8 +284,6 @@ or lists have a perfectly straight-looking right edge.
 % Free-to-read links. Custom datamodel fields `mydoi'/`mypdf' are read by
 % biber, mapped onto biblatex usera/userb, and rendered as clickable
 % [DOI]/[PDF] markers appended at the end of each bibliography entry.
-\DeclareDatamodelFields[type=field,datatype=verbatim]{mypdf,mydoi}
-\DeclareDatamodelEntryfields{mypdf,mydoi}
 \DeclareSourcemap{
   \maps[datatype=bibtex]{
     \map{\step[fieldsource=mydoi]\step[fieldset=usera, origfieldval]}

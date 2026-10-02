@@ -33,3 +33,7 @@
   openaccess,
   peerreview}
 
+
+% External full-text and DOI links supplied by the bibliography.
+\DeclareDatamodelFields[type=field,datatype=verbatim]{mypdf,mydoi}
+\DeclareDatamodelEntryfields{mypdf,mydoi}
