@@ -468,17 +468,31 @@ The rest of the document is written within the ~begin{document}~ environment.
 \cvitem{Birthplace}{Brookhaven, New York, United States of America}
 #+end_export
 
+* Research profile
+I develop numerical algorithms and software systems for scientific computing and AI. I maintain NumPy's f2py, co-maintain Airspeed Velocity, and lead development of eOn. My Leidarljos project develops persistent memory, provenance, and coordination across AI tools. My scientific software connects computer science with computational chemistry, biology, and earth sciences through gpridge, anneal, metatensor/metatomic, d-SEAMS, rsx, and Flowy. My work at SURF and with IHPC connects this research to national HPC infrastructure.
+
 * Work Experience :cventries:
 :PROPERTIES:
 :CUSTOM_ID: wexp
 :END:
+** SURF :cventry:
+:PROPERTIES:
+:CV_ENV: cventry
+:FROM: July 2026
+:TO: \textsc{present}
+:LOCATION: Amsterdam, Netherlands
+:NOTE: HPC Advisor
+:EMPLOYER: SURF
+:END:
+Support for Snellius, the Dutch national supercomputer; scientific software in the EasyBuild and EESSI stacks, performance investigation, and the Promising Applications programme. Work with the MultiXscale community and with Geert-Jan Kroes's Leiden group on QMCPACK.
+
 ** Lab COSMO :cventry:
 :PROPERTIES:
 :CV_ENV: cventry
-:FROM:   2025
-:TO:     \textsc{present}
+:FROM: May 2025
+:TO: June 2026
 :LOCATION: Switzerland
-:NOTE: Systems Specialist
+:NOTE: Systems Specialist; Postdoctoral Researcher
 :EMPLOYER: École Polytechnique Fédérale de Lausanne
 :END:
 Postdoctoral position with Prof. Michele Ceriotti and Dr. Guillaume Fraux working on the @@latex:\metatensor@@ ecosystem for interoperable atomistic machine learning, including GROMACS integration and DLPack support for zero-copy tensor interoperability.
@@ -534,6 +548,28 @@ Working on foundational FOSS scientific codebases and tools like ~numpy~ and ~f2
 :EMPLOYER: Faculty of Physical Sciences
 :END:
 Worked with Prof. Hannes Jónsson on Bayesian analysis and machine learning for /ab-inito/ quantum chemistry; partially employed on the EU funded "ReaxPro" project for potential energy surface saddle search acceleration.
+
+** IHPC :cventry:
+:PROPERTIES:
+:CV_ENV: cventry
+:FROM: 2021
+:TO: \textsc{present}
+:NOTE: Consultant
+:LOCATION: Iceland
+:EMPLOYER: Icelandic National Competence Centre for HPC and AI
+:END:
+Consultancy on reproducible software environments for Elja and scientific computing, working with Prof. Morris Riedel and the Icelandic research-computing community.
+
+** TurtleTech ehf. :cventry:
+:PROPERTIES:
+:CV_ENV: cventry
+:FROM: 2023
+:TO: \textsc{present}
+:NOTE: Founder
+:LOCATION: Reykjavík, Iceland
+:EMPLOYER: TurtleTech ehf.
+:END:
+Research software and scientific-computing consultancy.
 
 ** Department of Chemistry :cventry:
 :PROPERTIES:
@@ -1108,7 +1144,7 @@ Taught the basics of Python and assisted with shell lessons for high school stud
 :END:
 As part of the special COVID-19 [[https://compedu.stanford.edu/codeinplace/announcement/][~code-in-place~ initiative]], I worked as a section leader (teaching assistant). The course covered the fundamentals of computer programming using Python and was built off the first half of CS106A. Also moderated and participated in an AMA session on "Machine Learning for the Physical Sciences" and taught a workshop for the other section leaders entitled "Functional Python Packaging with Nix"
 
-** Opensource Contributions
+* Scientific software and open-source contributions
 :PROPERTIES:
 :CUSTOM_ID: osscontrib
 :END:
@@ -1130,7 +1166,17 @@ As part of the special COVID-19 [[https://compedu.stanford.edu/codeinplace/annou
 
 \cvitem{\textsc{metatensor}}{Contributor at EPFL labCOSMO. DLPack zero-copy tensor interchange, device-aware execution, Rust core.}
 
-\subsection{Opensource Projects Created}
+\subsection{Open-source Projects Created}
+
+\cvitem{\textsc{Leidarljos}}{Developer of open-source infrastructure for persistent memory, provenance, and coordinated work across AI tools. Explicit claims with validity and revision; cryptographic records of artefacts; task dependencies, ownership, permissions, and consensus methods. \href{https://leidarljos.github.io}{Project and documentation}. A memory manuscript is in preparation.}
+
+\cvitem{\textsc{rsx}}{Streaming bioinformatics toolkit, co-conceived with Ruhila Goswami. Implemented the Rust software, numerical kernels, and Python/C interfaces; joint benchmarks and manuscript. Published in BMC Bioinformatics (2026). \href{https://doi.org/10.1186/s12859-026-06628-4}{Paper}.}
+
+\cvitem{\textsc{gpridge}}{C++ library for Gaussian-process accelerated band and dimer searches, with structured covariance operations and independent numerical validation. Manuscript in preparation.}
+
+\cvitem{\textsc{anneal}}{Global-optimisation portfolio under a finite evaluation budget. Rust core, Python bindings, interchangeable search components, and finite-budget analysis. Manuscript in preparation for ACM Transactions on Mathematical Software.}
+
+\cvitem{\textsc{Flowy}}{Performance engineering, build and packaging, continuous integration, and manuscript contributions for probabilistic lava-emplacement prediction. Published in Computer Physics Communications (2025).}
 
 \cvitem{\textsc{d-SEAMS}}{Open-source engine for molecular dynamics trajectory analysis (co-creator). Voronoi tessellation, ring statistics, Steinhardt order parameters. NumFOCUS-funded. JCIM 2020.}
 
@@ -1910,7 +1956,7 @@ Compiling SciPy with LFortran.
 :END:
 #+begin_export latex
 \ExecutePublistOptions{plsorting=ddt}
-{\color{cvhighlight}\textsc{Journals}}
+{\color{cvhighlight}\textsc{Journal articles and correspondence}}
 
 \begin{refsection}
 \nocite{*}
@@ -1930,6 +1976,10 @@ Compiling SciPy with LFortran.
 \nocite{*}
 \printbibliography[heading=none, keyword=preprint]
 \end{refsection}
+
+{\color{cvhighlight}\textsc{Doctoral thesis}}
+
+\cvitem{2025}{\emph{Efficient Exploration of Chemical Kinetics: Development and application of tractable Gaussian Process Models}. Ph.D. in Physical Chemistry, University of Iceland, October 2025. \href{https://arxiv.org/abs/2510.21368}{Thesis}.}
 #+end_export
 
 * Conference Records :cventries:
@@ -3116,7 +3166,7 @@ Managed a diverse team of student content writers and also later typeset a spin-
 #+begin_export latex
 \subsection{Programming Languages}
 
-\cvdoubleitem{\textsc{Experienced}}{C++, Python, R, FORTRAN, Shell (zsh, bash),  OpenMP, OpenMPI, Tcl, CSS, JS, HTML, Sass, C}
+\cvdoubleitem{\textsc{Experienced}}{C++, Python, Rust, R, FORTRAN, Shell (zsh, bash),  OpenMP, OpenMPI, Tcl, CSS, JS, HTML, Sass, C}
 {\textsc{Familiar}}{Ruby, Julia, Java, Haskell, Matlab, Golang, ReactJS, Node, CUDA}
 
 \spacesubsection{}
